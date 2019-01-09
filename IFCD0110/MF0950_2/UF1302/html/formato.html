@@ -12,9 +12,14 @@
     <!-- Para referirse a archivos sin tener que poner siempre la URL completa. Por ejemplo en las imágenes de nuestra web, solo hace falta el nombre de la imagen -->
     <!-- <base href="https://www.mipagina.com/img/" target="_blank"> -->
 
-    <link rel="icon" type="image/png" href="imagen.png">
-    <link rel="icon" type="image/gif" href="imagen.gif">
-    <link rel="icon" type="image/vnd.microsoft.icon" href="imagen.ico">
+    <link rel="icon" type="image/png" href="../img/html5.png">
+    <link rel="icon" type="image/gif" href="../img/html5.gif">
+    <link rel="icon" type="image/vnd.microsoft.icon" href="../img/html5.ico">
+    
+    
+    <link rel="shortcut icon" type="image/x-icon" href="../img/favicon.ico">
+    <link rel="icon" type="image/icon" href="../img/favicon.ico">
+    
     
     <style>
         body {
@@ -103,9 +108,15 @@
 </head>
 
 <body>
-    <h1>Formato de HTML</h1>
-    <p>El formato de texto es el marcado que se aplica a un texto para añadirle datos de forma</p>
-    <p>Al texto resultante se le conoce como texto formateado, texto con estilos o texto enriquecido</p>
+    <h1>HTML formato</h1>
+    <hr>
+    
+<h2>Formato del texto</h2>	
+    
+    <div><img src="../img/html-formatos-de-texto.png" alt="Formatos de texto" width="500px" style="float: right"></div>
+    
+    <p>El formato de texto es el marcado que se aplica a un texto para añadirle datos de forma.</p>
+    <p>Al texto resultante se le conoce como texto formateado, texto con estilos o texto enriquecido.</p>
     <hr>
     <h2>Encabezados de texto</h2>
 
@@ -115,9 +126,11 @@
 
     <p>Los encabezamientos <code>&lt;h1&gt;</code> deben ser utilizados para los encabezados principales, seguido por encabezados <code>&lt;h2&gt;</code>, y menos importantes sucesivamente: <code>&lt;h3&gt;</code>, <code>&lt;h4&gt;</code>...</p>
     
-    <p class="nota"><b>Nota:</b> Usar encabezados HTML para sólo encabezados. No utilice encabezados para que el texto GRANDE o negrita.</p> 
-
-    <table>
+    <div class="nota">
+        <p ><b>Nota:</b> Usar encabezados HTML para sólo encabezados. No utilice encabezados para que el texto GRANDE o negrita.</p> 
+	</div>
+   
+<table>
         <tr>
             <th>Etiqueta</th>
             <th>Descripción</th>
@@ -247,8 +260,65 @@
         <td>Este texto es &lt;mark&gt;marcado&lt;/mark&gt;</td>
     </tr>
 </table>
+<div class="nota">
+<p><b>Nota:</b> Los navegadores muestran <code>&lt;strong&gt;</code> como <code>&lt;b&gt;</code>, y <code>&lt;em&gt;</code> como <code>&lt;i&gt;</code>. Sin embargo, hay una diferencia en el significado de las siguientes etiquetas: <code>&lt;b&gt;</code> y <code>&lt;i&gt;</code> define el texto en negrita y cursiva, pero <code>&lt;strong&gt;</code> y <code>&lt;em&gt;</code> significa que el texto es <strong>"importante"</strong>.</p>
+</div>
 
-<p class="nota"><b>Nota:</b> Los navegadores muestran <code>&lt;strong&gt;</code> como <code>&lt;b&gt;</code>, y <code>&lt;em&gt;</code> como <code>&lt;i&gt;</code>. Sin embargo, hay una diferencia en el significado de las siguientes etiquetas: <code>&lt;b&gt;</code> y <code>&lt;i&gt;</code> define el texto en negrita y cursiva, pero <code>&lt;strong&gt;</code> y <code>&lt;em&gt;</code> significa que el texto es <strong>"importante"</strong>.</p>
+<hr>
+<h2>Etiquetas que separan el texto</h2>
+
+<p>La etiqueta <code>&lt;p&gt;</code> separa el texto, añadiendo automáticamente un espacio (margen) antes y después de cada elemento <code>&lt;p&gt;</code>. El navegador eliminará todos los espacios en blanco y las líneas adicionales cuando se visualiza la etiqueta <code>&lt;p&gt;</code>.
+</p>
+<p>La etiqueta <code>&lt;br&gt;</code> es un aetiqueta vacía, lo que significa que no tiene ninguna etiqueta final. Inserta un salto de línea (una nueva línea) sin comenzar un nuevo párrafo.	
+</p>
+
+<p>Un texto dentro de una etiqueta <code>&lt;pre&gt;</code> se muestra en una fuente de ancho fijo (generalmente Courier), y conserva ambos espacios y saltos de línea.	
+</p>
+
+<table>
+    <tr>
+        <th>Etiqueta</th>
+        <th>Descripción</th>
+        <th>Ejemplo</th>
+        <th>Utilización</th>
+    </tr>
+    <tr>
+        <td>&lt;p&gt;</td>
+        <td>Define un párrafo de texto</td>
+		<td><p>Esto es un párrafo de texto.</p>
+       		<p>Esto es un párrafo de texto.</p>
+       </td>
+        <td>&lt;p&gt;Esto es un párrafo de texto.&lt;/p&gt; <br>
+        	&lt;p&gt;Esto es un párrafo de texto.&lt;/p&gt;
+        </td>
+    </tr>
+    <tr>
+        <td>&lt;br&gt;</td>
+        <td>Define un salto de línea</td>
+		<td>Esto es un salto de línea.<br>
+      		<br>
+       		Esto es un salto de línea.<br>
+       </td>
+        <td>Esto es un salto de línea.&lt;br&gt; <br> 
+        	&lt;br&gt; <br>
+        	Esto es un salto de línea.&lt;br&gt; <br>
+        </td>
+    </tr>
+    <tr>
+        <td>&lt;pre&gt;</td>
+        <td>Define un texto preformateado</td>
+		<td><pre>Esto es un texto preformateado. <br><br>Esto es un texto preformateado.   
+     		</pre> 
+      </td>
+        <td>&lt;pre&gt; Esto es un texto preformateado.<br><br> 
+        	Esto es un texto preformateado.&lt;/pre&gt; 
+        </td>
+    </tr>
+</table>
+<br>
+<div class="nota">
+<p><b>Nota:</b> Utilice el elemento <code>&lt;pre&gt;</code> cuando quiera mostrar el texto con formato inusual, o algún tipo de código informático</p>
+</div>
 
 <br>
 <h2><small>Ejemplo de uso</small></h2>
