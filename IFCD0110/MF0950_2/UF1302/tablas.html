@@ -161,18 +161,52 @@
 			width: 33.33%; 
 			background-color: white;
 		}
+		a:link {
+		  color: green; 
+		  background-color: transparent; 
+		  text-decoration: none;
+			padding: 20px;
+		}
+
+		a:visited {
+		  color: blue;
+		  background-color: transparent;
+		  text-decoration: none;
+			
+		}
+
+		a:hover {
+		  color: red;
+		  background-color: transparent;
+		  text-decoration: none;
+		}
+
+		a:active {
+		  color: yellow;
+			background-color: transparent;
+		  text-decoration: underline;
+		}
+		.active {
+		  	color: green;
+			background-color: transparent;
+		  text-decoration: underline;
+		}
     </style>
     <script src="js/funciones.js" type="text/javascript"></script>
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 
 <body>
+     <header>
      <a href="index.html"><img src="img/HTML5_Logo_64.png" alt="Logo HTML5" width="64" height="64" title="Inicio de la página"></a>
     <h1 id="inicio">HTML Tablas</h1>
+    </header>
     <hr>
+    <nav>
      <a href="index.html">Índice</a> | <a href="introduccion.html">Introducción</a> | <a href="bloques.html">Bloques</a> | <a href="formato.html">Formato</a> | <a href="listas.html">Listas</a> | <a href="tablas.html">Tablas</a> | <a href="multimedia.html">Multimedia</a> 
-    
+    </nav>
     <hr>
+    <aside>
     <ul>
 	   <li><a href="#etiquetasdefinentabla">Etiquetas que definen una tabla</a></li> 
 	   <li><a href="#atributoscope">El atributo Scope</a></li>
@@ -182,7 +216,23 @@
    	 
    	  
 	</ul>
+ 	 </aside>
+ 	 <hr>
+  	 <div style="overflow: hidden; width: auto;">  
+ 			<div style="width: 30%; float: left;">
+ 				<figure>
+  					<img src="img/html-tablas.png" alt="HTML5 tablas" width="300px">
+  				<figcaption align="center">Fig1. - HTML5 Tablas.</figcaption>
+			</figure>
+		</div>
+		<div style="width: 70%; float: left;">
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus esse, assumenda debitis libero laboriosam, necessitatibus consectetur praesentium veritatis explicabo quos quas nemo porro architecto laudantium aliquam iste fugit natus dicta.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus esse, assumenda debitis libero laboriosam, necessitatibus consectetur praesentium veritatis explicabo quos quas nemo porro architecto laudantium aliquam iste fugit natus dicta.</p>
+		
+	 	</div>
+	</div>
     <hr> 
+    <article>
 	<h2 id="etiquetasdefinentabla">Etiquetas que definen una tabla</h2>
 
 	<p>Una tabla HTML se define con la etiqueta <code>&lt;table&gt;</code>.</p>
@@ -237,8 +287,11 @@
         </tr>
     </table> 
     <br>
-	<hr>
+	
 	<a href="#inicio">Ir a Inicio</a>
+	</article>
+	<hr>
+	<article>
 	<h2 id="atributoscope">El atributo Scope</h2>
 	<p>El atributo scope provee un mecanismo para indicar explícitamente a qué celdas afecta una <b>celda de encabezado (th).</b> El atributo scope no tiene ningún efecto visual en los navegadores web normales, pero puede ser utilizado por los lectores de pantalla.</p>
 	<br>
@@ -326,8 +379,11 @@
  			</td>
  		</tr>  	
    </table>
-	<hr>
+	
 	<a href="#inicio">Ir a Inicio</a>
+	</article>
+	<hr>
+	<article>
 	<h2 id="colspanyrowspan">Los atributos colspan y rowspan</h2>
 	<p>El atributo colspan define el número de columnas que debe abarcar una celda. El atributo rowspan especifica el número de filas que debe abarcar una celda.</p>
 	
@@ -408,8 +464,11 @@
 		</td>
 		</tr>
 	</table>
-	<hr>
+	
 	<a href="#inicio">Ir a Inicio</a>
+	</article>
+	<hr>
+	<article>
 	<h2 id="colgroupycol">Los atributos colgroup y col</h2>
 	<p>La etiqueta <code>&lt;colgroup&gt;</code> especifica un grupo de una o más columnas en una tabla para formatear. La etiqueta <code>&lt;colgroup&gt;</code> es útil para aplicar estilos a columnas completas, en lugar de repetir los estilos para cada celda, para cada fila.</p>
 
@@ -503,8 +562,11 @@
 	  	</tr>
 	</table>
 	<br>
-	<hr>
+	
 	<a href="#inicio">Ir a Inicio</a>
+	</article>
+	<hr>
+	<article>
 	<h2 id="agrupacionporfilas">Agrupación por filas</h2>
 	<p>HTML provee tres elementos que pueden ayudar a los autores a organizar la información presentada en una tabla. Estas son: thead, para agrupar las filas que presentan información de encabezado; tfoot para contener a las filas que representan un pie o resumen; y tbody, para representar un bloque que consiste en un cuerpo de datos.</p>
 	<table class="tablaDemo" style="width: 95%; border: 0; text-align: center;">
@@ -630,8 +692,11 @@
 	      </table></td>
       </tr>
 </table>
-<hr>
+
 <a href="#inicio">Ir a Inicio</a>
+</article>
+<hr>
+<article>
 	<h2>Ejemplo</h2>
 	
 	<table width=100%>
@@ -694,10 +759,25 @@
 	      </tr>
         </tfoot>
   </table> 
-  <hr>
+ 
 
 <a href="#inicio">Ir a Inicio</a>
-		
+</article>
+<hr>
+<footer>
+	<a href="">Política de pivacidad</a> | <a href="">Aviso legal</a> | <a href="">Política cookies</a> | <a href="">FAQ</a> | <a href="">Condiciones generales</a> |
+</footer>
+<br>
+<footer>
+	<a href=""><img src="img/iconos32x32/facebooknegro32.png" alt="facebook negro"></a>
+	<a href=""><img src="img/iconos32x32/flickrnegro32.png" alt="flick negro"></a>
+	<a href=""><img src="img/iconos32x32/googleplusnegro32.png" alt="google plus"></a>
+	<a href=""><img src="img/iconos32x32/instagramnegro32.png" alt="instagram"></a>
+	<a href=""><img src="img/iconos32x32/linkdinnegro32.png" alt="linkedin"></a>
+	<a href=""><img src="img/iconos32x32/twitternegro32.png" alt="twitter"></a>
+	<a href=""><img src="img/iconos32x32/pinsterestnegro32.png" alt=""></a>
+	<a href=""><img src="img/iconos32x32/vimeonegro32.png" alt=""></a>
+</footer>		
 
 </body>
 </html>

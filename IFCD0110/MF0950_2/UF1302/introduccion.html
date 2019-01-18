@@ -87,6 +87,36 @@ padding: 8px;
 tr:nth-child(even) {
 background-color: #dddddd;
 }
+	a:link {
+		  color: green; 
+		  background-color: transparent; 
+		  text-decoration: none;
+			padding: 20px;
+		}
+
+		a:visited {
+		  color: blue;
+		  background-color: transparent;
+		  text-decoration: none;
+			
+		}
+
+		a:hover {
+		  color: red;
+		  background-color: transparent;
+		  text-decoration: none;
+		}
+
+		a:active {
+		  color: yellow;
+			background-color: transparent;
+		  text-decoration: underline;
+		}
+		.active {
+		  	color: green;
+			background-color: transparent;
+		  text-decoration: underline;
+		}
 
 </style>
 
@@ -98,13 +128,18 @@ background-color: #dddddd;
  
     </head>
 <body>
+<header>
  <a href="index.html"><img src="img/HTML5_Logo_64.png" alt="Logo HTML5" width="64" height="64" title="Inicio de la página"></a>
-<h1 id="inicio">HTML Introducción</h1>
+<h1 id="inicio">HTML Introducción</h1></header>
 <hr>
- <a href="index.html">Índice</a> | <a href="introduccion.html">Introducción</a> | <a href="bloques.html">Bloques</a> | <a href="formato.html">Formato</a> | <a href="listas.html">Listas</a> | <a href="tablas.html">Tablas</a> | <a href="multimedia.html">Multimedia</a> 
+<nav>
+ 		<a href="index.html">Índice</a> | <a href="introduccion.html">Introducción</a> | <a href="bloques.html">Bloques</a> | <a href="formato.html">Formato</a> | <a href="listas.html">Listas</a> | <a href="tablas.html">Tablas</a> | <a href="multimedia.html">Multimedia</a> 
+ </nav>
+   
     
  <hr> 
- <hr> 
+ 
+    <aside>
      <ul>
 	   <li><a href="#queeshtml">¿Qué es HTML?</a></li> 
 	   <li><a href="#estructurabasica">Estructura básica de un documento HTML</a></li>
@@ -116,6 +151,21 @@ background-color: #dddddd;
 	   
 	   
 	</ul> 
+	</aside>
+	<div style="overflow: hidden; width: auto;">  
+ 		<div style="width: 30%; float: left;">
+ 			<figure>
+  				<img src="img/html-formatos.png" alt="HTML5 formatos" width="300px">
+  				<figcaption align="center">Fig1. - HTML5 Formatos.</figcaption>
+			</figure>
+		</div>
+		<div style="width: 70%; float: left;">
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus esse, assumenda debitis libero laboriosam, necessitatibus consectetur praesentium veritatis explicabo quos quas nemo porro architecto laudantium aliquam iste fugit natus dicta.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus esse, assumenda debitis libero laboriosam, necessitatibus consectetur praesentium veritatis explicabo quos quas nemo porro architecto laudantium aliquam iste fugit natus dicta.</p>
+		
+	</div>
+</div>
+	<article>
 <h2 id="queeshtml">¿Qué es HTML?</h2>
 <p>HTML es el lenguaje de marcado estándar para la creación de páginas Web.</p>
 
@@ -128,8 +178,11 @@ background-color: #dddddd;
 <li>Los navegadores web son los encargados de visualizar las páginas web.</li>
 <li>El navegador no muestra las etiquetas HTML, sólo las lee, las interpreta y las representa.</li>
 </ul>
-<hr>
+
 <a href="#inicio">Ir a Inicio</a>
+</article>
+<hr>
+<article>
 <div>
 <h2 id="estructurabasica">Estructura básica de un documento HTML</h2>
 <div class="ejemplo">
@@ -163,8 +216,11 @@ background-color: #dddddd;
 </div>
 </div>
 </div>
-<hr>
+
 <a href="#inicio">Ir a Inicio</a>
+</article>
+<hr>
+<article>
 <div>
 <h2 id="explicacionetiquetasbasicas">Explicación de las etiquetas básicas HTML</h2>
 
@@ -181,8 +237,11 @@ background-color: #dddddd;
 <li>La etiqueta <code>&lt;!-- ... --&gt;</code> inserta comentarios en el código   HTML.</li>
 </ol>
 </div>
-<hr>
+
 <a href="#inicio">Ir a Inicio</a>
+</article>
+<hr>
+<article>
 <div>
 <h2 id="etiquetashtml">Etiquetas HTML</h2>
 <p>Las etiquetas HTML son los nombres de los elementos entre paréntesis angulares.</p>
@@ -205,8 +264,11 @@ background-color: #dddddd;
 </div>
 
 </div>
-<hr>
+
 <a href="#inicio">Ir a Inicio</a>
+</article>
+<hr>
+<article>
 <div>
 <h2 id="navegadoresweb">Navegadores web</h2>
 <p>El propósito de un navegador web  es leer los documentos HTML y mostrarlos.<br>
@@ -214,8 +276,11 @@ El navegador no muestra las etiquetas HTML, pero las utiliza para determinar com
 <img src="img/img_chrome.png" alt="imagen navegador Chrome" width="635" height="361">
 
 </div>
-<hr>
+
 <a href="#inicio">Ir a Inicio</a>
+</article>
+<hr>
+<article>
 <div>
 <h2 id="versioneshtml">Versiones de HTML</h2>
 <p>Desde los primeros días de la web, ha habido muchas versiones de HTML.</p>
@@ -252,8 +317,11 @@ El navegador no muestra las etiquetas HTML, pero las utiliza para determinar com
 
 </div>
 <br>
-<hr>
+
 <a href="#inicio">Ir a Inicio</a>
+</article>
+<hr>
+<article>
 <h2 id="estructurapaginahtml">Estructura de una página HTML</h2>
 <p>A continuación se muestra una visualización de una estructura de la página HTML:</p>
 <div style="width:99%;border:1px solid grey;padding:3px;margin:0;background-color:#ddd">&lt;html&gt;
@@ -280,6 +348,21 @@ El navegador no muestra las etiquetas HTML, pero las utiliza para determinar com
 </div>
 <hr>
 <a href="#inicio">Ir a Inicio</a>
-
+</article>
+<hr>
+<footer>
+	<a href="">Política de pivacidad</a> | <a href="">Aviso legal</a> | <a href="">Política cookies</a> | <a href="">FAQ</a> | <a href="">Condiciones generales</a> |
+</footer>
+<br>
+<footer>
+	<a href=""><img src="img/iconos32x32/facebooknegro32.png" alt="facebook negro"></a>
+	<a href=""><img src="img/iconos32x32/flickrnegro32.png" alt="flick negro"></a>
+	<a href=""><img src="img/iconos32x32/googleplusnegro32.png" alt="google plus"></a>
+	<a href=""><img src="img/iconos32x32/instagramnegro32.png" alt="instagram"></a>
+	<a href=""><img src="img/iconos32x32/linkdinnegro32.png" alt="linkedin"></a>
+	<a href=""><img src="img/iconos32x32/twitternegro32.png" alt="twitter"></a>
+	<a href=""><img src="img/iconos32x32/pinsterestnegro32.png" alt=""></a>
+	<a href=""><img src="img/iconos32x32/vimeonegro32.png" alt=""></a>
+</footer>
 </body>
 </html>

@@ -167,12 +167,36 @@
 			background-color: white;
 		}
 		
-		
-		li {
-  			color: darkred;
-  			text-align: center; 			
-  			text-decoration: none;
-			}
+		a:link {
+		  color: green; 
+		  background-color: transparent; 
+		  text-decoration: none;
+			padding: 20px;
+		}
+
+		a:visited {
+		  color: blue;
+		  background-color: transparent;
+		  text-decoration: none;
+			
+		}
+
+		a:hover {
+		  color: red;
+		  background-color: transparent;
+		  text-decoration: none;
+		}
+
+		a:active {
+		  color: yellow;
+			background-color: transparent;
+		  text-decoration: underline;
+		}
+		.active {
+		  	color: green;
+			background-color: transparent;
+		  text-decoration: underline;
+		}
 		
     </style>
     <script src="js/funciones.js" type="text/javascript"></script>
@@ -180,12 +204,16 @@
 </head>
 
 <body>
+     <header>
      <a href="index.html"><img src="img/HTML5_Logo_64.png" alt="Logo HTML5" width="64" height="64" title="Inicio de la página"></a>
     <h1 id="inicio">HTML Listas</h1>
+    </header>
     <hr>
+    <nav>
      <a href="index.html">Índice</a> | <a href="introduccion.html">Introducción</a> | <a href="bloques.html">Bloques</a> | <a href="formato.html">Formato</a> | <a href="listas.html">Listas</a> | <a href="tablas.html">Tablas</a> | <a href="multimedia.html">Multimedia</a> 
-    
+    </nav>
     <hr>
+    <aside>
     <ul>
 	   <li><a href="#etiquetasdefinelista">Etiquetas que definen una lista</a></li>
 	   <li><a href="#listasordenadas">Listas ordenadas: Ejemplos</a></li> 
@@ -193,8 +221,22 @@
 	    <li><a href="#listasanidadas">Listas anidadas</a></li>  
 	   
 	 </ul> 
+   </aside>
+    <div style="overflow: hidden; width: auto;">  
+ 			<div style="width: 30%; float: left;">
+ 				<figure>
+  					<img src="img/html-listas.png" alt="HTML5 Listas" width="300px">
+  				<figcaption align="center">Fig1. - HTML5 Listas.</figcaption>
+			</figure>
+		</div>
+		<div style="width: 70%; float: left;">
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus esse, assumenda debitis libero laboriosam, necessitatibus consectetur praesentium veritatis explicabo quos quas nemo porro architecto laudantium aliquam iste fugit natus dicta.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus esse, assumenda debitis libero laboriosam, necessitatibus consectetur praesentium veritatis explicabo quos quas nemo porro architecto laudantium aliquam iste fugit natus dicta.</p>
+		
+	</div>
+	</div>
      <hr> 
-    
+    <article>
 	<h2 id="etiquetasdefinelista">Etiquetas que definen una lista</h2>
 
 	<p>Una tabla HTML se define con la etiqueta <code>&lt;table&gt;</code>.</p>
@@ -237,8 +279,11 @@
     	<p><b>Nota:</b> Los elementos de la lista pueden contener una nueva lista y otros elementos HTML, como imágenes, enlaces, etc.
     	</p>
     </div>
-	<hr>
+	
 	<a href="#inicio">Ir a Inicio</a>
+	</article>
+	<hr>
+	<article>
 	<h2 id="listasordenadas">Listas ordenadas: Ejemplos</h2>
 	<p>Las listas ordenadas son casi idénticas a las listas no ordenadas, salvo que en este caso los elementos relacionados se muestran siguiendo un orden determinado. La lista ordenada se define mediante la etiqueta &lt;ol&gt;. Los elementos de la lista se definen mediante la etiqueta &lt;li&gt;, la misma que se utiliza en las listas no ordenadas. Se puede utilizar el estilo CSS list-style-type para especificar el tipo de numeración. El atributo type en la etiqueta &lt;ol&gt; sí se admite en HTML5</p>
 	
@@ -301,7 +346,9 @@
 </table>
 	<br>
 	<a href="#inicio">Ir a Inicio</a>
+	</article>
 	<hr>
+	<article>
 	<h2 id="listasdesordenadas">Listas desordenadas</h2>
 	<p>Una lista no ordenada es un conjunto de elementos relacionados entre sí para los que no se indica un orden o secuencia determinados. La etiqueta &lt;ul&gt; encierra todos los elementos de la lista y la etiqueta &lt;li&gt; cada uno de sus elementos. Se puede utilizar el estilo CSS list-style-type para especificar el tipo de viñeta. El atributo type en la etiqueta &lt;ul&gt; no se admite en HTML5.</p>
 	<table width=100%; bordercolor="black">
@@ -347,7 +394,9 @@
 </table>
 <br>
 <a href="#inicio">Ir a Inicio</a>
+</article>
 <hr>
+<article>
 	<h2 id="listasanidadas">Listas anidadas</h2>
 	<div id="divPadre">
 		<div id="divHijo1">
@@ -381,6 +430,9 @@
 				</ul>			
 		</div>
 	</div>
+	</article>
+	<hr>
+	<article>
 	<h2>Listas de definición</h2>
 	<div style=" width: 20%; background-color: antiquewhite;">
 		<dl>
@@ -402,8 +454,23 @@
 			</dd>
 		</dl>			  	
 	</div>
-	<hr>
+	
 <a href="#inicio">Ir a Inicio</a>	
-	<br>
+</article>
+	<hr>
+<footer>
+	<a href="">Política de pivacidad</a> | <a href="">Aviso legal</a> | <a href="">Política cookies</a> | <a href="">FAQ</a> | <a href="">Condiciones generales</a> |
+</footer>
+<br>
+<footer>
+	<a href=""><img src="img/iconos32x32/facebooknegro32.png" alt="facebook negro"></a>
+	<a href=""><img src="img/iconos32x32/flickrnegro32.png" alt="flick negro"></a>
+	<a href=""><img src="img/iconos32x32/googleplusnegro32.png" alt="google plus"></a>
+	<a href=""><img src="img/iconos32x32/instagramnegro32.png" alt="instagram"></a>
+	<a href=""><img src="img/iconos32x32/linkdinnegro32.png" alt="linkedin"></a>
+	<a href=""><img src="img/iconos32x32/twitternegro32.png" alt="twitter"></a>
+	<a href=""><img src="img/iconos32x32/pinsterestnegro32.png" alt=""></a>
+	<a href=""><img src="img/iconos32x32/vimeonegro32.png" alt=""></a>
+</footer>
 </body>
 </html>

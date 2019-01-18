@@ -101,6 +101,36 @@
             border-left: 4px solid #4CAF50; 
             /*color: black;*/
          }
+		a:link {
+		  color: green; 
+		  background-color: transparent; 
+		  text-decoration: none;
+			padding: 20px;
+		}
+
+		a:visited {
+		  color: blue;
+		  background-color: transparent;
+		  text-decoration: none;
+			
+		}
+
+		a:hover {
+		  color: red;
+		  background-color: transparent;
+		  text-decoration: none;
+		}
+
+		a:active {
+		  color: yellow;
+			background-color: transparent;
+		  text-decoration: underline;
+		}
+		.active {
+		  	color: green;
+			background-color: transparent;
+		  text-decoration: underline;
+		}
         
     </style>
     <script src="js/funciones.js" type="text/javascript"></script>
@@ -108,26 +138,52 @@
 </head>
 
 <body>
-     <a href="index.html"><img src="img/HTML5_Logo_64.png" alt="Logo HTML5" width="64" height="64" title="Inicio de la página"></a>
-    <h1 id="inicio">HTML formato</h1>
-    <hr>
- <a href="index.html">Índice</a> | <a href="introduccion.html">Introducción</a> | <a href="bloques.html">Bloques</a> | <a href="formato.html">Formato</a> | <a href="listas.html">Listas</a> | <a href="tablas.html">Tablas</a> | <a href="multimedia.html">Multimedia</a> 
+     <header><a href="index.html"><img src="img/HTML5_Logo_64.png" alt="Logo HTML5" width="64" height="64" title="Inicio de la página"></a>
+    <h1 id="inicio">HTML formato</h1></header>
      
+    <hr>
+    <nav> <a href="index.html">Índice</a> | <a href="introduccion.html">Introducción</a> | <a href="bloques.html">Bloques</a> | <a href="formato.html">Formato</a> | <a href="listas.html">Listas</a> | <a href="tablas.html">Tablas</a> | <a href="multimedia.html">Multimedia</a> </nav>
     <hr> 
+	<aside>    
      <ul>
 	   <li><a href="#formatotexto">Formato del texto</a></li> 
 	   <li><a href="#formateoelementoshtml">Formateo de elementos HTML</a></li>
 	   <li><a href="#etiquetasseparantexto">Etiquetas que separan el texto</a></li> 
-	</ul>   
+	</ul> 
+   </aside>  
     <hr>
     
+    <div style="overflow: hidden; width: auto;">  
+ 		<div style="width: 30%; float: left;">
+ 			<figure>
+  				<img src="img/html-formatos.png" alt="HTML5 formatos" width="300px">
+  				<figcaption align="center">Fig1. - HTML5 Formatos.</figcaption>
+			</figure>
+		</div>
+		<div style="width: 70%; float: left;">
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus esse, assumenda debitis libero laboriosam, necessitatibus consectetur praesentium veritatis explicabo quos quas nemo porro architecto laudantium aliquam iste fugit natus dicta.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus esse, assumenda debitis libero laboriosam, necessitatibus consectetur praesentium veritatis explicabo quos quas nemo porro architecto laudantium aliquam iste fugit natus dicta.</p>
+		
+		</div>
+</div>
+    <article>
 <h2 id="formatotexto">Formato del texto</h2>	
     
-    <div><img src="../img/html-formatos-de-texto.png" alt="Formatos de texto" width="500px" style="float: right"></div>
+    <div style="overflow: hidden; width: auto;">
+    <div style="width: 30%; float: right;">
+    		<figure>
+  				<img src="img/html-formatos-de-texto.png" alt="Formatos de texto" width="300px" style="float: right">
+  				<figcaption align="center">Fig2. - HTML5 Formatos de texto.</figcaption>
+			</figure>
+    	</div>
     
-    <p>El formato de texto es el marcado que se aplica a un texto para añadirle datos de forma.</p>
+    <div style="width: 70%; float: right;"><p>El formato de texto es el marcado que se aplica a un texto para añadirle datos de forma.</p>
     <p>Al texto resultante se le conoce como texto formateado, texto con estilos o texto enriquecido.</p>
+    </div>
+    </div>
+    </article>
     <hr>
+    <article>
     <h2>Encabezados de texto</h2>
 
     <p>Los motores de búsqueda utilizan los encabezados para indexar la estructura y el contenido de sus páginas web.</p> 
@@ -186,7 +242,9 @@
     </table>
 <br>
 <a href="#inicio">Ir a Inicio</a>
+</article>
 <hr>
+<article>
 <h2 id="formateoelementoshtml">Formateo de elementos HTML</h2>
 <p>HTML también define etiquetas especiales para la definición del texto con un especial significado.</p>
 <p>HTML utiliza etiquetas para el formato de salida, como negrita o cursiva de texto.</p>
@@ -275,7 +333,9 @@
 <p><b>Nota:</b> Los navegadores muestran <code>&lt;strong&gt;</code> como <code>&lt;b&gt;</code>, y <code>&lt;em&gt;</code> como <code>&lt;i&gt;</code>. Sin embargo, hay una diferencia en el significado de las siguientes etiquetas: <code>&lt;b&gt;</code> y <code>&lt;i&gt;</code> define el texto en negrita y cursiva, pero <code>&lt;strong&gt;</code> y <code>&lt;em&gt;</code> significa que el texto es <strong>"importante"</strong>.</p>
 </div>
 <a href="#inicio">Ir a Inicio</a>
+</article>
 <hr>
+<article>
 <h2 id="etiquetasseparantexto">Etiquetas que separan el texto</h2>
 
 <p>La etiqueta <code>&lt;p&gt;</code> separa el texto, añadiendo automáticamente un espacio (margen) antes y después de cada elemento <code>&lt;p&gt;</code>. El navegador eliminará todos los espacios en blanco y las líneas adicionales cuando se visualiza la etiqueta <code>&lt;p&gt;</code>.
@@ -331,8 +391,10 @@
 <p><b>Nota:</b> Utilice el elemento <code>&lt;pre&gt;</code> cuando quiera mostrar el texto con formato inusual, o algún tipo de código informático</p>
 </div>
 <a href="#inicio">Ir a Inicio</a>
+</article>
 <hr>
 <br>
+<article>
 <h2><small>Ejemplo de uso</small></h2>
 
 <p> <mark> <strong>Texto en negrita y resaltado</strong></mark></p>
@@ -344,5 +406,21 @@
 
 <p><strong>W3C</strong> (<i><b>W</b></i>orld <b>W</b>ide <b>W</b>eb <b>C</b>onsortium)</p>
 <br>
+</article>
+<hr>
+<footer>
+	<a href="">Política de pivacidad</a> | <a href="">Aviso legal</a> | <a href="">Política cookies</a> | <a href="">FAQ</a> | <a href="">Condiciones generales</a> |
+</footer>
+<br>
+<footer>
+	<a href=""><img src="img/iconos32x32/facebooknegro32.png" alt="facebook negro"></a>
+	<a href=""><img src="img/iconos32x32/flickrnegro32.png" alt="flick negro"></a>
+	<a href=""><img src="img/iconos32x32/googleplusnegro32.png" alt="google plus"></a>
+	<a href=""><img src="img/iconos32x32/instagramnegro32.png" alt="instagram"></a>
+	<a href=""><img src="img/iconos32x32/linkdinnegro32.png" alt="linkedin"></a>
+	<a href=""><img src="img/iconos32x32/twitternegro32.png" alt="twitter"></a>
+	<a href=""><img src="img/iconos32x32/pinsterestnegro32.png" alt=""></a>
+	<a href=""><img src="img/iconos32x32/vimeonegro32.png" alt=""></a>
+</footer>
 </body>
 </html>

@@ -157,25 +157,76 @@
 			width: 33.33%; 
 			background-color: white;
 		}
+		a:link {
+		  color: green; 
+		  background-color: transparent; 
+		  text-decoration: none;
+			padding: 20px;
+		}
+
+		a:visited {
+		  color: blue;
+		  background-color: transparent;
+		  text-decoration: none;
+			
+		}
+
+		a:hover {
+		  color: red;
+		  background-color: transparent;
+		  text-decoration: none;
+		}
+
+		a:active {
+		  color: yellow;
+			background-color: transparent;
+		  text-decoration: underline;
+		}
+		.active {
+		  	color: green;
+			background-color: transparent;
+		  text-decoration: underline;
+		}
     </style>
     <script src="js/funciones.js" type="text/javascript"></script>
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 
 <body>
-    <a href="index.html"><img src="img/HTML5_Logo_64.png" alt="Logo HTML5" width="64" height="64" title="Inicio de la página"></a>
-    <h1 id="inicio">HTML Bloques</h1>
+    <header><a href="index.html"><img src="img/HTML5_Logo_64.png" alt="Logo HTML5" width="64" height="64" title="Inicio de la página"></a></header>
     <hr>
+    
+    <nav><h1 id="inicio">HTML Bloques</h1>
+    
      <a href="index.html">Índice</a> | <a href="introduccion.html">Introducción</a> | <a href="bloques.html">Bloques</a> | <a href="formato.html">Formato</a> | <a href="listas.html">Listas</a> | <a href="tablas.html">Tablas</a> | <a href="multimedia.html">Multimedia</a> 
+     </nav>
     
     <hr> 
     
-    <ul>
-	   <li><a href="#etiquetastexto">Etiquetas que citan el texto</a></li> 
-	   <li><a href="#elementosagrupantexto">Elementos que agrupan el texto</a></li>
-	   <li><a href="#etiquetascodigo">Etiquetas de código de computadora</a></li>
-	</ul>   
+   <aside>
+   		<ul>
+		   <li><a href="#etiquetastexto">Etiquetas que citan el texto</a></li> 
+		   <li><a href="#elementosagrupantexto">Elementos que agrupan el texto</a></li>
+		   <li><a href="#etiquetascodigo">Etiquetas de código de computadora</a></li>
+		</ul>
+    </aside>
+      
+   <div style="overflow: hidden; width: auto;">  
+ 	<div style="width: 30%; float: left;">
+ 		<figure>
+  			<img src="img/html-bloques.png" alt="HTML5 bloques de contenido" width="300px">
+  			<figcaption align="center">Fig1. - HTML5 Bloques de contenido.</figcaption>
+		</figure>
+	</div>
+	<div style="width: 70%; float: left;">
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus esse, assumenda debitis libero laboriosam, necessitatibus consectetur praesentium veritatis explicabo quos quas nemo porro architecto laudantium aliquam iste fugit natus dicta.</p>
+		
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus esse, assumenda debitis libero laboriosam, necessitatibus consectetur praesentium veritatis explicabo quos quas nemo porro architecto laudantium aliquam iste fugit natus dicta.</p>
+	</div>
+</div>
+       
     <hr>
+    <article>
 	<h2 id="etiquetastexto">Etiquetas que citan el texto</h2>
 
     <p>Las abreviaturas de marcado <code>&lt;abbr&gt;</code> pueden proporcionar información útil a los navegadores, sistemas de traducción y motores de búsqueda. Utiliza el atributo <code>&lt;title&gt;</code> para definir el significado dela abreviación</p> 
@@ -245,6 +296,9 @@
     </div>
     <hr>
     <a href="#inicio">Ir a Inicio</a>
+    </article>
+    <hr>
+    <article>
     <h2 id="elementosagrupantexto">Elementos que agrupan el texto</h2>
     <p>El <code>&lt;div&gt;</code> se utiliza a menudo como un contenedor para otros elementos HTML. 
 	El elemento <code>&lt;div&gt;</code> tiene atributos, pero no son necesarios. Los más comunes son style, class y id para dar estilos CSS al bloque de contenido. 
@@ -305,10 +359,13 @@
     	<p><b>Nota:</b> Un elemento en bloque siempre empieza en una nueva línea y ocupa todo el ancho disponible (se extiende hacia la izquierda y la derecha tanto como sea posible). Un elemento en línea no se inicia en nueva línea, sólo ocupa el ancho que sea necesario.
     	</p>
  </div>
- <hr>
+ 
  <br>
  
-  	<a href="#inicio">Ir a Inicio</a> 	
+  	<a href="#inicio">Ir a Inicio</a>
+  	</article>
+  	<hr> 	
+  	<article>
  <h2 id="etiquetascodigo">Etiquetas de código de computadora</h2>
   	
  <br>
@@ -380,8 +437,24 @@
     	<var>iħ (∂/∂t).ψ=Hψ</var> Schrodinger <br>  	
     	</div>
  </div>
+ </article>
  
- <hr>
+ 
 <a href="#inicio">Ir a Inicio</a>
+<hr>
+<footer>
+	<a href="">Política de pivacidad</a> | <a href="">Aviso legal</a> | <a href="">Política cookies</a> | <a href="">FAQ</a> | <a href="">Condiciones generales</a> |
+</footer>
+<br>
+<footer>
+	<a href=""><img src="img/iconos32x32/facebooknegro32.png" alt="facebook negro"></a>
+	<a href=""><img src="img/iconos32x32/flickrnegro32.png" alt="flick negro"></a>
+	<a href=""><img src="img/iconos32x32/googleplusnegro32.png" alt="google plus"></a>
+	<a href=""><img src="img/iconos32x32/instagramnegro32.png" alt="instagram"></a>
+	<a href=""><img src="img/iconos32x32/linkdinnegro32.png" alt="linkedin"></a>
+	<a href=""><img src="img/iconos32x32/twitternegro32.png" alt="twitter"></a>
+	<a href=""><img src="img/iconos32x32/pinsterestnegro32.png" alt=""></a>
+	<a href=""><img src="img/iconos32x32/vimeonegro32.png" alt=""></a>
+</footer>
 </body>
 </html>
