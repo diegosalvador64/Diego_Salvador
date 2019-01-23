@@ -1,0 +1,55 @@
+Definición de accesibilidad web
+Normalmente la accesibilidad web se asocia con la idea de desarrollar páginas web que puedan ser utilizadas por las personas con discapacidad, tal como podemos leer en las siguientes definiciones:
+
+La accesibilidad Web significa que personas con algún tipo de discapacidad van a poder hacer uso de la Web. En concreto, al hablar de accesibilidad Web se está haciendo referencia a un diseño Web que va a permitir que estas personas puedan percibir, entender, navegar e interactuar con la Web, aportando a su vez contenidos. La accesibilidad Web también beneficia a otras personas, incluyendo personas de edad avanzada que han visto mermadas sus habilidad a consecuencia de la edad.
+
+Fuente: Introducción a la Accesibilidad Web, W3C.
+
+La accesibilidad web o de la interfaz, indica la capacidad de acceso a la Web y a sus contenidos por todas las personas, independientemente de la discapacidad (física, intelectual o técnica) que presenten o de las que se deriven del contexto de uso (tecnológicas o ambientales). Esta cualidad está íntimamente relacionada con la usabilidad.
+
+El máximo organismo dentro de la jerarquía de Internet que se encarga de promover la accesibilidad es el W3C, en especial su grupo de trabajo WAI.
+
+En España una de las asociaciones que trabaja en este campo es el SIDAR. En enero de 2007 el Instituto Nacional de Tecnologías de la Comunicación (INTECO) creó el Centro de Referencia en Accesibilidad y Estándares Web con el objetivo de fomentar la accesibilidad y crear un foco de conocimiento al respecto.
+
+Fuente: Accesibilidad web, Wikipedia.
+
+A web site is accessible if people with specific disabilities can use it with the same effectiveness, safety and security as non-disabled people.
+
+Un sitio web es accesible si las personas con discapacidad lo pueden utilizar con la misma efectividad, seguridad y protección que las personas sin discapacidad.
+
+Fuente: Validity and Reliability of Accessibility Evaluation Methods, Giorgio Brajnik.
+
+Guía breve para crear sitios web accesibles
+
+El World Wide Web Consortium (W3C) publica la guía Quick Tips to Make Accessible Web Sites (traducción al español disponible en Guía breve para crear sitios web accesibles). Los 10 consejos que proporcionan son:
+
+Imágenes y animaciones: Use el atributo alt para describir la función de cada elemento visual.
+Mapas de imagen: Use el elemento map y texto para las zonas activas.
+Multimedia: Proporcione subtítulos y transcripción del sonido, y descripción del vídeo.
+Enlaces de hipertexto: Use texto que tenga sentido leído fuera de contexto. Por ejemplo, evite "pincha aquí".
+Organización de las páginas: Use encabezados, listas y estructura consistente. Use CSS para la maquetación donde sea posible.
+Figuras y diagramas: Descríbalos brevemente en la pagina o use el atributo longdesc.
+Scripts, applets y plug-ins: Ofrezca contenido alternativo si las funciones nuevas no son accesibles.
+Marcos: Use el elemento noframes y títulos con sentido.
+Tablas: Facilite la lectura línea a línea. Resuma.
+Revise su trabajo: Verifique. Use las herramientas, puntos de comprobación y pautas de http://www.w3.org/TR/WCAG/.
+
+Esta guía son únicamente consejos que ayudan cuando se tiene un "primer contacto" con la accesibilidad web, pero en ningún caso implican que su cumplimiento garantice que se alcance algún nivel de adecuación (A, AA o AAA).
+
+Los consejos proporcionados en esta guía breve se pueden resumir en los siguientes puntos:
+
+Utiliza estándares abiertos.
+Utiliza los estándares correctamente: comprueba que el sitio web se valida correctamente.
+Evita el uso de tecnologías propietarias.
+Proporciona alternativas al contenido que puede presentar problemas de accesibilidad.
+
+Importante
+
+Visual
+La ceguera, la baja visión y la ceguera al color.
+Audición
+La sordera.
+Motor
+La incapacidad para utilizar un ratón, el tiempo de respuesta lento, el control motor delicado.
+Cognitivo
+Dificultades de aprendizaje, distracción, incapacidad para recordar o concentrarse en grandes cantidades de información.
