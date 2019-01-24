@@ -1,0 +1,72 @@
+Navegadores web
+navegadores	
+Principales características
+Seguridad y provacidad: Ofrecen seguridad contra software malicioso.
+Velocidad: Cargan rápidametne páginas y aplicaciones web.
+Productividad: Contienen marcadores, pestañas e historial.
+Compatibilidad: Están en continuo crecimiento y desarrollo.
+Simplicidad: Están diseñados para ser lo más sencillo posible.
+Navegadores web más usados
+Algunos navegadores vienen incorporados a su sistema operativo como es el caso de Internet Explorer o Microsoft Edge en Windows, Safari en MacOS e iOS, Firefox, Opera en Linux y Chrome en Android. Para hacernos una idea con datos y conocer mejor el porcentaje de usuarios de cada navegador, el ranking final de navegadores más empleados en el mundo es el siguiente:
+
+Cuota de mercado 2018
+Chome
+Chrome	Safari
+Safari	Firefox
+Firefox	
+Explorer	
+Edge	
+Opera
+58,4%	15,3%	10,1%	9,2%	4,9%	2,1%
+Descargar	Descargar	Descargar	Descargar	Descargar	Descargar
+Funcionalidad de los navegadores web
+Todos los navegadores incluyen la mayoría de las siguientes características: navegación por pestañas, bloqueador de ventanas emergentes, soporte para motores de búsqueda, gestor de descargas, marcadores, corrector ortográfico, y atajos del teclado. Para mantener la privacidad casi todos los navegadores ofrecen maneras sencillas de borrar cookies, cachés web y el historial.
+
+Funcionalidades de los navegadores web
+FUNCIONES	Chome
+Chrome	Safari
+Safari	Firefox
+Firefox	
+Explorer	
+Edge	
+Opera
+Sincronización en la nube	no válido SI	no válido Sí	no válido Sí	no válido No	no válido Sí	no válido Sí
+Gestor de descargas	no válido Sí	no válido Sí	no válido Sí	no válido Sí	no válido Sí	no válido Sí
+Navegación privada	no válido Sí	no válido Sí	no válido Sí	no válido Sí	no válido Sí	no válido Sí
+Modo de pantalla completa	no válido Sí	no válido No	no válido Sí	no válido Sí	no válido Sí	no válido Sí
+Pestañas verticales	no válido Sí	no válido No	no válido Sí	no válido No	no válido No	no válido Sí
+Extensiones personalizadas	no válido Sí	no válido No	no válido Sí	no válido Sí	no válido No	no válido Sí
+Valoración	valoración 6	valoración 3	valoración 6	valoración 4	valoración 4	valoración 6
+Compatibidad de los navegadores web
+La compatibilidad entre navegadores se refiere a que una página web se muestre de forma muy similar en todos los navegadores y en todos los sistemas operativos. Aunque los navegadores cada vez cumplen más los estándares que marca la W3C, entre ellos hay diferencias: reglas que no son soportadas, diferentes interpretaciones de una especificación, lo cual se traduce en que las páginas web no siempre se ven igual entre ellos.
+
+Compatibilidad entre sitemas operativos
+COMPATIBILIDAD	Chome
+Chrome	Safari
+Safari	Firefox
+Firefox	
+Explorer	
+Edge	
+Opera
+Windows	no válido Sí	no válido Sí	no válido Sí	no válido Sí	no válido Sí	no válido Sí
+macOS	no válido Sí	no válido Sí	no válido Sí	no válido No	no válido No	no válido Sí
+Linux	no válido Sí	no válido No	no válido Sí	no válido No	no válido No	no válido Sí
+Android	no válido Sí	no válido No	no válido Sí	no válido No	no válido No	no válido Sí
+iOS	no válido Sí	no válido Sí	no válido Sí	no válido No	no válido No	no válido Sí
+Windows Phone	no válido No	no válido No	no válido No	no válido Sí	no válido Sí	no válido Sí
+Valoración	valoración 5	valoración 3	valoración 5	valoración 2	valoración 2	valoración 6
+Detalles del software de los navegadores web
+Los navegadores de Internet siempre cumplen con el solo objetivo de permitirnos acceder a Internet desde cualquier lugar en que nos encontremos, e independientemente de la plataforma desde la cual los estemos usando. Sin embargo, cada plataforma exige que los navegadores web se comporten o estén desarrollados de una determinada manera.
+
+Detalles del Navegador
+DETALLES DEL SOFTWARE	Chome
+Chrome	Safari
+Safari	Firefox
+Firefox	Explorer
+Explorer	Edge
+Edge	Opera
+Opera
+Plataforma	WebKit 	WebKit 	Gecko 	Trident 	 EdgeHTML	 WebKit
+Motor de JavaScript 	V8 	Nitro 	TraceMonkey 	Chakra 	Chakra 	Carakan 
+Código abierto 	Sí 	No 	Sí 	No 	No 	No 
+Página web	Chrome	Safari	Firefox	Explorer	Edge	Opera
