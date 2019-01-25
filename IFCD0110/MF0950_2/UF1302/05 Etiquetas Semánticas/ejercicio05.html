@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ES">
+<head>
+    <title>Etiquetas que dan formato al texto</title>
+    <meta charset="UTF-8">
+    
+    <meta name="description" content="Diseño páginas web con HTML, CSS y Javascript">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="title" content="Confección y publicación de páginas web">
+    <meta name="author" content="Diego Salvador">
+
+    <!-- Para referirse a archivos sin tener que poner siempre la URL completa. Por ejemplo en las imágenes de nuestra web, solo hace falta el nombre de la imagen -->
+    <!-- <base href="https://www.mipagina.com/img/" target="_blank"> -->
+
+    <link rel="icon" type="image/png" href="img/html5.png">
+	<link rel="icon" type="image/gif" href="img/html5.gif">
+	<link rel="icon" type="image/vnd.microsoft.icon" href="img/html5.ico">
+
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="img/favicon.ico" type="image/ico">
+    
+    
+    <style>
+        body {
+            font-family: Gotham, Helvetica Neue, Helvetica, Arial," sans-serif";
+			color: black;
+            width:80%;
+            margin: 0 auto; /* centrar la página */
+			text-align: justify;
+			background-color:rgba(217,213,213,1.00);
+        }
+        h1,h2,h3,h4,h5,h6 { 
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+		
+			
+		hr {border: 1px solid #D4D2D2;}
+		
+		a:link {
+		  color: blue; 
+		  background-color: transparent; 
+		  text-decoration: none;
+		
+			
+		}
+
+		a:visited {
+		  color: lightcoral;
+		  background-color: transparent;
+		  text-decoration: none;
+			
+		}
+
+		a:hover {
+		  color: red;
+		  background-color: transparent;
+		  text-decoration: none;
+		}
+
+		a:active {
+		  color: yellow;
+		  background-color: transparent;
+		  text-decoration: underline;
+		}
+	
+		main{
+			background-color: #EDECEC;
+			width: 100%;
+            margin: 0; /* centrar la página */
+			padding: 0;
+		}
+		section {
+			display: block;
+			width: 100%;
+			margin: 0;
+			padding: 0;
+			background-color: tomato;
+		}
+		
+		div {
+			overflow: hidden;
+			width: 95%;
+			margin: auto;
+			padding: 0;
+			background-color: lightblue;
+
+		}
+		nav {
+			display: block;
+			width: 100%;
+			margin: 10px;
+			text-align: center;
+			overflow: hidden;
+		}	
+
+		header {
+			padding: 0;
+			margin: auto;
+			overflow: hidden;
+			height: 150px;
+		}
+		header h1 {
+			color: white;
+			text-align: center;
+			font-size: 5em;
+			margin: 0;
+			}
+		header h3 {
+			color: white;
+			text-align: center;
+			margin: 0;
+			font-size: 2em;
+		}
+		ul {
+			list-style-type: none;
+			list-style-image: url(lista-icono.png);
+		}
+		nav a:link {
+			color: white;
+		  	background-color: blue;
+		 	text-decoration: none;
+			padding: 10px;
+		}
+		nav a:visited {
+		  	color: lightcoral;
+		 	background-color: blue;
+		 	text-decoration: none;
+			padding: 10px;
+			
+		}
+		img {
+			width: 100%;
+		}
+		article {
+			background-color: white;
+		}
+	
+    </style>
+    <script src="js/funciones.js"></script>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body> 
+<main>
+	<header style="background-color: blue; padding: 5px;">
+	<h1>Título del periódico</h1>
+	<h3>El mayor periódico digital de España</h3>	
+	</header>
+	
+	
+	<nav>
+		<a href="#">Internacional</a>
+		<a href="#">Opinión</a>
+		<a href="#">Sociedad</a>
+		<a href="#">Economía</a>
+		<a href="#">Ciencia</a>
+		<a href="#">Tecnología</a>
+		<a href="#">Cultura</a>
+		<a href="#">Gente</a>
+		<a href="#">Deportes</a>
+		<a href="#">Televisión</a>
+		<a href="#">Vídeo</a>
+	</nav>
+
+	<section>	
+	<p style="text-align: center; font-size: 25px; color: white;" ><b>Tecnología</b></p>
+	<div>
+			<article style="float: left; width: 30%; padding: 2%;">
+				<a href="#"><img src="galaxy-note_9.jpg" alt="galaxy_note"></a><a href="#"><b>Análisis | Un mes con el Samsung Galaxy Note 9</b></a>
+				<p><span style="color: brown"><b>LAURA PÉREZ</b></span> <img src="estrella_32x32.png" alt="estrella" style="width: 15px"><img src="estrella_32x32.png" alt="estrella" style="width: 15px"><img src="estrella_32x32.png" alt="estrella" style="width: 15px"><img src="estrella_32x32.png" alt="estrella" style="width: 15px"><img src="estrella_32x32.png" alt="estrella" style="width: 15px">
+				
+				</p>
+				<p>Probamos el último modelo de la firma coreana, un terminal de gama alta que brilla por su pantalla, su característico lápiz digital S Pen y su funcionamiento con el uso de Inteligencia Artificial.</p>
+			</article>
+
+			
+			<article style="float: right; width: 30%; padding: 2%;">
+				<a href=""><img src="honor-view20.jpg" alt="honorview"></a>
+				<a href="#"><b>Honor View20, un móvil con más píxeles que ninguno</b></a>
+				<p><span style="color: brown"><b>ANA GÓMEZ</b></span><img src="estrella_32x32.png" alt="estrella" style="width: 15px"><img src="estrella_32x32.png" alt="estrella" style="width: 15px"><img src="estrella_32x32.png" alt="estrella" style="width: 15px"><img src="estrella_32x32.png" alt="estrella" style="width: 15px"></p>
+				<p>La segunda marca de Huawei lanza un teléfono inteligente con la cámara frontal oculta y la trasera de 48 megapíxeles. Se maneja por inteligencia artificial y por un superprocesador, el más potente.</p>
+
+			</article>
+			
+			
+			<article style="margin: auto; width: 30%; padding: 2%;">
+				<a href="#"><img src="pocophone-f1.jpg" alt="pocophone"></a>
+				<a href="#"><b>Pocophone F1, ¿el mejor móvil en relación calidad-precio?</b></a>
+				<p><span style="color: brown"><b>ANTONIO SÁNCHEZ</b></span><img src="estrella_32x32.png" alt="estrella" style="width: 15px"><img src="estrella_32x32.png" alt="estrella" style="width: 15px"><img src="estrella_32x32.png" alt="estrella" style="width: 15px"></p> 
+				<p>La segunda marca de la china Xiaomi se lanza al mercado con un terminal caracterizado por especificaciones de gama alta y un precio de gama media que logra eliminando lo superfluo.</p>
+
+			</article>
+		</div>
+	</section>
+	<section>
+		<div>
+			<article style="float: left; width: 20%; padding: 2%;">
+			<img src="logo-vodafone.png" alt="logovodafone" style="width: 50%">
+			<ul>
+				<li><a href="#">Más populares</a></li>
+				<li><a href="#">Redes sociales</a></li>
+				<li><a href="#">Ordenadores</a></li>
+				<li><a href="#">Gadgets</a></li>
+				<li><a href="#">Videoconsolas</a></li>
+				<li><a href="#">Teléfonos Móviles</a></li>
+				<li><a href="#">WhatsApp</a></li>
+				<li><a href="#">Tablets</a></li>
+				<li><a href="#">Smartphones</a></li>
+			</ul>
+				
+			</article>		
+						
+			<article style="float: left; width: 34%; padding: 2%;">
+				<iframe src="https://www.youtube.com/embed/IP3rOxqQQAw" frameborder="0" width="300" height="200" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<p><b>El superordenador que fabrica humanos virtuales para probar medicinas</b></p>
+			</article>
+			<article style="float: left; width: 34%; padding: 2%;">
+				<iframe src="https://www.youtube.com/embed/6_YopNlxcYU" frameborder="0" width="300" height="200" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><p><b>Una retina de grafeno para devolver la vista a 230 millones de personas</b></p>
+			</article>
+		</div>	
+	</section>
+	<section>
+	<p style="text-align: center; font-size: 25px; color: white;" ><b>Videojuegos</b></p>
+	<div>
+			<article style="float: left; width: 30%; padding: 2%;">
+				<a href="#"><img src="fornite.jpg" alt="fornite"></a><a href="#"><b>Cómo completar los desafíos de Fortnite de la Semana 8 de la Temporada 7</b></a>
+				<p><span style="color: brown"><b>JOSÉ ORTÍZ</b></span> <img src="estrella_32x32.png" alt="estrella" style="width: 15px"><img src="estrella_32x32.png" alt="estrella" style="width: 15px"><img src="estrella_32x32.png" alt="estrella" style="width: 15px"><img src="estrella_32x32.png" alt="estrella" style="width: 15px"><img src="estrella_32x32.png" alt="estrella" style="width: 15px">
+				
+				</p>
+				<p>Ya están disponibles los desafíos correspondientes a la Semana 8 de la Temporada 7 del Pase de Batalla de Fortnite Battle Royale. Completadlos con nuestra guía.</p>
+			</article>
+
+			
+			<article style="float: right; width: 30%; padding: 2%;">
+				<a href=""><img src="gta5.jpg" alt="gta5"></a>
+				<a href="#"><b>Todos los trucos y claves de GTA 5 en PS3, PS4, PC, Xbox One y 360s</b></a>
+				<p><span style="color: brown"><b>PEDRO ZAMBRANO</b></span><img src="estrella_32x32.png" alt="estrella" style="width: 15px"><img src="estrella_32x32.png" alt="estrella" style="width: 15px"><img src="estrella_32x32.png" alt="estrella" style="width: 15px"><img src="estrella_32x32.png" alt="estrella" style="width: 15px"></p>
+				<p>Ganar dinero infinito, coches de lujo, salud, munición, armas, tanques, eliminar estrellas… Recopilamos todos los trucos y claves de GTA 5 (Grand Theft Auto V) para todas las plataformas.</p>
+
+			</article>
+			
+			
+			<aside style="margin: auto; width: 30%; padding: 2%;">
+			
+			<img src="red_dead_redemption2.jpg" alt="red_dead_2"><p>Dead Redemption 2, número 1 en USA.</p>
+			<img src="red_dead_redemption3.jpg" alt="red_dead_3"><p>Todos los trucos de Red Dead Redemption 2.</p>
+			<img src="assassins-creed-odyssey.jpg" alt="assassins"><p>Assassin's Creed Odyssey, Guía completa</p>
+			<img src="call-of-duty.jpg" alt="call_duty"><p>Call of Duty: Black Ops 4, Guía de logros y trofeos</p>
+				
+			</aside>
+	  </div>
+	</section>
+	
+	<footer>
+		
+	</footer>
+
+</main>
+</body>
+</html>
