@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ES">
 <head>
-    <title>Etiquetas que dan formato al texto</title>
+    <title>Etiquetas semánticas</title>
     <meta charset="UTF-8">
     
     <meta name="description" content="Diseño páginas web con HTML, CSS y Javascript">
@@ -40,8 +40,7 @@
 		  color: blue; 
 		  background-color: transparent; 
 		  text-decoration: none;
-		
-			
+				
 		}
 
 		a:visited {
@@ -73,16 +72,18 @@
 			display: block;
 			width: 100%;
 			margin: 0;
-			padding: 0;
+			padding: 0%;
 			background-color: tomato;
 		}
 		
 		div {
 			overflow: hidden;
-			width: 95%;
+			width: 100%;
 			margin: auto;
+			/*margin: 0;*/
 			padding: 0;
-			background-color: lightblue;
+			/*background-color: lightblue;*/
+			background-color: white;
 
 		}
 		nav {
@@ -134,7 +135,17 @@
 		article {
 			background-color: white;
 		}
-	
+		footer {
+			padding: 0;
+			margin: auto;
+			overflow: hidden;
+			height: 150px;
+			background-color: blue;
+			padding: 5px;
+		}
+		
+		
+		
     </style>
     <script src="js/funciones.js"></script>
     <link rel="stylesheet" href="css/estilos.css">
@@ -162,8 +173,9 @@
 		<a href="#">Vídeo</a>
 	</nav>
 
-	<section>	
-	<p style="text-align: center; font-size: 25px; color: white;" ><b>Tecnología</b></p>
+	<section style="padding-top: 1px;">	
+	<h2 style="color: white; text-align: center">Tecnología</h2>
+	<!--<p style="text-align: center; font-size: 25px; color: white;"><b>Tecnología</b></p>-->
 	<div>
 			<article style="float: left; width: 30%; padding: 2%;">
 				<a href="#"><img src="galaxy-note_9.jpg" alt="galaxy_note"></a><a href="#"><b>Análisis | Un mes con el Samsung Galaxy Note 9</b></a>
@@ -211,17 +223,19 @@
 			</article>		
 						
 			<article style="float: left; width: 34%; padding: 2%;">
-				<iframe src="https://www.youtube.com/embed/IP3rOxqQQAw" frameborder="0" width="300" height="200" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<iframe src="https://www.youtube.com/embed/IP3rOxqQQAw" width="300" height="200" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 				<p><b>El superordenador que fabrica humanos virtuales para probar medicinas</b></p>
 			</article>
 			<article style="float: left; width: 34%; padding: 2%;">
-				<iframe src="https://www.youtube.com/embed/6_YopNlxcYU" frameborder="0" width="300" height="200" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><p><b>Una retina de grafeno para devolver la vista a 230 millones de personas</b></p>
+				<iframe src="https://www.youtube.com/embed/6_YopNlxcYU" width="300" height="200" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><p><b>Una retina de grafeno para devolver la vista a 230 millones de personas</b></p>
 			</article>
 		</div>	
 	</section>
-	<section>
-	<p style="text-align: center; font-size: 25px; color: white;" ><b>Videojuegos</b></p>
+	<section style="padding-top: 1px;">
+	<h2 style="color: white; text-align: center">Videojuegos</h2>
+	<!--<p style="text-align: center; font-size: 25px; color: white; padding-top: 2%"><b>Videojuegos</b></p>-->
 	<div>
+			<!--<article style="float: left; width: 30%; padding: 2%;">-->
 			<article style="float: left; width: 30%; padding: 2%;">
 				<a href="#"><img src="fornite.jpg" alt="fornite"></a><a href="#"><b>Cómo completar los desafíos de Fortnite de la Semana 8 de la Temporada 7</b></a>
 				<p><span style="color: brown"><b>JOSÉ ORTÍZ</b></span> <img src="estrella_32x32.png" alt="estrella" style="width: 15px"><img src="estrella_32x32.png" alt="estrella" style="width: 15px"><img src="estrella_32x32.png" alt="estrella" style="width: 15px"><img src="estrella_32x32.png" alt="estrella" style="width: 15px"><img src="estrella_32x32.png" alt="estrella" style="width: 15px">
@@ -231,7 +245,8 @@
 			</article>
 
 			
-			<article style="float: right; width: 30%; padding: 2%;">
+			<!--<article style="float: right; width: 30%; padding: 2%;">-->
+			<article style="float: left; width: 30%; padding: 2%;">
 				<a href=""><img src="gta5.jpg" alt="gta5"></a>
 				<a href="#"><b>Todos los trucos y claves de GTA 5 en PS3, PS4, PC, Xbox One y 360s</b></a>
 				<p><span style="color: brown"><b>PEDRO ZAMBRANO</b></span><img src="estrella_32x32.png" alt="estrella" style="width: 15px"><img src="estrella_32x32.png" alt="estrella" style="width: 15px"><img src="estrella_32x32.png" alt="estrella" style="width: 15px"><img src="estrella_32x32.png" alt="estrella" style="width: 15px"></p>
@@ -240,19 +255,56 @@
 			</article>
 			
 			
-			<aside style="margin: auto; width: 30%; padding: 2%;">
+			<!--<aside style="margin: auto; width: 30%; padding: 2%;">-->
 			
-			<img src="red_dead_redemption2.jpg" alt="red_dead_2"><p>Dead Redemption 2, número 1 en USA.</p>
-			<img src="red_dead_redemption3.jpg" alt="red_dead_3"><p>Todos los trucos de Red Dead Redemption 2.</p>
-			<img src="assassins-creed-odyssey.jpg" alt="assassins"><p>Assassin's Creed Odyssey, Guía completa</p>
-			<img src="call-of-duty.jpg" alt="call_duty"><p>Call of Duty: Black Ops 4, Guía de logros y trofeos</p>
-				
+			<aside style="float: left; width: 25%; padding: 2%;">
+			<p><b>Contenido relacionado</b></p>
+			
+			<div>
+				<div style="float: left; width: 45%; padding: 2%;">
+					<img src="red_dead_redemption2.jpg" alt="red_dead_2">
+				</div>
+				<div style="float: left; width: 45%; padding: 2%; text-align: left;"><a href="#"><b>Dead Redemption 2, número 1 en USA.</b></a></div>
+			</div>
+			<hr>
+			
+			<div>
+				<div style="float: left; width: 45%; padding: 2%;">
+					<img src="red_dead_redemption3.jpg" alt="red_dead_3">
+				</div>
+				<div style="float: left; width: 45%; padding: 2%; text-align: left;"><a href="#"><b>Todos los trucos de Red Dead Redemption 2.</b></a></div>
+			</div>
+			<hr>
+			<div>
+				<div style="float: left; width: 45%; padding: 2%;">
+					<img src="assassins-creed-odyssey.jpg" alt="assassins">
+				</div>
+				<div style="float: left; width: 45%; padding: 2%; text-align: left;"><a href="#"><b>Assassin's Creed Odyssey, Guía completa</b></a></div>
+			</div>
+			<hr>
+			<div>
+				<div style="float: left; width: 45%; padding: 2%;">
+					<img src="call-of-duty.jpg" alt="call_duty">
+				</div>
+				<div style="float: left; width: 45%; padding: 2%; text-align: left;"><a href="#"><b>Call of Duty: Black Ops 4, Guía de logros y trofeos</b></a></div>
+			</div>
+						
 			</aside>
+			
+			
 	  </div>
 	</section>
 	
 	<footer>
+		<nav class="nav_footer">
+		<p style="text-align: center;"><a href="#">Aviso Legal</a> | <a href="#">Política de privacidad</a> | <a href="#">Política de protección de datos</a> | <a href="#">Política de Cookies</a></p></nav>
 		
+		<details style="color: white; text-align: center;">
+  			<summary>©2004-2018.</summary>
+  				<p>WebMaster ™. Todos los derechos reservados.</p>
+  				<p>Todo el contenido y gráficos de esta web son propiedad de WebMaster ™</p>
+  
+		</details>
 	</footer>
 
 </main>
