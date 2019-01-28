@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ES">
 <head>
-    <title>Etiquetas que dan formato al texto</title>
+    <title>Etiquetas semánticas</title>
     <meta charset="UTF-8">
     
     <meta name="description" content="Diseño páginas web con HTML, CSS y Javascript">
@@ -39,24 +39,20 @@
 		a:link {
 		  color: blue; 
 		  background-color: transparent; 
-		  text-decoration: none;
-		
-			
+		  text-decoration: none;	
+				
 		}
-
 		a:visited {
 		  color: lightcoral;
 		  background-color: transparent;
 		  text-decoration: none;
 			
 		}
-
 		a:hover {
 		  color: red;
 		  background-color: transparent;
 		  text-decoration: none;
 		}
-
 		a:active {
 		  color: yellow;
 		  background-color: transparent;
@@ -64,7 +60,8 @@
 		}
 	
 		main{
-			background-color: #EDECEC;
+			/*background-color: #EDECEC;*/
+			background-color: antiquewhite; 
 			width: 100%;
             margin: 0; /* centrar la página */
 			padding: 0;
@@ -73,17 +70,18 @@
 			display: block;
 			width: 100%;
 			margin: 0;
-			padding: 0;
+			padding: 0%;
 			background-color: tomato;
 		}
 		
 		div {
 			overflow: hidden;
-			width: 95%;
+			width: 100%;
 			margin: auto;
+			/*margin: 0;*/
 			padding: 0;
-			background-color: lightblue;
-
+			/*background-color: lightblue;*/
+			background-color: white;
 		}
 		nav {
 			display: block;
@@ -92,7 +90,6 @@
 			text-align: center;
 			overflow: hidden;
 		}	
-
 		header {
 			padding: 0;
 			margin: auto;
@@ -100,13 +97,13 @@
 			height: 150px;
 		}
 		header h1 {
-			color: white;
+			color:antiquewhite;
 			text-align: center;
-			font-size: 5em;
+			font-size: 6em;
 			margin: 0;
 			}
 		header h3 {
-			color: white;
+			color:antiquewhite;
 			text-align: center;
 			margin: 0;
 			font-size: 2em;
@@ -134,7 +131,17 @@
 		article {
 			background-color: white;
 		}
-	
+		footer {
+			padding: 0;
+			margin: auto;
+			overflow: hidden;
+			height: 150px;
+			background-color: blue;
+			padding: 5px;
+		}
+		
+		
+		
     </style>
     <script src="js/funciones.js"></script>
     <link rel="stylesheet" href="css/estilos.css">
@@ -142,28 +149,29 @@
 
 <body> 
 <main>
-	<header style="background-color: blue; padding: 5px;">
-	<h1>Título del periódico</h1>
+	
+	<!--<header style="background-color: blue; padding: 5px;"> -->
+	<header style="background-image: url(red_dead_redemption3.jpg); padding: 5px;">
+	<h1>Noticias del Mundo</h1>
 	<h3>El mayor periódico digital de España</h3>	
-	</header>
-	
-	
+	</header>	
 	<nav>
-		<a href="#">Internacional</a>
-		<a href="#">Opinión</a>
-		<a href="#">Sociedad</a>
-		<a href="#">Economía</a>
-		<a href="#">Ciencia</a>
-		<a href="#">Tecnología</a>
-		<a href="#">Cultura</a>
-		<a href="#">Gente</a>
-		<a href="#">Deportes</a>
-		<a href="#">Televisión</a>
-		<a href="#">Vídeo</a>
+		<a href="https://es.wikipedia.org/wiki/Internacional" target="_blank">Internacional</a>
+		<a href="https://es.wikipedia.org/wiki/Opini%C3%B3n" target="_blank">Opinión</a>
+		<a href="https://es.wikipedia.org/wiki/Sociedad" target="_blank">Sociedad</a>
+		<a href="https://es.wikipedia.org/wiki/Ciencia_econ%C3%B3mica" target="_blank">Economía</a>
+		<a href="https://es.wikipedia.org/wiki/Ciencia" target="_blank">Ciencia</a>
+		<a href="https://es.wikipedia.org/wiki/Tecnolog%C3%ADa" target="_blank">Tecnología</a>
+		<a href="https://es.wikipedia.org/wiki/Cultura" target="_blank">Cultura</a>
+		<a href="https://es.wikipedia.org/wiki/Gente" target="_blank">Gente</a>
+		<a href="https://es.wikipedia.org/wiki/Deporte" target="_blank">Deportes</a>
+		<a href="https://es.wikipedia.org/wiki/Televisi%C3%B3n" target="_blank">Televisión</a>
+		<a href="https://es.wikipedia.org/wiki/Video" target="_blank">Vídeo</a>
 	</nav>
 
-	<section>	
-	<p style="text-align: center; font-size: 25px; color: white;" ><b>Tecnología</b></p>
+	<section style="padding-top: 1px;">	
+	<h2 style="color: white; text-align: center">Tecnología</h2>
+	<!--<p style="text-align: center; font-size: 25px; color: white;"><b>Tecnología</b></p>-->
 	<div>
 			<article style="float: left; width: 30%; padding: 2%;">
 				<a href="#"><img src="galaxy-note_9.jpg" alt="galaxy_note"></a><a href="#"><b>Análisis | Un mes con el Samsung Galaxy Note 9</b></a>
@@ -194,34 +202,38 @@
 	</section>
 	<section>
 		<div>
+		
 			<article style="float: left; width: 20%; padding: 2%;">
 			<img src="logo-vodafone.png" alt="logovodafone" style="width: 50%">
+			
 			<ul>
-				<li><a href="#">Más populares</a></li>
-				<li><a href="#">Redes sociales</a></li>
-				<li><a href="#">Ordenadores</a></li>
-				<li><a href="#">Gadgets</a></li>
-				<li><a href="#">Videoconsolas</a></li>
-				<li><a href="#">Teléfonos Móviles</a></li>
-				<li><a href="#">WhatsApp</a></li>
-				<li><a href="#">Tablets</a></li>
-				<li><a href="#">Smartphones</a></li>
+				<li><a href="https://es.wikipedia.org/wiki/Popular" target="_blank"><b>Más populares</b></a></li>
+				<li><a href="https://es.wikipedia.org/wiki/Red_social" target="_blank"><b>Redes sociales</b></a></li>
+				<li><a href="https://es.wikipedia.org/wiki/Computadora" target="_blank"><b>Ordenadores</b></a></li>
+				<li><a href="https://es.wikipedia.org/wiki/Gadget" target="_blank"><b>Gadgets</b></a></li>
+				<li><a href="https://es.wikipedia.org/wiki/Videoconsola" target="_blank"><b>Videoconsolas</b></a></li>
+				<li><a href="https://es.wikipedia.org/wiki/Tel%C3%A9fono_m%C3%B3vil" target="_blank"><b>Teléfonos Móviles</b></a></li>
+				<li><a href="https://es.wikipedia.org/wiki/WhatsApp" target="_blank"><b>WhatsApp</b></a></li>
+				<li><a href="https://es.wikipedia.org/wiki/Tableta" target="_blank"><b>Tablets</b></a></li>
+				<li><a href="https://es.wikipedia.org/wiki/Tel%C3%A9fono_inteligente" target="_blank"><b>Smartphones</b></a></li>
 			</ul>
-				
+		
 			</article>		
 						
 			<article style="float: left; width: 34%; padding: 2%;">
-				<iframe src="https://www.youtube.com/embed/IP3rOxqQQAw" frameborder="0" width="300" height="200" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<iframe src="https://www.youtube.com/embed/IP3rOxqQQAw" width="375" height="220" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 				<p><b>El superordenador que fabrica humanos virtuales para probar medicinas</b></p>
 			</article>
 			<article style="float: left; width: 34%; padding: 2%;">
-				<iframe src="https://www.youtube.com/embed/6_YopNlxcYU" frameborder="0" width="300" height="200" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><p><b>Una retina de grafeno para devolver la vista a 230 millones de personas</b></p>
+				<iframe src="https://www.youtube.com/embed/6_YopNlxcYU" width="375" height="220" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><p><b>Una retina de grafeno para devolver la vista a 230 millones de personas</b></p>
 			</article>
 		</div>	
 	</section>
-	<section>
-	<p style="text-align: center; font-size: 25px; color: white;" ><b>Videojuegos</b></p>
+	<section style="padding-top: 1px;">
+	<h2 style="color: white; text-align: center">Videojuegos</h2>
+	<!--<p style="text-align: center; font-size: 25px; color: white; padding-top: 2%"><b>Videojuegos</b></p>-->
 	<div>
+			<!--<article style="float: left; width: 30%; padding: 2%;">-->
 			<article style="float: left; width: 30%; padding: 2%;">
 				<a href="#"><img src="fornite.jpg" alt="fornite"></a><a href="#"><b>Cómo completar los desafíos de Fortnite de la Semana 8 de la Temporada 7</b></a>
 				<p><span style="color: brown"><b>JOSÉ ORTÍZ</b></span> <img src="estrella_32x32.png" alt="estrella" style="width: 15px"><img src="estrella_32x32.png" alt="estrella" style="width: 15px"><img src="estrella_32x32.png" alt="estrella" style="width: 15px"><img src="estrella_32x32.png" alt="estrella" style="width: 15px"><img src="estrella_32x32.png" alt="estrella" style="width: 15px">
@@ -231,7 +243,8 @@
 			</article>
 
 			
-			<article style="float: right; width: 30%; padding: 2%;">
+			<!--<article style="float: right; width: 30%; padding: 2%;">-->
+			<article style="float: left; width: 30%; padding: 2%;">
 				<a href=""><img src="gta5.jpg" alt="gta5"></a>
 				<a href="#"><b>Todos los trucos y claves de GTA 5 en PS3, PS4, PC, Xbox One y 360s</b></a>
 				<p><span style="color: brown"><b>PEDRO ZAMBRANO</b></span><img src="estrella_32x32.png" alt="estrella" style="width: 15px"><img src="estrella_32x32.png" alt="estrella" style="width: 15px"><img src="estrella_32x32.png" alt="estrella" style="width: 15px"><img src="estrella_32x32.png" alt="estrella" style="width: 15px"></p>
@@ -240,19 +253,56 @@
 			</article>
 			
 			
-			<aside style="margin: auto; width: 30%; padding: 2%;">
+			<!--<aside style="margin: auto; width: 30%; padding: 2%;">-->
 			
-			<img src="red_dead_redemption2.jpg" alt="red_dead_2"><p>Dead Redemption 2, número 1 en USA.</p>
-			<img src="red_dead_redemption3.jpg" alt="red_dead_3"><p>Todos los trucos de Red Dead Redemption 2.</p>
-			<img src="assassins-creed-odyssey.jpg" alt="assassins"><p>Assassin's Creed Odyssey, Guía completa</p>
-			<img src="call-of-duty.jpg" alt="call_duty"><p>Call of Duty: Black Ops 4, Guía de logros y trofeos</p>
-				
+			<aside style="float: left; width: 25%; padding: 2%;">
+			<p><b>Contenido relacionado</b></p>
+			
+			<div>
+				<div style="float: left; width: 45%; padding: 2%;">
+					<img src="red_dead_redemption2.jpg" alt="red_dead_2">
+				</div>
+				<div style="float: left; width: 45%; padding: 2%; text-align: left;"><a href="#"><b>Dead Redemption 2, número 1 en USA.</b></a></div>
+			</div>
+			<hr>
+			
+			<div>
+				<div style="float: left; width: 45%; padding: 2%;">
+					<img src="red_dead_redemption3.jpg" alt="red_dead_3">
+				</div>
+				<div style="float: left; width: 45%; padding: 2%; text-align: left;"><a href="#"><b>Todos los trucos de Red Dead Redemption 2.</b></a></div>
+			</div>
+			<hr>
+			<div>
+				<div style="float: left; width: 45%; padding: 2%;">
+					<img src="assassins-creed-odyssey.jpg" alt="assassins">
+				</div>
+				<div style="float: left; width: 45%; padding: 2%; text-align: left;"><a href="#"><b>Assassin's Creed Odyssey, Guía completa</b></a></div>
+			</div>
+			<hr>
+			<div>
+				<div style="float: left; width: 45%; padding: 2%;">
+					<img src="call-of-duty.jpg" alt="call_duty">
+				</div>
+				<div style="float: left; width: 45%; padding: 2%; text-align: left;"><a href="#"><b>Call of Duty: Black Ops 4, Guía de logros y trofeos</b></a></div>
+			</div>
+						
 			</aside>
+			
+			
 	  </div>
 	</section>
 	
 	<footer>
+		<nav>
+		<p style="text-align: center;"><a href="https://www.aepd.es/agencia/politica-privacidad-aviso-legal.html" target="_blank">Aviso Legal</a> | <a href="https://www.aepd.es/agencia/politica-privacidad-aviso-legal.html" target="_blank">Política de privacidad</a> | <a href="https://www.aepd.es/agencia/politica-privacidad-aviso-legal.html" target="_blank">Política de protección de datos</a> | <a href="https://www.aepd.es/agencia/politica-privacidad-aviso-legal.html" target="_blank">Política de Cookies</a></p></nav>
 		
+		<details style="color: white; text-align: center;">
+  			<summary>©2004-2018.</summary>
+  				<p>WebMaster ™. Todos los derechos reservados.</p>
+  				<p>Todo el contenido y gráficos de esta web son propiedad de WebMaster ™</p>
+  
+		</details>
 	</footer>
 
 </main>
