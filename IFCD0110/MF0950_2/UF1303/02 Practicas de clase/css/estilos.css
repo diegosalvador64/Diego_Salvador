@@ -1,0 +1,162 @@
+@charset "utf-8";
+/* CSS Document */	
+body {
+font-family:"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
+width:90%;
+margin: 0 auto;
+}
+h1,h2,h3,h4,h5,h6 {
+font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.nota {
+background-color: #ffffcc;
+border-left: 6px solid #ffeb3b;
+padding-top:10px;
+padding-bottom:10px;
+padding-left:20px;
+padding-right:5px;
+	 }
+hr {
+border: 1px solid #eeeeee;
+}
+code {
+color: crimson;
+background-color: #f1f1f1;
+padding-left: 4px;
+padding-right: 4px;
+font-size: 110%;
+}
+.etiquetasHTML {
+border: 1px solid #cccccc;
+background-color: #f1f1f1;
+font-size: 22px;
+padding: 12px;
+}
+code span {
+color: mediumblue;
+}
+code span span {
+color: brown;
+}
+code span span span {
+color: crimson;
+}
+.code {
+margin-top: 16px;
+margin-bottom: 16px;
+background-color: #ffffff;
+padding: 8px 12px;
+border-left: 4px solid #4CAF50;
+color: black;
+}
+.ejemplo {
+background-color: #f1f1f1;
+padding: 8px 16px;
+margin: 20px 0;
+box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+}
+table {
+font-family: arial, sans-serif;
+border-collapse: collapse;
+width: 100%;
+}
+
+td, th {
+border: 1px solid #dddddd;
+text-align: left;
+padding: 8px;
+}
+
+tr:nth-child(even) {
+background-color: #dddddd;
+}
+	a:link {
+		  color: green; 
+		  background-color: transparent; 
+		  text-decoration: none;
+			padding: 20px;
+		}
+
+		a:visited {
+		  color: blue;
+		  background-color: transparent;
+		  text-decoration: none;
+			
+		}
+
+		a:hover {
+		  color: red;
+		  background-color: transparent;
+		  text-decoration: none;
+		}
+
+		a:active {
+		  color: yellow;
+			background-color: transparent;
+		  text-decoration: underline;
+		}
+		.active {
+		  	color: green;
+			background-color: transparent;
+		  text-decoration: underline;
+		}
+	header h1 {
+			color: white;
+			margin: 20px;
+		}
+#divPadre {
+	width:99%; 
+	border:1px solid grey;
+	padding:3px;
+	margin:0;
+	background-color:#ddd;
+}
+#divHead {
+	width:90%;
+	border:1px solid grey;
+	padding:3px;
+	margin:20px;
+}
+#divTitle {
+	width:90%;
+	border:1px solid grey;
+	padding:5px;
+	margin:20px;
+}
+
+#divMeta {
+	width:90%;
+	border:1px solid grey;
+	padding:5px;
+	margin:20px;
+}
+
+#divBody {
+	width:90%;
+	border:1px solid grey;
+	padding:3px;
+	margin:20px;
+	background-color:#ddd;
+}
+
+#divBodyHijo {
+	width:90%;
+	border:1px solid grey;
+	padding:3px;
+	margin:20px;
+	background-color:#fff;
+}
+
+#divEncabezado {
+	width:90%;
+	border:1px solid grey;
+	padding:5px;
+	margin:20px;
+}
+
+#divParrafo {
+	width:90%;
+	border:1px solid grey;
+	padding:5px;
+	margin:20px;
+}

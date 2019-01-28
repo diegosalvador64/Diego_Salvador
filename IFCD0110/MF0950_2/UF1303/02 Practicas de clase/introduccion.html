@@ -15,125 +15,15 @@
 <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 <link rel="icon" href="img/favicon.ico" type="image/ico">
  
-<style>
-	
-body {
-font-family:"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
-width:90%;
-margin: 0 auto;
-}
-h1,h2,h3,h4,h5,h6 {
-font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-.nota {
-background-color: #ffffcc;
-border-left: 6px solid #ffeb3b;
-padding-top:10px;
-padding-bottom:10px;
-padding-left:20px;
-padding-right:5px;
-	 }
-hr {
-border: 1px solid #eeeeee;
-}
-code {
-color: crimson;
-background-color: #f1f1f1;
-padding-left: 4px;
-padding-right: 4px;
-font-size: 110%;
-}
-.etiquetasHTML {
-border: 1px solid #cccccc;
-background-color: #f1f1f1;
-font-size: 22px;
-padding: 12px;
-}
-code span {
-color: mediumblue;
-}
-code span span {
-color: brown;
-}
-code span span span {
-color: crimson;
-}
-.code {
-margin-top: 16px;
-margin-bottom: 16px;
-background-color: #ffffff;
-padding: 8px 12px;
-border-left: 4px solid #4CAF50;
-color: black;
-}
-.ejemplo {
-background-color: #f1f1f1;
-padding: 8px 16px;
-margin: 20px 0;
-box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
-}
-table {
-font-family: arial, sans-serif;
-border-collapse: collapse;
-width: 100%;
-}
-
-td, th {
-border: 1px solid #dddddd;
-text-align: left;
-padding: 8px;
-}
-
-tr:nth-child(even) {
-background-color: #dddddd;
-}
-	a:link {
-		  color: green; 
-		  background-color: transparent; 
-		  text-decoration: none;
-			padding: 20px;
-		}
-
-		a:visited {
-		  color: blue;
-		  background-color: transparent;
-		  text-decoration: none;
-			
-		}
-
-		a:hover {
-		  color: red;
-		  background-color: transparent;
-		  text-decoration: none;
-		}
-
-		a:active {
-		  color: yellow;
-			background-color: transparent;
-		  text-decoration: underline;
-		}
-		.active {
-		  	color: green;
-			background-color: transparent;
-		  text-decoration: underline;
-		}
-	header h1 {
-			color: white;
-			margin: 20px;
-		}
-
-</style>
-
-<script>   </script>
  
- <link href="css/estilos.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="css/estilos.css" type="text/css">
+
  <script src="js/funciones.js" type="text/javascript"></script>
 <!-- <base href="https://www.mipagina.com/img/" target="_blank"> -->
  
     </head>
 <body>
 <header style="background-color: tomato">
- <a href="index.html"><img src="img/HTML5_Logo_64.png" alt="Logo HTML5" width="64" height="64" title="Inicio de la página"></a>
 <h1 id="inicio">CSS Introducción</h1></header>
 <hr>
 <nav>
@@ -156,7 +46,7 @@ background-color: #dddddd;
 	   
 	</ul> 
 	</aside>
-	<div style="overflow: hidden; width: auto;">  
+<div style="overflow: hidden; width: auto;">  
  		<div style="width: 30%; float: left;">
  			<figure>
   				<img src="img/html-formatos.png" alt="HTML5 formatos" width="300px">
@@ -170,21 +60,13 @@ background-color: #dddddd;
 	</div>
 </div>
 	<article>
-<h2 id="queeshtml">¿Qué es HTML?</h2>
-<p>HTML es el lenguaje de marcado estándar para la creación de páginas Web.</p>
-
+<h2>¿Qué es CSS?</h2>
+<h2 id="queeshtml"></h2>
 <ul>
-<li>HTML significa HyperText Markup Language. (Lenguaje de marcado de hipertexto).</li>
-<li>HTML describe la estructura de las páginas web usando marcado.</li>
-<li>Los elementos HTML son los bloques de construcción de páginas HTML.</li>
-<li>Los elementos HTML están representados por etiquetas que poseen atributos.</li>
-<li>Las etiquetas HTML  marcan el contenido   describiendo la forma de como mostarlo.</li>
-<li>Los navegadores web son los encargados de visualizar las páginas web.</li>
-<li>El navegador no muestra las etiquetas HTML, sólo las lee, las interpreta y las representa.</li>
-</ul>
-
-<a href="#inicio">Ir a Inicio</a>
-</article>
+  <li><strong>CSS</strong> significa <strong>C</strong>ascading <strong>S</strong>tyle <strong>S</strong>heets (Hojas de Estilos en Casacada)</li>
+  <li>CSS describe <strong>cómo los elementos HTML se van a mostrar en la pantalla, papel, o en otros medios</strong></li>
+  <li>CSS <strong>ahorra mucho trabajo</strong> . Se puede controlar el diseño de varias páginas web a la vez</li>
+<li>Estilo externas se almacenan en <strong>archivos CSS</strong></li></ul></article>
 <hr>
 <article>
 <div>
@@ -328,17 +210,17 @@ El navegador no muestra las etiquetas HTML, pero las utiliza para determinar com
 <article>
 <h2 id="estructurapaginahtml">Estructura de una página HTML</h2>
 <p>A continuación se muestra una visualización de una estructura de la página HTML:</p>
-<div style="width:99%;border:1px solid grey;padding:3px;margin:0;background-color:#ddd">&lt;html&gt;
-<div style="width:90%;border:1px solid grey;padding:3px;margin:20px">&lt;head&gt;
-<div style="width:90%;border:1px solid grey;padding:5px;margin:20px">&lt;title&gt;Título de página&lt;/title&gt;
+<div id="divPadre">&lt;html&gt;
+<div id="divHead">&lt;head&gt;
+<div id="divTitle">&lt;link rel=&quot;stylesheet&quot; href=&quot;css/estilos.css&quot; type=&quot;text/css&quot;&gt;
 </div>
-<div style="width:90%;border:1px solid grey;padding:5px;margin:20px">&lt;meta charset=&quot;utf-8&quot;&gt;</div>
+<div id="divMeta">&lt;meta charset=&quot;utf-8&quot;&gt;</div>
 &lt;/head&gt;
 </div>
-<div style="width:90%;border:1px solid grey;padding:3px;margin:20px;background-color:#ddd">&lt;body&gt;
-<div style="width:90%;border:1px solid grey;padding:3px;margin:20px;background-color:#fff">
-<div style="width:90%;border:1px solid grey;padding:5px;margin:20px">&lt;h1&gt;Este es un encabezado de texto&lt;/h1&gt;</div>
-<div style="width:90%;border:1px solid grey;padding:5px;margin:20px">&lt;p&gt;Esto es un párrafo de texto&lt;/p&gt;</div>
+<div id="divBody">&lt;body&gt;
+<div id="divBodyHijo">
+<div id="divEncabezado">&lt;h1&gt;Este es un encabezado de texto&lt;/h1&gt;</div>
+<div id="divParrafo">&lt;p&gt;Esto es un párrafo de texto&lt;/p&gt;</div>
 </div>
 &lt;/body&gt;
 </div>
@@ -359,17 +241,7 @@ El navegador no muestra las etiquetas HTML, pero las utiliza para determinar com
 </footer>
 <br>
 <div align="center">
-<footer style="background-color: tomato;">
-	<a href=""><img src="img/iconos32x32/facebookblanco32.png" alt="facebook"></a>
-	<a href=""><img src="img/iconos32x32/flickrblanco32.png" alt="flick"></a>
-	<a href=""><img src="img/iconos32x32/googleplusblanco32.png" alt="google plus"></a>
-	<a href=""><img src="img/iconos32x32/instagramblanco32.png" alt="instagram"></a>
-	<a href=""><img src="img/iconos32x32/linkdinblanco32.png" alt="linkedin"></a>
-	<a href=""><img src="img/iconos32x32/tumblrblanco32.png" alt="tumblr"></a>
-	<a href=""><img src="img/iconos32x32/twitterblanco32.png" alt="twitter"></a>
-	<a href=""><img src="img/iconos32x32/vimeoblanco32.png" alt="vimeo"></a>
-	<a href=""><img src="img/iconos32x32/youtubeblanco32.png" alt="youtube"></a>
-</footer>
+
 </div>
 </body>
 </html>
