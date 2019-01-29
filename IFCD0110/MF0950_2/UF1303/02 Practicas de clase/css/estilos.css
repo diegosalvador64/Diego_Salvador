@@ -5,6 +5,114 @@ font-family:"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans"
 width:90%;
 margin: 0 auto;
 }
+
+/* Estilos para Bordes */
+
+h2 {
+	border-bottom: 2px solid red;
+}
+.spanNegrita {
+	font-weight: bold;
+}
+p.dotted {border-style: dotted;}
+p.dashed {border-style: dashed;}
+p.solid {border-style: solid;}
+p.double {border-style: double;}
+p.groove {border-style: groove;
+		border-color: antiquewhite;	
+}
+p.ridge {border-style: ridge;
+			border-color: antiquewhite;	
+}
+p.inset {border-style: inset;
+		border-color: antiquewhite;	
+}
+p.outset {border-style: outset;
+		border-color: antiquewhite;			
+}
+p.none {border-style: none;}
+p.hidden {border-style: hidden;}
+p.mix {border-style: dotted dashed solid double;}
+
+p.p1 {
+  border-style: solid;
+  border-width: 5px;
+}
+
+p.p2 {
+  border-style: solid;
+  border-width: medium;
+}
+
+p.p3 {
+  border-style: solid;
+  border-width: 2px 10px 4px 20px;
+}
+
+p.bordecolor1 {
+  border-style: dotted;
+  border-color: red;
+}
+
+p.bordecolor2 {
+  border-style: double;
+  border-color: green;
+} 
+
+p.bordecolor3 {
+  border-style: solid;
+  border-color: red green yellow blue;
+} 
+
+p.bordesIndividuales1 {
+  border-top-style: dotted;
+  border-right-style: solid;
+  border-bottom-style: dotted;
+  border-left-style: solid;
+}
+p.bordesIndividuales2 {
+  border-top-style: dashed;
+  border-right-style: solid;
+  border-bottom-style: dotted;
+  border-left-style: solid;
+}
+p.abreviacionborder {
+	border: 5px solid red;
+
+}
+p.abreviacionborder2 {
+	border: 10px double blue;
+
+}
+
+p.abreviacionborder3 {
+  border-left: 6px solid red;
+  background-color: lightgrey;
+}
+
+p.abreviacionborder4 {
+  border-bottom: 3px dotted green;
+  background-color: lightgrey;
+}
+
+.redondeado1 {
+  border: 2px solid red;
+  border-radius: 5px;
+}
+.redondeado2 {
+  border: 4px solid green;
+  border-radius: 15px;
+}
+.redondeado3 {
+	border: 2px solid magenta;
+  	padding: 10px;
+  	border-radius: 50px 20px;
+}
+
+
+/* resto estilos */
+
+
 h1,h2,h3,h4,h5,h6 {
 font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }

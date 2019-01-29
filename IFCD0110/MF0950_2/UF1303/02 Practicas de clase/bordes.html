@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="es-ES">
+<head>
+<meta charset="utf-8">
+<title>Bordes</title>
+<meta name="description" content="Diseño de páginas web con HTML, CSS y JavaScript">
+<meta name="keywords" content="HTML, CSS, JavaScript">
+<meta name="title" content="Bordes">
+<meta name="author" content="Diego">
+<link rel="stylesheet" href="css/estilos.css" type="text/css">
+</head>
+<body>
+<h1>Bordes CSS</h1>
+<hr>
+<h2>Bordes Estilos</h2>
+<p>La <code>border-style</code> propiedad especifica qué tipo de border visible.</p>
+<p>Se permiten los siguientes valores:</p>
+<ul>
+  <li><span class="spanNegrita">dotted</span> - Define un borde de puntos</li>
+  <li><span class="spanNegrita">dashed</span> - Define un borde punteado</li>
+  <li><span class="spanNegrita">solid</span> - Define un borde sólido</li>
+  <li><span class="spanNegrita">double</span> - Define un borde doble</li>
+  <li><span class="spanNegrita">groove</span> - Define un borde acanalado 3D. El efecto depende del valor de border-color</li>
+  <li><span class="spanNegrita">ridge</span> - Define un borde estriado 3D. El efecto depende del valor de border-color</li>
+  <li><span class="spanNegrita">inset</span> - Define un borde inserción 3D. El efecto depende del valor de border-color</li>
+  <li><span class="spanNegrita">outset</span> - Define un borde principio 3D. El efecto depende del valor de border-color</li>
+  <li><span class="spanNegrita">none</span> - Define ningún borde</li>
+  <li><span class="spanNegrita">hidden</span> - Define un borde oculto</li>
+</ul>
+<p>La <code>border-style</code> propiedad puede tener de uno a cuatro valores (por el borde superior, borde derecho, borde inferior y el borde izquierdo).</p>
+<h3>Ejemplos Estilo de borde</h3>
+<p class="dotted">A dotted border</p>
+<p class="dashed">A dashed border.</p>
+<p class="solid">A solid border.</p>
+<p class="double">A double border.</p>
+<p class="groove">A groove border. The effect depends on the border-color value.</p>
+<p class="ridge">A ridge border. The effect depends on the border-color value.</p>
+<p class="inset">An inset border. The effect depends on the border-color value.</p>
+<p class="outset">An outset border. The effect depends on the border-color value.</p>
+<p class="none">No border.</p>
+<p class="hidden">A hidden border.</p>
+<p class="mix">A mixed border.</p>
+<hr>
+
+<h2>Anchura del borde</h2>
+<p>La propiedad <code>border-width</code>  especifica la anchura de los cuatro bordes.</p>
+<p>La anchura se puede establecer como un tamaño específico (en px, pt, cm, em, etc) o mediante el uso de uno de los tres valores predefinidos: fino, medio o grueso.</p>
+<p>La propiedad <code>border-width</code>  puede tener de uno a cuatro valores (por el borde superior, borde derecho, borde inferior y el borde izquierdo).</p>
+<h3>Ejemplos Ancho de Borde</h3>
+<p class="p1">El estilo aplicado a este texto es: border-style: solid; border-width: 5px;</p>
+<p class="p2">El estilo aplicado a este texto es: border-style: solid; border-width: medium;</p>
+<p class="p3">El estilo aplicado a este texto es: border-style: solid; border-width: 2px 10px 4px 20px;</p>
+<hr>
+<h2>Color del borde</h2>
+<p>La <code>border-color</code> propiedad se utiliza para establecer el color de los cuatro bordes.</p>
+<p>El color se puede ajustar por:</p>
+<ul>
+  <li><span class="spanNegrita">Nombre</span> - indique un nombre de color, como "rojo"</li>
+  <li><span class="spanNegrita">Hex</span> - especificar un valor hexadecimal, como "# FF0000"</li>
+  <li><span class="spanNegrita">RGB</span> - especificar un valor RGB, así como "rgb (255,0,0)"</li>
+  <li><span class="spanNegrita">transparente</span></li>
+</ul>
+<p>La <code>border-color</code> propiedad puede tener de uno a cuatro valores (por el borde superior, borde derecho, borde inferior y el borde izquierdo). </p>
+<p>Si <code>border-color</code> no se establece, se hereda el color del elemento.</p>
+<h3>Ejemplos de color de borde</h3>
+<p class="bordecolor1">A solid red border</p>
+<p class="bordecolor2">A solid green border</p>
+<p class="bordecolor3">A solid multicolor border</p>
+<hr>
+<h2>Bordes: lados individuales</h2>
+<p>De los ejemplos anteriores se ha visto que es posible especificar un borde diferente para cada lado.</p>
+<p>En CSS, también hay propiedades para especificar cada uno de los bordes (superior, derecho, inferior e izquierda).</p>
+<p>Así es como funciona:</p>
+<p>Si la <code>border-style</code> propiedad tiene cuatro valores:</p>
+<ul>
+  <li><strong>-Estilo de borde: punteada doble sólida discontinua;</strong>
+    <ul>
+      <li>el borde superior está punteado</li>
+      <li>borde derecho es sólida</li>
+      <li>borde inferior es el doble</li>
+      <li>borde izquierdo es discontinua</li>
+    </ul>
+  </li>
+</ul>
+<p>Si la <code>border-style</code> propiedad tiene tres valores:</p>
+<ul>
+  <li><strong>Borde de estilo: punteada doble sólido;</strong>
+    <ul>
+      <li>el borde superior está punteado</li>
+      <li>Borde derecho e izquierdo son sólidos</li>
+      <li>borde inferior es el doble</li>
+    </ul>
+  </li>
+</ul>
+<p>Si la <code>border-style</code> propiedad tiene dos valores:</p>
+<ul>
+  <li><strong>Borde de estilo: punteado sólido;</strong>
+    <ul>
+      <li>bordes superior e inferior son de puntos</li>
+      <li>bordes derecho e izquierdo son sólidos</li>
+    </ul>
+  </li>
+</ul>
+<p>Si la <code>border-style</code> propiedad tiene un valor:</p>
+<ul>
+  <li><strong>Borde de estilo: de puntos;</strong>
+    <ul>
+      <li>los cuatro bordes son de puntos</li>
+    </ul>
+  </li>
+</ul>
+<p>La <code>border-style</code> propiedad se utiliza en el ejemplo anterior. Sin embargo, también trabaja con <code>border-width</code> y <code>border-color</code>.</p>
+<h3>Ejemplos de bordes individuales</h3>
+<p class="bordesIndividuales1">Bordes punteados superior e inferior: border-top-style: dotted; border-right-style: solid; border-bottom-style: dotted; border-left-style: solid;</p>
+<p class="bordesIndividuales2">Bordes dashed superior, punteado inferior y sólido los laterales: border-top-style: dashed; border-right-style: solid; border-bottom-style: dotted; border-left-style: solid; </p>
+<hr>
+<h2>Abreviación de las propiedades de border</h2>
+<p>Para acortar el código, también es posible especificar todas las propiedades de borde individuales en una sola propiedad.</p>
+<p>La <code>border</code> propiedad es una propiedad abreviada para las siguientes propiedades de borde individuales:</p>
+<ul>
+  <li><code>border-width</code></li>
+  <li><code>border-style</code> (necesario)</li>
+  <li><code>border-color</code></li>
+</ul>
+<h3>Ejemplos de la abreviación de las propiedades de border</h3>
+<p class="abreviacionborder">El estilo abreviado es: border: 5px solid red;</p>
+<p class="abreviacionborder2">El estilo abreviado es: border: 10px double blue;</p>
+<p class="abreviacionborder3">El estilo abreviado es: border-left: 6px solid red; background-color: lightgrey;</p>
+<p class="abreviacionborder4">El estilo abreviado es: border-bottom: 3px dotted green; background-color: lightgrey;</p>
+<h2>Bordes redondeados</h2>
+<p>La <code>border-radius</code> propiedad se utiliza para añadir bordes redondeados a un elemento. Esta propiedad le permite añadir esquinas redondeadas de los elementos. Esta propiedad puede tener de uno a cuatro valores.</p>
+<h3>Ejemplos de bordes redondeados</h3>
+<p class="redondeado1">El estilo es: border: 2px solid red;border-radius: 5px;</p>
+<p class="redondeado2">El estilo es: border: 4px solid green; border-radius: 15px;</p>
+<p class="redondeado3">El estilo es: border: 2px solid red; padding: 10px; border-radius: 50px 20px;</p>
+<h2>Propiedad Outline</h2>
+
+<p>Establece un contorno alrededor de un elemento por fuera del propio borde del elemento.</p>
+
+</body>
+</html>
