@@ -1,0 +1,24 @@
+Lenguaje HTML
+Definición HTML
+HTML, siglas en inglés de HyperText Markup Language (lenguaje de marcas de hipertexto), hace referencia al lenguaje de marcado para la elaboración de páginas web. Es un estándar que sirve de referencia del software que conecta con la elaboración de páginas web en sus diferentes versiones, define una estructura básica y un código (denominado código HTML) para la definición de contenido de una página web, como texto, imágenes, videos, audios, juegos, entre otros.
+
+HTML, es un estándar a cargo del World Wide Web Consortium (W3C®) o Consorcio WWW, organización dedicada a la estandarización de casi todas las tecnologías ligadas a la web, sobre todo en lo referente a su escritura e interpretación. Se considera el lenguaje web más importante siendo su invención crucial en la aparición, desarrollo y expansión de la World Wide Web (WWW Red Mundial Web). Es el estándar que se ha impuesto en la visualización de páginas web.
+
+Estándar HTML
+El lenguaje HTML basa su filosofía de desarrollo en la diferenciación.
+
+Al añadir un elemento externo a la página web (imagen, vídeo, audio, entre otros.), este no se incrusta directamente en el código de la página, sino que se hace una referencia a la ubicación de dicho elemento mediante etiquetas de texto. De este modo, la página web contiene solamente texto mientras que recae en el navegador web (interpretador del código) la tarea de unir todos los elementos y visualizar la página final.
+
+Al ser un estándar, HTML busca ser un lenguaje que permita que cualquier página web escrita en una determinada versión, pueda ser interpretada de la misma forma (estándar) por cualquier navegador web.
+
+Sólo tuve que tomar la idea de hipertexto y conectarlo con las ideas de TCP y DNS y —¡Et voilà!— la World Wide Web.
+Tim Berners-Lee, creador de la Web y autor del libro "Tejiendo la red".
+
+Navegadores HTML
+Un navegador web (en inglés, web browser) es un software, aplicación o programa que permite el acceso a la Web, interpretando la información de distintos tipos de archivos y sitios web para que estos puedan ser visualizados.
+
+La funcionalidad básica de un navegador web es permitir la visualización de documentos de texto, posiblemente con recursos multimedia incrustados. Además, permite visitar páginas web y hacer actividades en ella, es decir, enlazar un sitio con otro, imprimir, enviar y recibir correo, entre otras funcionalidades más.
+
+Los documentos que se muestran en un navegador web pueden estar ubicados en la computadora donde está el usuario y también pueden estar en cualquier otro dispositivo conectado en la computadora del usuario o a través de Internet, y que tenga los recursos necesarios para la transmisión de los documentos (un software servidor web).
+
+Tales documentos de texto, comúnmente denominados páginas web, poseen hiperenlaces o hipervínculos que enlazan una porción de texto o una imagen a otro documento. El seguimiento de enlaces de una página a otra, ubicada en cualquier computadora conectada a Internet, se llama navegación, de donde se origina el nombre navegador.

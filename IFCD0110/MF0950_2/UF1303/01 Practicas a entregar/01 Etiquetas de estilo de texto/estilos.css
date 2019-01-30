@@ -1,0 +1,121 @@
+@charset "utf-8";
+/* CSS Document */	
+body {
+	background-color: white;
+	font-family: Lucida Grande, Lucida Sans Unicode, Lucida Sans, DejaVu Sans, Verdana," sans-serif";
+	width:80%;
+    margin: 0 auto; /* centrar la página */
+	color: rgba(122,116,116,1.00);
+	font-size: 120%;
+}
+div {background-color: rgba(239,232,197,0.70);
+	padding: 20px;
+	border: 1px solid rgba(168,166,167,1.00);
+	margin-bottom: 20px;
+	margin-top: 20px;
+	border-radius: 10px;
+	box-shadow: 5px 5px 5px 0 rgba(0,0,0,0.2), 5px 5px 5px 0 rgba(0,0,0,0.19);
+}
+h1 {
+	text-transform: uppercase;
+	text-align: center;
+	border: 1px solid darkred;
+	border-left-style: none;
+	border-right-style: none;
+	text-shadow: 2px 5px 5px grey;
+	background-color: darkred;
+	letter-spacing: 3px;
+		
+}
+h2 { 
+	text-align: center;
+	border: 1px dotted darkred;
+	border-left-style: none;
+	border-right-style: none;
+	text-shadow: 2px 5px 5px grey;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+h3 {
+	text-align: center;
+	border: 1px dashed darkred;
+	border-left-style: none;
+	border-right-style: none;
+	text-shadow: 2px 5px 5px grey;
+	margin-left: 40px;
+	margin-right: 40px;
+}
+
+mark {
+	border: 1px solid darkred;
+	color: darkred;
+	padding: 5px;
+}
+hr {
+	width: 100px;
+	border: 2px solid rgba(189,185,185,1.00);
+}
+p {
+	border: 2px solid darkred;
+	padding: 10px;
+	line-height: 1.5;
+	border-radius: 10px;
+	background-color: cornsilk;
+	box-shadow: 5px 5px 5px 0 rgba(0,0,0,0.2), 5px 5px 5px 0 rgba(0,0,0,0.19);
+}
+abbr {
+	color: darkred;
+	text-decoration: none;
+	border: 1px solid green;
+	padding-left: 4px;
+	padding-right: 4px;
+	
+}
+blockquote {
+	text-indent: 50px;
+	text-align: justify;
+}
+
+span{
+	border: 2px solid darkred;
+	text-align: center;
+	padding: 10px;
+	line-height: 1.5;
+	border-radius: 10px;
+	background-color: cornsilk;
+	box-shadow: 5px 5px 5px 0 rgba(0,0,0,0.2), 5px 5px 5px 0 rgba(0,0,0,0.19);
+	display: block;
+	margin: auto;
+	width: 90%;
+}
+
+cite {color: blue;
+	  text-align: center;
+	}
+b {
+	color: blue;
+}
+s {text-decoration-color: darkred;}
+
+/*q {quotes: "« " " »";}*/
+q {quotes: "\00AB " " \00BB";}
+
+i{color: darkred;
+ 
+}
+u {text-decoration: underline blue;}
+
+ins {color: black;
+	text-decoration: underline darkred;}
+
+del {text-decoration: line-through red;}
+
+em {color: darkred;}
+
+strong {
+	color: darkred;
+}
+sup {color: darkred;}
+
+
