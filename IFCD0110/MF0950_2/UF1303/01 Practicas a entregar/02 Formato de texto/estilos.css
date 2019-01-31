@@ -1,0 +1,107 @@
+@charset "utf-8";
+/* CSS Document */
+
+* {
+	box-sizing: border-box; /* para mantener el tamaño de cajas incluyendo padding y margin */
+}
+.body {
+	background-image: url(textura.jpg);
+	width: 80%;
+	margin: 0 auto; /* centrar la página */
+}
+.main {
+	margin: 30px; /* centrar la página */
+	padding: 20px;
+	border: 1px solid rgba(168,166,167,1.00);
+	box-shadow: 5px 5px 5px 0 rgba(0,0,0,0.2), 5px 5px 5px 0 rgba(0,0,0,0.19);
+	background-image:url(libreta-espiral.gif);
+	background-repeat: repeat-y;
+}
+.container {
+	margin: 100px; /* centrar la página */
+	padding: 20px;
+	border: 1px solid rgba(168,166,167,1.00);
+	background-color: white;
+	box-shadow: 5px 5px 5px 0 rgba(0,0,0,0.2), 5px 5px 5px 0 rgba(0,0,0,0.19);
+	
+}
+.divDatos {
+	margin: 100px; /* centrar la página */
+	padding: 20px;
+	border: 1px solid rgba(168,166,167,1.00);
+	background-image: url(chincheta-roja.png);
+	background-repeat: no-repeat;
+  	background-position: right top;
+	background-color: gainsboro;
+	box-shadow: 5px 5px 5px 0 rgba(0,0,0,0.2), 5px 5px 5px 0 rgba(0,0,0,0.19);
+}
+.h1 {
+	background-color: antiquewhite;
+	border-bottom-style: groove;
+	
+	text-align: center;
+}
+.h2 {
+	font-variant: small-caps;
+	border-bottom-style: groove;
+	}
+
+.nav {
+	background-color: antiquewhite;
+	margin: auto; /* centrar la página */
+	list-style-type: none; /*quitar el punto de la lista */
+	padding: 5px;
+	width: 100%;
+	overflow: hidden;
+	}
+
+.nav li {
+	background-color: darkred;
+	display: block;
+	border: 1px solid black;
+	width: 30%;
+	float: left;
+	text-align: center;
+	margin-right: 1px;
+}
+.nav li:hover {
+	background-color: darkred;
+}
+.nav li a {
+	color: white;
+	text-decoration: none;
+	padding: 10px 25px;
+	display: block;
+}
+.nav li a:hover {
+	color: yellow;
+}
+/**/
+.botonIndice {
+	background-color: darkred;
+	color: white;
+	display: block;
+	border: 1px solid black;
+	padding: 5px 10px;
+	text-align: center;
+	margin-left: 5px;
+	width: 100px;
+}
+.botonIndice:hover {
+	background-color: darkred;
+}
+
+.p0 {
+	font-size: 120%;
+	font-weight: 200%;
+	text-align: justify;
+	margin:10px;
+	padding: 10px;
+	}
+.p1 {
+	background-color: bisque;
+	text-align: justify;
+	margin: 10px;
+	border-left-color: 2px solid darkred;
+	padding: 10px;
+}

@@ -1,7 +1,7 @@
 @charset "utf-8";
 /* CSS Document */	
 body {
-font-family:"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
+font-family: 'Sarabun', sans-serif;
 width:90%;
 margin: 0 auto;
 }
@@ -178,36 +178,60 @@ padding: 8px;
 tr:nth-child(even) {
 background-color: #dddddd;
 }
-	a:link {
-		  color: green; 
-		  background-color: transparent; 
-		  text-decoration: none;
-			padding: 20px;
-		}
+.nav1 {
+	/*background-color: green;*/
+	text-align: left;
+}
+.nav1 a {
+	background-color: darkred;
+	color: white;
+	padding: 10px 20px;
+	text-decoration: none;
+	border: 2px solid black;
+	border-radius: 20px;
+	box-shadow: 2px 2px 5px grey;
+}
+.nav1 a:hover {
+	background-color: red;
+	color: yellow;
+	border-bottom: 4px solid yellow;
+}
+.nav2 {
+	background-color:antiquewhite;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	overflow: auto;
+	}
 
-		a:visited {
-		  color: blue;
-		  background-color: transparent;
-		  text-decoration: none;
-			
-		}
+.nav2 li {
+	background-color: yellow;
+	border: 1px solid black;
+	width: auto;
+	float: left;
+	text-align: center;
+	margin-right: 5px;
+	border-radius: 20px;
+}
+.nav2 li:hover {
+	background-color: darkred;
+}
+.nav2 li a {
+	color: black;
+	text-decoration: none;
+	padding: 10px 25px;
+	display: block;
+}
+.nav2 li a:hover {
+	color: green;
+}
 
-		a:hover {
-		  color: red;
-		  background-color: transparent;
-		  text-decoration: none;
-		}
 
-		a:active {
-		  color: yellow;
-			background-color: transparent;
-		  text-decoration: underline;
-		}
-		.active {
-		  	color: green;
-			background-color: transparent;
-		  text-decoration: underline;
-		}
+.active {
+	  	color: green;
+		background-color: transparent;
+        text-decoration: underline;
+		} 
 	header h1 {
 			color: white;
 			margin: 20px;
