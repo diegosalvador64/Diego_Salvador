@@ -1,11 +1,11 @@
 @charset "utf-8";
 /* CSS Document */
 
-* {
+ * {
 	box-sizing: border-box; /* para mantener el tamaño de cajas incluyendo padding y margin */
 }
 .body {
-	background-image: url(textura.jpg);
+	background-image: url(fondo-telas-047.jpg);
 	width: 80%;
 	margin: 0 auto; /* centrar la página */
 }
@@ -25,44 +25,95 @@
 	box-shadow: 5px 5px 5px 0 rgba(0,0,0,0.2), 5px 5px 5px 0 rgba(0,0,0,0.19);
 	
 }
-.divDatos {
-	margin: 100px; /* centrar la página */
-	padding: 20px;
+.divDatos1 {
+	margin: 20px; /* centrar la página */
+	padding: 10px;
 	border: 1px solid rgba(168,166,167,1.00);
 	background-image: url(chincheta-roja.png);
 	background-repeat: no-repeat;
   	background-position: right top;
+	background-size: 75px;
 	background-color: gainsboro;
 	box-shadow: 5px 5px 5px 0 rgba(0,0,0,0.2), 5px 5px 5px 0 rgba(0,0,0,0.19);
 }
-.h1 {
+
+.divDatos2 {
+	margin: 20px; /* centrar la página */
+	padding: 10px;
+	border: 1px solid rgba(168,166,167,1.00);
+	background-image: url(chincheta-azul.png);
+	background-repeat: no-repeat;
+  	background-position: right top;
+	background-size: 75px;
+	background-color: floralwhite;
+	box-shadow: 5px 5px 5px 0 rgba(0,0,0,0.2), 5px 5px 5px 0 rgba(0,0,0,0.19);
+}
+.divDatos3 {
+	margin: 20px; /* centrar la página */
+	padding: 10px;
+	border: 1px solid rgba(168,166,167,1.00);
+	background-image: url(chincheta-verde.png);
+	background-repeat: no-repeat;
+  	background-position: right top;
+	background-size: 75px;
+	background-color:darksalmon;
+	box-shadow: 5px 5px 5px 0 rgba(0,0,0,0.2), 5px 5px 5px 0 rgba(0,0,0,0.19);
+}
+.footer {
+	margin: 20px; /* centrar la página */
+	padding: 10px;
+	border: 1px dotted darkred;
 	background-color: antiquewhite;
+	text-align: center;
+}
+.h1 {
+	font-variant: small-caps;
+	background-color: antiquewhite;
+	border-bottom-color: aquamarine;
+	border-bottom-width: 10px;
 	border-bottom-style: groove;
-	
 	text-align: center;
 }
 .h2 {
 	font-variant: small-caps;
 	border-bottom-style: groove;
+	border-bottom-color: firebrick;
+	border-bottom-width: 10px;
+	padding-top: 25px;
 	}
+
+.noPuntoLista {list-style-type: none;
+}
+.letraGruesa {font-weight: bold;}
+
+.textoSinDecoracion {text-decoration: none;
+					color: darkblue;
+					font-weight: bold;
+}
 
 .nav {
+	padding: 0;
+	margin: 0;
+}
+.nav ul {
 	background-color: antiquewhite;
-	margin: auto; /* centrar la página */
-	list-style-type: none; /*quitar el punto de la lista */
-	padding: 5px;
-	width: 100%;
-	overflow: hidden;
+	font-family: Gotham, Helvetica Neue, Helvetica, Arial," sans-serif";
+	font-weight: bold;
+	margin: 0 auto; /* centrar la página */
+	width: auto;
+	overflow: auto;
+	padding: 0;
 	}
 
-.nav li {
+.nav li { 
 	background-color: darkred;
-	display: block;
-	border: 1px solid black;
-	width: 30%;
+	list-style-type: none; /*quitar el punto de la lista */
+	border: 2px solid yellow;
+	border-radius: 20px;
+	width: 33.33%;
 	float: left;
 	text-align: center;
-	margin-right: 1px;
+	padding: 5px;
 }
 .nav li:hover {
 	background-color: darkred;
@@ -70,38 +121,59 @@
 .nav li a {
 	color: white;
 	text-decoration: none;
-	padding: 10px 25px;
-	display: block;
 }
 .nav li a:hover {
 	color: yellow;
 }
 /**/
 .botonIndice {
-	background-color: darkred;
+	background-color: chocolate;
+	font-family: Gotham, Helvetica Neue, Helvetica, Arial," sans-serif";
+	font-weight: bold;
 	color: white;
-	display: block;
 	border: 1px solid black;
 	padding: 5px 10px;
 	text-align: center;
-	margin-left: 5px;
-	width: 100px;
+	text-decoration: none;
+	border-radius: 20px;
 }
 .botonIndice:hover {
 	background-color: darkred;
 }
 
-.p0 {
-	font-size: 120%;
-	font-weight: 200%;
-	text-align: justify;
-	margin:10px;
-	padding: 10px;
-	}
-.p1 {
-	background-color: bisque;
-	text-align: justify;
-	margin: 10px;
-	border-left-color: 2px solid darkred;
+.letraMuyGrande {font-size: 1.1em;}
+.letraGrande {font-size: 1em;}
+.letraMediana {font-size: 0.9em;}
+.letraPequena {font: 0.7em;}
+
+.ajusteTexto {word-spacing: -0.1em; letter-spacing: -0.01em; text-align: justify;} /*en lugar del text-align: justify */
+
+.colorRojo {color:darkred;}
+.colorVerde {color:darkgreen;}
+.colorAzul {color:darkblue;}
+.colorAmarillo {color: khaki;}
+.desplazarLista {margin-left: 20px;}
+
+.fondoRojo {
+	background-color: tomato;
+	border-left: 4px solid darkred;
 	padding: 10px;
 }
+
+.fondoVerde {
+	background-color:#BAF9C5;
+	border-left: 4px solid darkred;
+	padding: 10px;
+}
+
+.fondoAzul {
+	background-color:#CED0F4;
+	border-left: 4px solid darkred;
+	padding: 10px;
+}
+.fondoAmarillo {
+	background-color:#DBEC9C;
+	border-left: 4px solid darkred;
+	padding: 10px;
+}
+
