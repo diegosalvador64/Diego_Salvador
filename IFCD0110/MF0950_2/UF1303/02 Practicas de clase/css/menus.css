@@ -1,0 +1,78 @@
+@charset "utf-8";
+/* CSS Document */
+* {
+	box-sizing: border-box content-box; /* mantiene el tamaño de padding y margin, sin que los sume*/
+  }
+/* CSS para menú inline-Block (menu1) */
+#menu1 { 
+	width: 80%;
+	margin: 0 auto; 
+	border: 1px solid black; 
+	padding: 10px;
+}
+#menu1 ul {
+	list-style-type: none;
+	text-align: center;
+	background-color: antiquewhite;
+	margin: 0;
+	padding: 0;
+}
+#menu1 ul li {
+	display: inline-block;
+	border: 1px solid black;
+}
+#menu1 ul li a {
+	display: inline-block;
+	text-decoration: none;
+	width: 100px;
+	padding: 10px;
+	color: green;
+}
+#menu1 ul li:hover {
+	background-color: lightsalmon;
+}
+#menu1 ul li a:hover {
+	text-decoration: underline;
+	background-color: ghostwhite;
+	color: rebeccapurple;
+}
+/* CSS para menú Float (menu2) */
+
+#menu2 {
+	width: 80%;
+	margin: 0 auto; 
+	border: 1px solid black; 
+	padding: 10px;
+}
+#menu2 ul {
+	list-style-type: none;
+	margin: 0 auto;
+	padding: 0;
+	background-color: burlywood;
+	overflow: hidden;
+	border: 1px solid black;
+	width: 80%;
+	}
+#menu2 ul li {
+	float: left; /* las propiedades float y width (anchura) deben ir juntas */
+	border: 1px solid yellow; 
+	padding: 5px;
+	margin: 5px;
+}
+#menu2 ul li a {
+	background-color: aliceblue;
+	border: 1px solid black;
+	text-align: center;
+	text-decoration: none;
+	padding: 10px;
+
+}
+#alineacion {
+	width: 80%;
+	margin: auto;
+}
+#menu2 ul li a:hover {
+	text-decoration: underline;
+	background-color:darkorange;
+	color: rebeccapurple;
+}
