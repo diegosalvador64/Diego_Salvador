@@ -1,7 +1,9 @@
 @charset "utf-8";
 /* CSS Document */
 * {
-	box-sizing: border-box content-box; /* mantiene el tamaño de padding y margin, sin que los sume*/
+	box-sizing: border-box; /* mantiene el tamaño de padding y margin, sin que los sume*/
+	font-family: Gotham, Helvetica Neue, Helvetica, Arial," sans-serif";
+	font-size: 1em;
   }
 /* CSS para menú inline-Block (menu1) */
 #menu1 { 
@@ -42,37 +44,152 @@
 	width: 80%;
 	margin: 0 auto; 
 	border: 1px solid black; 
-	padding: 10px;
+	overflow: hidden;
+	height: auto;
 }
 #menu2 ul {
 	list-style-type: none;
-	margin: 0 auto;
+	float: left;
+	margin: 0;
 	padding: 0;
-	background-color: burlywood;
-	overflow: hidden;
-	border: 1px solid black;
-	width: 80%;
-	}
+	position: relative; /* Utilizamos esta propiedad en lugar del margin en el caso de los float */
+	left: 50%;
+	
+}
 #menu2 ul li {
-	float: left; /* las propiedades float y width (anchura) deben ir juntas */
-	border: 1px solid yellow; 
-	padding: 5px;
-	margin: 5px;
+	float: left;
+	margin: 10px 2px;
+	border: 2px solid orange;
+	position: relative;
+	right: 50%;
+	background-color: darkred;
 }
 #menu2 ul li a {
-	background-color: aliceblue;
-	border: 1px solid black;
-	text-align: center;
 	text-decoration: none;
+	text-align: center;
 	padding: 10px;
-
-}
-#alineacion {
-	width: 80%;
-	margin: auto;
+	display: block;
+	width: 100px;
+	color: white;
 }
 #menu2 ul li a:hover {
 	text-decoration: underline;
-	background-color:darkorange;
-	color: rebeccapurple;
+	color: orange;
+	background-color: darkblue;
 }
+/* CSS para menú inline (menu3) */
+#menu3 {
+	width: 80%;
+	margin: 0 auto; 
+	border: 1px solid black; 
+	padding: 20px;
+}
+#menu3 ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+#menu3 ul li {
+	display: inline;
+	margin: 2px;
+}
+#menu3 ul li a {
+	text-decoration: none;
+	display: inline;
+	padding: 10px 15px;
+}
+.rojo {
+	background-color: darkred;
+	color: white;
+}
+.rojo:hover {
+	opacity: 0.8;
+}
+.azul {
+	background-color: darkblue;
+	color: white;
+}
+.azul:hover {
+	opacity: 0.8;
+}
+.naranja {
+	background-color: orange;
+	color: white;
+}
+.naranja:hover {
+	opacity: 0.8;
+}
+.verde {
+	background-color: darkgreen;
+	color: white;
+}
+.verde:hover {
+	opacity: 0.8;
+}
+.violeta {
+	background-color: darkviolet;
+	color: white;
+}
+.violeta:hover {
+	opacity: 0.8;
+}
+/* CSS para menú block (menu4) */
+#menu4 {
+	width: 80%;
+	margin: 0 auto; 
+	border: 1px solid black; 
+	padding: 10px;
+}
+#menu4 ul {
+	list-style-type: none;
+	display: block;
+	margin: 0;
+	padding: 0;
+	border: 1px solid red;
+	width: auto;
+	}
+#menu4 ul li {
+	display: block;
+	border: 1px solid black;
+	width: auto;
+	margin: auto;
+	
+}
+#menu4 ul li a {
+    display: block;
+	text-decoration: none;
+	text-align: center;
+	color: white;
+	padding: 5px;
+	background-color: darkseagreen;
+}
+#menu4 ul li a:hover {
+	opacity: 0.6;
+}
+/* --------------- Menus -----------------------*/
+#padre {
+	overflow: hidden;
+	width: 80%;
+	border: 1px solid black;
+	margin: auto;
+}
+#hijo1 {
+	float: left;
+	width: 33.33%;
+	background-color: lightgray;
+	height: 200px;
+}
+#hijo2 {
+	float: right;
+	width: 33.33%;
+	background-color: lightgray;
+	height: 200px;
+}
+#hijo3 {
+	margin: auto;
+	width: 33.33%;
+	background-color: lightgray;
+	height: 200px;
+}
+
