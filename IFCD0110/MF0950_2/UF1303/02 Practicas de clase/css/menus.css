@@ -178,18 +178,18 @@
 	float: left;
 	width: 33.33%;
 	background-color: lightgray;
-	height: 200px;
+	height: auto;
 }
 #hijo2 {
 	float: right;
 	width: 33.33%;
 	background-color: lightgray;
-	height: 200px;
+	height: auto;
 }
 #hijo3 {
 	margin: auto;
 	width: 33.33%;
 	background-color: lightgray;
-	height: 200px;
+	height: auto;
 }
 
