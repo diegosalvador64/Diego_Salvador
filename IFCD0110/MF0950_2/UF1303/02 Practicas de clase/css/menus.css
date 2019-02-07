@@ -11,6 +11,9 @@
 	margin: 0 auto; 
 	border: 1px solid black; 
 	padding: 10px;
+	position: sticky; /* posición pegajosa: no lo soportan todos los navegadores */
+	top: 0;
+	z-index: 1; /*orden de apilación: queremos que este elemento esté siempre por delante*/
 }
 #menu1 ul {
 	list-style-type: none;
@@ -159,14 +162,249 @@
 #menu4 ul li a {
     display: block;
 	text-decoration: none;
+	text-align: left;
+	color: white;
+	padding: 5px;
+	background-color: darkseagreen;
+	}
+#menu4 ul li a:hover {
+	opacity: 0.6;
+}
+
+/* CSS para menú block (menu5) */
+#menu5 {
+	width: 80%;
+	margin: 0 auto; 
+	border: 1px solid black; 
+	padding: 10px;
+}
+#menu5 ul {
+	list-style-type: none;
+	display: block;
+	margin: 0;
+	padding: 0;
+	border: 1px solid red;
+	width: auto;
+	}
+#menu5 ul li {
+	display: block;
+	border: 1px solid black;
+	width: auto;
+	margin: auto;
+	
+}
+#menu5 ul li a {
+    display: block;
+	text-decoration: none;
+	text-align: right;
+	color: white;
+	padding: 5px;
+	background-color: darkseagreen;
+	}
+#menu5 ul li a:hover {
+	opacity: 0.6;
+}
+
+/* CSS para menú block (menu6) */
+#menu6 {
+	width: 80%;
+	margin: 0 auto; 
+	border: 1px solid black; 
+	padding: 10px;
+}
+#menu6 ul {
+	list-style-type: none;
+	display: block;
+	margin: 0;
+	padding: 0;
+	border: 1px solid red;
+	width: auto;
+	}
+#menu6 ul li {
+	display: block;
+	border: 1px solid black;
+	width: auto;
+	margin: auto;
+	
+}
+#menu6 ul li a {
+    display: block;
+	text-decoration: none;
 	text-align: center;
 	color: white;
 	padding: 5px;
 	background-color: darkseagreen;
-}
-#menu4 ul li a:hover {
+	}
+#menu6 ul li a:hover {
 	opacity: 0.6;
 }
+/* CSS para menú Barra Redes Sociales (menu7) */
+#menu7 { 
+	width: 80%;
+	margin: 0 auto; 
+	border: 1px solid black; 
+	padding: 10px;
+}
+#menu7 ul {
+	list-style-type: none;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+}
+#menu7 ul li {
+	display: inline-block;
+	background-color: gray;
+	padding: 10px;
+}
+#menu7 ul li a {
+	display: inline-block;
+	text-decoration: none;
+	width: auto;
+	/*padding: 10px;*/
+}
+#menu7 ul li a:hover {
+	opacity: 0.5;
+}
+
+/* CSS para menú Barra Redes Sociales (menu77) Lo pongo a la derecha vertical fija */
+
+#menu77 { 
+	width: 80%;
+	margin: 0 auto; 
+	border: 1px solid black; 
+	padding: 10px;
+	
+}
+#menu77 ul {
+	list-style-type: none;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+	position: fixed; /* esta propiedad fija el elemento donde le digamos */
+	right: 0;
+	top: 10%;
+}
+#menu77 ul li {
+	background-color: skyblue;
+	border: 1px solid gray;
+	padding: 10px;
+}
+#menu77 ul li a {
+	text-decoration: none;
+	width: auto;
+}
+#menu77 ul li a:hover {
+	opacity: 0.5;
+}
+
+/* CSS para menús anidados en vertical */
+#menu8 {
+	width: 80%;
+	margin: 0 auto; 
+	border: 1px solid black; 
+	padding: 10px;
+	}
+#menu8 ul {
+	list-style-type: none;
+	margin: 0 auto;
+	padding: 0;
+	background-color: orange;
+	overflow: hidden;
+	}
+#menu8 ul li {
+	float: left;
+	border-right: 1px solid #bbb;
+}
+#menu8 ul li a {
+	color: white;
+	display: block;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+#menu8 ul li a:hover {
+	background: darkorange;
+}
+
+#menu8 ul li ul {
+	display: none; 
+	position: absolute;
+	background-color: #f9f9f9;
+	box-shadow: 5px 5px #888888;
+	/*box-shadow: 0px 8px 16px 0px rgba(0,0,0,0,0.2);*/
+	z-index: 1;
+}
+#menu8 ul li:hover ul {
+	display: block;
+	
+}
+#menu8 ul li ul li {
+	float: none; /* para que no floten los elementos de lista de las listas hijas */
+}
+#menu8 ul li ul li a {
+	color: black;
+	padding:  12px 16px;
+}
+#menu8 ul li ul li a:hover {
+	background-color: dodgerblue;
+	color: white;
+}
+/* CSS para menús anidados en horizontal */
+#menu9 {
+	width: 80%;
+	margin: 0 auto; 
+	border: 1px solid black; 
+	padding: 10px;
+	}
+#menu9 ul {
+	list-style-type: none;
+	margin: 0 auto;
+	padding: 0;
+	background-color: orange;
+	width: 300px;
+	/*overflow: hidden;*/
+	}
+#menu9 ul li {
+	float: none;
+	border-right: 1px solid #bbb;
+}
+#menu9 ul li a {
+	color: white;
+	display: block;
+	text-align: left;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+/*
+#menu9 ul li a:hover {
+	background: darkorange;
+}
+
+#menu9 ul li ul {
+	display: none; 
+	position: absolute;
+	background-color: #f9f9f9;
+	box-shadow: 5px 5px #888888;
+	z-index: 1;
+}
+#menu9 ul li:hover ul {
+	display: block;
+	
+}
+#menu9 ul li ul li {
+	float: none; 
+	
+}
+#menu9 ul li ul li a {
+	color: black;
+	padding:  12px 16px;
+}
+#menu9 ul li ul li a:hover {
+	background-color: dodgerblue;
+	color: white;
+} */
+
 /* --------------- Menus -----------------------*/
 #padre {
 	overflow: hidden;
@@ -177,19 +415,26 @@
 #hijo1 {
 	float: left;
 	width: 33.33%;
-	background-color: lightgray;
+	background-color: white;
 	height: auto;
 }
 #hijo2 {
 	float: right;
 	width: 33.33%;
-	background-color: lightgray;
+	background-color: white;
 	height: auto;
 }
 #hijo3 {
 	margin: auto;
 	width: 33.33%;
-	background-color: lightgray;
+	background-color: white;
 	height: auto;
 }
+.iconos {
+	width: 25px;
+	height: 25px;
+	vertical-align: -0.4em;
+	margin: 2px;
+}
+
 
