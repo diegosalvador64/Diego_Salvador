@@ -205,6 +205,38 @@
 	opacity: 0.6;
 }
 
+/* --------------- Menus -----------------------*/
+#padre {
+	overflow: hidden;
+	width: 80%;
+	border: 1px solid black;
+	margin: auto;
+}
+#hijo1 {
+	float: left;
+	width: 33.33%;
+	background-color: white;
+	height: auto;
+}
+#hijo2 {
+	float: right;
+	width: 33.33%;
+	background-color: white;
+	height: auto;
+}
+#hijo3 {
+	margin: auto;
+	width: 33.33%;
+	background-color: white;
+	height: auto;
+}
+.iconos {
+	width: 25px;
+	height: 25px;
+	vertical-align: -0.4em;
+	margin: 2px;
+}
+
 /* CSS para menú block (menu6) */
 #menu6 {
 	width: 80%;
@@ -350,25 +382,40 @@
 	background-color: dodgerblue;
 	color: white;
 }
-/* CSS para menús anidados en horizontal */
+/* CSS para menús anidados en vertical y los menús hijos en horizontal */
 #menu9 {
 	width: 80%;
 	margin: 0 auto; 
 	border: 1px solid black; 
 	padding: 10px;
-	position: relative;
 	}
 #menu9 ul {
 	list-style-type: none;
-	margin: 0 auto;
+	margin: 0;
 	padding: 0;
-	background-color: orange;
+ 	background-color: orange; 
+	width: 150px;
 	position: absolute;
-	overflow: hidden;
 	}
 #menu9 ul li {
-	float: left;
+	float: none;
 	border-right: 1px solid #bbb;
+	position: relative;
+}
+#menu9 ul li ul {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 150px;
+	z-index: 1;
+	background-color: #f9f9f9;
+	box-shadow: 5px 5px #888888;
+}
+#menu9 ul li:hover > ul {
+	display: block;
+}
+#menu9 ul li ul li {
+	position: relative;
 }
 #menu9 ul li a {
 	color: white;
@@ -382,22 +429,6 @@
 	background: darkorange;
 }
 
-#menu9 ul li ul {
-	display: none; 
-	position: relative;
-	background-color: #f9f9f9;
-	box-shadow: 5px 5px #888888;
-	z-index: 1;
-}
-
-#menu9 ul li:hover ul {
-	display: block;
-	
-}
-#menu9 ul li ul li {
-	float: right; 
-}
-
 #menu9 ul li ul li a {
 	color: black;
 	padding:  12px 16px;
@@ -407,36 +438,127 @@
 	color: white;
 } 
 
-/* --------------- Menus -----------------------*/
-#padre {
-	overflow: hidden;
+/* CSS para 3 menús anidados en vertical */
+#menu10 {
 	width: 80%;
-	border: 1px solid black;
-	margin: auto;
+	margin: 0 auto; 
+	border: 1px solid black; 
+	padding: 10px;
+	}
+#menu10 ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	
+	}
+
+#menu10 ul li {
+	display: block;
+	width: 150px;
+	position: relative;
+	background-color: black;
 }
-#hijo1 {
+#menu10 ul li a {
+	text-decoration: none;
+	padding: 14px 16px;
+	color: white;
+	display: block;
+	text-align: left;
+}
+#menu10 ul li a:hover {
+	background: darkorange;
+}
+#menu10 ul li ul {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 150px;
+	z-index: 1;
+	background-color: #f9f9f9;
+	box-shadow: 5px 5px #888888;
+}
+
+#menu10 ul li:hover > ul {
+	display: block;
+}
+
+#menu10 ul li ul li {
+	/*position: relative;
+	display: block;*/ /* esto no hace falta porques estas propiedades las hereda del padre */
+}
+
+#menu10 ul li ul li a {
+	color: white;
+	padding:  12px 16px;
+}
+#menu10 ul li ul li a:hover {
+	background-color: dodgerblue;
+	color: white;
+}
+
+/*Menú horizontal desplegable 3 niveles horizontal - vertical - horizontal */
+
+#menu11 {
+	width: 80%;
+	margin: 0 auto; 
+	border: 1px solid black; 
+	padding: 10px;
+	/*overflow: hidden;*/
+	}
+
+#menu11 ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	/*overflow: hidden;*/
+	z-index: 1;
+	background-color: #848181;
+}
+#menu11 ul li {
+	display: block;
 	float: left;
-	width: 33.33%;
-	background-color: white;
-	height: auto;
+	width: 150px;
+	text-align: left;
 }
-#hijo2 {
-	float: right;
-	width: 33.33%;
-	background-color: white;
-	height: auto;
+#menu11 ul li a {
+	text-decoration: none;
+	padding: 14px 16px;
+	color: black;
+	display: block;
+	text-align: left;
 }
-#hijo3 {
-	margin: auto;
-	width: 33.33%;
-	background-color: white;
-	height: auto;
+
+#menu11 ul li a:hover {
+	background: darkorange;
 }
-.iconos {
-	width: 25px;
-	height: 25px;
-	vertical-align: -0.4em;
-	margin: 2px;
+
+#menu11 ul li ul {
+	display: none;
 }
+#menu11 ul li:hover > ul {
+	display: block;
+}
+#menu11 ul li ul li {
+	position: relative;
+	
+}
+#menu11 ul li ul li a {
+	color: black;
+	padding:  12px 16px;
+	display: block;
+	text-align: center;
+	text-decoration: none;
+}
+#menu11 ul li ul li a:hover {
+	background-color: dodgerblue;
+	color: white;
+}
+
+#menu11 ul li ul li ul {
+	position: absolute;
+	top: 0;
+	left: 150px;
+}
+
 
 
