@@ -1,0 +1,270 @@
+@charset "utf-8";
+/* CSS Document */
+* {
+	box-sizing: border-box; /* mantiene el tamaño de padding y margin, sin que los sume*/
+	font-family: Gotham, Helvetica Neue, Helvetica, Arial," sans-serif";
+	margin: 0;
+	padding: 0;
+ }
+h3 {
+	color: #6D97F8;
+	padding-top: 10px;
+}
+#header {background-color: blueviolet;
+}
+#body {
+	width: 80%;
+	margin: 0 auto;
+	padding: 0;
+	}
+#divHeaderPadre {
+	overflow: hidden;
+	width: auto;
+	margin: 0 auto; 
+}
+#divHeaderHijo1 {
+	width: 30%; 
+	float: left;
+	width: 200px;
+
+}
+#divHeaderHijo2 {
+	width: 70%; 
+	float: left;
+	color: white;
+	}
+#divHeaderHijo2 h1{
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+#listaNav {
+	background-color:#58D6F0; 
+	padding-top: 20px;
+	padding-left: 10%;
+	padding-bottom: 20px;
+}
+#listaNav p {
+	text-align: center;
+	color: blue
+}
+#listaNav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+#listaNav ul li {
+	display: inline-block;
+	text-align: center;
+
+}
+#listaNav ul li a {
+	display: block;
+	text-decoration: none;
+	width: 100px;
+	color: #6D97F8;
+	border: 1px solid #6D97F8;
+	background-color: aliceblue;
+	border-radius: 5px;
+	}
+
+#main {
+	background-color: lightgray;
+	padding: 5px 20px;
+	}
+#section {
+	overflow: hidden;
+	width: auto;
+	margin: 0;
+	padding: 5px;
+	background-color:#58D6F0; 
+}
+#divSection {
+	width: 80%;
+	margin: 0 auto;
+	padding: 0;
+}
+#articulo1 {
+	float: left;
+	width: 45%;
+	background-color: antiquewhite;
+	border: 1px solid black;
+	padding: 5%;
+	margin: 5px;
+	box-shadow: 2px 4px #888888;
+}
+#articulo1 p {
+	text-align: justify;
+	padding: 5px;
+}
+#articulo1 a {
+	display: block;
+	text-decoration: none;
+	color: white;
+	background-color:#78C8F5;
+	text-align: center;
+	width: 100px;
+	padding: 10px;
+	
+}
+#articulo1 a:hover {
+	text-decoration: underline;
+	background-color: ghostwhite;
+	color: rebeccapurple;
+}
+#articulo2 {
+	float: left;
+	width: 45%;
+	background-color: antiquewhite;
+	border: 1px solid black;
+	padding: 5%;
+	margin: 5px;
+	box-shadow: 2px 4px #888888;
+}
+#articulo2 p {
+	text-align: justify;
+	padding: 5px;
+}
+#articulo2 a {
+	display: block;
+	text-decoration: none;
+	color: white;
+	background-color:#78C8F5;
+	text-align: center;
+	width: 100px;
+	padding: 10px;
+}
+#articulo2 a:hover {
+	text-decoration: underline;
+	background-color: ghostwhite;
+	color: rebeccapurple;
+}
+#aside {
+	width: auto;
+	margin: 0;
+	padding: 0;
+	background-color:#58D6F0; 
+}
+#aside p {
+	text-align: center;
+	font-size: 1.2em;
+	color: blue;
+	padding: 10px;
+}
+#asideDivHijo1 li p {
+	color: black;
+	text-align: center;
+}
+#asideDivHijo1 ul {
+	list-style-type: none;
+	margin: 20px;
+	padding: 0;
+}
+#asideDivHijo1 ul li {
+	display: inline-block;
+	text-align: center;
+	background-color: antiquewhite;
+	border: 2px solid black;
+	width: 32%;
+	padding-top: 10px;
+	margin: 5px;
+	box-shadow: 2px 4px #888888;
+}
+#asideDivHijo1 ul li a {
+	display: block;
+	
+	}
+/* ------------------- */
+#asideDivHijo2 {
+	width: auto;
+    margin: 0 auto;
+	padding: 5px;
+}
+#asideDivHijo2 li p {
+	color: black;
+	text-align: center;
+}
+#asideDivHijo2 ul {
+	list-style-type: none;
+	margin: 30px;
+	padding: 0;
+}
+#asideDivHijo2 ul li {
+	display: inline-block;
+	text-align: center;
+	background-color: antiquewhite;
+	border: 2px solid black;
+	width: 22.5%;
+	padding: 10px;
+	margin: 10px;
+	box-shadow: 2px 4px #888888; 
+
+}
+#asideDivHijo2 ul li a {
+	display: block;
+}
+/*  ----------------------- */
+#footer {background-color:#706FE5;
+}
+#footer p {
+	text-align: center;
+	color: white;
+	padding: 20px 0;
+}
+
+#listaPadre {
+	list-style-type: none;
+	overflow: auto;
+	width: auto;
+	padding: 0;
+	margin: 0 25px;
+}
+#listaPadre p {
+	color: #5B74E5;
+	text-align: left;
+	font-size: 0.8em;
+	font-weight: bold;
+	
+}
+#listaRedes {
+	background-color: antiquewhite;
+	float: left;
+	width: 25%;
+	margin: 25px;
+	padding: 10px;
+	list-style-type: none;
+}
+#listaRedes a {
+	display: inline-block;
+	text-align: center;
+	text-decoration: none;
+}
+
+/**---------------------------*/
+#listaContacto {
+	background-color: antiquewhite;
+	float: left;
+	width: 25%;
+	margin: 25px;
+	padding: 10px;
+	list-style-type: none;
+}
+#listaContacto a {
+	display: inline-block;
+	text-align: center;
+	text-decoration: none;
+}
+
+/**---------------------------*/
+#listaDoc {
+	background-color: antiquewhite;
+	float: left;
+	width: 25%;
+	margin: 25px;
+	padding: 10px;
+	list-style-type: none;
+}
+#listaDoc a {
+	display: inline-block;
+	text-align: center;
+	text-decoration: none;
+}

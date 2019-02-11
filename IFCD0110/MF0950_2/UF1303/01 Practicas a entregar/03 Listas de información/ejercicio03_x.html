@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="es-ES">
+<head>
+<meta charset="utf-8">
+
+<title>Lenguaje HTML</title>
+
+<link  href="Images/HTML5_png.png" rel="icon" type="image/png">
+<link href="css/estilos.css" rel="stylesheet" type="text/css">
+
+<!-- Metaetiquetas para que la web se vea bien en todos los dispositivos -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+<div id="principal" >
+
+<!-- Cabecera de la página web -->
+<header>
+<p>&lt;header&gt;Cabecera&lt;/header&gt;</p>
+<div>
+<div id="logo">
+<img src="img/HTML5_png.png" alt="Logo HTML5" width="216" longdesc="Logotipo de la empresa">
+</div>
+
+<div id="titulo">
+  <h1>La Web Semántica</h1>
+  <h2>Donde las etiquetas identifican el contenido</h2>
+</div>
+</div>
+
+</header>
+
+<!-- Barra de Navegación -->
+<nav>
+<p>&lt;nav&gt;Barra de navegación&lt;/nav&gt;</p>
+<a href="#">Encabezado</a>&nbsp;<a href="#">Navegación</a>&nbsp;<a href="#">Main</a>&nbsp;<a href="#">Sección</a>&nbsp;<a href="#">Artículo</a>&nbsp;<a href="#">Figure</a>&nbsp;<a href="#">Aside</a>&nbsp;<a href="#">Footer</a></p>
+</nav>
+<!-- Sección de la página -->
+<div id="fondoblanco">
+  <main> &lt;main&gt;Contenido principal&lt;/main&gt;
+    <section>
+      <h1>&lt;section&gt;Sección de la página web&lt;/section&gt; </h1  
+  
+>
+      <div class="div-articulos">
+        <div class="div-articulo">
+          <article style="border: 3px solid black;">
+            <h2>&lt;article&gt;Artículo web&lt;/article&gt;</h2>
+            <!-- Figura para etiquetar la imágen -->
+            <figure> <img name="paisaje" src="img/01-albarracin.jpg" alt="Foto de Paisaje" style="width:100%">
+              <figcaption>Foto paisaje</figcaption>
+            </figure>
+            <h2><a href="#">Título del artículo</a></h2>
+            <p class="parrafo">Albarracín es un pueblo turolense con mucho encanto. Considerado un monumento en sí mismo, el trazado de sus calles con sinuosos pasadizos, sus caseríos de tono rojizo y su muralla...<br>
+            </p>
+            <span class="parrafo"><a href="#" style="background-color:dodgerblue; padding: 10px; margin-top:5px; display: block;width:100px; color: white;"> leer más</a></span>
+            <p class="parrafo-articulo"><span><strong>Pedro</strong></span> | <em>Comentarios 2</em> |
+              <time>09/05/2018</time>
+            </p>
+            <hr>
+          </article>
+        </div>
+        <div class="div-articulo">
+          <article style="border: 3px solid black;">
+            <h2>&lt;article&gt;Artículo web&lt;/article&gt;</h2>
+            <img name="paisaje" src="img/02-huesca.jpg" alt="Foto de Paisaje" style="width:100%">
+            <!-- Figura para etiquetar la imágen -->
+            <figure>
+              <figcaption>Foto paisaje</figcaption>
+            </figure>
+            <h2><a href="#">Título del artículo</a></h2>
+            <p class="parrafo">Alquézar se encuentra situado en un entorno natural privilegiado, en el corazón del Parque Natural de la Sierra y Cañones de Guara. Sus calles estrechas y empedradas invitan a pasear por ellas y descu...</p>
+            <p class="parrafo"><a href="#" style="background-color: dodgerblue; padding: 10px; margin-top:5px; display: block;width:100px; color: white;"> leer más</a></p>
+            <p class="parrafo-articulo"><strong>JUAN </strong>| <em>Comentarios 2</em> |
+              <time>09/05/2018</time>
+            </p>
+            <hr>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+
+<!-- Contenido relacionado -->
+<aside>
+<h2>&lt;aside&gt;Contenido relacionado&lt;/aside&gt;</h2>
+<div id="asidefotos"> 
+<ul>
+  <li><a href="#"><img name="paisaje" src="img/img_5terre.jpg" alt="Foto de Paisaje" style="width:100%">
+  <p>Los 10 pueblos costeros más bonitos de España</p></a></li>
+  <li><a href="#"><img name="paisaje" src="img/img_lights.jpg" alt="Foto de Paisaje" style="width:100%">
+  <p>Las 10 imágenes más  increíbles de la aurora boreal</p></a></li>
+  <li><a href="#"><img name="paisaje" src="img/img_mountains.jpg" alt="Foto de Paisaje" style="width:100%">
+  <p>Los 10 grandes lagos  ubicados entre montañas</p></a></li>
+</ul>
+</div> 
+</aside>
+<aside>
+  <div id="asideNovedades">
+    <ul>
+      <li><a href="#"><img name="paisaje" src="img/01.png" alt="Foto de Paisaje" style="width:100%">
+        <p>Los lugares más áridos</p>
+      </a></li>
+      <li><a href="#"><img name="paisaje" src="img/02.jpg" alt="Foto de Paisaje" style="width:100%">
+      <p>Los ríos más grandes</p></a><a href="#">
+      </a></li>
+       <li><a href="#"><img name="paisaje" src="img/03.jpg" alt="Foto de Paisaje" style="width:100%">
+        <p>Las carreteras más rectas</p>
+      </a></li>
+      <li><a href="#"><img name="paisaje" src="img/04.jpg" alt="Foto de Paisaje" style="width:100%">
+        <p>Las casas más remotas</p>
+      </a></li>
+    </ul>
+</div>
+</aside>
+
+ 
+<footer>
+  <p>&lt;footer&gt;Sección de pie de página del documento&lt;/footer&gt;</p>
+<div>
+  <p><strong>Síguenos en...</strong></p>
+<a href="#">
+<img src="img/iconos/facebook.png" width="32" height="32" alt="facebook" style="vertical-align: middle;"></a> 
+<a href="#">Facebook</a><br>
+
+<a href="#">
+<img src="img/iconos/twitter.png" alt="twitter" width="32" height="32"></a> 
+<a href="#">Twitter</a><br>
+
+<a href="#">
+<img src="img/iconos/googleplus.png" alt="googleplus" width="32" height="32"></a> 
+<a href="#">Google +</a><br>
+
+<a href="#">
+<img src="img/iconos/linkdin.png" alt="linkdin" width="32" height="32"></a> 
+<a href="#">Linked<br></a> 
+
+<a href="#">
+<img src="img/iconos/youtube.png" alt="youtube" width="32" height="32"></a> 
+<a href="#">Youtube</a> 
+</div> 
+
+<div>
+<p><strong>Contacto</strong></p>
+
+<a href="#"><img src="img/iconos/home.png" width="32" height="32" alt="facebook"></a> 
+<a href="#"><span>CFTIC. Centro de Formación </span></a><br>
+
+<a href="#"><img src="img/iconos/placeholder.png" alt="twitter" width="32" height="32"></a><a href="#"> Av. de las Arcas del Agua, 2</a><br>
+
+<a href="#">
+<img src="img/iconos/email.png" alt="twitter" width="32" height="32"></a>  
+<a href="#">28905,  Madrid</a><br>
+
+<a href="#">
+<img src="img/iconos/auricular-phone.png" width="32" height="32" alt="facebook"></a> 
+<a href="#">916 83 81 60</a><br>
+
+<a href="#"><img src="img/iconos/emailcircular.png" alt="twitter" width="32" height="32"></a> 
+<a href="mailto:nombre@gmail.com">correo@gmail.com</a><a href="#"></a> 
+
+</div>
+
+<div>
+<p><strong>Documentación</strong></p>
+
+<a href="#"><img src="img/iconos/aviso-legal.png" width="32" height="32" alt="facebook"></a> 
+<a href="#"><span>Aviso Legal </span></a><br>
+
+<a href="#"><img src="img/iconos/privacidad.png" alt="twitter" width="32" height="32"></a><a href="#"> Política de Privacidad</a><br>
+
+<a href="#">
+<img src="img/iconos/politicadeuso.png" alt="twitter" width="32" height="32"></a>  
+<a href="#">Condiciones de Uso</a><br>
+
+<a href="#">
+<img src="img/iconos/cookies.png" width="32" height="32" alt="facebook"></a> 
+<a href="#">Política de Cookies</a><br>
+
+<a href="#"><img src="img/iconos/contacto.png" alt="twitter" width="32" height="32"></a> 
+<a href="mailto:nombre@gmail.com">Accesibilidad web</a><a href="#"></a> 
+
+</div>
+
+
+<details>
+  <summary>&copy;2008-2019.</summary>
+  <p>WebMaster &#8482;. Todos los derechos reservados .</p>
+  <p>Todo el contenido y gráficos de esta web son propiedad de WebMaster &#8482;</p>
+</details>
+</footer>
+
+</div>
+</body>
+</html>
