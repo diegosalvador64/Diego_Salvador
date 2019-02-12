@@ -47,6 +47,12 @@
   		color: darkgreen;
   		font-variant: small-caps;
 }
+	#p3::before {
+  	content: url(img/iconos/apple-black.png);
+}
+	#p4::after {
+  	content: url(img/iconos/apple-black.png);
+}
 </style>
 </head>
 
@@ -136,5 +142,20 @@
 <p>Varios pseudo-elementos también se pueden combinar. En el siguiente ejemplo, la primera letra de un párrafo será de color forestgreen, en un tamaño de letra XX-Large. El resto de la primera línea será darkgreen, y en pequeñas-caps. El resto del párrafo será el tamaño de fuente predeterminado y color:</p>
 <p class="intro2">This is an introduction.</p>
 <p>This is a paragraph with some text. A bit more text even.</p>
+
+<!------------------------------------------->
+<h2>La :: antes de pseudo-elemento</h2>
+<p><code>p3::before {content: url(img/iconos/auricular-phone.png);}</code></p>
+<p>El ejemplo siguiente inserta una imagen antes de que el contenido de cada elemento p3:</p>
+<p id="p3">The ::before pseudo-element inserts content before the content of an element.</p>
+
+<p><b>Note:</b> IE8 supports the content property only if a !DOCTYPE is specified.</p>
+<!--------------------------------------------------------->
+<h2>La :: después de pseudo-elemento</h2>
+<p><code>p4::after {content: url(img/iconos/auricular-phone.png);}</code></p>
+<p>El ejemplo siguiente inserta una imagen después del contenido de cada elemento p4:</p>
+<p id="p4">The ::after pseudo-element inserts content after the content of an element.</p>
+
+<p><b>Note:</b> IE8 supports the content property only if a !DOCTYPE is specified.</p>
 </body>
 </html>
