@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="es-ES">
+<head>
+<meta charset="utf-8">
+<title>Pseudo clases</title>
+<style>
+	body {
+		font-family: Lucida Grande, Lucida Sans Unicode, Lucida Sans, DejaVu Sans, Verdana," sans-serif";
+		font-size: 1.5em;
+		width: 80%;
+		margin: 10px auto;
+		border: 1px solid black;
+	}
+	#div1 p {
+	  	background-color: yellow;
+	}
+	#div2 > p {
+  		background-color: yellow;
+	 }
+	#div3 + p {
+ 	 	background-color: yellow;
+	}
+	#div4 ~ p {
+		background-color: yellow;
+	}
+	h2 + p {
+		color: red;
+	}
+	#p1::first-line {
+  		color: forestgreen;
+  		font-variant: small-caps;
+		font-weight: bold;
+	}
+	#p2::first-letter {
+  		color: forestgreen;
+  		font-size: 2em;
+	}
+	p.intro::first-letter {
+  		color: forestgreen;
+  		font-size:200%;
+	} 
+	p.intro2::first-letter {
+  		color: forestgreen;
+  		font-size:200%;
+	} 
+	p.intro2::first-line {
+  		color: darkgreen;
+  		font-variant: small-caps;
+}
+</style>
+</head>
+
+<body>
+<h1>CSS combinadores</h1>
+<hr>
+<p>Un combinador es algo que explica la relación entre los selectores.</p>
+<h2>Selector descendientes</h2>
+<p><code>div p {background-color: yellow;}</code><br>
+</p>
+<div id="div1">
+  <p>Paragraph 1 in the div.</p>
+  <p>Paragraph 2 in the div.</p>
+  <span><p>Paragraph 3 in the div.</p></span>
+</div>
+
+<p>Paragraph 4. Not in a div.</p>
+<p>Paragraph 5. Not in a div.</p>
+<!------------------------------------------------------------------>
+<h2>Selector hijo (descendiente directo)</h2>
+<p><code>div > p {background-color: yellow;}</code><br>
+</p>
+<div id="div2">
+  <p>Paragraph 1 in the div.</p>
+  <p>Paragraph 2 in the div.</p>
+  <span><p>Paragraph 3 in the div.</p></span> <!-- not Child but Descendant -->
+</div>
+
+<p>Paragraph 4. Not in a div.</p>
+<p>Paragraph 5. Not in a div.</p>
+<hr>
+<!--------------------------------------------------------->
+<h2>Selector adyacente</h2>
+
+<p><code>div + p {background-color: yellow;}</code><br>
+</p>
+<p>El selector de hermanos adyacentes selecciona todos los elementos que son los hermanos adyacentes de un elemento especificado.</p>
+<div id="div3">
+  <p>Paragraph 1 in the div.</p>
+  <p>Paragraph 2 in the div.</p>
+</div>
+
+<p>Paragraph 3. Not in a div.</p>
+<p>Paragraph 4. Not in a div.</p>
+<!--------------------------------------------------------->
+<h2>Selector general entre hermanos</h2>
+
+<p><code>div ~ p {background-color: yellow;}</code><br>
+
+<p>El interruptor general de hermanos selecciona todos los elementos que son hermanos de un elemento especificado.</p>
+<div>
+	<p>Paragraph 1.</p>
+
+
+	<div id="div4">
+  		<code>Some code.</code>
+  		<p>Paragraph 2.</p>
+	</div>
+
+	<p>Paragraph 3.</p>
+	<code>Some code.</code>
+	<p>Paragraph 4.</p>
+</div>
+<!------------------------------------------------------------>
+<h1>CSS pseudo-elementos</h1>
+<hr>
+<h2>La primera línea :: pseudo-elemento</h2>
+<p><code>selector::pseudo-element {property:value;}</code></p>
+<p>El ::first-linepseudo-elemento se utiliza para añadir un estilo especial a la primera línea de un texto.</p>
+
+<p id="p1">You can use the ::first-line pseudo-element to add a special effect to the first line of a text. Some more text. And even more, and more, and more, and more, and more, and more, and more, and more, and more, and more, and more, and more.</p>
+<!--------------------------------------->
+<h2>La :: pseudo-elemento first-letter</h2>
+<p><code>p::first-letter {color: #ff0000;font-size: xx-large;}</code></p>
+<p id="p2">You can use the ::first-letter pseudo-element to add a special effect to the first character of a text!</p>
+
+<!----------------------------------------->
+<h2>Los pseudo-elementos y clases CSS</h2>
+<p><code>p.intro::first-letter {color: #ff0000;font-size:200%;}</code></p>
+<p>Pseudo-elementos se pueden combinar con clases CSS: </p>
+<p class="intro">This is an introduction.</p>
+<p>This is a paragraph with some text. A bit more text even.</p>
+<!-------------------------------------------------------->
+<h2>Múltiples pseudo-elementos</h2>
+<p><code>p.intro::first-letter {color: #ff0000;font-size:200%;} p::first-line {color: #0000ff;font-variant: small-caps;}</code></p>
+<p>Pseudo-elementos se pueden combinar con clases CSS: </p>
+<p>Varios pseudo-elementos también se pueden combinar. En el siguiente ejemplo, la primera letra de un párrafo será de color forestgreen, en un tamaño de letra XX-Large. El resto de la primera línea será darkgreen, y en pequeñas-caps. El resto del párrafo será el tamaño de fuente predeterminado y color:</p>
+<p class="intro2">This is an introduction.</p>
+<p>This is a paragraph with some text. A bit more text even.</p>
+</body>
+</html>

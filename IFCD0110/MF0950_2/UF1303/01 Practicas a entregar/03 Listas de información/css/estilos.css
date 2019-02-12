@@ -10,6 +10,10 @@ h3 {
 	color: #6D97F8;
 	padding-top: 10px;
 }
+#h2 {
+	text-align: left;
+	padding: 20px 0;
+}
 #header {background-color: blueviolet;
 }
 #body {
@@ -38,7 +42,8 @@ h3 {
 	padding-bottom: 30px;
 }
 #listaNav {
-	background-color:#58D6F0; 
+	/*background-color:#58D6F0;*/
+	background-color: #A7C5EF;
 	padding-top: 20px;
 	padding-left: 10%;
 	padding-bottom: 20px;
@@ -65,31 +70,40 @@ h3 {
 	border: 1px solid #6D97F8;
 	background-color: aliceblue;
 	border-radius: 5px;
+	box-shadow: 2px 4px #888888;
 	}
-
+#listaNav ul li a:hover {
+	color: white;
+	border: 1px solid white;
+	background-color: #324CE4;
+	}
 #main {
 	background-color: lightgray;
-	padding: 5px 20px;
+	padding: 5px;
 	}
 #section {
-	overflow: hidden;
 	width: auto;
 	margin: 0;
 	padding: 5px;
-	background-color:#58D6F0; 
+	background-color:#A7C5EF; 
 }
 #divSection {
+	overflow: hidden;
 	width: 80%;
 	margin: 0 auto;
 	padding: 0;
 }
+#divSection img {
+	width: 325px;
+}
+
 #articulo1 {
 	float: left;
-	width: 45%;
+	width: 48%;
 	background-color: antiquewhite;
 	border: 1px solid black;
 	padding: 5%;
-	margin: 5px;
+	margin: 0 5px;
 	box-shadow: 2px 4px #888888;
 }
 #articulo1 p {
@@ -113,11 +127,11 @@ h3 {
 }
 #articulo2 {
 	float: left;
-	width: 45%;
+	width: 48%;
 	background-color: antiquewhite;
 	border: 1px solid black;
 	padding: 5%;
-	margin: 5px;
+	margin: 0 5px;
 	box-shadow: 2px 4px #888888;
 }
 #articulo2 p {
@@ -142,7 +156,7 @@ h3 {
 	width: auto;
 	margin: 0;
 	padding: 0;
-	background-color:#58D6F0; 
+	background-color: #A7C5EF; 
 }
 #aside p {
 	text-align: center;
@@ -169,10 +183,9 @@ h3 {
 	margin: 5px;
 	box-shadow: 2px 4px #888888;
 }
-#asideDivHijo1 ul li a {
-	display: block;
-	
-	}
+#asideDivHijo1 img {
+	width: 300px;
+}
 /* ------------------- */
 #asideDivHijo2 {
 	width: auto;
@@ -185,27 +198,33 @@ h3 {
 }
 #asideDivHijo2 ul {
 	list-style-type: none;
-	margin: 30px;
-	padding: 0;
+	margin: 10px 50px;
+	padding: 0 10px;
 }
 #asideDivHijo2 ul li {
 	display: inline-block;
-	text-align: center;
+	/*text-align: center;*/
 	background-color: antiquewhite;
 	border: 2px solid black;
 	width: 22.5%;
-	padding: 10px;
+	padding: 5px;
 	margin: 10px;
 	box-shadow: 2px 4px #888888; 
 
 }
-#asideDivHijo2 ul li a {
-	display: block;
+#asideDivHijo2 img {
+	width: 200px;
 }
+
 /*  ----------------------- */
 #footer {background-color:#706FE5;
 }
 #footer p {
+	text-align: center;
+	color: white;
+	padding: 20px 0;
+}
+#footer details {
 	text-align: center;
 	color: white;
 	padding: 20px 0;
@@ -215,8 +234,13 @@ h3 {
 	list-style-type: none;
 	overflow: auto;
 	width: auto;
-	padding: 0;
-	margin: 0 25px;
+	padding: 0 25px 0 20px;
+	margin: 0 25px 0 20px;
+}
+#listaPadre ul {
+	position: relative; 
+	left: 10%;
+	/*right: 15%;*/
 }
 #listaPadre p {
 	color: #5B74E5;
@@ -225,13 +249,26 @@ h3 {
 	font-weight: bold;
 	
 }
+#listaPadre li a {
+	color: gray;
+	text-align: left;
+	font-size: 0.8em;
+	font-weight: bold;
+	vertical-align: top;
+	margin: 5px;
+}
+#listaPadre li a img {
+	width: 23px;
+	vertical-align: bottom;
+}
 #listaRedes {
 	background-color: antiquewhite;
 	float: left;
 	width: 25%;
-	margin: 25px;
+	margin: 10px;
 	padding: 10px;
 	list-style-type: none;
+	border: 2px solid black;
 }
 #listaRedes a {
 	display: inline-block;
@@ -244,9 +281,10 @@ h3 {
 	background-color: antiquewhite;
 	float: left;
 	width: 25%;
-	margin: 25px;
+	margin: 10px;
 	padding: 10px;
 	list-style-type: none;
+	border: 2px solid black;
 }
 #listaContacto a {
 	display: inline-block;
@@ -259,9 +297,10 @@ h3 {
 	background-color: antiquewhite;
 	float: left;
 	width: 25%;
-	margin: 25px;
+	margin: 10px;
 	padding: 10px;
 	list-style-type: none;
+	border: 2px solid black;
 }
 #listaDoc a {
 	display: inline-block;
