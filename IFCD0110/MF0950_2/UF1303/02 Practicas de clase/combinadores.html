@@ -4,12 +4,18 @@
 <meta charset="utf-8">
 <title>Pseudo clases</title>
 <style>
+	* {
+		box-sizing: border-box;
+	}
 	body {
 		font-family: Lucida Grande, Lucida Sans Unicode, Lucida Sans, DejaVu Sans, Verdana," sans-serif";
 		font-size: 1.5em;
 		width: 80%;
 		margin: 10px auto;
 		border: 1px solid black;
+	}
+	h2 {
+		font-size: 0.9em;
 	}
 	#div1 p {
 	  	background-color: yellow;
@@ -57,105 +63,164 @@
 </head>
 
 <body>
-<h1>CSS combinadores</h1>
+
+<style>
+	.flex-container {
+		display: flex;
+		flex-direction: row; /* se puede poner column también */
+		flex-wrap: wrap; /* nowrap */
+		justify-content: space-between; /* center, space-around, space-between, flex-end, flex-start */
+		align-items: left; /* strecht */
+		align-content: space-between;
+		background-color: dodgerblue;
+	}
+	.flex-container > div {
+		background-color: #f1f1f9;
+		width: 25%;
+		/*margin: 10px;*/
+		padding: 10px;
+		text-align: center;
+		font-size: 0.7em;
+	}
+	
+	@media screen and (max-width: 1024px) { /* la propiedad de max-width el nº de pixeles se ordena de mayor a menor (1024>800>600>500). De menor a mayor para la propiedad min-width */ /* 1024px pantalla normal */
+  		body {
+    		background-color: coral;
+ 		 }
+		.flex-container > div {
+			width: 25%;
+		}
+	}
+	@media screen and (max-width: 800px) { /* 800px pantalla tablet */
+  		body {
+    		background-color: lightgreen;
+ 		 }
+		.flex-container > div {
+			width: 50%;
+		}
+	}
+	@media screen and (max-width: 500px) { /* 500px pantalla smartphone */
+  		body {
+    		background-color: blueviolet;
+ 		 }
+		.flex-container > div {
+			width: 100%;
+		}
+		;
+	}
+</style>
+<h2>CSS combinadores</h2>
 <hr>
 <p>Un combinador es algo que explica la relación entre los selectores.</p>
-<h2>Selector descendientes</h2>
-<p><code>div p {background-color: yellow;}</code><br>
-</p>
-<div id="div1">
-  <p>Paragraph 1 in the div.</p>
-  <p>Paragraph 2 in the div.</p>
-  <span><p>Paragraph 3 in the div.</p></span>
-</div>
-
-<p>Paragraph 4. Not in a div.</p>
-<p>Paragraph 5. Not in a div.</p>
-<!------------------------------------------------------------------>
-<h2>Selector hijo (descendiente directo)</h2>
-<p><code>div > p {background-color: yellow;}</code><br>
-</p>
-<div id="div2">
-  <p>Paragraph 1 in the div.</p>
-  <p>Paragraph 2 in the div.</p>
-  <span><p>Paragraph 3 in the div.</p></span> <!-- not Child but Descendant -->
-</div>
-
-<p>Paragraph 4. Not in a div.</p>
-<p>Paragraph 5. Not in a div.</p>
 <hr>
-<!--------------------------------------------------------->
-<h2>Selector adyacente</h2>
+<p>Ejemplo del uso de display: flex. Sustituye a la problemática de la propiedad float</p>
+<div class="flex-container">
+	<div><h2>Selector descendientes</h2>
+		<p><code>div p {background-color: yellow;}</code><br>
+		</p>
+		<div id="div1">
+		  <p>Paragraph 1 in the div.</p>
+		  <p>Paragraph 2 in the div.</p>
+		  <span><p>Paragraph 3 in the div.</p></span> <!-- not Child but Descendant -->
+		</div>
 
-<p><code>div + p {background-color: yellow;}</code><br>
-</p>
-<p>El selector de hermanos adyacentes selecciona todos los elementos que son los hermanos adyacentes de un elemento especificado.</p>
-<div id="div3">
-  <p>Paragraph 1 in the div.</p>
-  <p>Paragraph 2 in the div.</p>
-</div>
-
-<p>Paragraph 3. Not in a div.</p>
-<p>Paragraph 4. Not in a div.</p>
-<!--------------------------------------------------------->
-<h2>Selector general entre hermanos</h2>
-
-<p><code>div ~ p {background-color: yellow;}</code><br>
-
-<p>El interruptor general de hermanos selecciona todos los elementos que son hermanos de un elemento especificado.</p>
-<div>
-	<p>Paragraph 1.</p>
-
-
-	<div id="div4">
-  		<code>Some code.</code>
-  		<p>Paragraph 2.</p>
+		<p>Paragraph 4. Not in a div.</p>
+		<p>Paragraph 5. Not in a div.</p>
+		<hr>
 	</div>
+  	<div><h2>Selector hijo (descendiente directo)</h2>
+		<p><code>div > p {background-color: yellow;}</code><br>
+		</p>
+		<div id="div2">
+		  <p>Paragraph 1 in the div.</p>
+		  <p>Paragraph 2 in the div.</p>
+		  <span><p>Paragraph 3 in the div.</p></span> <!-- not Child but Descendant -->
+		</div>
 
-	<p>Paragraph 3.</p>
-	<code>Some code.</code>
-	<p>Paragraph 4.</p>
-</div>
-<!------------------------------------------------------------>
-<h1>CSS pseudo-elementos</h1>
+		<p>Paragraph 4. Not in a div.</p>
+		<p>Paragraph 5. Not in a div.</p>
+		<hr>
+	</div>
+  	<div>
+  	<h2>Selector hermanos adyacentes</h2>
+		<p><code>div + p {background-color: yellow;}</code><br>
+		</p>
+		
+		<div id="div3">
+		  <p>Paragraph 1 in the div.</p>
+		  <p>Paragraph 2 in the div.</p>
+		</div>
+
+		<p>Paragraph 3. Not in a div.</p>
+		<p>Paragraph 4. Not in a div.</p>
+		<hr>
+	</div>
+  	<div>
+  		<h2>Selector general entre hermanos</h2>
+		<p><code>div ~ p {background-color: yellow;}</code><br>
+		<div>
+			<p>Paragraph 1.</p>
+
+
+			<div id="div4">
+				<code>Some code.</code>
+				<p>Paragraph 2.</p>
+			</div>
+
+			<p>Paragraph 3.</p>
+			<code>Some code.</code>
+			<p>Paragraph 4.</p>
+		</div>
+		<hr>
+		</div>
+	</div>
 <hr>
-<h2>La primera línea :: pseudo-elemento</h2>
+
+
+<!------------------------------------------------------------>
+<h2>CSS pseudo-elementos</h2>
+<hr>
+<h3>La primera línea :: pseudo-elemento</h3>
 <p><code>selector::pseudo-element {property:value;}</code></p>
 <p>El ::first-linepseudo-elemento se utiliza para añadir un estilo especial a la primera línea de un texto.</p>
 
 <p id="p1">You can use the ::first-line pseudo-element to add a special effect to the first line of a text. Some more text. And even more, and more, and more, and more, and more, and more, and more, and more, and more, and more, and more, and more.</p>
+<hr>
 <!--------------------------------------->
-<h2>La :: pseudo-elemento first-letter</h2>
+<h3>La :: pseudo-elemento first-letter</h3>
 <p><code>p::first-letter {color: #ff0000;font-size: xx-large;}</code></p>
 <p id="p2">You can use the ::first-letter pseudo-element to add a special effect to the first character of a text!</p>
-
+<hr>
 <!----------------------------------------->
-<h2>Los pseudo-elementos y clases CSS</h2>
+<h3>Los pseudo-elementos y clases CSS</h3>
 <p><code>p.intro::first-letter {color: #ff0000;font-size:200%;}</code></p>
 <p>Pseudo-elementos se pueden combinar con clases CSS: </p>
 <p class="intro">This is an introduction.</p>
 <p>This is a paragraph with some text. A bit more text even.</p>
+<hr>
 <!-------------------------------------------------------->
-<h2>Múltiples pseudo-elementos</h2>
+<h3>Múltiples pseudo-elementos</h3>
 <p><code>p.intro::first-letter {color: #ff0000;font-size:200%;} p::first-line {color: #0000ff;font-variant: small-caps;}</code></p>
 <p>Pseudo-elementos se pueden combinar con clases CSS: </p>
 <p>Varios pseudo-elementos también se pueden combinar. En el siguiente ejemplo, la primera letra de un párrafo será de color forestgreen, en un tamaño de letra XX-Large. El resto de la primera línea será darkgreen, y en pequeñas-caps. El resto del párrafo será el tamaño de fuente predeterminado y color:</p>
 <p class="intro2">This is an introduction.</p>
 <p>This is a paragraph with some text. A bit more text even.</p>
-
+<hr>
 <!------------------------------------------->
-<h2>La :: antes de pseudo-elemento</h2>
+<h3>La :: antes de pseudo-elemento</h3>
 <p><code>p3::before {content: url(img/iconos/auricular-phone.png);}</code></p>
 <p>El ejemplo siguiente inserta una imagen antes de que el contenido de cada elemento p3:</p>
 <p id="p3">The ::before pseudo-element inserts content before the content of an element.</p>
 
 <p><b>Note:</b> IE8 supports the content property only if a !DOCTYPE is specified.</p>
+<hr>
 <!--------------------------------------------------------->
-<h2>La :: después de pseudo-elemento</h2>
+<h3>La :: después de pseudo-elemento</h3>
 <p><code>p4::after {content: url(img/iconos/auricular-phone.png);}</code></p>
 <p>El ejemplo siguiente inserta una imagen después del contenido de cada elemento p4:</p>
 <p id="p4">The ::after pseudo-element inserts content after the content of an element.</p>
 
 <p><b>Note:</b> IE8 supports the content property only if a !DOCTYPE is specified.</p>
+<hr>
 </body>
 </html>
