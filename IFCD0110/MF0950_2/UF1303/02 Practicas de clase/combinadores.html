@@ -66,11 +66,15 @@
 
 <style>
 	.flex-container {
-		display: flex;
-		flex-direction: row; /* se puede poner column también */
-		flex-wrap: wrap; /* nowrap */
+		display: flex; /* propiedad que define la flexión: inline, block, flex, grid. Es la estándar*/
+		display: -webkit-flex; /* Compatibilidad con el navegador Safari de Apple */
+		display: -mz-flex; /* Compatibilidad con el navegador Mozilla-Firefox. Ya no hace falta este parche en las nuevas versiones de navegadores  */
+		display: -ms-flex; /* Compatibilidad con el navegador Explorer. Ya no hace falta este parche en las nuevas versiones de navegadores */
+		display: -o-flex; /* Compatibilidad con el navegador Opera. Ya no hace falta este parche en las nuevas versiones de navegadores */
+		flex-direction: row; /* row | row-reverse | column | column-reverse. Cambia la orientación del eje principal. */
+		flex-wrap: wrap; /* nowrap | wrap | wrap-reverse. Evita o permite el desbordamiento (multilinea).*/
 		justify-content: space-between; /* center, space-around, space-between, flex-end, flex-start */
-		align-items: left; /* strecht */
+		align-items: left; /* flex-start | flex-end | center | stretch | baseline */
 		align-content: space-between;
 		background-color: dodgerblue;
 	}
@@ -106,7 +110,6 @@
 		.flex-container > div {
 			width: 100%;
 		}
-		;
 	}
 </style>
 <h2>CSS combinadores</h2>
@@ -114,6 +117,10 @@
 <p>Un combinador es algo que explica la relación entre los selectores.</p>
 <hr>
 <p>Ejemplo del uso de display: flex. Sustituye a la problemática de la propiedad float</p>
+<p><img src="https://i.lenguajecss.com/assets/css/propiedades/flexbox-como-funciona.png" alt="Flexbox CSS: Â¿CÃ³mo funciona?" align="middle"/></p>
+<p><img src="https://i.lenguajecss.com/assets/css/propiedades/flexbox-justify-content.png" alt="Propiedad justify-content de Flexbox CSS"/></p>
+<p><img src="https://i.lenguajecss.com/assets/css/propiedades/flexbox-align-content.png" alt="Propiedad align-content de Flexbox CSS"/></p>
+<p><img src="https://i.lenguajecss.com/assets/css/propiedades/flexbox-align-items.png" alt="Propiedad align-items y align-self de Flexbox CSS"/></p>
 <div class="flex-container">
 	<div><h2>Selector descendientes</h2>
 		<p><code>div p {background-color: yellow;}</code><br>
