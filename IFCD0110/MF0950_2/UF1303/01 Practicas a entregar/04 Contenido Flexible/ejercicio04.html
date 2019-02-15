@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ES">
+<head>
+    <title>Contenido flexible</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Diseño páginas web con HTML, CSS y Javascript">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="title" content="Confección y publicación de páginas web">
+    <meta name="author" content="Diego Salvador">
+
+    <!-- Para referirse a archivos sin tener que poner siempre la URL completa. Por ejemplo en las imágenes de nuestra web, solo hace falta el nombre de la imagen -->
+    <!-- <base href="https://www.mipagina.com/img/" target="_blank"> -->
+
+    <link rel="shortcut icon" href="./img/CSS3_icon.ico.ico" type="image/x-icon">
+	<link rel="icon" href="./img/CSS3_icon.ico.ico" type="image/ico">
+    
+    <script src="js/funciones.js"></script>
+    <link rel="stylesheet" href="estilos.css" type="text/css">
+</head>
+
+<body> 
+<div class="flex-primero">
+	<div><img src="./img/logo.png" alt="logo"></div>
+	<div>
+		<nav class="flex-primer-menu">
+			<div><a href="#">Playas</a></div>
+			<div><a href="#">Top 10 destinos</a></div>
+			<div><a href="#">Cruceros</a></div>
+			<div><a href="#">Vuelos baratos</a></div>
+			<div><a href="">Destinos</a></div>
+			<div><a href="#">Alquileres vacacionales</a></div>
+		</nav>
+		<nav class="flex-segundo-menu">			
+			<div><a href="#">Inicio</a></div>
+			<div><a href="#">Vuelos</a></div>
+			<div><a href="#">Hoteles</a></div>
+			<div><a href="#">Vuelo + Hotel</a></div>
+			<div><a href="#">Coches alquiler</a></div>
+			<div><a href="#">Traslados aeropuerto</a></div>
+			</nav>
+				
+	</div>
+</div>
+ 
+<header>
+	<div class="header">
+	<div class="flex-qatar">
+		<div id="descubresudeste">Descubre el sudeste Asiático</div>
+		<div id="muchomas">y mucho más</div>
+		<div><img src="./img/qatar-airways.png" alt="qatarairways"></div>
+		<div><span id="desde">desde </span><span id="precio475"> 475 €</span></div>
+		<div id="botonqatar"><a href="#">Reserva ya</a></div>
+	</div>
+	</div>
+</header> 
+<main class="main">
+	<div><span class="ofertas">Ofertas Hoteles.</span><span class="texto_ofertas"> Descubre miles de hoteles en multitud de destinos. Reserva ya el tuyo con nuestro buscador de hoteles</span></div>
+	<section class="flex-section1">
+		<div ><img src="./img/ofertas-fin-semana-hoteles.jpg" alt="ofertas">
+		<h2 class="finsemana">FINES DE SEMANA</h2><span>VER OFERTAS</span></div>
+		<div><img src="./img/hoteles-semana-santa.jpg" alt="hoteles">
+		<h2 class="semanasanta">SEMANA SANTA</h2><span>VER OFERTAS</span></div>
+		<div><img src="./img/ofertas-hoteles-puente-mayo.jpg" alt="puente_mayo">
+		<h2 class="puentemayo">PUENTE DE MAYO</h2><span>VER OFERTAS</span></div>
+	</section>
+	<div>
+		VER TODOS LOS HOTELES
+	</div>
+	<div><span class="ofertas">Ofertas viajes</span><span class="texto_ofertas">. Tu viaje te está esperando. Conoce ESpaña y Europa a precios irrepetibles. Busca tu oferta y disfruta tu viaje...</span></div>
+	<section class="flex-section2">
+		<div><img src="./img/tenerife.jpg" alt="tenerife">
+		<h2>Tenerife</h2><span>VER OFERTAS</span></div>
+		<div><img src="./img/piazza-navona-roma.jpg" alt="piazza_navona">
+		<h2>Roma</h2><span>VER OFERTAS</span></div>
+		<div><img src="./img/bruselas.jpg" alt="bruselas">
+		<h2>Bruselas</h2><span>VER OFERTAS</span></div>
+		<div><img src="./img/estambul.jpg" alt="estambul">
+		<h2>Estambul</h2><span>VER OFERTAS</span></div>
+	</section>
+	<div>VER TODAS LAS OFERTAS DE VIAJES</div>
+	<div><span class="ofertas">Ofertas grandes cruceros</span><span class="texto_ofertas">, por el Mediteráneo, norte de Europa, todo incluido</span></div>
+	<section class="flex-section3">
+		<div><img src="./img/crucero-mediterraneo.jpg" alt="crucero_mediterraneo">
+		<h2>CRUCEROS MEDITERRÁNEO</h2><span>VER OFERTAS</span></div>
+		<div><img src="./img/crucero-caribe.jpg" alt="crucero_caribe">
+		<h2>CRUCEROS CARIBE</h2><span>VER OFERTAS</span></div>
+	</section>
+	<div>VER TODAS LAS OFERTAS DE CRUCEROS</div>
+</main> 
+ 
+<footer>
+	<div>Reserva tu vuelo con eViajes</div>
+	<div class="flex-footer">
+		<div><img src="./img/cohete.png" alt="cohete"></div>
+		<div><img src="./img/avion.png" alt="avion"></div>
+		<div><img src="./img/escudo.png" alt="escudo"></div>
+	</div>
+	<div class="flex-footer-rrss">
+		<div><img src="./img/iconos/facebook.png" alt="facebook"></div>
+		<div><img src="./img/iconos/twitter.png" alt="twitter"></div>
+		<div><img src="./img/iconos/youtube.png" alt="youtube"></div>
+		<div><img src="./img/iconos/googleplus.png" alt="googleplus"></div>
+		<div><img src="./img/iconos/pinsterest.png" alt="pinterest"></div>
+		<div><img src="./img/iconos/instagram.png" alt="instagram"></div>
+		<div><img src="./img/iconos/linkdin.png" alt="linkedin"></div>
+	</div>
+	<div class="flex-footer-avisos">
+		<div><details>
+			<summary>Copyright &copy;2019 VIAJES S.L.</summary>
+  	  		<p>All content and graphics on this web site are the property of the company Refsnes Data.</p>
+			</details>
+		</div>
+		<div>COOKIES</div>
+		<div>AVISO LEGAL</div>
+		<div>NEWSLETTER</div>
+	</div>
+</footer>
+
+</body>
+</html>

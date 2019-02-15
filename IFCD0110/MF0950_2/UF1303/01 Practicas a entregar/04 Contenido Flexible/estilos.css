@@ -1,0 +1,258 @@
+@charset "utf-8";
+/* CSS Document */
+
+ * {
+	box-sizing: border-box; /* para mantener el tamaño de cajas incluyendo padding y margin */
+}
+body {
+	background-color: white;
+	width: 75%;
+	margin: 0 auto; /* centrar la página */
+	font-family: Lucida Grande, Lucida Sans Unicode, Lucida Sans, DejaVu Sans, Verdana," sans-serif";
+}
+.header {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	background-image: url(img/foto-playa.jpg);
+	background-position: center; /* Center the image */
+  	background-repeat: no-repeat; /* Do not repeat the image */
+ 	background-size: cover;
+	height:500px;
+	border-bottom: 3px solid yellow;
+	}
+
+ main {
+	margin: 0; /* centrar la página */
+	padding: 0;
+	
+ }
+	main img {
+		width: 100%;
+	}
+
+	nav a {
+	color: white;
+	text-decoration: none;
+	font-family:Segoe, Segoe UI, DejaVu Sans, Trebuchet MS, Verdana," sans-serif";
+	padding: 5px;	
+}
+	nav a:hover {
+	color: yellow;
+}
+	.flex-primero {
+		display: flex; /* propiedad que define la flexión */
+		flex-direction: row;
+		background-color: blue;
+		margin: 0;
+		padding: 20px;
+	}
+	
+	.flex-primero > div {
+		width: auto;
+	}
+	.flex-primero img {
+		width: 100%;
+		margin-left: 20px;
+	}
+	
+	.flex-primer-menu {
+		display: flex; /* propiedad que define la flexión */
+		justify-content: flex-end;
+		position: absolute;
+		left: 50%;
+  		top: 0;
+		flex-flow: row wrap;
+		background-color: darkblue;
+		
+	}
+	
+	.flex-primer-menu > div {
+		width: auto;
+		font-size: 0.7em;
+		padding: 1px;
+		margin: 2px;
+	}
+	.flex-segundo-menu {
+		display: flex; /* propiedad que define la flexión */
+		flex-flow: row wrap;
+		position: absolute;
+		left: 44%;
+  		top: 45px;
+		background-color: blue;
+	}
+	
+	.flex-segundo-menu > div {
+		width: auto;
+		font-size: 0.9em;
+		font-weight: bold;
+		padding: 0;
+		margin: 2px;
+	}
+	.flex-qatar {
+		display: flex; /* propiedad que define la flexión */
+		flex-direction: column;
+		background-color: black;
+		position: absolute;
+		top: 20%;
+		left: 65%;
+		opacity: 0.8;
+		width: 250px;
+		height: 300px;
+		padding: 10px;
+		border-top: 2px solid yellow;
+	}
+	
+	.flex-qatar > div {
+		width: auto;
+	}
+	.flex-qatar img {
+		width: 100%;
+		margin: 5px;
+	}
+	
+	.flex-qatar a {
+		display: block;
+		width: 100px;
+		color: white;
+		border: 1px solid white;
+		text-decoration: none;
+		border-radius: 5px;
+		text-align: center;
+		padding: 5px;
+		margin: 5px;
+	}
+
+	.flex-qatar a:hover {
+		color: black;
+		background-color: white;
+		border: 1px solid black;
+	}
+
+	#descubresudeste {
+		font-size: 1.5em;
+		color: white;
+	}
+	#muchomas {
+		color: white;
+		padding: 10px 0;
+	}
+	#desde {
+		color: white;
+		font-style: italic;
+	}
+	#precio475 {
+		color: white;
+		font-size: 2em;
+		padding: 10px;
+		}
+/* ------------------------------------------------*/	
+
+	.ofertas {
+		font-size: 1.5em;
+		font-variant: small-caps;
+		font-weight: bold;
+		color: skyblue;
+	}
+	.texto_ofertas {
+				font-size: 0.8em;
+		color: gray;
+		}
+
+/* ------------------------------------------------*/
+	.flex-section1 {
+		display: flex; /* propiedad que define la flexión */
+		flex-direction: row;
+		position: relative;
+		background-color: dodgerblue;
+	}
+	
+	.flex-section1 > div {
+		background-color: white;
+		width: 33.3%;
+		margin: 4px;
+		padding: 0;
+		border: 1px solid gray;
+		box-shadow: 5px 5px 5px 0 rgba(0,0,0,0.2), 5px 5px 5px 0 rgba(0,0,0,0.19);
+	}	
+
+	.finsemana {
+		position: absolute;
+		top: 70px;
+		left: 10px;
+		color: white;
+	}
+	.semanasanta {
+		position: absolute;
+		top: 70px;
+		left: 300px;
+		color: white;
+	}
+	.puentemayo {
+		position: absolute;
+		top: 70px;
+		left: 550px;
+		color: white;
+	}
+/* ------------------------------------------------*/	
+	.flex-section2 {
+		display: flex; /* propiedad que define la flexión */
+		flex-direction: row;
+		background-color: dodgerblue;
+	}
+	
+	.flex-section2 > div {
+		background-color: antiquewhite;
+		width: 25%;
+		margin: 10px;
+		padding: 10px;
+		box-shadow: 5px 5px 5px 0 rgba(0,0,0,0.2), 5px 5px 5px 0 rgba(0,0,0,0.19);
+	}	
+
+/* ------------------------------------------------*/
+	.flex-section3 {
+		display: flex; /* propiedad que define la flexión */
+		flex-direction: row;
+		background-color: dodgerblue;
+	}
+	
+	.flex-section3 > div {
+		background-color: antiquewhite;
+		width: 50%;
+		text-align: center;
+		margin: 10px;
+		padding: 10px;
+		box-shadow: 5px 5px 5px 0 rgba(0,0,0,0.2), 5px 5px 5px 0 rgba(0,0,0,0.19);
+	}	
+/* ------------------------------------------------*/
+	.flex-footer {
+		display: flex; /* propiedad que define la flexión */
+		flex-direction: row;
+		
+		background-color: darkviolet;
+	}
+	
+	.flex-footer > div {
+		width: 100%;
+		align-content: center;
+	}
+	.flex-footer-rrss {
+		display: flex; /* propiedad que define la flexión */
+		flex-direction: row;
+	}
+	
+	.flex-footer-rrss > div {
+		width: 100%;
+	}
+	.flex-footer-avisos {
+		display: flex; /* propiedad que define la flexión */
+		flex-direction: row;
+		background-color: black;
+	}
+	
+	.flex-footer-avisos > div {
+		width: 25%;
+		color: white;
+		font-size: 0.9em;
+	}
