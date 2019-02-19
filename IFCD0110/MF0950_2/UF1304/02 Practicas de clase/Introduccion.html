@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="es-ES">
+<head>
+<meta charset="utf-8">
+<title>HTML formularios</title>
+</head>
+
+<body>
+<h1>HTML formularios</h1>
+<hr>
+<h2>El elemento &lt;form&gt;</h2>
+<p>El Elemento HTML&lt;form&gt;define una forma que se utiliza para recolectar información del usuario:</p>
+<p>Un formulario HTML contiene <strong>elementos de formulario</strong> .</p>
+<p>Los elementos del formulario son diferentes tipos de elementos de entrada, como campos de texto, casillas de verificación, botones de radio, botones, y más.</p>
+<hr>
+<h2>El Elemento &lt;input&gt;</h2>
+<p>El &lt;input&gt;Elemento es el Elemento de forma Más Importante.</p>
+<p>El &lt;input&gt;Elemento Se Puede Mostrar de Varias Maneras, dependiendo del atributo de <strong>tipo</strong> .</p>
+<p>Aquí hay EJEMPLOS UNOS:</p>
+<table>
+  <tbody>
+    <tr>
+      <th>Tipo</th>
+      <th>Descripción</th>
+    </tr>
+    <tr>
+      <td>&lt;Tipo de entrada = "text"&gt;</td>
+      <td>Definir la ONU campo de entrada de texto De Una Línea</td>
+    </tr>
+    <tr>
+      <td>&lt;Tipo de entrada = "radio"&gt;</td>
+      <td>Definir la ONU Botón de Opción (to select uña de las MUCHAS OPCIONES)</td>
+    </tr>
+    <tr>
+      <td>&lt;Input type = "submit"&gt;</td>
+      <td>Definir la ONU Botón De Envío (párr Enviar el Formulario)</td>
+    </tr>
+  </tbody>
+</table>
+<h3>Entrada de texto</h3>
+<p>&lt;input type="text"&gt;define el campo de entrada :</p>
+<form>
+Nombre:<br>
+  <input type="text" name="nombre"><br>
+  Apellido:<br>
+  <input type="text" name="apellido">
+</form>
+<hr>
+<h2>Entrada del Botón de Radio</h2>
+<p>&lt;input type="radio"&gt;define un <strong>Botón de la radio</strong> .</p>
+<p>Los Botones de radio permiten al usuario seleccionar un Número Limitado de Opciones:</p>
+<form>
+  <input type="radio" name="genero" value="masculino">Hombre<br>
+  <input type="radio" name="genero" value="femenino">Mujer<br>
+  <input type="radio" name="genero" value="otro"> Otro
+</form>
+<hr>
+<h2>El Botón Enviar</h2>
+<p>&lt;input type="submit"&gt;define el Botón para <strong>enviar</strong> los Datos del Formulario para ser procesado.</p>
+<form>
+  Nombre:<br><br>
+  <input type="text" name="nombre" value=""><br><br>
+  Apellido:<br><br>
+  <input type="text" name="apellido" value=""><br><br>
+  <input type="submit" value="Enviar">
+</form>
+<hr>
+<h2>El atributo action</h2>
+<p>El action atributo define la acción que debe realizarse cuando se envía el formulario.</p>
+<p>Normalmente, los datos del formulario se envía a una página web en el servidor cuando el usuario hace clic en el botón de envío.</p>
+<p>En el ejemplo anterior, los datos del formulario se envía a una página en el servidor llamado "/action_page.php". Esta página contiene un script del lado del servidor que gestiona los datos del formulario:</p>
+<p>&lt;form <strong>action="/action_page.php</strong>"&gt;</p>
+<p>&lt;form <strong>action="mailto:correo@gmail.com</strong>"&gt;</p>
+<p>&lt;form <strong>action="</strong>&quot; onsubmit=&quot;return validarFormulario()&quot;&gt;</p>
+
+<form action="/action_page.php">
+  Nombre:<br><br>
+  <input type="text" name="nombre" value=""><br><br>
+  Apellido:<br><br>
+  <input type="text" name="apellido" value=""><br><br>
+  <input type="submit" value="Enviar">
+</form>
+<p>Si el actionse omite el atributo, la acción se establece en la página actual.</p>
+<hr>
+<h2>El atributo de destino</h2>
+<p>El targetatributo especifica si el resultado presentado se abrirá en una nueva pestaña del navegador, un marco, o en la ventana actual.</p>
+<p>El valor por defecto es " _self" que significa que el formulario se haya presentado en la ventana actual.</p>
+<p>Para que el resultado formulario se abre en una nueva pestaña del navegador, utilice el valor " _blank":</p>
+<p>&lt;form action="/action_page.php" <strong>target="_blank"</strong>&gt;</p>
+<p>Otros valores son legales " _parent", " _top", o un nombre que representa el nombre de un iframe.</p>
+<hr>
+<h2>El atributo del método</h2>
+<p>El method atributo especifica el método HTTP ( <strong>GET</strong> o <strong>la POST</strong> ) para ser utilizado cuando la presentación de los datos del formulario:</p>
+<p>&lt;form action="/action_page.php" <strong>method="get"</strong>&gt;</p>
+<p>&lt;form action="/action_page.php" <strong>method="post"</strong>&gt;</p>
+<p>El método por defecto al presentar los datos del formulario es GET.</p>
+<p>Sin embargo, cuando se utiliza GET, los datos de formularios presentados serán <strong>visibles en el campo de dirección de la página</strong> :</p>
+<p>/action_page.php?firstname=Mickey&amp;lastname=Mouse</p>
+<form action="/action_page.php" method="get">
+  Nombre:<br>
+  <input type="text" name="nombre"><br>
+  Apellidos:<br>
+  <input type="text" name="apellidos"><br><br>
+  <input type="submit" value="Enviar">
+</form>
+<p><strong>Notas sobre GET:</strong></p>
+<ul>
+  <li>Anexa forma-datos en el URL en el nombre de pares / valor</li>
+  <li>La longitud de un URL es limitado (aproximadamente 3000 caracteres)</li>
+  <li>Nunca utilice GET para enviar datos sensibles! (Serán visibles en la URL)</li>
+  <li>Útil para el envío de formularios donde un usuario desea marcar el resultado</li>
+  <li>GET es mejor para los datos no seguros, como las cadenas de consulta en Google</li>
+</ul>
+<h2>¿Cuándo utilizar la POST?</h2>
+<p>Siempre use POST si los datos del formulario contiene información confidencial o personal. El método POST no muestra los datos del formulario presentado en el campo de dirección de la página.</p>
+<form action="/action_page.php" method="post">
+  Nombre:<br>
+  <input type="text" name="nombre"><br>
+  Apellidos:<br>
+  <input type="text" name="apellidos"><br><br>
+  <input type="submit" value="Enviar">
+</form>
+<p><strong>Notas sobre POST:</strong></p>
+<ul>
+  <li>POST no tiene ninguna limitaciones de tamaño, y se puede utilizar para enviar grandes cantidades de datos.</li>
+  <li>los envíos de formularios con el post no se pueden marcar</li>
+</ul>
+<hr>
+
+<h2>El nombre del atributo</h2>
+<p>Cada campo de entrada debe tener un nameatributo que se presentará.</p>
+<p>Si el name se omite, los datos de ese campo de entrada no se enviarán a todos.</p>
+<p>Este ejemplo solamente presentará el campo de entrada "Nombre":</p>
+<form action="/action_page.php">
+  Nombre:<br>
+  <input type="text"><br>
+  Apellido:<br>
+  <input type="text" name="apellido"><br><br>
+  <input type="submit" value="Enviar">
+</form>
+<hr>
+<h2>La agrupación de formulario de datos con &lt;fieldset&gt;</h2>
+<p>El &lt;fieldset&gt;elemento se utiliza para los datos relacionados con el grupo en una forma.</p>
+<p>El &lt;legend&gt;elemento define un título para el &lt;fieldset&gt; elemento. Ambas etiquetas son elementos de decoración y pertenecen a las etiquetas &lt;form&gt;.</p>
+<form action="/action_page.php" method="get">
+  <fieldset>
+    <legend>Información Personal:</legend>
+    Nombre:<br>
+    <input type="text" name="nombre" value="Mickey">
+    <br>
+    Apellido:<br>
+    <input type="text" name="apellido" value="Mouse">
+    <br><br>
+    <input type="submit" value="Enviar">
+  </fieldset>
+</form>
+<hr>
+<p>Aquí está la lista de todos los &lt;form&gt;atributos:</p>
+<table>
+  <tbody>
+    <tr>
+      <th>Atributo</th>
+      <th>Descripción</th>
+    </tr>
+    <tr>
+      <td>accept-charset</td>
+      <td>Especifica el conjunto de caracteres utilizado en el formulario enviado (por defecto: la página de juego de caracteres).</td>
+    </tr>
+    <tr>
+      <td>action</td>
+      <td>Especifica una dirección (URL) donde enviar el formulario (por defecto: la página de remitentes).</td>
+    </tr>
+    <tr>
+      <td>autocomplete</td>
+      <td>Especifica si el navegador debe autocompletar la forma (por defecto: activado).</td>
+    </tr>
+    <tr>
+      <td>enctype</td>
+      <td>Especifica la codificación de los datos presentados (por defecto: es codificada en URL).</td>
+    </tr>
+    <tr>
+      <td>method</td>
+      <td>Especifica el método HTTP utilizado al presentar el formulario (por defecto: GET).</td>
+    </tr>
+    <tr>
+      <td>name</td>
+      <td>Especifica un nombre usado para identificar la forma (para el uso de DOM: document.forms.name).</td>
+    </tr>
+    <tr>
+      <td>novalidate</td>
+      <td>Especifica que el navegador no se debe validar el formulario.</td>
+    </tr>
+    <tr>
+      <td>target</td>
+      <td>Especifica el destino de la dirección en el atributo de acción (por defecto: _self).</td>
+    </tr>
+  </tbody>
+</table>
+<hr>
+<h3>EJEMPLO DE USO</h3>
+<form action="/action_page.php" method="post" name="formulario1" enctype="multipart/form-data" accept-charset="UTF-8" autocomplete="off" novalidate target="_blank">
+<fieldset>
+<legend>Datos de contacto</legend>
+<p>Introduce tu nombre:
+<input name="nombre" type="text">
+  <br>
+  <p>Introduce tu apellido:
+<input name="apellido" type="text">
+  <br>
+  <input type="submit" value="Enviar">
+  </fieldset>
+</form>
+</body>
+</html>
