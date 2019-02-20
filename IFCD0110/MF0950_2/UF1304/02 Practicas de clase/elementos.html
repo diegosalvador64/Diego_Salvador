@@ -3,9 +3,38 @@
 <head>
 <meta charset="utf-8">
 <title>Elementos de Formularios</title>
+<style>
+	body {
+		width: 90%;
+		margin: 1% auto;
+		font-family: Lucida Grande, Lucida Sans Unicode, Lucida Sans, DejaVu Sans, Verdana," sans-serif";
+		font-size: 1em;
+	}	
+	#formulario6 {
+		background-color: antiquewhite;
+		font-family: Consolas, Andale Mono, Lucida Console, Lucida Sans Typewriter, Monaco, Courier New, monospace;
+	}
+	#formulario6 select {
+		color: darkred;
+		border: 1px solid red;
+	}
+	#formulario6 p {
+		color: blue;
+	}
+	
+	#formulario6 input {
+		border: 1px dotted black;
+		color: darkgreen;
+	}
+	textarea {
+		resize: none;
+	}
+	
+</style>
 </head>
 
 <body>
+
 <h1>Elementos de formulario HTML</h1>
 <hr>
 <h2>El elemento &lt;input&gt;</h2>
@@ -87,8 +116,76 @@
   </fieldset>
 </form>
 <hr>
+<h2>Elemento &lt;optiongroup&gt;</h2>
 
-<h2>La &lt;textarea&gt; Element</h2>
+<p>El elemento &lt;optgroup&gt; se utiliza para las opciones relacionadas con los grupos en una lista desplegable.</p>
+<p>&lt;form action=&quot;/action_page.php&quot;&gt;<br>
+  &lt;fields&gt;<br>
+  &lt;select&gt;<br>
+&lt;optgroup label=&quot;Swedish Cars&quot;&gt;<br>
+&lt;option value=&quot;volvo&quot;&gt;Volvo&lt;/option&gt;<br>
+&lt;option value=&quot;saab&quot;&gt;Saab&lt;/option&gt;<br>
+&lt;/optgroup&gt;<br>
+&lt;optgroup label=&quot;German Cars&quot;&gt;<br>
+&lt;option value=&quot;mercedes&quot;&gt;Mercedes&lt;/option&gt;<br>
+&lt;option value=&quot;audi&quot;&gt;Audi&lt;/option&gt;<br>
+&lt;/optgroup&gt;<br>
+&lt;br&gt;&lt;br&gt;<br>
+&lt;input type=&quot;submit&quot; value=&quot;Enviar&quot;&gt;<br>
+&lt;/select&gt;<br>
+&lt;/fields&gt;<br>
+&lt;/form&gt;</p>
+<p>Selecciona la marca de coche:</p> 
+<form action="/action_page.php">
+<select>
+  <optgroup label="Swedish Cars">
+    <option value="volvo">Volvo</option>
+    <option value="saab">Saab</option>
+  </optgroup>
+  <optgroup label="German Cars">
+    <option value="mercedes">Mercedes</option>
+    <option value="audi">Audi</option>
+  </optgroup>
+  <br><br>
+  <input type="submit" value="Enviar">
+</select>
+</form>
+
+	 
+<hr>
+<h2>Etiqueta &lt;label&gt;</h2>
+<p>La etiqueta &lt;label&gt; define una etiqueta para un botón &lt;&gt;, &lt;input&gt;, &lt;metro&gt;, &lt;salida&gt;, &lt;progreso&gt;, &lt;seleccionar&gt; o elemento &lt;textarea&gt;.</p>
+<p>El elemento &lt;label&gt; no hace nada especial para el usuario, pero  mejora la facilidad de uso para los usuarios, ya que si el usuario hace clic en el texto dentro del elemento &lt;label&gt;, se alterna el control.</p>
+<p>El atributo de la etiqueta &lt;label&gt; debería ser igual al atributo id del elemento relacionado para unirse juntos.</p>
+<p>&lt;form action=&quot;/action_page.php&quot;&gt;<br>
+&lt;label for=&quot;male&quot;&gt;Male&lt;/label&gt;<br>
+&lt;input type=&quot;radio&quot; name=&quot;gender&quot; id=&quot;male&quot; value=&quot;male&quot;&gt;&lt;br&gt;<br>
+&lt;label for=&quot;female&quot;&gt;Female&lt;/label&gt;<br>
+&lt;input type=&quot;radio&quot; name=&quot;gender&quot; id=&quot;female&quot; value=&quot;female&quot;&gt;&lt;br&gt;<br>
+&lt;label for=&quot;other&quot;&gt;Other&lt;/label&gt;<br>
+&lt;input type=&quot;radio&quot; name=&quot;gender&quot; id=&quot;other&quot; value=&quot;other&quot;&gt;&lt;br&gt;&lt;br&gt;<br>
+&lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;<br>
+&lt;/form&gt;<br>
+</p>
+
+
+
+	
+<p>Click on one of the text labels to toggle the related control:</p>
+
+<form action="/action_page.php">
+  <label for="male">Male</label>
+  <input type="radio" name="gender" id="male" value="male"><br>
+  <label for="female">Female</label>
+  <input type="radio" name="gender" id="female" value="female"><br>
+  <label for="other">Other</label>
+  <input type="radio" name="gender" id="other" value="other"><br><br>
+  <input type="submit" value="Submit">
+</form>
+
+<hr>
+<p>&nbsp;</p>
+<h2> Elemento &lt;textarea&gt;</h2>
 <p>El &lt;textarea&gt; elemento define un campo de entrada de líneas múltiples ( <strong>un área de texto</strong> ):</p>
 <p>El rows atributo especifica el número visible de líneas en un área de texto.</p>
 <p>El cols atributo especifica la anchura visible de un área de texto.</p>
@@ -110,41 +207,46 @@
   </fieldset>
 </form>
 <hr>
-<h2>El botón &lt;&gt; Elemento</h2>
+<h2>El  Elemento &lt;button&gt;</h2>
 <p>El &lt;button&gt;elemento define un hacer clic <strong>botón</strong> :</p>
 <p>&lt;button type=&quot;button&quot; onclick=&quot;alert('¡Passa Tronko!')&quot;&gt;Pulse aquí&lt;/button&gt;</p>
 <button type="button" onclick="alert('¡Passa Tronko!')">Pulse aquí</button>
 <p><strong>Nota:</strong> Siempre especificar el <strong>tipo de</strong> atributo para el elemento de botón. Los diferentes navegadores pueden usar diferentes tipos predeterminados para el elemento de botón.</p>
 <hr>
-<h2>HTML5 &lt;lista de datos&gt; Element</h2>
-<p>El &lt;datalist&gt; elemento especifica una lista de opciones predefinidas para un &lt;input&gt;elemento.</p>
-<p>Los usuarios podrán ver una lista desplegable de las opciones predefinidas, ya que los datos de entrada.</p>
-<p>El list atributo del &lt;input&gt; elemento, debe hacer referencia al idatributo del &lt;datalist&gt;elemento.</p>
-<p>&lt;form action="/action_page.php"&gt;<br>
-    &lt;input list="browsers"&gt;<br>
-    &lt;datalist id="browsers"&gt;<br>
-      &lt;option value="Internet Explorer"&gt;<br>
-      &lt;option value="Firefox"&gt;<br>
-      &lt;option value="Chrome"&gt;<br>
-      &lt;option value="Opera"&gt;<br>
-      &lt;option value="Safari"&gt;<br>
-    &lt;/datalist&gt; <br>
+<h2>HTML5 Elemento &lt;lista de datos&gt;</h2>
+<p>El &lt;datalist&gt; elemento especifica una lista de opciones predefinidas para un &lt;input&gt;elemento. Los usuarios podrán ver una lista desplegable de las opciones predefinidas, ya que los datos de entrada. El list atributo del &lt;input&gt; elemento, debe hacer referencia al id atributo del elemento &lt;datalist&gt;. Ejemplos con varios atributos de &lt;form&gt;. <cite>ESTA ETIQUETA HTML5 NO ES COMPATIBLE CON SAFARI.</cite></p>
+<p>&lt;form action=&quot;/action_page.php&quot; method=&quot;get&quot; accept-charset=&quot;UTF-8&quot; autocomplete=&quot;on&quot; enctype=&quot;multipart/form-data&quot; name=&quot;formulario5&quot; novalidate target=&quot;_blank&quot;&gt;<br>
+&lt;fieldset&gt;<br>
+&lt;legend&gt;Elementos datalist&lt;/legend&gt;<br>
+&lt;input list=&quot;navegadores&quot;&gt;<br>
+&lt;datalist id=&quot;navegadores&quot;&gt;<br>
+&lt;option value=&quot;Internet Explorer&quot;&gt;&lt;/option&gt;<br>
+&lt;option value=&quot;Firefox&quot;&gt;&lt;/option&gt;<br>
+&lt;option value=&quot;Chrome&quot;&gt;&lt;/option&gt;<br>
+&lt;option value=&quot;Opera&quot;&gt;&lt;/option&gt;<br>
+&lt;option value=&quot;Safari&quot;&gt;&lt;/option&gt;<br>
+&lt;/datalist&gt; <br>
+&lt;input type=&quot;submit&quot; value=&quot;Enviar&quot;&gt;<br>
+&lt;/fieldset&gt;<br>
 &lt;/form&gt;</p>
-<form action="/action_page.php">
-  <input list="browsers">
-  <datalist id="browsers">
-    <option value="Internet Explorer">
-    <option value="Firefox">
-    <option value="Chrome">
-    <option value="Opera">
-    <option value="Safari">
+<form action="/action_page.php" method="get" accept-charset="UTF-8" autocomplete="on" enctype="multipart/form-data" name="formulario5" novalidate target="_blank">
+ <fieldset>
+ <legend>Elementos datalist</legend>
+  <input list="navegadores">
+  <datalist id="navegadores">
+	<option value="Internet Explorer"></option>
+    <option value="Firefox"></option>
+    <option value="Chrome"></option>
+    <option value="Opera"></option>
+    <option value="Safari"></option>
   </datalist> 
   <input type="submit" value="Enviar">
+  </fieldset>
 </form>
 <hr>
 <p>&nbsp;</p>
-<h2>HTML5 &lt;output&gt;</h2>
-<p>El &lt;output&gt;elemento representa el resultado de un cálculo (como uno realizado por un script).</p>
+<h2>HTML5 Elemento &lt;output&gt;</h2>
+<p>El &lt;output&gt; elemento representa el resultado de un cálculo (como uno realizado por un script). Esta etiqueta HTML5 solamente funciona con funciones de javascript y es compatible con  los principales navegadores.</p>
 <p>&lt;form action=&quot;/action_page.php&quot;<br>
   oninput=&quot;x.value=parseInt(a.value)+parseInt(b.value)&quot;&gt;<br>
 0<br>
@@ -166,6 +268,111 @@ oninput="x.value=parseInt(a.value)+parseInt(b.value)">
   <output name="x" for="a b"></output>
   <br><br>
   <input type="submit" value="Enviar">
+</form>
+<hr>
+<h2>Elementos de formulario HTML</h2>
+<p>&nbsp;</p>
+<table>
+  <tbody>
+    <tr>
+      <th>Tag</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td><a href="https://www.w3schools.com/tags/tag_form.asp">&lt;form&gt;</a></td>
+      <td>Defines an HTML form for user input</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.w3schools.com/tags/tag_input.asp">&lt;input&gt;</a></td>
+      <td>Defines an input control</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.w3schools.com/tags/tag_textarea.asp">&lt;textarea&gt;</a></td>
+      <td>Defines a multiline input control (text area)</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.w3schools.com/tags/tag_label.asp">&lt;label&gt;</a></td>
+      <td>Defines a label for an &lt;input&gt; element</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.w3schools.com/tags/tag_fieldset.asp">&lt;fieldset&gt;</a></td>
+      <td>Groups related elements in a form</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.w3schools.com/tags/tag_legend.asp">&lt;legend&gt;</a></td>
+      <td>Defines a caption for a &lt;fieldset&gt; element</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.w3schools.com/tags/tag_select.asp">&lt;select&gt;</a></td>
+      <td>Defines a drop-down list</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.w3schools.com/tags/tag_optgroup.asp">&lt;optgroup&gt;</a></td>
+      <td>Defines a group of related options in a drop-down list</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.w3schools.com/tags/tag_option.asp">&lt;option&gt;</a></td>
+      <td>Defines an option in a drop-down list</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.w3schools.com/tags/tag_button.asp">&lt;button&gt;</a></td>
+      <td>Defines a clickable button</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.w3schools.com/tags/tag_datalist.asp">&lt;datalist&gt;</a></td>
+      <td>Specifies a list of pre-defined options for input controls</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.w3schools.com/tags/tag_output.asp">&lt;output&gt;</a></td>
+      <td>Defines the result of a calculation</td>
+    </tr>
+  </tbody>
+</table>
+<hr>
+<h2>Ejemplo de Formulario</h2>
+<form action="/action_page.php" method="get" accept-charset="UTF-8" autocomplete="on" enctype="multipart/form-data" name="formulario6" novalidate target="_blank" id="formulario6">
+	<fieldset>	
+	<legend>Formulario</legend>
+	Introduce tu nombre y apellidos:
+	<label for="nombre">Nombre y apellidos</label>
+  	<input name="nombre" type="text" required><br>
+  	<p>Seleccione un país</p>
+   	<select>
+	<optgroup label="Paises europeos">
+    <option value="espana">España</option>
+    <option value="rumania">Rumanía</option>
+    <option value="francia">Francia</option>
+    <option value="alemania">Alemania</option>
+    </optgroup>
+  	<optgroup label="Países americanos">
+    <option value="argentina">Argentina</option>
+    <option value="brasil">Brasil</option>
+    <option value="colombia">Colombia</option>
+    </optgroup>
+    </select><br>
+  	<p>Seleccione una provincia</p>
+  	<input list="provincias">
+  	<datalist id="provincias">
+	<option value="Madrid"></option>
+    <option value="Toledo"></option>
+    <option value="Ciudad Real"></option>
+    <option value="Segovia"></option>
+    <option value="Soria"></option>
+  </datalist> 
+  <p>Seleccione Comunidad autónoma</p>
+  <select name="comunidad" size="2" multiple>
+    <option value="CAM">CAM</option>
+    <option value="Murcia">Murcia</option>
+    <option value="Andalucia" selected>Andalucía</option>
+    <option value="Asturias">Asturias</option>
+  </select>
+  <p>Escriba un comentario</p>
+
+  <textarea name="comentario" rows="10" cols="30"></textarea>
+  <br>
+	<br>
+	<input type="submit" value="Enviar">
+	</fieldset>
 </form>
 <p>&nbsp;</p>
 <p>&nbsp;</p>

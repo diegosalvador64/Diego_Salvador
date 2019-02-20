@@ -1,0 +1,207 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>HTML Tipos de Inputs</title>
+<style>
+	body {
+		width: 90%;
+		font-family: Lucida Grande, Lucida Sans Unicode, Lucida Sans, DejaVu Sans, Verdana," sans-serif";
+		}
+	rojo {
+		color: red;
+	}
+</style>
+</head>
+
+<body>
+<h1>Tipos de entrada HTML</h1>
+<p>Estos son los diferentes tipos de entrada se pueden utilizar en HTML:</p>
+<ul>
+  <li>&lt;input type="hidden"&gt;</li>
+  <li>&lt;input type="image"&gt;</li>
+</ul>
+<hr>
+<h2>&lt;input type="text"&gt;</h2>
+<p>Define un <strong>campo de entrada de texto de una línea</strong> :</p>
+
+<form action="/action_page.php">
+  <p>
+  <label for="nombre">Nombre: </label>
+  <input type="text" name="nombre" id="nombre">
+  <br>
+  <label for="apellido">Apellidos:</label>
+  <input type="text" name="apellido" id="apellido">
+  <br><br>
+  <input type="submit" value="Enviar">
+  </p>
+</form>
+<hr>
+<h2>&lt;input type="password"&gt;</h2>
+<p>define un campo de contraseña :</p>
+<form action="/action_page.php">
+<label for="usuario">Usuario:</label><br>
+<input type="text" name="usuario">
+<br>
+<label for="contrasena">Contraseña:</label><br>
+<input type="password" name="contrasena">
+<br><br>
+  <input type="submit" value="Acceder">
+</form>
+<hr>
+<h2>&lt;input type="checkbox"&gt;</h2>
+<p>Define una <strong>casilla de verificación o chequeo</strong>. El usuario puede seleccionar cero o más opciones de un número limitado de opciones.:</p>
+<form action="/action_page.php" method="post">
+	<fieldset>
+		<legend>Elija uno o varios sistemas operativos </legend>
+	  <input type="checkbox" name="so1" id="so1" value="microsoft">Microsoft <br>
+	  <input type="checkbox" name="so2" id="so2" value="android">Android <br>
+	  <input type="checkbox" name="so3" id="so3" value="macintosh">Macintosh <br>
+	  <input type="checkbox" name="so4" id="so4" value="windows">Windows <br>
+	  <input type="checkbox" name="so5" id="so5" value="ios">IOS <br><br>
+		<input type="submit" value="Enviar">
+	</fieldset>
+</form> 
+<hr>
+<h2>&lt;input type="radio"&gt;</h2>
+<p>Define un <strong>botón de radio</strong> .</p>
+<p>Los botones de radio permiten al usuario seleccionar sólo una de un número limitado de opciones:</p>
+<form action="/action_page.php">
+<fieldset>
+<legend>Elija género </legend>
+ 
+  <input type="radio" name="genero" id="hombre" value="hombre"> Hombre<br>
+  <input type="radio" name="genero" id="mujer"  value="mujer"> Mujer<br>
+  <input type="radio" name="genero" id="otro"   value="otro"> Otro<br><br>
+  <input type="submit" value="Enviar">
+  </fieldset>
+</form>
+<hr>
+<h2>&lt;input type="submit"&gt;&lt;input type="reset"&gt;&lt;input type="button"&gt;</h2>
+<form action="/action_page.php">
+	<fieldset>
+		<legend>Botones de formulario</legend>
+		<input type="text" name="nombre" id="nombre">
+		<label for="submit"></label>
+		<input type="submit" name="boton1" id="submit" value="Enviar">
+		<label for="reset"></label>
+		<input type="reset" name="boton2" id="reset" value="Restablecer"><br>
+		<label for="button">Botón javascript</label>
+		<input type="button" name="boton3" id="button" value="Acción" onclick="alert('¡Passa tronko!')"><br>
+	</fieldset>
+</form>
+<hr>
+<h2>Nuevos campos HTML5</h2>
+<h3>&lt;input type="color"&gt;</h3>
+<p>se utiliza para campos de entrada que deben contener un color.</p>
+<form action="/action_page.php">
+  Select your favorite color:
+  <input type="color" name="favcolor" value="#ff0000">
+  <input type="submit">
+</form>
+
+<h3>&lt;input type="date"&gt;</h3>
+<p>Se utiliza para campos de entrada que deben contener una fecha.</p>
+<p>En función de soporte de los navegadores, un selector de fecha puede aparecer en el campo de entrada.</p>
+<form action="/action_page.php">
+  Cumpleaños:
+  <input type="date" name="bday">
+  <input type="submit" value="Enviar">
+</form>
+
+<br>
+<h3>&lt;input type="datetime-local"&gt;</h3>
+<p>Especifica un campo de entrada de fecha y hora, sin zona horaria.</p>
+<p>En función de soporte de los navegadores, un selector de fecha puede aparecer en el campo de entrada.</p>
+<form action="/action_page.php">
+  Cumpleaños (fecha y hora):
+  <input type="datetime-local" name="bdaytime">
+  <input type="submit" value="Enviar">
+</form>
+
+<h3>&lt;input type="email"&gt;</h3>
+<p>Se utiliza para campos de entrada que deben contener una dirección de correo electrónico. En función de soporte del navegador, la dirección de correo electrónico se puede validar de forma automática cuando se presente. Algunos teléfonos inteligentes reconocen el tipo de correo electrónico, y añaden ".com" al teclado para que coincida con la entrada de correo electrónico.</p>
+<form action="/action_page.php">
+  E-mail:
+  <input type="email" name="email">
+  <input type="submit" value="Enviar">
+</form>
+
+<h3>&lt;input type="file"&gt;</h3>
+
+<p>Define un campo de selección de archivo y un botón "Examinar" para la carga de archivos.</p>
+<form action="/action_page.php">
+  Seleccione un fichero: <input type="file" name="myFile"><br><br>
+  <input type="submit" value="Enviar">
+</form>
+
+
+<h3>&lt;input type="month"&gt;</h3>
+<p>Permite al usuario seleccionar un mes y el año. En función de soporte de los navegadores, un selector de fecha puede aparecer en el campo de entrada.</p>
+<form action="/action_page.php">
+  <p>Cumpleaños (mes y año):
+  <input type="month" name="bdaymonth">
+    <input type="submit" value="Enviar">
+  </p>
+</form>
+
+<h3>&lt;input type="number"&gt;</h3>
+<p>Define un <strong>campo numérico</strong>  de entrada. También puede establecer restricciones en la que sólo se aceptan los números.</p>
+<form action="/action_page.php">
+ Cantidad (entre 1 y 5):
+  <input type="number" name="quantity" min="1" max="5">
+  <input type="submit" value="Enviar">
+</form>
+
+<h3>&lt;input type="range"&gt;</h3>
+<p>Define un control para la introducción de un número cuyo valor exacto no es importante (como un control deslizante). Rango por defecto es de 0 a 100. Sin embargo, se puede establecer restricciones en lo que los números son aceptados con el min, maxy stepatributos<br>
+</p>
+<form action="/action_page.php" method="get">
+  Puntos:
+  <input type="range" name="points" min="0" max="10">
+  <input type="submit" value="Enviar">
+</form>
+<h3>&lt;input type="search"&gt;</h3>
+<p>Se utiliza para campos de búsqueda (un campo de búsqueda se comporta como un campo de texto normal).</p>
+<form action="/action_page.php">
+  Buscar en Google:
+  <input type="search" name="googlesearch">
+  <input type="submit" value="Enviar">
+</form>
+<h3>&lt;input type="tel"&gt;</h3>
+<p>Se utiliza para campos de entrada que deben contener un número de teléfono. <strong>Nota:</strong> El tipo de teléfono sólo está soportado en Safari 8.</p>
+<form action="/action_page.php">
+  Teléfono:
+  <input type="tel" name="usrtel">
+  <input type="submit" value="Enviar"> 
+</form>
+
+
+<h3>&lt;input type="time"&gt;</h3> 
+<p>Permite al usuario seleccionar un tiempo (sin zona horaria). En función de soporte de los navegadores, un selector de hora puede aparecer en el campo de entrada.</p>
+<form action="/action_page.php">
+  Selecciona una hora:
+  <input type="time" name="usr_time">
+  <input type="submit" value="Enviar">
+</form>
+
+<h3>&lt;input type="url"&gt;</h3>
+<p>Se utiliza para campos de entrada que deben contener una dirección URL. En función de soporte de los navegadores, el campo URL se puede validar de forma automática cuando se presente. Algunos teléfonos inteligentes reconocen el tipo de URL, y añade ".com" al teclado para que coincida con la entrada URL.</p>
+
+<form action="/action_page.php">
+  Añade tu web personal:
+  <input type="url" name="homepage">
+  <input type="submit" value="Enviar">
+</form>
+
+<h3>&lt;input type="week"&gt;</h3>
+<p>Permite al usuario seleccionar una semana y el año.</p>
+<p>En función de soporte de los navegadores, un selector de fecha puede aparecer en el campo de entrada.</p>
+<form action="/action_page.php">
+  Selecciona una semana:
+  <input type="week" name="year_week">
+  <input type="submit" value="Enviar">
+</form>
+<hr>
+</body>
+</html>
