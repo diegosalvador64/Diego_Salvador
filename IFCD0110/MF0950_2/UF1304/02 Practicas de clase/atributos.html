@@ -1,0 +1,342 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Atributos</title>
+<style>
+	* {
+		box-sizing: border-box;
+	
+	}
+	body{
+		width: 90%;
+		font-family: Lucida Grande, Lucida Sans Unicode, Lucida Sans, DejaVu Sans, Verdana," sans-serif";
+		margin: 0 auto;
+	}
+	input[type=text] {
+		  width: auto;
+		  padding: 12px;
+		  border: 1px solid red;
+		  border-radius: 4px;
+		  margin-bottom: 10px;
+	}
+	input[type=submit] {
+		width: auto;
+		background-color: antiquewhite;
+		font-weight: bold;
+		padding: 10px;
+	  }
+	input[type=submit]:hover {
+		background-color: black;
+		color: white;
+		border: 1px solid white;
+	  }
+	ul {
+		width: 30%;
+		border: 1px solid blue;
+	}
+</style>
+</head>
+
+<body>
+<h1>HTML atributos de entrada</h1>
+<p>&nbsp;</p>
+<hr>
+<ul>
+  <li>autocomplete</li>
+  <li>autofocus</li>
+  <li>height and width</li>
+  <li>list</li>
+  <li>min and max</li>
+  <li>multiple</li>
+  <li>pattern (regexp)</li>
+  <li>placeholder</li>
+  <li>required</li>
+  <li>step</li>
+</ul>
+<hr>
+
+<h2>Atributo value</h2>
+<p>Especifica el valor inicial para un campo de entrada:</p>
+<form action="">
+<fieldset>
+<legend>Atributo value</legend>
+<label for="nombre"></label>Nombre<br>
+<input type="text" name="nombre" value="John">
+<br>
+<label for="apellido"></label>Apellido<br>
+<input type="text" name="apellido"><br>
+
+<input type="submit" value="Enviar">
+</fieldset>
+</form>
+<hr>
+
+<h2>Atributo readonly</h2>
+<p>Especifica que el campo de entrada es de sólo lectura (no se puede cambiar):</p>
+<form action="">
+<fieldset>
+<legend>Atributo readonly</legend>
+<label for="nombre"></label>Nombre<br>
+<input type="text" name="nombre" value="John" readonly>
+<br>
+<label for="apellido"></label>Apellido<br>
+<input type="text" name="apellido"><br>
+
+<input type="submit" value="Enviar">
+</fieldset>
+</form>
+<hr>
+<h2>Atributo disabled</h2> 
+<p>Especifica que el campo de entrada se desactiva.</p>
+
+<form action="">
+<fieldset>
+<legend>Atributo disabled</legend>
+<label for="nombre"></label>Nombre<br>
+<input type="text" name="nombre" value="John" disabled>
+<br>
+<label for="apellido"></label>Apellido<br>
+<input type="text" name="apellido"><br>
+
+<input type="submit" value="Enviar">
+</fieldset>
+</form>
+<hr>
+<h2>Atributo size</h2> 
+<p>Especifica el tamaño (en caracteres) para el campo de entrada:</p>
+<form action="">
+<fieldset>
+<legend>Atributo size</legend>
+<label for="nombre"></label>Nombre<br>
+<input type="text" name="nombre" value="John" size="50">
+<br>
+<label for="apellido"></label>Apellido<br>
+<input type="text" name="apellido"><br>
+
+<input type="submit" value="Enviar">
+</fieldset>
+</form>
+<hr>
+<h2>Atributo maxlength</h2>  
+<p>Especifica la longitud máxima permitida para el campo de entrada:</p>
+<form action="">
+<fieldset>
+<legend>Atributo maxlength</legend>
+<label for="nombre"></label>Nombre<br>
+<input type="text" name="nombre" value="John" maxlength="10">
+<br>
+<label for="apellido"></label>Apellido<br>
+<input type="text" name="apellido"><br>
+
+<input type="submit" value="Enviar">
+</fieldset>
+</form>
+<hr>
+<h2>Atributo autocomplete</h2>
+<p>Especifica si un campo de formulario o de entrada debe tener autocompletar encendido o apagado.</p>
+<p>Cuando autocompletar está activado, el navegador completa automáticamente los valores de entrada basado en valores que el usuario ha introducido antes.</p>
+<p>El atributo autocomplete trabaja con &lt;form&gt; y los siguientes &lt;input&gt; types: text, search, url, tel, email, password, datepickers, range, and color.</p>
+<form action="">
+<fieldset>
+<legend>Atributo autocomplete</legend>
+<label for="nombre"></label>Nombre<br>
+<input type="text" name="nombre" value="John" maxlength="10" autocomplete="off">
+<br>
+<label for="apellido"></label>Apellido<br>
+<input type="text" name="apellido" autocomplete="on"><br>
+
+<input type="submit" value="Enviar">
+</fieldset>
+</form>
+<hr>
+<h2>Atributo novalidate</h2>
+<p>Es un atributo de &lt;form&gt;.</p>
+<p>Cuando está presente, novalidate especifica que los datos del formulario no deben ser validados cuando se presente.</p>
+<form action="" novalidate>
+<fieldset>
+<legend>Atributo novalidate</legend>
+<label for="nombre"></label>Nombre<br>
+<input type="text" name="nombre" value="John" maxlength="10" autocomplete="off">
+<br>
+<label for="apellido"></label>Apellido<br>
+<input type="text" name="apellido" autocomplete="on"><br>
+E-mail: <br>
+<input type="email" name="user_email"><br>
+
+<input type="submit" value="Enviar">
+</fieldset>
+</form>
+<hr>
+
+<h2>Atributo autofocus</h2>
+<p>Especifica cuál es el campo de entrada de forma automática que debe obtener el foco cuando se carga la página.</p>
+
+<form action="/action_page.php" method="get" novalidate>
+<fieldset>
+<legend>Atributo autofocus</legend>
+<label for="nombre"></label>Nombre<br>
+<input type="text" name="nombre" value="John" maxlength="10" autocomplete="off">
+<br>
+<label for="apellido"></label>Apellido<br>
+<input type="text" name="apellido" autocomplete="on" autofocus><br>
+E-mail: <br>
+<input type="email" name="user_email"><br>
+
+<input type="submit" value="Enviar">
+</fieldset>
+</form>
+<hr>
+
+<h2>Atributos height y width</h2>  
+<p>Especifican la altura y la anchura de un elemento &lt;input type="image"&gt;.<br>
+<form action="/action_page.php" method="get" novalidate>
+<fieldset>
+<legend>Atributo height y width</legend>
+<label for="nombre"></label>Nombre<br>
+<input type="text" name="nombre" value="John" maxlength="10" autocomplete="off">
+<br>
+<label for="apellido"></label>Apellido<br>
+<input type="text" name="apellido" autocomplete="on" autofocus><br>
+E-mail: <br>
+<input type="email" name="user_email"><br>
+<input type="image" src="../../UF1303/02 Practicas de clase/instagram.png" alt="instagram" width="30" height="30"><br>
+
+<input type="submit" value="Enviar">
+</fieldset>
+</form>
+ <hr>
+ 
+  <h2>Atributo list</h2>
+  <p>Se refiere a un &lt;datalist&gt;elemento que contiene opciones predefinidas para un elemento &lt;input&gt;.</p>
+  <form action="/action_page.php" method="get" novalidate>
+<fieldset>
+<legend>Atributo list</legend>
+<label for="nombre"></label>Nombre<br>
+<input type="text" name="nombre" value="John" maxlength="10" autocomplete="off">
+<br>
+<label for="apellido"></label>Apellido<br>
+<input type="text" name="apellido" autocomplete="on" autofocus><br>
+E-mail: <br>
+<input type="email" name="user_email">
+<input type="image" src="../../UF1303/02 Practicas de clase/instagram.png" alt="instagram" width="30" height="30"><br>
+<input list="browsers" name="browser">
+<datalist id="browsers">
+  <option value="Internet Explorer">
+  <option value="Firefox">
+  <option value="Chrome">
+  <option value="Opera">
+  <option value="Safari">
+</datalist><br>
+
+<input type="submit" value="Enviar">
+</fieldset>
+</form>
+ <hr>
+ 
+  <h2>Atributos min y max</h2>
+<p>Especifican los valores mínimo y máximo para un elemento &lt;input&gt;.</p><br>
+<form action="/action_page.php" method="get">
+<fieldset>
+<legend>Atributo list</legend>
+<label for="nombre"></label>Nombre<br>
+<input type="text" name="nombre" value="John" maxlength="10" autocomplete="off">
+<br>
+<label for="apellido"></label>Apellido<br>
+<input type="text" name="apellido" autocomplete="on" autofocus><br>
+Enter a date before 1980-01-01:
+  <input type="date" name="bday" max="1979-12-31"><br>
+
+  Enter a date after 2000-01-01:
+  <input type="date" name="bday" min="2000-01-02"><br>
+
+  Quantity (between 1 and 5):
+  <input type="number" name="quantity" min="1" max="5"><br>
+
+
+<input type="submit" value="Enviar">
+</fieldset>
+</form>
+<hr>
+<h2>Atributo multiple</h2> 
+<p>Especifica que el usuario está autorizado para entrar en más de un valor en el &lt;input&gt;elemento.</p>
+<form action="/action_page.php" method="get">
+<fieldset>
+<legend>Atributo multiple</legend>
+<label for="nombre"></label>Nombre<br>
+<input type="text" name="nombre" value="John" maxlength="10" autocomplete="off">
+<br>
+<label for="apellido"></label>Apellido<br>
+<input type="text" name="apellido" autocomplete="on" autofocus><br>
+Selecciona imágenes: <input type="file" name="img" multiple><br>
+<input type="submit" value="Enviar">
+</fieldset>
+</form>	
+<hr>
+<h2>Atributo pattern</h2>
+<p>Especifica una expresión regular que el &lt;input&gt;valor del elemento se compara. El atributo pattern trabaja con elementos text, search, url, tel, email, y password.</p>
+<form action="/action_page.php" method="get">
+<fieldset>
+<legend>Atributo pattern</legend>
+<label for="nombre"></label>Nombre<br>
+<input type="text" name="nombre" value="John" maxlength="10" autocomplete="off">
+<br>
+<label for="apellido"></label>Apellido<br>
+<input type="text" name="apellido" autocomplete="on"><br>
+Código de país <input type="text" name="country_code" pattern="[A-Za-z]{3}" title="El código de país tiene 3 letras"><br>
+<input type="submit" value="Enviar">
+</fieldset>
+</form>	
+<hr> 
+<h2>Atributo placeholder</h2> 
+<p>Especifica una pista que describe el valor esperado de un campo de entrada (un valor de muestra o una breve descripción del formato).</p>
+<p>El atributo placeholder trabaja con elementos text, search, url, tel, email, y password.<br><br>
+</p>
+<form action="/action_page.php" method="get">
+<fieldset>
+<legend>Atributo placeholder</legend>
+<label for="nombre"></label>Nombre<br>
+<input type="text" name="nombre" placeholder="nombre"><br>
+<label for="apellido"></label>Apellido<br>
+<input type="text" name="apellido" placeholder="nombre"><br>
+
+<input type="submit" value="Enviar">
+</fieldset>
+</form>	
+<hr>
+<h2>Atributo required</h2>  
+<p>Especifica que un campo de entrada debe ser completado antes de enviar el formulario.</p>
+<p>El atributo required trabaja con los siguientes tipos de entrada: ext, search, url, tel, email, password, date pickers, number, checkbox, radio, y file.</p>
+<form action="/action_page.php" method="get">
+<fieldset>
+<legend>Atributo required</legend>
+<label for="nombre"></label>Nombre<br>
+<input type="text" name="nombre" required>
+<br>
+<label for="apellido"></label>Apellido<br>
+<input type="text" name="apellido" placeholder="nombre"><br>
+
+<input type="submit" value="Enviar">
+</fieldset>
+</form>	
+<hr>
+<h2>Atributo step</h2>  
+<p>Especifica los intervalos de números legales para un &lt;input&gt;elemento. El atributo step trabaja con los elementos input number, range, date, datetime-local, month, time y week.</p>
+<p>Ejemplo: Si el paso = "3", números legales podrían ser -3, 0, 3, 6, etc. </p>
+<form action="/action_page.php" method="get">
+
+  <fieldset>
+	<legend>Atributo step</legend>
+	<label for="nombre"></label>Nombre<br>
+	<input type="text" name="nombre" required>
+	<br>
+	<label for="apellido"></label>Apellido<br>
+	<input type="text" name="apellido" placeholder="nombre"><br>
+	<label for="points"></label>Puntos<br>
+	<input type="number" name="points" step="3"><br><br>
+	<input type="submit" value="Enviar">
+	</fieldset>
+</form>	
+
+</body>
+</html>

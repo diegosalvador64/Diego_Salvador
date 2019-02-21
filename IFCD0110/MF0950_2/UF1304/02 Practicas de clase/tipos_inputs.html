@@ -16,10 +16,36 @@
 
 <body>
 <h1>Tipos de entrada HTML</h1>
+<hr>
+<h2>Tipos de campos de entrada estándar</h2>
+
 <p>Estos son los diferentes tipos de entrada se pueden utilizar en HTML:</p>
 <ul>
+  <li>&lt;input type="button"&gt;</li>
+  <li>&lt;input type="checkbox"&gt;</li>
+  <li>&lt;input type="file"&gt;</li>
   <li>&lt;input type="hidden"&gt;</li>
   <li>&lt;input type="image"&gt;</li>
+  <li>&lt;input type="password"&gt;</li>
+  <li>&lt;input type="radio"&gt;</li>
+  <li>&lt;input type="reset"&gt;</li>
+  <li>&lt;input type="submit"&gt;</li>
+  <li>&lt;input type="text"&gt;</li>
+</ul>
+<h2>Tipos campos de entrada datos HTML5:</h2> 
+<ul>
+ <li>&lt;input type="color"&gt;</li>
+  <li>&lt;input type="date"&gt;</li>
+  <li>&lt;input type="datetime-local"&gt;</li>
+  <li>&lt;input type="email"&gt;</li>
+  <li>&lt;input type="month"&gt;</li>
+  <li>&lt;input type="search"&gt;</li>
+  <li>&lt;input type="tel"&gt;</li>
+  <li>&lt;input type="time"&gt;</li>
+  <li>&lt;input type="url"&gt;</li>
+  <li>&lt;input type="week"&gt;</li>
+  <li>&lt;input type="range"&gt;</li>
+  <li>&lt;input type="number"&gt;</li>
 </ul>
 <hr>
 <h2>&lt;input type="text"&gt;</h2>
@@ -163,10 +189,12 @@
 </form>
 <h3>&lt;input type="search"&gt;</h3>
 <p>Se utiliza para campos de búsqueda (un campo de búsqueda se comporta como un campo de texto normal).</p>
-<form action="/action_page.php">
-  Buscar en Google:
-  <input type="search" name="googlesearch">
+<form action="https://www.google.com/search" enctype="multipart/form-data" method="get">
+ <fieldset>
+ <legend>Buscar en Google</legend>
+  <input type="search" name="q" id="buscar" value="" required>
   <input type="submit" value="Enviar">
+  </fieldset>
 </form>
 <h3>&lt;input type="tel"&gt;</h3>
 <p>Se utiliza para campos de entrada que deben contener un número de teléfono. <strong>Nota:</strong> El tipo de teléfono sólo está soportado en Safari 8.</p>
