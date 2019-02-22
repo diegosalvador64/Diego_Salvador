@@ -1,0 +1,90 @@
+@charset "utf-8";
+/* CSS Document */
+
+  * {
+	box-sizing: border-box; /* para mantener el tamaño de cajas incluyendo padding y margin */
+	
+	}
+	body {
+		background-color: white;
+		width: 40%;
+		padding: 0 auto;
+		margin: 0 auto; /* centrar la página */
+		font-family: Lucida Grande, Lucida Sans Unicode, Lucida Sans, DejaVu Sans, Verdana," sans-serif";
+	}
+	img {
+		border-radius: 500px;
+		width: 200px;
+}
+	.flex1 {
+		width: auto;
+		display: flex; /* propiedad que define la flexión */
+		flex-direction: row;
+		flex-wrap: wrap;
+		border: 1px solid lightgray;
+		margin: 20px;
+	}
+	.flex1 > div {
+		width: 100%;
+		margin: 10px;
+		padding: 20px;
+	}
+	.imagen {
+		text-align: center;
+		  		
+	}
+	.contenedor-imagenes {
+		position: relative;
+	}
+	.times {
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		font-weight: bold;
+		font-size: 1.2em;
+	}
+	input[type=text] {
+		  width: 100%;
+		  border: 1px solid gray;
+		  padding: 10px;
+		  margin: 5px;
+		 }
+	input[type=password] {
+		  width: 100%;
+		  border: 1px solid gray;
+		  padding: 10px;
+		  margin: 5px;
+		}
+	input[type=submit] {
+		  width: 100%;
+		  border: 1px solid gray;
+		  padding: 20px;
+		  margin: 5px;
+		  background: #089F0B;
+		  color: white;
+		}
+	input[type=submit]:hover {
+		  background: darkgreen;
+		  }
+
+	.botonregistro {
+		  width: auto;
+		  border: 1px solid gray;
+		  padding: 10px;
+		  margin: 10px;
+		  border-radius: 5px;
+		  text-decoration: none;
+		  background: darkred;
+		  color: white;
+		}
+	.botonregistro:hover {
+		  background: salmon;
+		  }
+
+	label {
+			font-size: 1.2em;
+			font-weight: bold;
+	}
+	.olvidado {
+			margin-left: 75px;
+		}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ES">
+<head>
+    <title>Formulario de registro</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Diseño páginas web con HTML, CSS y Javascript">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="title" content="Confección y publicación de páginas web">
+    <meta name="author" content="Diego Salvador">
+
+    <!-- Para referirse a archivos sin tener que poner siempre la URL completa. Por ejemplo en las imágenes de nuestra web, solo hace falta el nombre de la imagen -->
+    <!-- <base href="https://www.mipagina.com/img/" target="_blank"> -->
+
+    <link rel="shortcut icon" href="./img/CSS3_icon.ico.ico" type="image/x-icon">
+	<link rel="icon" href="./img/CSS3_icon.ico.ico" type="image/ico">
+    
+    <script src="js/funciones.js"></script>
+    <link rel="stylesheet" href="estilos.css" type="text/css">
+</head>
+
+<body>
+		
+	<div class="flex1">
+			<div>
+			 <img src="./social_facebook_b.png" alt="">
+			 <img src="./social_google_b.png" alt="">
+			 <img src="./social_twitter_b.png" alt="">
+			</div>
+			<div>
+				<form action="formulario" autocomplete="off" method="post">
+					
+					<label for="nombre">Usuario</label><br>
+					<input type="text" name="nombre" value="" required placeholder="Entrar usuario" pattern="[A-Za-z0-9]{10}" autofocus title="Rellene el campo" maxlength="10"><br>
+					<label for="contrasena">Contraseña:</label><br>
+					<input type="password" name="contrasena" required placeholder="Entrar contraseña"
+					title="Rellene el campo" minlength="8">
+					<br><br>
+					<input type="submit" value="Iniciar sesión"><br>
+					<input type="checkbox" name="recordarme" class="recordarme" value="" checked><span class="terminos"></span>Recordarme<br><br>
+					<a href="#" class="botonregistro">Registrarse</a>
+					<span class="olvidado">¿Has olvidado la </span><a href="#">contraseña?</a>
+					
+				</form>
+			</div>	
+			
+	</div>
+	
+ 
+<br>
+
+</body>
+</html>

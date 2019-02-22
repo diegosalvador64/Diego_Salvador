@@ -1,0 +1,71 @@
+@charset "utf-8";
+/* CSS Document */
+
+ * {
+	box-sizing: border-box; /* para mantener el tamaño de cajas incluyendo padding y margin */
+}
+body {
+	background-color: white;
+	width: 75%;
+	margin: 0 auto; /* centrar la página */
+	font-family: Lucida Grande, Lucida Sans Unicode, Lucida Sans, DejaVu Sans, Verdana," sans-serif";
+}
+	input[type=text] {
+		  width: 100%;
+		  border: 1px solid gray;
+		  padding: 5px;
+		  border-radius: 5px;
+		}
+	input[type=email] {
+		  width: 100%;
+		  border: 1px solid gray;
+		  padding: 5px;
+		  border-radius: 5px;
+		}
+	label {
+		font-size: 0.9em;
+		font-family: Gotham, Helvetica Neue, Helvetica, Arial," sans-serif";
+		}
+	textarea {
+		  width: 100%;
+		  border: 1px solid gray;
+		  resize: none;
+		  border-radius: 5px;
+	}
+	#divformulario {
+		width: 60%;
+		background-color: azure;
+		padding: 10px;
+		margin: 5px;
+		overflow: hidden;
+	}
+	#terminos {
+		font-size: 0.8em;
+	}
+	.rojo {
+		color: red;
+	}
+	input:invalid {
+		background: #F7F2F2
+	}
+	
+	input[type=submit] {
+		width: auto;
+		background-color: green;
+		color: white;
+		font-weight: bold;
+		border-radius: 5px;
+		padding: 10px;
+	  }
+	input[type=submit]:hover {
+		background-color: darkgreen;
+		cursor: grabbing;
+	 } 
+	a { 
+		font-size: 0.8em;
+		
+	}
+	a:hover {
+		text-decoration: none;
+		color: darkred;
+		}
