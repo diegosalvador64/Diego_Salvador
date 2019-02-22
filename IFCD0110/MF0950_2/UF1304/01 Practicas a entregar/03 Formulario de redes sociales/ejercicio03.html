@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ES">
 <head>
-    <title>Formulario de registro</title>
+    <title>Formulario de Redes Sociales</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Diseño páginas web con HTML, CSS y Javascript">
@@ -20,32 +20,38 @@
 </head>
 
 <body>
-		
+	<main>
+	<h2>INICIAR SESIÓN CON REDES O MANUALMENTE</h2>
 	<div class="flex1">
 			<div>
-			 <img src="./social_facebook_b.png" alt="">
-			 <img src="./social_google_b.png" alt="">
-			 <img src="./social_twitter_b.png" alt="">
+				  <div class="flex-fb"><a href="#" class="enlace-rrss"><img src="./social_facebook_w.png" alt="facebook"><span class="inicia_sesion">Inicia sesión con Facebook</span></a></div>
+				  <div class="flex-twitter"><a href="#" class="enlace-rrss"><img src="./social_twitter_w.png" alt="twitter"><span class="inicia_sesion">Inicia sesión con Twitter</span></a></div>
+				  <div class="flex-google"><a href="#" class="enlace-rrss"><img src="./social_google_w.png" alt="google"><span class="inicia_sesion">Inicia sesión con Google +</span></a></div>
+				<!--<div class="flex-botonregistro"><a href="#" class="botonesinferiores">Registrarse</a></div>-->  
 			</div>
+			
 			<div>
+				
 				<form action="formulario" autocomplete="off" method="post">
 					
-					<label for="nombre">Usuario</label><br>
-					<input type="text" name="nombre" value="" required placeholder="Entrar usuario" pattern="[A-Za-z0-9]{10}" autofocus title="Rellene el campo" maxlength="10"><br>
-					<label for="contrasena">Contraseña:</label><br>
-					<input type="password" name="contrasena" required placeholder="Entrar contraseña"
+					<label for="nombre"></label>
+				  <input type="text" name="nombre" value="" required placeholder="Usuario" pattern="[A-Za-z0-9]{10}" autofocus title="Rellene el campo" maxlength="10">
+					<label for="contrasena"></label>
+					<input type="password" name="contrasena" required placeholder="Contraseña"
 					title="Rellene el campo" minlength="8">
-					<br><br>
-					<input type="submit" value="Iniciar sesión"><br>
-					<input type="checkbox" name="recordarme" class="recordarme" value="" checked><span class="terminos"></span>Recordarme<br><br>
-					<a href="#" class="botonregistro">Registrarse</a>
-					<span class="olvidado">¿Has olvidado la </span><a href="#">contraseña?</a>
-					
+					<input type="submit" value="Iniciar sesión">
+									
 				</form>
+				
+				
 			</div>	
 			
 	</div>
-	
+	<div class="flex-botonregistro">
+		<div><a href="#" class="registrarse">Registrarse</a></div>
+		<div><a href="#" class="recordar">¿Recordar contraseña?</a></div>
+	</div>
+	</main>
  
 <br>
 
