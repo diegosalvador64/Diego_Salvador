@@ -31,7 +31,7 @@
 		width: auto;
 		display: flex; /* propiedad que define la flexión */
 		flex-direction: row;
-		flex-wrap: wrap;
+		flex-wrap: nowrap;
 		
 	}
 	.flex1 > div {
@@ -41,7 +41,7 @@
 		width: auto;
 		display: flex; /* propiedad que define la flexión */
 		flex-direction: row;
-		flex-wrap: wrap;
+		flex-wrap: nowrap;
 		
 	}
 	.flex-botonregistro > div {
@@ -52,13 +52,11 @@
 	@media screen and (max-width: 600px) {
   		.flex1 {
 				flex-direction: column;
-				flex-wrap: nowrap;
-				width: auto;
+				width: 100%;
 			}
 		.flex-botonregistro {
 				flex-direction: column;
-				flex-wrap: nowrap;
-				width: auto;
+				width: 100%;
 			}
 		}
 	.inicia_sesion {
