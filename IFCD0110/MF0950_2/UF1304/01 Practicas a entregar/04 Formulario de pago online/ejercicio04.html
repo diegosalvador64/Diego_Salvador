@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ES">
+<head>
+    <title>Formulario de Pago</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Diseño páginas web con HTML, CSS y Javascript">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="title" content="Confección y publicación de páginas web">
+    <meta name="author" content="Diego Salvador">
+
+    <!-- Para referirse a archivos sin tener que poner siempre la URL completa. Por ejemplo en las imágenes de nuestra web, solo hace falta el nombre de la imagen -->
+    <!-- <base href="https://www.mipagina.com/img/" target="_blank"> -->
+
+    <link rel="shortcut icon" href="./img/CSS3_icon.ico.ico" type="image/x-icon">
+	<link rel="icon" href="./img/CSS3_icon.ico.ico" type="image/ico">
+    
+    <script src="js/funciones.js"></script>
+    <link rel="stylesheet" href="estilos.css" type="text/css">
+</head>
+
+<body>
+	
+	<h2>Formulario de Pago</h2>
+	<main>
+		<form action="/action_page.php" autocomplete="off" method="post">
+			<div class="form_principal">
+					<div class="form_direccion">
+							<div><h2>Dirección de envío</h2></div>
+							<div><label for="nombre"><img src="./user.png" alt="usuario">Nombre completo</label>
+							<input type="text" name="nombre" value="" required placeholder="Nombre y apellidos"  autofocus title="Rellene el campo"></div>
+							<div>
+							<label for="email"><img src="./mail.png" alt="">Correo electrónico</label><br>
+							<input type="email" name="email" required placeholder="Tu correo electrónico" pattern=".+@[yY][aA][hH][oO][oO][.][eS][sS]" title="Solo se permiten cuentas de yahoo.es"></div>
+							 <div><label for="direccion"><img src="./contactcard.png" alt="direccion">Dirección</label>
+							<input type="text" name="direccion" required placeholder="Dirección postal"
+							title="Rellene el campo"></div>
+							<div><label for="ciudad"><img src="./building.png" alt="ciudad">Ciudad</label>
+							<input type="text" name="direccion" required placeholder="Población"
+							title="Rellene el campo"></div>
+							<div class="estado_codigo">
+								<div id="estado">
+									<label for="estado">Estado</label>
+									<input type="text" name="estado" required placeholder="ES"
+									title="Rellene el campo">
+								</div>
+								<div>
+									<label for="codigo_postal">Código Postal</label>
+									<input type="text" name="codigo_postal" required placeholder="28000"
+									title="Rellene el campo" pattern="[0-9]{5}" maxlength="5" title="Rellene el campo solamente con números">
+								</div>
+
+							</div>
+
+					</div>
+						
+					<div class="form_pago">
+					  	  <h2>Pago</h2>
+					  	  <div id="form_pago">
+						  <div><label for="seleccion_tarjeta">Seleccione una tarjeta</label><br>
+						   <input type="radio" name="tarjetas" id="visa" value="" checked><label for="visa"><img src="./visa.png" alt="visa"></label>
+						   <input type="radio" name="tarjetas" id="mastercard" value=""><label for="mastercard"><img src="./mastercard.png" alt="mastercard"></label>
+						   <input type="radio" name="tarjetas" id="american_express" value=""><label for="american_express"><img src="./american-express.png" alt="american_express"></label>
+						   <input type="radio" name="tarjetas" id="discover" value=""><label for="discover"><img src="./discover.png" alt="discover"></label>
+						   </div>
+						  <div>
+						  	<label for="titular">Titular de la tarjeta</label>
+							<input type="text" name="titular" value="" required placeholder="Titular"  title="Rellene el campo">
+						  </div>
+						  <div>
+						  	<label for="num_tarjeta">Número de tarjeta de crédito</label>
+							<input type="text" name="num_tarjeta" value="" required placeholder="1111-2222-3333-4444" pattern="[0-9]{4}[-][0-9]{4}[-][0-9]{4}[-][0-9]{4}" title="Rellene el campo">
+						  </div>
+						  <div>
+						  	<label for="mes_exp">Mes exp</label><br>
+						  	<input list="mes_exp" class="listas" required>
+								  <datalist id="mes_exp">
+									<option value="Enero"></option>
+									<option value="Febrero"></option>
+									<option value="Marzo"></option>
+									<option value="Abril"></option>
+									<option value="Mayo"></option>
+									<option value="Junio"></option>
+									<option value="Julio"></option>
+									<option value="Agosto"></option>
+									<option value="Septiembre"></option>
+									<option value="Octubre"></option>
+									<option value="Noviembre"></option>
+									<option value="Diciembre"></option>
+								</datalist> 
+						  </div>
+						   <div class="anyo_cvv">
+							   <div id="anyo_exp2">
+								<label for="anyo_exp">Año exp</label><br>
+								<input list="anyo_exp" class="listas" required>
+									  <datalist id="anyo_exp">
+										<option value="2019"></option>
+										<option value="2018"></option>
+										<option value="2017"></option>
+										<option value="2016"></option>
+										<option value="2015"></option>
+										<option value="2014"></option>
+										<option value="2013"></option>
+										<option value="2012"></option>
+										<option value="2011"></option>
+										<option value="2010"></option>
+									</datalist> 
+							  </div>
+							  <div>
+							  		<label for="cvv">CVV</label><br>
+							  		<input type="text" name="cvv" value="" required placeholder="111" pattern="[0-9]{3}" maxlength="3" title="Rellene el campo">
+							  </div>
+						  </div>
+						 </div>
+					</div>	
+			</div>
+			<div class="recordarme">
+				<input type="checkbox" name="recordarme" value="" checked><span class="terminos">Acepto los términos y </span><a href="#">condiciones de privacidad</a><br><br>
+				<input type="submit" value="Continuar con el pago">
+			</div>
+		</form>
+	</main>
+ 
+<br>
+
+</body>
+</html>
