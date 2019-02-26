@@ -1,0 +1,67 @@
+INDEX
+--------------------------------------------------------
+Confección y publicación de páginas web
+
+Página Web
+Una página web, es un documento capaz de contener texto, sonido, vídeo, programas, enlaces, imágenes y muchas otras cosas, adaptada para la llamada World Wide Web Consortium (W3C®) y que puede ser mostrada mediante un navegador web. Esta información se encuentra generalmente en formato HTML o XHTML, y puede proporcionar acceso a otras páginas web mediante enlaces de hipertexto.
+
+Sitio Web
+Las páginas web pueden estar almacenadas en un equipo local o en un servidor web remoto. El servidor web puede restringir el acceso únicamente a redes privadas, por ejemplo, en una intranet corporativa, o puede publicar las páginas en la World Wide Web. El acceso a las páginas web es realizado mediante una transferencia desde servidores, utilizando el protocolo de transferencia de hipertexto (HTTP).
+
+
+HTML
+--------------------------------------------------------
+Lenguaje de marcado
+Lenguaje HTML
+HTML, sigla en inglés de HyperText Markup Language (lenguaje de marcas de hipertexto), hace referencia al lenguaje de marcado para la elaboración de páginas web. Es un estándar que sirve de referencia del software que conecta con la elaboración de páginas web en sus diferentes versiones, define una estructura básica y un código (denominado código HTML) para la definición de contenido de una página web, como texto, imágenes, videos, juegos, entre otros.
+
+HTML, es un estándar a cargo del World Wide Web Consortium (W3C®)WWW, organización dedicada a la estandarización de casi todas las tecnologías ligadas a la web, sobre todo en lo referente a su escritura e interpretación. 
+
+Se considera el lenguaje web más importante siendo su invención crucial en la aparición, desarrollo y expansión de la World Wide Web (WWW Red Mundial Web). Es el estándar que se ha impuesto en la visualización de páginas web y es el que todos los navegadores actuales han adoptado.
+
+Estándar HTML
+El lenguaje HTML basa su filosofía de desarrollo en la diferenciación.
+
+Al añadir un elemento externo a la página (imagen, vídeo, script, entre otros.), este no se incrusta directamente en el código de la página, sino que se hace una referencia a la ubicación de dicho elemento mediante etiquetas de texto. De este modo, la página web contiene solamente texto mientras que recae en el navegador web (interpretador del código) la tarea de unir todos los elementos y visualizar la página final.
+
+Al ser un estándar, HTML busca ser un lenguaje que permita que cualquier página web escrita en una determinada versión, pueda ser interpretada de la misma forma (estándar) por cualquier navegador web actualizado.
+"Sólo tuve que tomar la idea de hipertexto y conectarlo con las ideas de TCP y DNS y — ¡et voilà! — la World Wide Web." 
+Tim Berners-Lee, creador de la Web
+
+CSS
+--------------------------------------------------------
+Hoja de Estilos en Cascada
+Lenguaje CSS
+CSS, siglas en inglés de Cascading Style Sheets, (en español "Hojas de estilo en cascada"), es un lenguaje de diseño gráfico para definir y crear la presentación de un documento estructurado escrito en un lenguaje de marcado. Es usado para establecer el diseño visual de los documentos web, e interfaces de usuario escritas en HTML o XHTML. Junto con HTML y JavaScript, CSS es una tecnología usada por muchos sitios web para crear páginas visualmente atractivas, interfaces de usuario para aplicaciones web.
+
+La especificación CSS es mantenida por el World Wide Web Consortium (W3C®) WWW, organización dedicada a la estandarización del MIME type text/css, registrado para su uso descrito en el RFC 23185.
+
+CSS busca mejorar la accesibilidad del documento, provee más flexibilidad y control en la especificación de características presentacionales, permitiendo que varios documentos HTML compartan un mismo estilo usando una sola hoja de estilos separada en un archivo .css. Con ello, se reduce la complejidad y la repetición de código en la estructura del documento.
+
+Estándar CSS
+CSS separa el contenido de un documento de la forma de presentación.
+
+La separación del formato y el contenido hace posible presentar el mismo documento marcado en diferentes estilos para mostrar una página web de manera distinta dependiendo del tamaño de la pantalla o tipo de dispositivo.
+
+La especificación CSS describe un esquema prioritario para determinar qué reglas de estilo se aplican si más de una regla coincide para un elemento en particular. Estas reglas son aplicadas con un sistema llamado de cascada, de modo que las prioridades son calculadas y asignadas a las reglas.
+"Cada navegador web usa un motor de renderizado, el soporte de CSS no es exactamente igual en ninguno de ellos.." 
+Håkon Wium Lie, CTO de la compañía Opera Software y cocreador del estándar CSS
+
+JS
+--------------------------------------------------------
+Lenguaje de Programación
+Lenguaje JS
+JS, siglas en inglés de JavaScript, (en español "Guión Java"), es un lenguaje de programación orientado a objetos Se utiliza principalmente del lado del cliente (client-side), implementado como parte de un navegador web. permitiendo mejoras en la interfaz de usuario y páginas web dinámicas. JavaScript se diseñó con una sintaxis similar a C, aunque adopta nombres y convenciones del lenguaje de programación Java. Sin embargo, Java y JavaScript tienen semánticas y propósitos diferentes.
+
+Todos los navegadores modernos interpretan el código JavaScript integrado en las páginas web. Para interactuar con una página web se provee al lenguaje JavaScript de una implementación del Document Object Model (DOM).
+
+Se utiliza en páginas web HTML para realizar operaciones en el marco de la aplicación cliente, sin acceso a funciones del servidor. Actualmente es ampliamente utilizado para enviar y recibir información introducida por el usuario a través del navegador. JavaScript interpreta en el agente de usuario al mismo tiempo que las sentencias van descargándose junto con el código HTML.
+
+Estándar JS
+La W3C® diseñó el estándar Document Object Model (DOM).
+
+ECMAScript es una especificación de lenguaje de programación publicada por ECMA International. El desarrollo empezó en 1996 y estuvo basado en el popular lenguaje JavaScript propuesto como estándar por Netscape Communications Corporation. Actualmente está aceptado como el estándar ISO 16262.
+
+La mayoría de navegadores de Internet incluyen una implementación del estándar ECMAScript, al igual que un acceso al Document Object Model para manipular páginas web. JavaScript está implementado en la mayoría de navegadores, Internet Explorer de Microsoft usa JScript..
+"La especificación estándar del lenguaje inicialmente se llamaba Mocha, luego LiveScript, y finalmente Javascript.." 
+Brendan Eich, empleado en Netscape
