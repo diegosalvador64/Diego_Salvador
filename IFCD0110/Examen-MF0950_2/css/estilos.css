@@ -11,6 +11,11 @@ body {
 	padding: 0 auto;
 	color: rgba(102,102,102,1)
 }
+header {
+	margin: 0 auto;
+	padding: 0 auto;
+	position: relative;
+}
 #container {
 	width: 90%;
 	margin: 10px;
@@ -33,16 +38,36 @@ img {
 div {
 	background-color: white;
 	border-radius: 10px;
+	margin: 0 20px;
+	padding: 0 10px;
 }
+div p {
+		padding: 10px;
+		margin: 40px;
+}
+#nota {
+	margin: 16px 20px;
+    padding: 20px;
+    border-left: 4px solid #2196F3; 
+	font-size: 1.1em;
+        
+}
+#tim_berners {
+		text-align: center;
+		padding: 0;
+		margin: 0;
+} 
 h2 {
 	text-align: center;
 }
 nav {
-	text-align: left;
+	width: auto;
+	margin-left: -25px; 
 }
+
 nav ul li {
 	display: inline-block;
-	
+		
 }
 nav a {
 		text-decoration: none; 
@@ -82,7 +107,11 @@ nav a:hover {
  h3 {
 	background-color: #3366AB;
 	color: white;
+	width: auto;
+	margin: 20px;
+	display: inline;
 	}
+/*--------------------------*/
 .navegadores {
 				text-align: center;
 			  	margin: auto; 
@@ -104,6 +133,39 @@ nav a:hover {
 .navegadores a:hover {
 		color: darkred;
 }
+/*--------------------------*/
+#divformulario {
+		width: 50%;
+		padding: 10px;
+		margin: 5px 265px;
+		}
+	input[type=submit] {
+			width: auto;
+			background-color: green;
+			color: white;
+			font-weight: bold;
+			border-radius: 5px;
+			margin-top: 10px;
+			padding: 10px;
+		  }
+	input[type=submit]:hover {
+			background-color: darkgreen;
+			} 
+ 	input[type=text] {
+		  width: 100%;
+		  border: 1px solid gray;
+		  padding: 5px;
+		 }
+	input[type=email] {
+		  width: 100%;
+		  border: 1px solid gray;
+		  padding: 5px;
+		 }
+	textarea {
+		width: 100%;
+		resize: none;
+	}
+/*--------------------------*/
 footer { 
 	text-align: center;
 	padding: 5px;
@@ -115,3 +177,4 @@ footer a {
 footer a:hover {
 		color: darkred;
 }
+
