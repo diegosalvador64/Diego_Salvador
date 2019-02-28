@@ -1,0 +1,249 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="description" content="Diseño de páginas web con HTML, CSS y JavaScript">
+<meta name="keywords" content="HTML, CSS, JavaScript">
+<meta name="title" content="Confección y publicación de páginas web">
+<meta name="author" content="Diego">
+
+<link rel="icon" type="image/png" href="img/html5.png">
+<link rel="icon" type="image/gif" href="img/html5.gif">
+<link rel="icon" type="image/vnd.microsoft.icon" href="img/html5.ico">
+
+<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+<link rel="icon" href="img/favicon.ico" type="image/ico">
+
+<title>GRID, mallas o rejillas</title>
+<style>
+	body {
+		font-size: 1.2em;
+		font-family: Lucida Grande, Lucida Sans Unicode, Lucida Sans, DejaVu Sans, Verdana," sans-serif";
+	}
+	</style>
+</head>
+
+<body>
+<h1>Diseño de cuadrícula</h1>
+<p>El Diseño de cuadrícula Módulo CSS ofrece un sistema basado en el diseño de la red, con filas y columnas, por lo que es más fácil diseñar páginas web sin tener que utilizar flotadores y posicionamiento.</p>
+<hr>
+<h2>display: grid</h2>
+<p>Un diseño de rejilla o malla consiste en un elemento padre, con uno o más elementos secundarios. Un elemento HTML se convierte en un contenedor de cuadrícula mediante el establecimiento de la display a la rejilla o en línea de la red.</p>
+<ul>
+  <li>La propiedad <strong>grid-template-columns</strong> define el número de columnas en su diseño de cuadrícula, y se puede definir la anchura de cada columna. El valor es una lista separada por espacios, donde cada valor define la longitud de la columna respectiva.
+Si desea que su diseño de cuadrícula que contiene 4 columnas, especifique el ancho de las columnas 4, o "auto" si todas las columnas deben tener la misma anchura.
+  </li>
+  <li>La  propiedad <strong>grid-template-rows</strong> define la altura de cada fila. El valor es una lista separada por espacios, donde cada valor define el la altura de la fila respectiva.</li>
+</ul>
+<h3>Sintaxis</h3>
+
+<p><strong>grid-template</strong>: none|grid-template-rows / grid-template-columns|grid-template-areas|initial|inherit;</p>
+<p>
+  <style>
+	.grid-contenedor {
+		display: grid;
+		/*grid-template-columns: 100px auto 200px; *//*Especifica el número y Anchura de las columnas. esta propiedad genera las mallas en realidad. Va junto a la propiedad display:grid;*/
+		grid-template-columns: 150px auto auto 150px;
+		grid-template-rows: auto 150px; /* Especifica número y altura de las filas, al igual que la anterior define las columnas */
+		/*grid-template: auto 150px / 150px auto auto 150px; *//* esta propiedad sustituye a las dos anteriores: primero: grid-template-rows / grid-template-columns */
+  		background-color: #2196F3;
+  		padding: 10px;
+	}	
+	.grid-contenedor > div {
+		background-color: rgba(255, 255, 255, 0.8);
+	    border: 1px solid rgba(0, 0, 0, 0.8);
+	    padding: 20px;
+	    font-size: 30px;
+	    text-align: center;
+	}
+  </style>
+</p>
+<div class="grid-contenedor">
+  <div>1</div>
+	<div>2</div>
+	<div>3</div>
+	<div>4</div>
+	<div>5</div>
+	<div>6</div>
+	<div>7</div>
+	<div>8</div>
+</div>
+<hr>
+<h2>grid-gap</h2>
+<br>
+<p>Se puede ajustar el tamaño de la separación mediante el uso de una de las siguientes propiedades:</p>
+<ul>
+  <li><strong>grid-column-gap</strong>: establece la distancia entre las columnas.</li>
+  <li><strong>grid-row-gap</strong>: establece la separación entre las filas.</li>
+  <li><strong>grid-gap</strong>: propiedad abreviada que reúne las dos anteriores.</li>
+  <li></li>
+  <li><strong>grid-column-start</strong>: Indica en qué columna empezará el item de la cuadrícula.</li>
+  <li><strong>grid-column-end</strong>: Indica en qué columna terminará el item de la cuadrícula.</li>
+  <li><strong>grid-column</strong>: <strong><em>grid-column-start / grid-column-end</em></strong>.</li>
+  <li></li>
+  <li><strong>grid-row-start</strong>: Indica en qué fila empezará el item de la cuadrícula.</li>
+  <li><strong>grid-row-end</strong>: Indica en qué fila terminará el item de la cuadrícula.</li>
+  <li><strong>grid-row</strong>: <strong><em>grid-row-start / grid-row-end</em></strong>.</li>
+  <li></li>
+ </ul>
+
+<style>
+	.grid-gap {
+		display: grid;
+		grid-template-columns: auto auto auto auto;
+		grid-column-gap: 30px;
+		grid-row-gap: 10px;
+		/*grid-gap: 30px 10px;*/ /*hace lo mismo que las dos anteriores*/
+		background-color: #2196F3;
+  		padding: 10px;
+	}
+	.grid-gap > div {
+		background-color: rgba(255, 255, 255, 0.8);
+	    border: 1px solid rgba(0, 0, 0, 0.8);
+	    padding: 20px;
+	    font-size: 30px;
+	    text-align: center;
+	}
+	.item1 {
+		grid-column-start: 1;
+  		grid-column-end: 3;
+	}
+	.item2 {
+		grid-row-start: 2;
+  		grid-row-end: 4;
+	}
+	.item5 {
+		grid-column-start: 4;
+  		grid-row-start: 2;
+  		grid-row-end: 5;
+	}
+	.item8 {
+		grid-column-end: span 2; /* expande la columna en 2 */
+	}
+</style>
+
+<div class="grid-gap">
+  <div class="item1">1</div>
+  <div class="item2">2</div>
+  <div class="item3">3</div>
+  <div class="item4">4</div>
+  <div class="item5">5</div>
+  <div class="item6">6</div>
+  <div class="item7">7</div>
+  <div class="item8">8</div>
+		
+</div>
+<hr>
+<h2>grip-template-areas</h2>
+<p>Elementos de la cuadrícula con nombre pueden ser referidos a la propiedad <em>grid-template-areas</em> del contenedor de cuadrícula.</p>
+<style>
+	.grid-area {
+		display: grid;
+		grid-template-areas: 
+			'header header header header header'
+			'menu main main main aside'
+			'menu footer footer footer footer';
+		background-color: #2196F3;
+  		padding: 10px;
+	}	
+	.grid-area > div {
+		background-color: rgba(255, 255, 255, 0.8);
+	    border: 1px solid rgba(0, 0, 0, 0.8);
+	    padding: 20px;
+	    font-size: 30px;
+	    text-align: center;
+	}
+	.area1 {grid-area: header;}
+	.area2 {grid-area: menu;}
+	.area3 {grid-area: main;}
+	.area4 {grid-area: aside;}
+	.area5 {grid-area: footer;}
+	
+</style>
+<div class="grid-area">
+  <div class="area1">Cabecera</div>
+  <div class="area2">Navegación</div>
+  <div class="area3">Contenido</div>
+  <div class="area4">Relacionado</div>
+  <div class="area5">Pie de página</div>
+</div>
+<!------------------------->
+<style>
+	.grid-area1 {
+		display: grid;
+		grid-template-areas: 
+			'header1 header1 header1 header1 header1'
+			'menu1 main1 main1 main1 aside1'
+			/*'footer1 footer1 footer1 footer1 footer1';*/
+			'menu1 footer1 footer1 footer1 aside1';
+		background-color: #2196F3;
+  		padding: 10px;
+	}	
+	.grid-area1 > div {
+		background-color: rgba(255, 255, 255, 0.8);
+	    border: 1px solid rgba(0, 0, 0, 0.8);
+	    padding: 20px;
+	    font-size: 30px;
+	    text-align: center;
+	}
+	.area11 {grid-area: header1;}
+	.area21 {grid-area: menu1;}
+	.area31 {grid-area: main1;}
+	.area41 {grid-area: aside1;}
+	.area51 {grid-area: footer1;}
+	
+</style>
+<div class="grid-area1">
+  <div class="area11">Cabecera</div>
+  <div class="area21">Navegación</div>
+  <div class="area31">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis excepturi ab repellat debitis, itaque libero totam. Aut recusandae porro eligendi nemo possimus, neque vitae dolore perspiciatis illum, nisi, facere laboriosam!</p><img src="crucero-caribe.jpg" alt="crucero">
+  </div>
+  <div class="area41">Relacionado</div>
+  <div class="area51">Pie de página</div>
+</div>
+<hr>
+<h2>grid-auto-flow</h2>
+<ul>
+  <li>La propiedad <strong>grid-auto-flow</strong> controla el número de elementos de auto-flow que se insertan en la malla/cuadrícula.</li>
+  <li><strong>Sintaxis</strong>: <em>grid-auto-flow: row|column|dense|row dense|column dense;</em></li>
+  
+  <li>
+    La propiedad <strong>grid-auto-columns</strong> establece un tamaño para las columnas en un contenedor tipo grid.
+  Esta propiedad sólo afecta a las columnas con el tamaño no establecido. </li>
+  <li><strong>Sintaxis</strong>: <em>grid-auto-columns: auto|max-content|min-content|length</em></li>
+  <li>La propiedad <strong>grid-auto-rows</strong> establece un tamaño para las filas de un contenedor de cuadrícula. Esta propiedad sólo afecta a las filas con el tamaño no establecido.
+  </li>
+  <li><strong>Sintaxis</strong>: <em>grid-auto-columns: auto|max-content|min-content|length;</em></li>
+</ul>
+<div><table>
+    <tbody>
+      <tr>
+        <th>Value</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>row</td>
+        <td>Default value. Places items by filling each row</td>
+      </tr>
+      <tr>
+        <td>column</td>
+        <td>Places items by filling each column</td>
+      </tr>
+      <tr>
+        <td>dense</td>
+        <td>Place items to fill any holes in the grid</td>
+      </tr>
+      <tr>
+        <td>row dense</td>
+        <td>Places items by filling each row, and fill any holes in the grid</td>
+      </tr>
+      <tr>
+        <td>column dense</td>
+        <td>Places items by filling each column, and fill any holes in the grid</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</body>
+</html>
