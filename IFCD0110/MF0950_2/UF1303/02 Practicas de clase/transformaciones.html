@@ -1,0 +1,195 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="description" content="Diseño de páginas web con HTML, CSS y JavaScript">
+<meta name="keywords" content="HTML, CSS, JavaScript">
+<meta name="title" content="Confección y publicación de páginas web">
+<meta name="author" content="Diego">
+
+<link rel="icon" type="image/png" href="img/html5.png">
+<link rel="icon" type="image/gif" href="img/html5.gif">
+<link rel="icon" type="image/vnd.microsoft.icon" href="img/html5.ico">
+
+<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+<link rel="icon" href="img/favicon.ico" type="image/ico">
+<title>Transformaciones</title>
+</head>
+
+<body>
+<h1>CSS Transformaciones 2D</h1>
+<p>Las transformaciones CSS permiten trasladar, rotar, escalar y sesgar elementos. Una transformación es un efecto que permite un cambio de elemento de forma, tamaño y posición. CSS admite transformaciones 2D y 3D.</p>
+<h2>Transformaciones CSS 2D</h2>
+<p>Los métodos de transformación 2D son:</p>
+<ul>
+  <li>translate()</li>
+  <li>rotate()</li>
+  <li>scale()</li>
+  <li>skewX()</li>
+  <li>skewY()</li>
+  <li>matrix()</li>
+</ul>
+<h2>El Método translate () </h2>
+<p>El método translate()  mueve un elemento desde su posición actual (de acuerdo con los parámetros dados para el eje X y el eje Y).</p>
+<div></div>
+	<div class="div1">Original</div>
+	<div class="div2">Translate</div>
+
+  <style>
+div {
+		overflow: hidden;
+	}
+.div1 {
+  width: 300px;
+  height: 100px;
+  background-color: rgba(255,253,0,0.5);
+  border: 1px solid black;
+ }
+.div2 {
+	width: 300px;
+  	height: 100px;
+	background-color: yellow;
+	border: 1px solid black;
+	-ms-transform: translate(50px,50px); /* IE 9 */
+	-webkit-transform: translate(50px,50px); /* Safari */
+	transform: translate(50px,50px); /* Standard syntax */
+	position: relative;
+	top: -100px;
+ }
+  </style>
+<hr>
+<h2>El Método rotate () </h2>
+<p>El método rotate() hace girar un sentido horario elemento o antihorario según un grado dado.</p>
+<div></div>
+	<div class="div3">Original</div>
+	<div class="div4">Rotate</div>
+
+  <style>
+div {
+		overflow: hidden;
+	}
+.div3 {
+  width: 100px;
+  height: 100px;
+  background-color: rgba(255,0,0,0.5);
+  border: 1px solid black;
+ }
+.div4 {
+	width: 100px;
+  	height: 100px;
+	background-color: red;
+	border: 1px solid black;
+	-ms-transform: rotate(45deg); /* IE 9 */
+	-webkit-transform: rotate(45deg); /* Safari */
+	transform: rotate(45deg); /* Standard syntax */
+	position: relative;
+	top: -100px;
+ }
+  </style>
+  <hr>
+  <h2> Método scale () </h2>
+  <p>El método scale()  aumenta o disminuye el tamaño de un elemento (de acuerdo con los parámetros dados para la anchura y altura).</p>
+  
+  	<div class="div5">Original</div>
+<div class="div6">Scale</div>
+
+  
+      <style>
+.div5 {
+  width: 100px;
+  height: 100px;
+  color: white;
+  background-color: blue;
+  border: 1px solid black;
+  position: relative;
+  top: 40px;
+  left: 50px;
+ }
+.div6 {
+	width: 100px;
+  	height: 100px;
+	color: white;
+	background-color: rgba(0,0,255,0.5);
+	border: 1px solid black;
+	-ms-transform: scale(1.5, 1.5); /* IE 9 */
+	-webkit-transform: scale(1.5, 1.5); /* Safari */
+	transform: scale(1.5, 1.5); /* Standard syntax */
+	position: relative;
+	top: -60px;
+	left: 50px;
+ }
+      </style>
+<hr>
+  <h2>Método skew () </h2>
+  <p>El método skew() sesga o inclina un elemento a lo largo de la X y el eje Y por los ángulos dados. Es la fusión de dos métodos: </p>
+  <ul>
+    <li>El método skewX() sesga un elemento a lo largo del eje X por el ángulo dado.</li>
+    <li>El método skewY() sesga un elemento a lo largo del eje Y por el ángulo dado.</li>
+  </ul>
+<div class="div7">Original</div>
+<div class="div8">Skew</div>
+
+  
+ <style>
+.div7 {
+  width: 100px;
+  height: 100px;
+  color: white;
+  background-color: green;
+  border: 1px solid black;
+  position: relative;
+  top: 40px;
+  left: 50px;
+ }
+.div8 {
+	width: 100px;
+  	height: 100px;
+	color: white;
+	background-color:#078C37;
+	border: 1px solid black;
+	-ms-transform: skew(30deg, 10deg); /* IE 9 */
+	-webkit-transform: skew(30deg, 10deg); /* Safari */
+	transform: skew(30deg, 10deg); /* Standard syntax */
+	position: relative;
+	top: -60px;
+	left: 150px;
+ }
+</style>
+<hr>
+<h2>Método matrix () </h2>
+<p>El método matrix() combina todo el 2D métodos de transformada en una sola.</p>
+<p>El método  matrix () toma seis parámetros, que contiene funciones matemáticas, que le permite rotar, escala, mover  e inclinar elementos.</p>
+<p>Los parámetros son los siguientes: matrix (scaleX (), skewY (), skewX (), scaleY (), translateX (), translateY ()):</p>
+<p>Este ejemplo; matrix(1.5, 0.5, 0, 1.5, 150, 0); no admite unidades (ni degrees ni px, ni nada):</p>
+<div class="div9">Original</div>
+<div class="div10">Skew</div>
+
+  
+ <style>
+.div9 {
+  width: 100px;
+  height: 100px;
+  color: white;
+  background-color: green;
+  border: 1px solid black;
+  position: relative;
+  top: 40px;
+  left: 50px;
+ }
+.div10 {
+	width: 100px;
+  	height: 100px;
+	color: white;
+	background-color:#078C37;
+	border: 1px solid black;
+	-ms-transform: matrix(1.5, 0.5, 0, 1.5, 150, 0); /* IE 9 */
+	-webkit-transform: matrix(1.5, 0.5, 0, 1.5, 150, 0); /* Safari */
+	transform: matrix(1.5, 0.5, 0, 1.5, 150, 0); /* Standard syntax */
+	position: relative;
+	top: -60px;
+	left: 150px;
+ }
+</style>
+<hr>
+</body>
+</html>

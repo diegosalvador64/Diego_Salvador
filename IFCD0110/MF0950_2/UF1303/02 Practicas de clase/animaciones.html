@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="description" content="Diseño de páginas web con HTML, CSS y JavaScript">
+<meta name="keywords" content="HTML, CSS, JavaScript">
+<meta name="title" content="Confección y publicación de páginas web">
+<meta name="author" content="Diego">
+
+<link rel="icon" type="image/png" href="img/html5.png">
+<link rel="icon" type="image/gif" href="img/html5.gif">
+<link rel="icon" type="image/vnd.microsoft.icon" href="img/html5.ico">
+
+<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+<link rel="icon" href="img/favicon.ico" type="image/ico">
+<title>Animaciones</title>
+</head>
+
+<body>
+<h2>Las animaciones CSS</h2>
+<p>Las animaciones CSS permiten animar la mayoría de los elementos HTML sin necesidad de utilizar JavaScript o Flash!</p>
+<p>Una animación permite a un elemento de cambiar gradualmente de un estilo a otro.</p>
+<p>Se puede cambiar tantas propiedades CSS como se desee.</p>
+<p>Para utilizar la animación CSS, primero debe especificar algunos fotogramas clave para la animación.</p>
+<p>Fotogramas clave conservar lo estilos el elemento tendrá en determinados momentos.</p>
+<h2>La Regla @keyframes</h2>
+<p>Al especificar estilos CSS dentro de la regla @keyframes, la animación cambiará gradualmente desde el estilo actual al nuevo estilo en determinados momentos.</p>
+<p>Para conseguir una animación para el trabajo, debe obligar a la animación a un elemento.</p>
+<h2>Propiedades de animación CSS</h2>
+<p>La siguiente tabla muestra la regla @keyframes y todas las propiedades de animación CSS:</p>
+<table>
+  <tbody>
+    <tr>
+      <th>Property</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td>@keyframes</td>
+      <td>Specifies the animation code</td>
+    </tr>
+    <tr>
+      <td>animation</td>
+      <td>A shorthand property for setting all the animation properties</td>
+    </tr>
+    <tr>
+      <td>animation-delay</td>
+      <td>Specifies a delay for the start of an animation</td>
+    </tr>
+    <tr>
+      <td>animation-direction</td>
+      <td>Specifies whether an animation should be played forwards, backwards or in alternate cycles</td>
+    </tr>
+    <tr>
+      <td>animation-duration></td>
+      <td>Specifies how long time an animation should take to complete one cycle</td>
+    </tr>
+    <tr>
+      <td>animation-fill-mode</td>
+      <td>Specifies a style for the element when the animation is not playing (before it starts, after it ends, or both)</td>
+    </tr>
+    <tr>
+      <td>animation-iteration-count</td>
+      <td>Specifies the number of times an animation should be played</td>
+    </tr>
+    <tr>
+      <td>animation-name</td>
+      <td>Specifies the name of the @keyframes animation</td>
+    </tr>
+    <tr>
+      <td>animation-play-state</td>
+      <td>Specifies whether the animation is running or paused</td>
+    </tr>
+    <tr>
+      <td>animation-timing-function</td>
+      <td>Specifies the speed curve of the animation</td>
+    </tr>
+  </tbody>
+</table>
+<p>La propiedad animation es una propiedad abreviada para:</p>
+<ul>
+  <li>animation-name</li>
+  <li>animation-duration</li>
+  <li><a href="https://www.w3schools.com/cssref/css3_pr_animation-timing-function.asp">animation-timing-function</a></li>
+  <li><a href="https://www.w3schools.com/cssref/css3_pr_animation-delay.asp">animation-delay</a></li>
+  <li><a href="https://www.w3schools.com/cssref/css3_pr_animation-iteration-count.asp">animation-iteration-count</a></li>
+  <li><a href="https://www.w3schools.com/cssref/css3_pr_animation-direction.asp">animation-direction</a></li>
+  <li><a href="https://www.w3schools.com/cssref/css3_pr_animation-fill-mode.asp">animation-fill-mode</a></li>
+  <li><a href="https://www.w3schools.com/cssref/css3_pr_animation-play-state.asp">animation-play-state</a></li>
+</ul>
+<hr>
+<div id="div1"></div>
+<style>
+	#div1 {
+ 	  width: 100px;
+	  height: 100px;
+	  background-color: red;
+	  -webkit-animation-name: ejemplo1; /* Safari 4.0 - 8.0 */
+	  -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+	  animation-name: ejemplo1;
+	  animation-duration: 4s;
+	  animation-iteration-count: infinite;	
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes ejemplo1 {
+  from {background-color: red;}
+  to {background-color: yellow;}
+}
+
+/* Standard syntax */
+@keyframes ejemplo1 {
+  from {background-color: red;}
+  to {background-color: yellow;}
+}	
+</style>
+<br>
+</body>
+</html>
