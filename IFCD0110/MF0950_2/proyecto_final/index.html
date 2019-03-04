@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="es">
+<title>W3.CSS Plantilla</title>
+<meta charset="UTF-8">
+<meta name="description" content="Diseño páginas web con HTML, CSS y Javascript">
+<meta name="keywords" content="HTML, CSS, JavaScript">
+<meta name="title" content="Confección y publicación de páginas web">
+<meta name="author" content="Diego Salvador">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="./css/w3.css">
+<link rel="stylesheet" href="./css/raleway.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://fontawesome.com">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+
+body, html {
+  height: 100%;
+  line-height: 1.8;
+}
+
+/* Full height image header */
+.bgimg-1 {
+  background-position: center;
+  background-size: cover;
+  background-image: url("./img/mac.jpg");
+  min-height: 100%;
+}
+
+.w3-bar .w3-button {
+  padding: 16px;
+}
+</style>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-card" id="myNavbar">
+    <a href="#home" class="w3-bar-item w2-button w3-wide"><img src="./img/HTML5_Logo_64.png" alt="logo"></a>
+    <!-- Right-sided navbar links -->
+    <div class="w3-right w3-hide-small">
+      <a href="#about" class="w3-bar-item w2-button">ACERCA DE MÍ</a>
+      <a href="#team" class="w3-bar-item w2-button"><i class="fa fa-user"></i> EQUIPO</a>
+      <a href="#work" class="w3-bar-item w2-button"><i class="fa fa-th"></i> TRABAJOS</a>
+      <a href="#pricing" class="w3-bar-item w2-button"><i class="fa fa-euro"></i> PRECIOS</a>
+      <a href="#contact" class="w3-bar-item w2-button"><i class="fa fa-envelope"></i> CONTACTO</a>
+     </div>
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</div>
+
+<!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ACERCA DE MÍ</a>
+  <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">EQUIPOS</a>
+  <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">TRABAJOS</a>
+  <a href="#pricing" onclick="w3_close()" class="w3-bar-item w3-button">PRECIOS</a>
+  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACTO</a>
+</nav>
+
+<!-- Header with full-height image -->
+<header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-left w3-text-white" style="padding:48px">
+    <span class="w3-jumbo w3-hide-small">Comienza algo que realmente interesa</span><br>
+    <span class="w3-xxlarge w3-hide-large w3-hide-medium">Comienza algo que realmente interesa</span><br>
+    <span class="w3-large">Deja de perder un tiempo valioso con proyectos que no te identifican</span>
+    <p><a href="#about" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Aprende más y empieza hoy</a></p>
+  </div> 
+  <div class="w3-display-bottomleft w3-text-grey w3-large" style="padding:24px 48px">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+    <i class="fa fa-google-plus w3-hover-opacity"></i>
+    <i class="fa fa-vimeo w3-hover-opacity"></i>
+  </div>
+</header>
+
+<!-- About Section -->
+<div class="w3-container" style="padding:128px 16px" id="about">
+  <h3 class="w3-center">SOBRE LA COMPAÑÍA</h3>
+  <p class="w3-center w3-large">Características clave de nuestra empresa</p>
+  <div class="w3-row-padding w3-center" style="margin-top:64px">
+    <div class="w3-quarter">
+      <i class="fa fa-desktop w3-margin-bottom w3-jumbo w3-center"></i>
+      <p class="w3-large"><strong>Responsive</strong></p>
+      <p>Una Web Responsive es aquella que es capaz de adaptarse a cualquier dispositivo donde se visualice. Las estadísticas muestran el creciente tráfico web que se genera desde dispositivos móviles, pero además Google penaliza ya en su buscador a aquellas webs que no son responsables. Si tu sitio web está obsoleta, es el momento de ponerte en manos de nuestro equipo para diseñar una web responsive con las mejores garantías.</p>
+    </div>
+    <div class="w3-quarter">
+      <i class="fa fa-pencil w3-margin-bottom w3-jumbo"></i>
+      <p class="w3-large"><strong>Creatividad</strong></p>
+      <p>Nuestro verdadero punto fuerte es una creatividad desbordante que nos permite abordar un diseño espectacular. Tendrás una web con personalidad, con mensajes publicitarios potentes y coherentes con tu estrategia de negocio.
+.</p>
+    </div>
+    <div class="w3-quarter">
+      <i class="fa fa-puzzle-piece w3-margin-bottom w3-jumbo"></i>
+      <p class="w3-large"><strong>Diseño profesional</strong></p>
+      <p>¿Buscas un diseño web atractivo y funcional? Tenemos la mejor solución para ti. Una estética completamente profesional, con un diseño personalizado y adaptado a tus necesidades y preferencias personales. Una web a medida.</p>
+    </div>
+    <div class="w3-quarter">
+      <i class="fa fa-cog w3-margin-bottom w3-jumbo"></i>
+      <p class="w3-large"><strong>Soporte</strong></p>
+      <p>El soporte técnico y el mantenimiento de un sitio web es fundamental para velar por la seguridad de nuestra página y tener ésta siempre actualizada. Un servicio de soporte técnico garantiza la adaptación de la web a las nuevas tecnologías para que, entre otros aspectos, se visualice sin problemas en dispositivos móviles y cualquier navegador de internet.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Promo Section - "We know design" -->
+<div class="w3-container w3-light-grey" style="padding:128px 16px">
+  <div class="w3-row-padding">
+    <div class="w3-col m6">
+      <h3>Somos expertos en diseño.</h3>
+      <p>Especialistas en soluciones digitales, diseño gráfico y diseño web en Madrid. Programación a medida y diseño corporativo. Cuéntanos tu idea y la hacemos realidad. Presupuestos sin compromiso.</p>
+      <p><a href="#work" class="w3-button w3-black"><i class="fa fa-th"> </i> Visualiza aquí nuestros trabajos</a></p>
+    </div>
+    <div class="w3-col m6">
+      <img class="w3-image w3-round-large w3-hover-opacity" src="./img/phone_buildings.jpg" alt="Buildings" width="700" height="394">
+    </div>
+  </div>
+</div>
+
+<!-- Team Section -->
+<div class="w3-container" style="padding:128px 16px" id="team">
+  <h3 class="w3-center">EQUIPO</h3>
+  <p class="w3-center w3-large">Quienes hacen posible la compañía</p>
+  <div class="w3-row-padding w3-grayscale" style="margin-top:64px">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card">
+        <img src="./img/team2.jpg" alt="John" style="width:100%" class="w3-hover-opacity">
+        <div class="w3-container">
+          <h3>Juan Gómez</h3>
+          <p class="w3-opacity">CEO & Fundador</p>
+          <p><cite>Siempre tuve vocación de inventor y por tanto de querer cambiar el status quo y evolucionar la sociedad en la que vivo.</cite></p>
+          <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contacto</button></p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card">
+        <img src="./img/team1.jpg" alt="Jane" style="width:100%" class="w3-hover-opacity">
+        <div class="w3-container">
+          <h3>Petra Sánchez</h3>
+          <p class="w3-opacity">Directora Artística</p>
+          <p><cite>Desde que era niña, tuve pasión por los colores y las formas de la naturaleza.</cite></p>
+          <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contacto</button></p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card">
+        <img src="./img/team3.jpg" alt="Mike" style="width:100%" class="w3-hover-opacity">
+        <div class="w3-container">
+          <h3>Dagoberto Escorcia</h3>
+          <p class="w3-opacity">Diseñador Web</p>
+          <p><cite>Me gusta que tengas una página con gancho, que tu web refleje tu personalidad y los valores de tu negocio. En eso estoy.</cite></p>
+          <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contacto</button></p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card">
+        <img src="./img/team4.jpg" alt="Dan" style="width:100%" class="w3-hover-opacity">
+        <div class="w3-container">
+          <h3>José Fuertes Barriga</h3>
+          <p class="w3-opacity">Director Comercial</p>
+          <p><cite>Sin un buen departamento comercial, por muy bueno que sea el producto, éste no tiene nada que hacer. Por eso estoy aquí, porque soy el mejor en mi trabajo</cite></p>
+          <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contacto</button></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Promo Section "Statistics" -->
+<div class="w3-container w3-row w3-center w3-dark-grey w3-padding-64">
+  <div class="w3-quarter">
+    <span class="w3-xxlarge">14+</span>
+    <br>Partners
+  </div>
+  <div class="w3-quarter">
+    <span class="w3-xxlarge">55+</span>
+    <br>Proyectos realizados
+  </div>
+  <div class="w3-quarter">
+    <span class="w3-xxlarge">89+</span>
+    <br>Clientes satisfechos
+  </div>
+  <div class="w3-quarter">
+    <span class="w3-xxlarge">150+</span>
+    <br>Encuentros
+  </div>
+</div>
+
+<!-- Work Section -->
+<div class="w3-container" style="padding:128px 16px" id="work">
+  <h3 class="w3-center">NUESTRO TRABAJO</h3>
+  <p class="w3-center w3-large">Lo que hemos hecho por las personas.</p>
+
+  <div class="w3-row-padding" style="margin-top:64px">
+    <div class="w3-col l3 m6">
+      <img src="./img/tech_mic.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A microphone">
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="./img/tech_phone.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A phone">
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="./img/tech_drone.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A drone">
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="./img/tech_sound.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Soundbox">
+    </div>
+  </div>
+
+  <div class="w3-row-padding w3-section">
+    <div class="w3-col l3 m6">
+      <img src="./img/tech_tablet.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A tablet">
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="./img/tech_camera.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A camera">
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="./img/tech_typewriter.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A typewriter">
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="./img/tech_tableturner.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A tableturner">
+    </div>
+  </div>
+</div>
+
+<!-- Modal for full size images on click-->
+<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+  <span class="w3-button w3-xxlarge w3-black w3-padding-large w3-display-topright" title="Close Modal Image">×</span>
+  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+    <img id="img01" class="w3-image">
+    <p id="caption" class="w3-opacity w3-large"></p>
+  </div>
+</div>
+
+<!-- Skills Section -->
+<div class="w3-container w3-light-grey w3-padding-64">
+  <div class="w3-row-padding">
+    <div class="w3-col m6">
+      <h3>Nuestros valores.</h3>
+      <p>compromiso con nuestros clientes.</p>
+      <p>Calidad en nuestros servicios.</p>
+      <p>Flexibilidad para adaptarnos a vuestras necesidades.</p>
+      <p>Nos consideramos partner de nuestros clientes, aportando al plan estratégico de las compañías un apoyo fundamental en la consecución de sus objetivos</p>
+    </div>
+    <div class="w3-col m6">
+      <p class="w3-wide"><i class="fa fa-cog w3-margin-right"></i>Programación</p>
+      <div class="w3-grey">
+        <div class="w2-container w3-dark-grey w3-center" style="width:90%">75%</div>
+      </div>
+      <p class="w3-wide"><i class="fa fa-pencil w3-margin-right"></i>Diseño web</p>
+      <div class="w3-grey">
+        <div class="w2-container w3-dark-grey w3-center" style="width:85%">80%</div>
+      </div>
+      <p class="w3-wide"><i class="fa fa-camera w3-margin-right"></i>Photoshop</p>
+      <div class="w3-grey">
+        <div class="w2-container w3-dark-grey w3-center" style="width:75%">65%</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Pricing Section -->
+<div class="w3-container w3-center w3-dark-grey" style="padding:128px 16px" id="pricing">
+  <h3>PRECIOS</h3>
+  <p class="w3-large">Elija un plan de precios que se ajuste a sus necesidades.</p>
+  <div class="w3-row-padding" style="margin-top:64px">
+    <div class="w3-third w3-section">
+      <ul class="w3-ul w3-white w3-hover-shadow">
+        <li class="w3-black w3-xlarge w3-padding-32">Básico</li>
+        <li class="w3-padding-16"><b>10GB</b> Almacenamiento</li>
+        <li class="w3-padding-16"><b>10</b> Emails</li>
+        <li class="w3-padding-16"><b>10</b> Dominios</li>
+        <li class="w3-padding-16">Soporte<b> Indefinido</b></li>
+        <li class="w3-padding-16">
+          <h2 class="w3-wide">€ 10</h2>
+          <span class="w3-opacity">mensual</span>
+        </li>
+        <li class="w3-light-grey w3-padding-24">
+          <button class="w3-button w3-black w3-padding-large">Regístrate</button>
+        </li>
+      </ul>
+    </div>
+    <div class="w3-third">
+      <ul class="w3-ul w3-white w3-hover-shadow">
+        <li class="w3-red w3-xlarge w3-padding-48">Profesional</li>
+        <li class="w3-padding-16"><b>25GB</b> Almacenamiento</li>
+        <li class="w3-padding-16"><b>25</b> Emails</li>
+        <li class="w3-padding-16"><b>25</b> Dominios</li>
+        <li class="w3-padding-16">Soporte<b> Indefinido</b></li>
+        <li class="w3-padding-16">
+          <h2 class="w3-wide">€ 25</h2>
+          <span class="w3-opacity">mensual</span>
+        </li>
+        <li class="w3-light-grey w3-padding-24">
+          <button class="w3-button w3-black w3-padding-large">Regístrate</button>
+        </li>
+      </ul>
+    </div>
+    <div class="w3-third w3-section">
+      <ul class="w3-ul w3-white w3-hover-shadow">
+        <li class="w3-black w3-xlarge w3-padding-32">Premium</li>
+        <li class="w3-padding-16"><b>50GB</b> Almacenamiento</li>
+        <li class="w3-padding-16"><b>50</b> Emails</li>
+        <li class="w3-padding-16"><b>50</b> Dominios</li>
+        <li class="w3-padding-16">Soporte<b> Indefinido</b></li>
+        <li class="w3-padding-16">
+          <h2 class="w3-wide">€ 50</h2>
+          <span class="w3-opacity">mensual</span>
+        </li>
+        <li class="w3-light-grey w3-padding-24">
+          <button class="w3-button w3-black w3-padding-large">Regístrate</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- Contact Section -->
+<div class="w3-container w3-light-grey" style="padding:128px 16px" id="contact">
+  <h3 class="w3-center">CONTACTO</h3>
+  <p class="w3-center w3-large">Contacta con nosotros. Envíanos un mensaje:</p>
+  <div style="margin-top:48px">
+    <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Madrid, España</p>
+    <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Teléfono: +34 666-666</p>
+    <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: mail@mail.com</p>
+    <br>
+    <form action="/action_page.php" target="_blank">
+      <p><input class="w3-input w3-border" type="text" placeholder="Nombre y apellidos" required name="Name"></p>
+      <p><input class="w3-input w3-border" type="email" name="email" required placeholder="Email" pattern=".+@[yY][aA][hH][oO][oO][.][eS][sS]" title="Solo se permiten cuentas de yahoo.es"></p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Asunto" required name="Subject"></p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Mensaje" required name="Message"></p>
+      <p>
+        <button class="w3-button w3-black" type="submit">
+          <i class="fa fa-paper-plane"></i> ENVIAR MENSAJE
+        </button>
+      </p>
+    </form>
+    <!-- Image of location/map -->
+    <img src="./img/map.jpg" class="w3-image w3-greyscale" style="width:100%;margin-top:48px">
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64">
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>Ir al inicio</a>
+  <div class="w3-xlarge w3-section">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+    <i class="fa fa-google-plus w3-hover-opacity"></i>
+    <i class="fa fa-vimeo w3-hover-opacity"></i>
+  </div>
+  <p>Desarrollado por <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+</footer>
+ 
+<script>
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+
+// Toggle between showing and hiding the sidebar when clicking the menu icon
+var mySidebar = document.getElementById("mySidebar");
+
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+  } else {
+    mySidebar.style.display = 'block';
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+}
+</script>
+
+</body>
+</html>
+
