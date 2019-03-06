@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="es-ES">
+<head>
+<meta charset="utf-8">
+<title>Dónde se puede insertar Javascript</title>
+<link rel="stylesheet" href="./css/estilos.css" type="text/css">
+<script src="js/funciones.js"></script>
+<script>
+function myFunction1() {
+  document.getElementById("demo10").innerHTML = "He cambiado desde el head";
+}
+</script>
+<style>
+	/*body {width: 80%; margin: 20px auto;}*/
+</style>
+</head>
+
+<body class="w-75 m-auto">
+<h1 class="text-primary">¿Dónde se puede insertar Javascript?</h1>
+<hr>
+<ul>
+  <li>Se puede insertar en línea, dentro de las propias <strong>etiquetas HTML</strong> dentro de atributos como <strong>onClick</strong>, como hemos visto anteriormente.</li>
+  <li>En HTML, el código JavaScript debe ser insertado entre etiquetas <code>&lt;script&gt;</code> y <code>&lt;/script&gt;</code>.</li>
+  <li>Los scripts pueden ser colocados en el <code>&lt;body&gt;</code>, o en la <code>&lt;head&gt;</code> sección de una página <strong>HTML</strong>, o en ambos.</li>
+  <li>Los <strong>scripts</strong> también pueden ser colocados en <strong>archivos externos</strong> como <strong>js/funciones.js</strong>.</li>
+</ul>
+<p>Ejemplos antiguos de JavaScript pueden utilizar un atributo de tipo: &lt;script type = &quot;text / javascript&quot;&gt; <br>
+No se requiere el atributo type. JavaScript es el lenguaje de scripts por defecto en HTML.</p>
+<h3>Ejemplos de uso</h3>
+<div class="row">
+  <div class="col-8 shadow-lg p-3 mb-5 bg-white rounded">
+    <h5>Ejemplo Javascript inmerso en &lt;head&gt;</h5>
+    <code><p>&lt;!DOCTYPE html&gt;<br>
+      &lt;html&gt;
+    </p>
+    <p>&lt;head&gt;<br>
+      &lt;script&gt;<br>
+      function myFunction() {<br>
+      document.getElementById("demo").innerHTML = "Paragraph changed.";<br>
+      }<br>
+  &lt;/script&gt;<br>
+  &lt;/head&gt;<br>
+  &lt;body&gt;</p>
+    <p>&lt;h1&gt;A Web Page&lt;/h1&gt;<br>
+      &lt;p id="demo"&gt;A Paragraph&lt;/p&gt;<br>
+      &lt;button type="button" onclick="myFunction()"&gt;Try it&lt;/button&gt;</p>
+    <p>&lt;/body&gt;<br>
+      &lt;/html&gt;</p>
+ 	</code>
+  </div>
+  <div class="col-4 shadow-lg p-3 mb-5 bg-white rounded">
+  	<h5>Ejemplo en Head</h5>
+  	<p id="demo10">Soy un párrafo</p>
+		<button type="button" onclick="myFunction1(); document.getElementById('demo10').style.color='darkred'; document.getElementById('demo10').style.fontSize='3.5em';">Inténtalo</button>
+		<button class="btn btn-light" type="button" onclick="document.getElementById('demo10').style.color='gray'; document.getElementById('demo10').style.fontSize='1em';document.getElementById('demo10').style.color='black'">Restablecer estilo inicial
+		</button>
+  </div>
+  <div class="col-8 shadow-lg p-3 mb-5 bg-white rounded">
+    <h5>Ejemplo Javascript inmerso en &lt;body&gt;</h5>
+    <code><p>&lt;!DOCTYPE html&gt;<br>
+      &lt;html&gt;<br>
+      &lt;body&gt; <br>
+      <br>
+      &lt;h1&gt;A Web Page&lt;/h1&gt;<br>
+      &lt;p id="demo"&gt;A Paragraph&lt;/p&gt;<br>
+      &lt;button type="button" onclick="myFunction()"&gt;Try it&lt;/button&gt;<br>
+      <br>
+      &lt;script&gt;<br>
+      function myFunction() {<br>
+      document.getElementById("demo").innerHTML = "Paragraph changed.";<br>
+      }<br>
+  &lt;/script&gt;<br>
+  <br>
+  &lt;/body&gt;<br>
+  &lt;/html&gt;</p>
+  </code>
+  	
+  </div>
+  <div class="col-4 shadow-lg p-3 mb-5 bg-white rounded">
+  	<h5>Ejemplo en body</h5>
+  	<p id="demo11">Soy un párrafo segunda parte</p>
+	<button type="button" onclick="myFunction2(); document.getElementById('demo11').style.color='green'; document.getElementById('demo11').style.fontSize='2.5em'; ">Inténtalo</button>
+	<button class="btn btn-light" type="button" onclick="document.getElementById('demo11').style.color='gray'; document.getElementById('demo11').style.fontSize='1em';document.getElementById('demo11').style.color='black'">Restablecer estilo inicial</button>
+
+	<script>
+	function myFunction2() {
+	 document.getElementById("demo11").innerHTML = "He cambiado desde el body";
+	}
+	</script>
+  </div>
+   <div class="col-8 shadow-lg p-3 mb-5 bg-white rounded">
+     <h5>Ejemplo en archivo externo: MyScript.js</h5>
+     <code><p>function myFunction() {<br>
+ document.getElementById("demo").innerHTML = "Paragraph changed.";<br>
+}</p></code>
+ 	</div>
+ 	<div class="col-4 shadow-lg p-3 mb-5 bg-white rounded">
+ 	<h5>Ejemplo en archivo externo</h5>
+ 	<p id="demo12">Soy un párrafo externo que voy a cambiar</p>
+	<button type="button" onclick="myFunction3()">Inténtalo, leñe</button>
+	<button class="btn btn-light" type="button" onclick="document.getElementById('demo12').style.color='gray'; document.getElementById('demo12').style.fontSize='1em';document.getElementById('demo12').style.color='black'">Restablecer estilo inicial</button>	
+ 	</div>
+  <div class="col-12 shadow-lg p-3 mb-5 bg-white rounded">
+    <h5>Ejemplo en etiqueta en línea</h5>
+    <p><code>&lt;button onclick=&quot;document.getElementById('imagen').src='pic_bulbon.gif'&quot;&gt;Enciende la luz&lt;/button&gt;</code></p>
+  	
+  </div>
+</div>
+</body>
+</html>

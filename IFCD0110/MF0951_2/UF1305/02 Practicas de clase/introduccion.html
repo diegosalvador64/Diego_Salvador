@@ -18,11 +18,61 @@
 
 <p>En este ejemplo se utiliza el método de "encontrar" un elemento HTML (con id = "demo") y cambia el contenido del elemento ( innerHTML) a "Hola JavaScript":</p>
 <div class="bg-light">
-	Ejemplo de uso
-	<div class="alert alert-warning border-right-0 border-top-0 border-bottom-0 border-success">
-		<samp>document.getElementById("demo").innerHTML = "Hello JavaScript";</samp>
-	</div>
-	
+	<h4>Ejemplo de uso</h4>
+  <div class="alert alert-warning border-right-0 border-top-0 border-bottom-0 border-success"><code>&lt;p id=&quot;demo1&quot;&gt;Javascript puede cambiar el código HTML&lt;/p&gt;<br>
+&lt;button type=&quot;button&quot; onClick=&quot;document.getElementById('demo1').innerHTML='¡Hola Javascript!'&quot;&gt;¡Púlsame!&lt;/button&gt;</code></div>
 </div>
+
+<br>
+<div class="row bg-light p-2">
+	<div class="col-4 shadow-lg p-3 mb-5 bg-white rounded">
+		<p id="demo1">Javascript puede cambiar el código HTML</p>
+		<button type="button" onClick="document.getElementById('demo1').innerHTML='¡Hola Javascript!'">¡Púlsame!</button>
+	</div>
+	<div class="col-4 shadow-lg p-3 mb-5 bg-white rounded">
+		<p id="demo2">Javascript can change the HTML code</p>
+		<button type="button" onClick="document.getElementById('demo2').innerHTML='Hello Javascript!'">Click me!</button>
+	</div>
+	<div class="col-4 shadow-lg p-3 mb-5 bg-white rounded">
+		<p id="demo3">Javascript peut changer le code de HTML</p>
+		<button type="button" onClick="document.getElementById('demo3').innerHTML='Bonjour Javascript!'">Clique moi!</button>
+	</div>
+</div>
+<hr>
+<h2>JavaScript puede cambiar los valores de atributos HTML</h2>
+<p>En este ejemplo JavaScript cambia el valor de la src(fuente) atributo de una imagen:</p>
+<h4>Ejemplo de uso</h4>
+<div class="alert alert-warning border-right-0 border-top-0 border-bottom-0 border-success"><code>&lt;button onclick=&quot;document.getElementById('imagen').src='pic_bulbon.gif'&quot;&gt;Enciende la luz&lt;/button&gt;<br>
+&lt;img src=&quot;./img/pic_bulboff.gif&quot; alt=&quot;myImagen&quot; id=&quot;imagen&quot; style=&quot;width: 100px&quot;&gt;<br>
+&lt;button onclick=&quot;document.getElementById('imagen').src='pic_bulboff.gif'&quot;&gt;Apaga la luz&lt;/button&gt;</code></div>
+
+<div class="row">
+ <div class="col-4 shadow-lg p-3 mb-5 bg-white rounded">
+ 	<button onclick="document.getElementById('imagen').src='img/pic_bulbon.gif'">Enciende la luz</button>
+ </div>
+  <div class="col-4 shadow-lg p-3 mb-5 bg-white rounded">
+  	<img src="./img/pic_bulboff.gif" alt="myImagen" id="imagen" style="width: 100px">
+  </div>
+  <div class="col-4 shadow-lg p-3 mb-5 bg-white rounded">
+  	<button onclick="document.getElementById('imagen').src='img/pic_bulboff.gif'">Apaga la luz</button>
+  </div>
+  
+</div>
+<hr>
+
+<h2>JavaScript puede cambiar el estilo</h2>
+<h4>Ejemplo de uso</h4>
+<div class="alert alert-warning border-right-0 border-top-0 border-bottom-0 border-success"><code>&lt;p id=&quot;texto&quot;&gt;Javascript puede cambiar el estilo&lt;/p&gt;<br>
+  &lt;button class=&quot;btn btn-danger&quot; type=&quot;button&quot; onclick=&quot;document.getElementById('texto').style.color='red'; document.getElementById('texto').style.fontSize='1.5em';&quot;&gt;Cambia el texto a rojo&lt;/button&gt;<br>
+  &lt;button class=&quot;btn btn-success&quot; type=&quot;button&quot; onclick=&quot;document.getElementById('texto').style.color='green'; document.getElementById('texto').style.fontSize='2em';&quot;&gt;Cambia el texto a verde&lt;/button&gt;<br>
+  &lt;button class=&quot;btn btn-primary&quot; type=&quot;button&quot; onclick=&quot;document.getElementById('texto').style.color='blue'; document.getElementById('texto').style.fontSize='2.5em';&quot;&gt;Cambia el texto a azul&lt;/button&gt;<br>
+&lt;button class=&quot;btn btn-light&quot; type=&quot;button&quot; onclick=&quot;document.getElementById('texto').style.color='gray'; document.getElementById('texto').style.fontSize='1em';document.getElementById('texto').style.color='black'&quot;&gt;Restablecer&lt;/button&gt;</code></div>
+
+<p id="texto">Javascript puede cambiar el estilo</p>
+<button class="btn btn-outline-danger" type="button" onclick="document.getElementById('texto').style.color='red'; document.getElementById('texto').style.fontSize='1.5em';">Cambia el texto a rojo</button>
+<button class="btn btn-outline-success" type="button" onclick="document.getElementById('texto').style.color='green'; document.getElementById('texto').style.fontSize='2em';">Cambia el texto a verde</button>
+<button class="btn btn-outline-primary" type="button" onclick="document.getElementById('texto').style.color='blue'; document.getElementById('texto').style.fontSize='2.5em';">Cambia el texto a azul</button>
+<button class="btn btn-light" type="button" onclick="document.getElementById('texto').style.color='gray'; document.getElementById('texto').style.fontSize='1em';document.getElementById('texto').style.color='black'">Restablecer</button>
+<hr>
 </body>
 </html>
