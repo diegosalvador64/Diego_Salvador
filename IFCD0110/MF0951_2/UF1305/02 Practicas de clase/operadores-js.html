@@ -1,0 +1,700 @@
+<!doctype html>
+<html lang="es-ES">
+<head>
+<meta charset="utf-8">
+<title>Operadores JavaScript</title>
+<meta name="keywords" content="HTML, CSS, JavaScript">
+<meta name="description" content="Aprende Javascript con ejemplos pr&aacute;cticos">
+
+<link href="css/estilos.css" rel="stylesheet" type="text/css">
+<script src="js/funciones.js"></script>
+</head>
+
+<body>
+<div class="container mt-5">
+<h1>Operadores cálculo en JavaScript</h1>
+<hr>
+<h2>Operadores aritméticos Javascript</h2>
+<p>Los operadores aritméticos realizan operaciones aritméticas con números literales (z = 10 * 5) o con variables (z = x * y).</p>
+<p>Teniendo en cuenta que <strong>x = 5 , y = 2</strong> , la siguiente tabla se explican los operadores de aritméticos..</p>
+<table class="table table-hover">
+
+<thead>
+<tr>
+<th>Operador</th>
+<th>Descripción</th>
+<th>Variables</th>
+<th>Operaciones</th>
+<th>Resultado</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td id="demo1">&nbsp;</td>
+<td id="demo2">&nbsp;</td>
+<td id="demo3">&nbsp;</td>
+<td id="demo4">&nbsp;</td>
+<td id="demo5">&nbsp;</td>
+</tr>
+
+<tr>
+<td id="demo6">&nbsp;</td>
+<td id="demo7">&nbsp;</td>
+<td id="demo8">&nbsp;</td>
+<td id="demo9">&nbsp;</td>
+<td id="demo10">&nbsp;</td>
+</tr>
+
+<tr>
+<td id="demo11">&nbsp;</td>
+<td id="demo12">&nbsp;</td>
+<td id="demo13">&nbsp;</td>
+<td id="demo14">&nbsp;</td>
+<td id="demo15">&nbsp;</td>
+</tr>
+
+<tr>
+<td id="demo16">&nbsp;</td>
+<td id="demo17">&nbsp;</td>
+<td id="demo18">&nbsp;</td>
+<td id="demo19">&nbsp;</td>
+<td id="demo20">&nbsp;</td>
+</tr>
+
+<tr>
+<td id="demo21">&nbsp;</td>
+<td id="demo22">&nbsp;</td>
+<td id="demo23">&nbsp;</td>
+<td id="demo24">&nbsp;</td>
+<td id="demo25">&nbsp;</td>
+</tr>
+
+<tr>
+<td id="demo26">&nbsp;</td>
+<td id="demo27">&nbsp;</td>
+<td id="demo28">&nbsp;</td>
+<td id="demo29">&nbsp;</td>
+<td id="demo30">&nbsp;</td>
+</tr>
+
+<tr>
+<td id="demo31">&nbsp;</td>
+<td id="demo32">&nbsp;</td>
+<td id="demo33">&nbsp;</td>
+<td id="demo34">&nbsp;</td>
+<td id="demo35">&nbsp;</td>
+</tr>
+</tbody>
+
+</table>
+
+<script>
+//suma
+var operador = "+";	
+var descripcion = "Sumar";
+var variables = "var x=5; var y=2;";
+var operaciones = "z = x + y;";
+	
+var x = 5;
+var y = 2;
+var z = x +y;
+	
+document.getElementById("demo1").innerHTML = operador;
+document.getElementById("demo2").innerHTML = descripcion;
+document.getElementById("demo3").innerHTML = variables;
+document.getElementById("demo4").innerHTML = operaciones;
+document.getElementById("demo5").innerHTML = z;	
+
+//Resta
+var operador = "-";	
+var descripcion = "Restar";
+var variables = "var x=5; var y=2;";
+var operaciones = "z = x - y;";
+	
+var x = 5;
+var y = 2;
+var z = x - y;
+	
+document.getElementById("demo6").innerHTML = operador;
+document.getElementById("demo7").innerHTML = descripcion;
+document.getElementById("demo8").innerHTML = variables;
+document.getElementById("demo9").innerHTML = operaciones;
+document.getElementById("demo10").innerHTML = z;	
+
+//Multiplicar
+var operador = "*";	
+var descripcion = "Multiplicar";
+var variables = "var x=5; var y=2;";
+var operaciones = "z = x * y;";
+	
+var x = 5;
+var y = 2;
+var z = x * y;
+	
+document.getElementById("demo11").innerHTML = operador;
+document.getElementById("demo12").innerHTML = descripcion;
+document.getElementById("demo13").innerHTML = variables;
+document.getElementById("demo14").innerHTML = operaciones;
+document.getElementById("demo15").innerHTML = z;	
+	
+//Dividir
+var operador = "/";	
+var descripcion = "Dividir";
+var variables = "var x=5; var y=2;";
+var operaciones = "z = x / y;";
+	
+var x = 5;
+var y = 2;
+var z = x / y;
+	
+document.getElementById("demo16").innerHTML = operador;
+document.getElementById("demo17").innerHTML = descripcion;
+document.getElementById("demo18").innerHTML = variables;
+document.getElementById("demo19").innerHTML = operaciones;
+document.getElementById("demo20").innerHTML = z;	
+	
+//Resto división
+var operador = "%";	
+var descripcion = "Resto división";
+var variables = "var x=5; var y=2;";
+var operaciones = "z = x % y;";
+	
+var x = 5;
+var y = 2;
+var z = x % y;
+	
+document.getElementById("demo21").innerHTML = operador;
+document.getElementById("demo22").innerHTML = descripcion;
+document.getElementById("demo23").innerHTML = variables;
+document.getElementById("demo24").innerHTML = operaciones;
+document.getElementById("demo25").innerHTML = z;
+	
+//Incremento (+1)
+var operador = "++";	
+var descripcion = "Incremento (+1)";
+var variables = "var x=5;";
+var operaciones = "x++; z = x;";
+	
+var x = 5;
+x++;
+var z = x;
+	
+document.getElementById("demo26").innerHTML = operador;
+document.getElementById("demo27").innerHTML = descripcion;
+document.getElementById("demo28").innerHTML = variables;
+document.getElementById("demo29").innerHTML = operaciones;
+document.getElementById("demo30").innerHTML = z;
+	
+//Decremento (-1)
+var operador = "--";	
+var descripcion = "Decremento (-1)";
+var variables = "var x=5;";
+var operaciones = "x--; z = x;";
+	
+var x = 5;
+x--;
+var z = x;
+	
+document.getElementById("demo31").innerHTML = operador;
+document.getElementById("demo32").innerHTML = descripcion;
+document.getElementById("demo33").innerHTML = variables;
+document.getElementById("demo34").innerHTML = operaciones;
+document.getElementById("demo35").innerHTML = z;
+</script>
+
+<br>
+<hr>
+<h2>Operadores de asignación de JavaScript</h2>
+<p>Los operadores de asignación asignan valores a las variables JavaScript.</p>
+<p>Teniendo en cuenta que <strong>x = 10</strong> , en la siguiente tabla se explican los operadores de asignación.<br>
+</p>
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Operador</th>
+      <th>Descripción</th>
+      <th>Variables</th>
+      <th>Asignación</th>
+      <th>Operación</th>
+      <th>Resultado</th>
+    </tr>
+</thead>
+<tbody>
+    <tr>
+      <td id="demo36">&nbsp;</td>
+      <td id="demo37">&nbsp;</td>
+      <td id="demo38">&nbsp;</td>
+      <td id="demo39">&nbsp;</td>
+      <td id="demo40">&nbsp;</td>
+      <td id="demo41">&nbsp;</td>
+    </tr>
+    <tr>
+      <td id="demo42">&nbsp;</td>
+      <td id="demo43">&nbsp;</td>
+      <td id="demo44">&nbsp;</td>
+      <td id="demo45">&nbsp;</td>
+      <td id="demo46">&nbsp;</td>
+      <td id="demo47">&nbsp;</td>
+    </tr>
+    <tr>
+      <td id="demo48">&nbsp;</td>
+      <td id="demo49">&nbsp;</td>
+      <td id="demo50">&nbsp;</td>
+      <td id="demo51">&nbsp;</td>
+      <td id="demo52">&nbsp;</td>
+      <td id="demo53">&nbsp;</td>
+    </tr>
+    <tr>
+      <td id="demo54">&nbsp;</td>
+      <td id="demo55">&nbsp;</td>
+      <td id="demo56">&nbsp;</td>
+      <td id="demo57">&nbsp;</td>
+      <td id="demo58">&nbsp;</td>
+      <td id="demo59">&nbsp;</td>
+    </tr>
+    <tr>
+      <td id="demo60">&nbsp;</td>
+      <td id="demo61">&nbsp;</td>
+      <td id="demo62">&nbsp;</td>
+      <td id="demo63">&nbsp;</td>
+      <td id="demo64">&nbsp;</td>
+      <td id="demo65">&nbsp;</td>
+    </tr>
+    <tr>
+      <td id="demo66">&nbsp;</td>
+      <td id="demo67">&nbsp;</td>
+      <td id="demo68">&nbsp;</td>
+      <td id="demo69">&nbsp;</td>
+      <td id="demo70">&nbsp;</td>
+      <td id="demo71">&nbsp;</td>
+    </tr>
+  </tbody>
+</table>
+<script>
+	
+//Igualdad
+var operador = "=";	
+var descripcion = "Igualdad";
+var variables = "var x=10;";
+var asignacion = "x = y;";
+var operaciones = "x = y;";
+	
+var x = 10;
+var y = x;
+	
+document.getElementById("demo36").innerHTML = operador;
+document.getElementById("demo37").innerHTML = descripcion;
+document.getElementById("demo38").innerHTML = variables;
+document.getElementById("demo39").innerHTML = asignacion;
+document.getElementById("demo40").innerHTML = operaciones;
+document.getElementById("demo41").innerHTML = (x=y);	
+
+//suma
+var operador = "+=";	
+var descripcion = "Suma";
+var variables = "var x=10;";
+var asignacion = "x += 5;";
+var operaciones = "x = x+5;";
+	
+var x = 10;
+x += 5;
+	
+document.getElementById("demo42").innerHTML = operador;
+document.getElementById("demo43").innerHTML = descripcion;
+document.getElementById("demo44").innerHTML = variables;
+document.getElementById("demo45").innerHTML = asignacion;
+document.getElementById("demo46").innerHTML = operaciones;
+document.getElementById("demo47").innerHTML = x;	
+
+//resta
+var operador = "-=";	
+var descripcion = "Resta";
+var variables = "var x=10;";
+var asignacion = "x -= 5;";
+var operaciones = "x = x-5;";
+	
+var x = 10;
+x -= 5;
+	
+document.getElementById("demo48").innerHTML = operador;
+document.getElementById("demo49").innerHTML = descripcion;
+document.getElementById("demo50").innerHTML = variables;
+document.getElementById("demo51").innerHTML = asignacion;
+document.getElementById("demo52").innerHTML = operaciones;
+document.getElementById("demo53").innerHTML = x;	
+
+//multiplicación
+var operador = "*=";	
+var descripcion = "Multiplicación";
+var variables = "var x=10;";
+var asignacion = "x *= 5;";
+var operaciones = "x = x*5;";
+	
+var x = 10;
+x *= 5;
+	
+document.getElementById("demo54").innerHTML = operador;
+document.getElementById("demo55").innerHTML = descripcion;
+document.getElementById("demo56").innerHTML = variables;
+document.getElementById("demo57").innerHTML = asignacion;
+document.getElementById("demo58").innerHTML = operaciones;
+document.getElementById("demo59").innerHTML = x;	
+	
+//división
+var operador = "/=";	
+var descripcion = "División";
+var variables = "var x=10;";
+var asignacion = "x /= 5;";
+var operaciones = "x = x/5;";
+	
+var x = 10;
+x /= 5;
+	
+document.getElementById("demo60").innerHTML = operador;
+document.getElementById("demo61").innerHTML = descripcion;
+document.getElementById("demo62").innerHTML = variables;
+document.getElementById("demo63").innerHTML = asignacion;
+document.getElementById("demo64").innerHTML = operaciones;
+document.getElementById("demo65").innerHTML = x;
+	
+//Resto división
+var operador = "%=";	
+var descripcion = "Resto División";
+var variables = "var x=10;";
+var asignacion = "x %= 5;";
+var operaciones = "x = x%5;";
+	
+var x = 10;
+x %= 5;
+	
+document.getElementById("demo66").innerHTML = operador;
+document.getElementById("demo67").innerHTML = descripcion;
+document.getElementById("demo68").innerHTML = variables;
+document.getElementById("demo69").innerHTML = asignacion;
+document.getElementById("demo70").innerHTML = operaciones;
+document.getElementById("demo71").innerHTML = x;	
+
+</script>
+
+<br>
+<hr>
+<h2>Operadores de comparación de JavaScript</h2>
+<p>Los operadores de comparación se utilizan  para determinar la igualdad o la diferencia entre las variables o valores. Devuelve true (verdadero) o false ( falso).</p>
+<p>Teniendo en cuenta que <strong>x = 5, y  = 8</strong> , la siguiente tabla se explican los operadores de comparación.</p>
+<table class="table table-hover">
+  <tbody>
+    <tr>
+      <th>Operador</th>
+      <th>Descripción</th>
+      <th>Variables</th>
+      <th>Comparación</th>
+      <th>Resultado</th>
+    </tr>
+    <tr>
+      <td id="demo72">&nbsp;</td>
+      <td id="demo73">&nbsp;</td>
+      <td id="demo74">&nbsp;</td>
+      <td id="demo75">&nbsp;</td>
+      <td id="demo76">&nbsp;</td>
+    </tr>
+    <tr>
+      <td id="demo77">&nbsp;</td>
+      <td id="demo78">&nbsp;</td>
+      <td id="demo79">&nbsp;</td>
+      <td id="demo80">&nbsp;</td>
+      <td id="demo81">&nbsp;</td>
+    </tr>
+    <tr>
+      <td id="demo82">&nbsp;</td>
+      <td id="demo83">&nbsp;</td>
+      <td id="demo84">&nbsp;</td>
+      <td id="demo85">&nbsp;</td>
+      <td id="demo86">&nbsp;</td>
+    </tr>
+    <tr>
+      <td id="demo87">&nbsp;</td>
+      <td id="demo88">&nbsp;</td>
+      <td id="demo89">&nbsp;</td>
+      <td id="demo90">&nbsp;</td>
+      <td id="demo91">&nbsp;</td>
+    </tr>
+    <tr>
+      <td id="demo92">&nbsp;</td>
+      <td id="demo93">&nbsp;</td>
+      <td id="demo94">&nbsp;</td>
+      <td id="demo95">&nbsp;</td>
+      <td id="demo96">&nbsp;</td>
+    </tr>
+    <tr>
+      <td id="demo97">&nbsp;</td>
+      <td id="demo98">&nbsp;</td>
+      <td id="demo99">&nbsp;</td>
+      <td id="demo100">&nbsp;</td>
+      <td id="demo101">&nbsp;</td>
+    </tr>
+    <tr>
+      <td id="demo102">&nbsp;</td>
+      <td id="demo103">&nbsp;</td>
+      <td id="demo104">&nbsp;</td>
+      <td id="demo105">&nbsp;</td>
+      <td id="demo106">&nbsp;</td>
+    </tr>
+    <tr>
+      <td id="demo107">&nbsp;</td>
+      <td id="demo108">&nbsp;</td>
+      <td id="demo109">&nbsp;</td>
+      <td id="demo110">&nbsp;</td>
+      <td id="demo111">&nbsp;</td>
+    </tr>
+    <tr>
+      <td id="demo112">&nbsp;</td>
+      <td id="demo113">&nbsp;</td>
+      <td id="demo114">&nbsp;</td>
+      <td id="demo115">&nbsp;</td>
+      <td id="demo116">&nbsp;</td>
+    </tr>
+  </tbody>
+</table>
+<script>
+//Igual al valor
+var operador = "==";	
+var descripcion = "Igual al valor";
+var variables = "var x=5; var y=8;";
+var operaciones = "x == y;";
+	
+var x = 5;
+var y = 8;
+	
+document.getElementById("demo72").innerHTML = operador;
+document.getElementById("demo73").innerHTML = descripcion;
+document.getElementById("demo74").innerHTML = variables;
+document.getElementById("demo75").innerHTML = operaciones;
+document.getElementById("demo76").innerHTML = (x == y);	
+
+//Igual al valor y al tipo de datos
+var operador = "===";	
+var descripcion = "Igual al valor y al tipo de datos";
+var variables = "var x=5; var y='5';";
+var operaciones = "x === y;";
+	
+var x = 5;
+var y = "5";
+	
+document.getElementById("demo77").innerHTML = operador;
+document.getElementById("demo78").innerHTML = descripcion;
+document.getElementById("demo79").innerHTML = variables;
+document.getElementById("demo80").innerHTML = operaciones;
+document.getElementById("demo81").innerHTML = (x === y);	
+
+//Distinto al valor
+var operador = "!=";	
+var descripcion = "Distinto al valor";
+var variables = "var x=5; var y=8;";
+var operaciones = "x != y;";
+	
+var x = 5;
+var y = 8;
+	
+document.getElementById("demo82").innerHTML = operador;
+document.getElementById("demo83").innerHTML = descripcion;
+document.getElementById("demo84").innerHTML = variables;
+document.getElementById("demo85").innerHTML = operaciones;
+document.getElementById("demo86").innerHTML = (x != y);	
+
+//Distinto al valor y al tipo de datos
+var operador = "!==";	
+var descripcion = "Distinto al valor y al tipo de datos";
+var variables = "var x=5; var y=8;";
+var operaciones = "x !== y;";
+	
+var x = 5;
+var y = 8;
+	
+document.getElementById("demo87").innerHTML = operador;
+document.getElementById("demo88").innerHTML = descripcion;
+document.getElementById("demo89").innerHTML = variables;
+document.getElementById("demo90").innerHTML = operaciones;
+document.getElementById("demo91").innerHTML = (x !== y);	
+	
+//Mayor que
+var operador = ">";	
+var descripcion = "Mayor que";
+var variables = "var x=5; var y=8;";
+var operaciones = "x > y;";
+	
+var x = 5;
+var y = 8;
+	
+document.getElementById("demo92").innerHTML = operador;
+document.getElementById("demo93").innerHTML = descripcion;
+document.getElementById("demo94").innerHTML = variables;
+document.getElementById("demo95").innerHTML = operaciones;
+document.getElementById("demo96").innerHTML = (x > y);	
+	
+//Menor que
+var operador = "<";	
+var descripcion = "Menor que";
+var variables = "var x=5; var y=8;";
+var operaciones = "x < y;";
+	
+var x = 5;
+var y = 8;
+	
+document.getElementById("demo97").innerHTML = operador;
+document.getElementById("demo98").innerHTML = descripcion;
+document.getElementById("demo99").innerHTML = variables;
+document.getElementById("demo100").innerHTML = operaciones;
+document.getElementById("demo101").innerHTML = (x < y);	
+
+//Mayor o igual que
+var operador = ">=";	
+var descripcion = "Mayor o igual que";
+var variables = "var x=5; var y=8;";
+var operaciones = "x >= y;";
+	
+var x = 5;
+var y = 8;
+	
+document.getElementById("demo102").innerHTML = operador;
+document.getElementById("demo103").innerHTML = descripcion;
+document.getElementById("demo104").innerHTML = variables;
+document.getElementById("demo105").innerHTML = operaciones;
+document.getElementById("demo106").innerHTML = (x >= y);	
+	
+//Menor o igual que
+var operador = "<=";	
+var descripcion = "Menor o igual que";
+var variables = "var x=5; var y=8;";
+var operaciones = "x <= y;";
+	
+var x = 5;
+var y = 8;
+	
+document.getElementById("demo107").innerHTML = operador;
+document.getElementById("demo108").innerHTML = descripcion;
+document.getElementById("demo109").innerHTML = variables;
+document.getElementById("demo110").innerHTML = operaciones;
+document.getElementById("demo111").innerHTML = (x <= y);	
+
+//Operador ternario
+var operador = "?";	
+var descripcion = "Operador ternario";
+var variables = "var x=5; var y=8;";
+var operaciones = "(x < y) ? 'Menor':'Mayor';";
+	
+var x = 5;
+var y = 8;
+	
+document.getElementById("demo112").innerHTML = operador;
+document.getElementById("demo113").innerHTML = descripcion;
+document.getElementById("demo114").innerHTML = variables;
+document.getElementById("demo115").innerHTML = operaciones;
+document.getElementById("demo116").innerHTML = (x < y) ? "Menor":"Mayor";	
+
+</script>
+
+<br>
+<hr>
+<h2>Operadores lógicos Javascript</h2>
+<p>Los operadores lógicos se utilizan para determinar la lógica entre las variables o valores.</p>
+<p>Dado que <strong>x = 6</strong> y <strong>y = 3</strong>, la tabla de abajo se explican los operadores lógicos:</p>
+<table class="table table-hover">
+  <tbody>
+    <tr>
+      <th>Operator</th>
+      <th>Description</th>
+      <th>Variables</th>
+      <th>Comparación</th>
+      <th>Resultado</th>
+    </tr>
+    <tr>
+      <td id="demo117">&nbsp;</td>
+      <td id="demo118">&nbsp;</td>
+      <td id="demo119">&nbsp;</td>
+      <td id="demo120">&nbsp;</td>
+      <td id="demo121">&nbsp;</td>
+    </tr>
+    <tr>
+      <td id="demo122">&nbsp;</td>
+      <td id="demo123">&nbsp;</td>
+      <td id="demo124">&nbsp;</td>
+      <td id="demo125">&nbsp;</td>
+      <td id="demo126">&nbsp;</td>
+    </tr>
+    <tr>
+      <td id="demo127">&nbsp;</td>
+      <td id="demo128">&nbsp;</td>
+      <td id="demo129">&nbsp;</td>
+      <td id="demo130">&nbsp;</td>
+      <td id="demo131">&nbsp;</td>
+    </tr>
+  </tbody>
+</table>
+<script>
+//AND
+var operador = "&&";	
+var descripcion = "Operador lógico and (y)";
+var variables = "var x=6; var y=3;";
+var comparacion = "(x<10 && y>1);";
+	
+var x = 6;
+var y = 3;
+	
+document.getElementById("demo117").innerHTML = operador;
+document.getElementById("demo118").innerHTML = descripcion;
+document.getElementById("demo119").innerHTML = variables;
+document.getElementById("demo120").innerHTML = comparacion;
+document.getElementById("demo121").innerHTML = (x<10 && y>1);	
+	
+//OR
+var operador = "||";	
+var descripcion = "Operador lógico OR (o)";
+var variables = "var x=6; var y=3;";
+var comparacion = "(x<10 || y<1);";
+	
+var x = 6;
+var y = 3;
+	
+document.getElementById("demo122").innerHTML = operador;
+document.getElementById("demo123").innerHTML = descripcion;
+document.getElementById("demo124").innerHTML = variables;
+document.getElementById("demo125").innerHTML = comparacion;
+document.getElementById("demo126").innerHTML = (x<10 || y<1);	
+//NOT
+var operador = "!";	
+var descripcion = "Operador lógico NOT (no)";
+var variables = "var x=6; var y=3;";
+var comparacion = "!(x==y);";
+	
+var x = 6;
+var y = 3;
+	
+document.getElementById("demo127").innerHTML = operador;
+document.getElementById("demo128").innerHTML = descripcion;
+document.getElementById("demo129").innerHTML = variables;
+document.getElementById("demo130").innerHTML = comparacion;
+document.getElementById("demo131").innerHTML = !(x==y);
+</script>
+<br>
+<hr>
+<div class="alert-warning">
+<h3>¿Es la suma o la multiplicación la que se hace primero?</h3>
+<ul>
+  <li>Al igual que en las matemáticas escolares tradicionales, la multiplicación se realiza en primer lugar.</li>
+  <li>Multiplicación (*) y división (/) tienen mayor prioridad que la suma (+) y resta (-).</li>
+  <li>Y (como en las matemáticas escolares) la precedencia se puede cambiar mediante el uso de paréntesis.</li>
+</ul>
+</div>
+<hr>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
