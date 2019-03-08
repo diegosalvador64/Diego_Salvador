@@ -59,7 +59,51 @@
   
 </div>
 <hr>
+<div class="shadow-lg p-3 mb-5 bg-white rounded"> <!--bombilla2-->
 
+        <p class="text-primary font-weight-bold">Ejemplo</p>
+
+        <button type="button" onclick="
+
+            var element=document.getElementsByClassName('pruebas'); // Obtiene los elementos y los almacena en un array [0,1,2]
+
+            for (var i=0;i<element.length;i++){
+
+            // var i Inicializa la variable con valor 0
+            // element.length obtiene el tamaño del array = 3
+	        // i < element.length se ejecuta el bucle o loop mientras se cumpla la condición
+            // i++ suma 1, cada vez que de produzca un ciclo completo
+
+             element[i].src='img/pic_bulbon.gif'; //Modifica la imagen
+
+                }
+
+        ">Enciende la bombilla</button>
+
+
+
+        <img src="img/pic_bulboff.gif" class="pruebas">
+
+        <img src="img/pic_bulboff.gif" class="pruebas">
+
+        <img src="img/pic_bulboff.gif" class="pruebas">
+
+
+
+        <button type="button" onclick="
+
+            var element=document.getElementsByClassName('pruebas');
+
+            for (var i=0;i<element.length;i++){
+
+                element[i].src='img/pic_bulboff.gif';
+
+                }
+
+        ">Apaga la bombilla</button>
+
+    </div><!--fin bombilla2-->
+<hr>
 <h2>JavaScript puede cambiar el estilo</h2>
 <h4>Ejemplo de uso</h4>
 <div class="alert alert-warning border-right-0 border-top-0 border-bottom-0 border-success"><code>&lt;p id=&quot;texto&quot;&gt;Javascript puede cambiar el estilo&lt;/p&gt;<br>
