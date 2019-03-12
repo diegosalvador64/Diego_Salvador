@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="es-ES">
+<head>
+<meta charset="utf-8">
+<title>Variables JavaScript</title>
+<meta name="keywords" content="HTML, CSS, JavaScript">
+<meta name="description" content="Aprende Javascript con ejemplos pr&aacute;cticos">
+<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+<link href="css/estilos.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+<div class="container p-5">
+	<h1>Tipos de salidas en Javascript</h1>
+    <hr>
+  <!----------- posibilidades de visualización de JavaScript: innerHTML, document.write, window.alert, console.log --------------------------------->   
+  <h2>Las posibilidades de visualización de JavaScript</h2>
+    <p>JavaScript puede alterar los datos "Display" de diferentes maneras:</p>
+    <ul>
+      <li>La escritura en un elemento HTML, usando <code>innerHTML</code>.</li>
+      <li>La escritura en la salida HTML utilizando <code>document.write()</code>.</li>
+      <li>Escribir en un cuadro de alerta, utilizando <code>window.alert()</code>.</li>
+      <li>Escribir en la consola del navegador, usando <code>console.log()</code>.</li>
+    </ul>
+    <hr>
+    <div class="container rounded p-3 mb-3" style="background-color: rgba(0,0,0,0.075)">
+   	  <div class="row shadow">
+    		<div class="col-md-3 mb-2">
+    			<div class="bg-light shadow rounded p-2">
+    				<p><strong>Usando innerHTML</strong></p>
+    				<p>La propiedad <code>innerHTML</code> define el contenido HTML. Para acceder al contenido </p>
+    				<button class="btn btn-primary" onClick="demo1()">Pulse aquí</button>
+    				<p id="demo1"></p>
+   				  	
+    				  <script>
+						  function demo1 () {
+							  document.getElementById("demo1").innerHTML = 5 + 6;
+						  }
+						
+					  </script>
+   			        
+   			  </div>
+    		</div>
+    		<div class="col-md-3 mb-2">
+    			<div class="bg-light shadow rounded p-2">
+    				<p><strong>Usando document.write()</strong></p>
+    				<p>Para pruebas, es conveniente utilizar <code>document.write()</code>:</p>
+    				<button class="btn btn-primary" onClick="demo2()">Pulse aquí</button>
+    				<p>
+    				<script>
+							function demo2 () {
+							  document.write(5 + 6);
+						  }
+					</script></p>
+   			  </div>
+    		</div>
+    		<div class="col-md-3 mb-2">
+    			<div class="bg-light shadow rounded p-2">
+    				<p><strong>Usando window.alert()</strong></p>
+    				<p>Se puede utilizar un cuadro de alerta <code>window.alert()</code> para mostrar los datos:</p>
+    				<button class="btn btn-primary" onClick="demo3()">Pulse aquí</button>
+    				<p>
+    				<script>
+							function demo3() {
+								window.alert(5 + 6);
+							}
+					
+					</script></p>
+    			</div>
+    		</div>
+    		<div class="col-md-3 mb-2">
+    			<div class="bg-light shadow rounded p-2">
+    				<p><strong>Usando console.log()</strong></p>
+    				<p>Para depuración, se puede utilizar el método <code>console.log()</code> para mostrar los datos. Para ver este resultado, es necesario pulsar PF12 y mirar la consola.</p>
+    				<button class="btn btn-primary" onClick="demo4()">Pulse aquí</button>
+    				<p>
+    				<script>
+						function demo4 () {
+							console.log(5 + 6);
+						}
+					</script></p>
+    			</div>
+    		</div>
+    	</div>
+    </div>
+ <!--------------------------------------------> 
+ <hr>
+ <h2>Cuadros de diálogos de ventanas</h2>
+    <p>JavaScript puede mostrar cuadros de diálgos de ventanas de diferentes maneras:</p>
+    <ul>
+      <li>El método <code>confirm())</code> muestra un cuadro de diálogo con un mensaje especificado.</li>
+      <li>El método <code>alert()</code> muestra un cuadro de alerta con un mensaje especificado y un botón Aceptar.</li>
+      <li>El método <code>prompt()</code> muestra un cuadro de diálogo que solicita al usuario entrada de datos.</li>
+    </ul>
+    <hr>
+    <div class="container rounded p-3 mb-3" style="background-color: rgba(0,0,0,0.075)">
+   	  <div class="row shadow">
+    		<div class="col-md-4 mb-2">
+    			<div class="bg-light shadow rounded p-2">
+    				<p><strong>Usando confirm()</strong></p>
+    				<p>El método <code>confirm()</code> muestra un cuadro de diálogo con un mensaje especificado, con la posibilidad de pulsar Aceptar o Cancelar. </p>
+    				<p><em>confirm(message)</em></p>
+    				<button class="btn btn-primary" onClick="confirmar()">Pulsar</button>
+    				<script>
+						  function confirmar () {
+							  var inicial;
+							  var boton = confirm('¿Aceptar o cancelar?');
+							  if (boton == true) {
+									inicial = "Has pulsado Aceptar";}  
+							  else {
+								  	inicial = "Has pulsado Cancelar";
+							  }
+							  alert(inicial);
+							}
+						
+					  </script>
+   			       
+   			  </div>
+    		</div>
+    		<div class="col-md-4 mb-2">
+    			<div class="bg-light shadow rounded p-2">
+    				<p><strong>Usando alert())</strong></p>
+    				<p>El método <code>alert()</code> muestra un cuadro de alerta con un mensaje especificado y un botón Aceptar.</p>
+    				<p><em>alert(message)</em></p>
+    				<button class="btn btn-primary" onClick="fechaHora()">Pulsar</button>
+    				<script>
+						function fechaHora () {
+							var fecha = new Date(); 
+							var extraerDia = fecha.getDay();
+							var extraerMes = fecha.getMonth();
+							var extraerAnyo = fecha.getFullYear();
+							var diaSemana = ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'];	
+							var extraerDiaMes = fecha.getDate();
+							var nombreMes = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio',
+										  'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
+							alert("Hoy es : " + diaSemana[extraerDia] + " día " + extraerDiaMes + " del mes de " + nombreMes[extraerMes] + " del año " + extraerAnyo);
+						}
+					</script>
+    				
+   			  </div>
+    		</div>
+    	<!------------------->	
+    		<div class="col-md-4 mb-2">
+    			<div class="bg-light shadow rounded p-2">
+    				<p><strong>Usando prompt()</strong></p>
+    				<p>El método <code>prompt()</code> muestra un cuadro de diálogo que solicita al usuario  entrada de datos.</p>
+					<p>Un cuadro de mensaje se utiliza a menudo si desea que el usuario introduzca un valor antes de entrar en una página.</p>
+   					<p><em>prompt(text, defaultText)</em></p>
+    				<button class="btn btn-primary" onClick="simbolo()">Pulsar </button>
+    				<script>
+						function simbolo() {
+							var nombre = prompt('Teclee su nombre');
+							var apellido = prompt('Teclee su apellido');
+							window.alert('Tu nombre es: ' + nombre + '\n y tu apellido es: ' + apellido);	
+							}
+						
+					</script>
+    			</div>
+    		</div>
+    		
+    	<!------------------->
+    	<div class="col-md-4 mb-2">
+    			<div class="bg-light shadow rounded p-2">
+    				<p><strong>Usando open()</strong></p>
+    				<p>El método <code>open()</code> muestra un cuadro de diálogo que solicita al usuario  entrada de datos.</p>
+					<p>Un cuadro de mensaje se utiliza a menudo si desea que el usuario introduzca un valor antes de entrar en una página.</p>
+   					<p><em>prompt(text, defaultText)</em></p>
+    				<button class="btn btn-primary" onClick="openVentana()">Pulsar </button>
+    				<script>					
+						function openVentana() {
+							var miVentana = window.open("", "MensajeVentana", "width=200,height=100");
+  							miVentana.document.write("<p>Esto es 'MensajeVentana'. ¡Tengo 200px de ancho y 100px de alto!</p>"); }		
+					</script>
+    			</div>
+    		</div>
+    	<!---------------------->
+    	
+    	<!------------------->
+    	<div class="col-md-4 mb-2">
+    			<div class="bg-light shadow rounded p-2">
+    				<p><strong>Usando close()</strong></p>
+    				<p>El método <code>close()</code> muestra un cuadro de diálogo que solicita al usuario  entrada de datos.</p>
+					<p>Un cuadro de mensaje se utiliza a menudo si desea que el usuario introduzca un valor antes de entrar en una página.</p>
+   					<p><em>prompt(text, defaultText)</em></p>
+    				<button class="btn btn-primary" onClick="simbolo()">Pulsar </button>
+    				<script>
+						function simbolo() {
+							var nombre = prompt('Teclee su nombre');
+							var apellido = prompt('Teclee su apellido');
+							window.alert('Tu nombre es: ' + nombre + '\n y tu apellido es: ' + apellido);	
+							}
+						
+					</script>
+    			</div>
+    		</div>
+    	<!---------------------->
+    	<!------------------->
+    	<div class="col-md-4 mb-2">
+    			<div class="bg-light shadow rounded p-2">
+    				<p><strong>Usando print()</strong></p>
+    				<p>El método <code>prompt()</code> muestra un cuadro de diálogo que solicita al usuario  entrada de datos.</p>
+					<p>Un cuadro de mensaje se utiliza a menudo si desea que el usuario introduzca un valor antes de entrar en una página.</p>
+   					<p><em>prompt(text, defaultText)</em></p>
+    				<button class="btn btn-primary" onClick="simbolo()">Pulsar </button>
+    				<script>
+						function simbolo() {
+							var nombre = prompt('Teclee su nombre');
+							var apellido = prompt('Teclee su apellido');
+							window.alert('Tu nombre es: ' + nombre + '\n y tu apellido es: ' + apellido);	
+							}
+						
+					</script>
+    			</div>
+    		</div>
+    	<!---------------------->
+    	</div>
+    </div>
+ <!--------------------------------------------> 
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
