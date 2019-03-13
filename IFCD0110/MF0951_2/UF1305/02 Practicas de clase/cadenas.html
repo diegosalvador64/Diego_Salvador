@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="es-ES"><head>
+<meta charset="utf-8">
+<title>Metodos cadenas Javascript</title>
+<meta name="keywords" content="HTML, CSS, JavaScript">
+<meta name="description" content="Aprende Javascript con ejemplos pr&aacute;cticos">
+<script src="js/funciones.js"></script>
+<link href="css/estilos.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<h1>Métodos string (cadenas)</h1>
+<hr>
+<h2>El concepto de cadenas</h2>
+<p>Un string (cadena), es cero o más caracteres escritos entre comillas. Se utiliza como valor en propiedades de objetos, matrices y variables.</p>
+<p>Las cadenas JavaScript se utilizan para almacenar y manipular texto. Los métodos son funciones que permiten manipular las cadenas de texto.</p>
+<div>
+<div>
+  <table>
+       <caption>
+       <strong>Secuencias de escape JavaScript</strong>
+       </caption>
+        <tbody>
+          <tr>
+            <th>Código</th>
+            <th>Resultado</th>
+          </tr>
+          <tr>
+            <td>\b</td>
+            <td>Espacio en blanco</td>
+          </tr>
+          <tr>
+            <td>\f</td>
+            <td>Avance de página</td>
+          </tr>
+          <tr>
+            <td>\n</td>
+            <td>Nueva línea</td>
+          </tr>
+          <tr>
+            <td>\r</td>
+            <td>Retorno de carro</td>
+          </tr>
+          <tr>
+            <td>\t</td>
+            <td>Tabulator Horizontal</td>
+          </tr>
+        </tbody>
+    </table>
+  <p>La secuencia <strong>\n</strong> inserta una línea nueva en una cadena</p>
+  </div>
+<div>
+  <table>
+  <caption>
+       <strong>Secuencias de escape JavaScript</strong>
+  </caption>
+    <tbody>
+      <tr>
+        <th>Código</th>
+        <th>Resultado</th>
+        <th>Descripción</th>
+      </tr>
+      <tr>
+        <td>\'</td>
+        <td>'</td>
+        <td>Comillas simples</td>
+      </tr>
+      <tr>
+        <td>\"</td>
+        <td>"</td>
+        <td>Comillas dobles</td>
+      </tr>
+      <tr>
+        <td>\\</td>
+        <td>\</td>
+        <td>Barra invertida</td>
+      </tr>
+      <tr>
+        <td>\u00F1</td>
+        <td>ñ</td>
+        <td>Letra ñ minúscula</td>
+      </tr>
+      <tr>
+        <td>\u00D1</td>
+        <td>Ñ</td>
+        <td>Letra ñ mayúscula</td>
+      </tr>
+      </tbody>
+  </table>
+  <p>La secuencia <strong>\"</strong> inserta una comilla doble en una cadena<br>
+  </p>
+  <p></p>
+
+</div> 
+
+</div>
+<hr>
+<table>
+  <tbody>
+    <tr>
+      <th>Método</th>
+      <th>Descripción</th>
+      <th>&nbsp;</th>
+    </tr>
+    <tr>
+      <td><a href="#">length ( )</a></td>
+      <td>Devuelve la longitud de una cadena.</td>
+      <td><button type="button" onClick="">Ejecutar</button></td>
+    </tr>
+    <tr>
+      <td><a href="#">charAt ( )</a></td>
+      <td>Devuelve el carácter en el índice especificado (posición).</td>
+      <td><button type="button" onClick="">Ejecutar</button></td>
+    </tr>
+    <tr>
+      <td><a href="#">charCodeAt ( )</a></td>
+      <td>Devuelve el índice del caracter Unicode  especificado.</td>
+      <td><button type="button" onClick="caractercode()">Ejecutar</button></td>
+    </tr>
+    <tr>
+      <td><a href="#">fromCharCode ( )</a></td>
+      <td>Convierte los valores Unicode en caracteres.</td>
+      <td><button type="button" onClick="">Ejecutar</button></td>
+    </tr>
+    <tr>
+      <td><a href="#">toUpperCase ( )</a></td>
+      <td>Convierte una cadena en mayúsculas.</td>
+      <td><button type="button" onClick="">Ejecutar</button></td>
+    </tr>
+    <tr>
+      <td><a href="#">toLowerCase ( )</a></td>
+      <td>Convierte una cadena a minúsculas.</td>
+      <td><button type="button" onClick="">Ejecutar</button></td>
+    </tr>
+    <tr>
+      <td><a href="#">concat ( )</a></td>
+      <td>Convierte  dos o más cadenas en una nueva cadena concatenada.</td>
+      <td><button type="button" onClick="">Ejecutar</button></td>
+    </tr>
+    <tr>
+      <td><a href="#">endsWith ( )</a></td>
+      <td>Comprueba si una cadena termina con una cadena/caracteres especificados.</td>
+      <td><button type="button" onClick="">Ejecutar</button></td>
+    </tr>
+    <tr>
+      <td><a href="#">includes ( )</a></td>
+      <td>Comprueba si una cadena contiene la cadena/caracteres especificados.</td>
+      <td><button type="button" onClick="">Ejecutar</button></td>
+    </tr>
+    <tr>
+      <td><a href="#">indexOf ( )</a></td>
+      <td>Devuelve la posición de la primera aparición encontrada de un valor especificado en una cadena.</td>
+      <td><button type="button" onClick="">Ejecutar</button></td>
+    </tr>
+    <tr>
+      <td><a href="#">lastIndexOf ( )</a></td>
+      <td>Devuelve la posición de la última aparición encontrada de un valor especificado en una cadena.</td>
+      <td><button type="button" onClick="">Ejecutar</button></td>
+    </tr>
+    <tr>
+      <td><a href="#">localeCompare ( )</a></td>
+      <td>Compara dos cadenas en la localización actual.</td>
+      <td><button type="button" onClick="">Ejecutar</button></td>
+    </tr>
+    <tr>
+      <td><a href="#">match ( )</a></td>
+      <td>Busca una cadena que coincida con una expresión regular y devuelve las coincidencias separadas por comas</td>
+      <td><button type="button" onClick="">Ejecutar</button></td>
+    </tr>
+    <tr>
+      <td><a href="#">repeat ( )</a></td>
+      <td>Devuelve una cadena nueva con un número especificado de copias de una cadena existente</td>
+      <td><button type="button" onClick="">Ejecutar</button></td>
+    </tr>
+    <tr>
+      <td><a href="#">replace( )</a></td>
+      <td>Busca una cadena con una expresión regular y devuelve una nueva cadena sustituyendo los valores especificados.</td>
+      <td><button type="button" onClick="">Ejecutar</button></td>
+    </tr>
+    <tr>
+      <td><a href="#">search ( )</a></td>
+      <td>Busca una cadena para un valor especificado o una expresión regular y devuelve la posición de la coincidencia</td>
+      <td><button type="button" onClick="">Ejecutar</button></td>
+    </tr>
+    <tr>
+      <td><a href="#">slice ( )</a></td>
+      <td>Extrae parte de una cadena y devuelve una nueva cadena con la parte extraída.</td>
+      <td><button type="button" onClick="">Ejecutar</button></td>
+    </tr>
+    <tr>
+      <td><a href="#">split ( )</a></td>
+      <td>Divide una cadena en una matriz de subcadenas</td>
+      <td><button type="button" onClick="">Ejecutar</button></td>
+    </tr>
+    <tr>
+      <td><a href="#">startsWith ( )</a></td>
+      <td>Comprueba si una cadena empieza con una cadena/caracteres especificados.</td>
+      <td><button type="button" onClick="">Ejecutar</button></td>
+    </tr>
+    <tr>
+      <td><a href="#">substr ( )</a></td>
+      <td>Extrae partes de una cadena, comenzando en una posición especificada  y la longitud de caracteres a mostrar.</td>
+      <td><button type="button" onClick="">Ejecutar</button></td>
+    </tr>
+    <tr>
+      <td><a href="#">substring ( )</a></td>
+      <td>Extrae los caracteres de una cadena, entre dos índices especificados (posición).</td>
+      <td><button type="button" onClick="">Ejecutar</button></td>
+    </tr>
+    <tr>
+      <td><a href="#">toString( )</a></td>
+      <td>Convierte un objeto en una cadena de caracteres.</td>
+      <td><button type="button" onClick="">Ejecutar</button></td>
+    </tr>
+    <tr>
+      <td><a href="#">trim()</a></td>
+      <td>Elimina el espacio en blanco de ambos extremos de una cadena</td>
+      <td><button type="button" onClick="">Ejecutar</button></td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<hr>
+<p>&nbsp;</p>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
