@@ -234,8 +234,9 @@
    	  <div class="row shadow">
     		<div class="col-md-4 mb-2">
     			<div class="bg-light shadow rounded p-2">
-    				<p><strong>Usando resizeBy()</strong></p>
+    				<p><strong>Usando resizeBy() y resizeTo()</strong></p>
     				<p>El método <code>resizeBy()</code> cambia el tamaño de una ventana en la cantidad especificada, con relación a su tamaño actual. </p>
+    				<p>El método <code>resizeTo()</code> cambia el tamaño de una ventana a la anchura y altura especificadas.</p>
     				<p><em>resizeBy(width, height)</em></p>
     				<button class="btn btn-primary" onClick="abrirVentana2()">Crear ventana</button><br><br>
     				<button class="btn btn-primary" onClick="cambiarTamano()">Cambiar Tamaño Ventana</button><br><br>
@@ -244,7 +245,12 @@
 						var miVentana2;
 						function abrirVentana2() {
 							miVentana2 = window.open("", "MensajeVentana", "width=200,height=100");
-  							miVentana2.document.write("<p>Esto es 'MensajeVentana'. ¡Tengo 200px de ancho y 100px de alto!</p>"); }	
+  							miVentana2.document.write("<p>Esto es 'MensajeVentana'. ¡Tengo 200px de ancho y 100px de alto!</p>"); }
+						
+						function resizeWinTo() {
+							  myWindow.resizeTo(800, 600);
+							  myWindow.focus();
+							}
 						
 						function cambiarTamano() {
 							miVentana2.resizeBy(250, 250);
@@ -261,7 +267,7 @@
     		</div>
     		<div class="col-md-4 mb-2">
     			<div class="bg-light shadow rounded p-2">
-    				<p><strong>Usando <code>setInterval()</code></strong></p>
+    				<p><strong>Usando setInterval()</strong></p>
     				<p>El método <code>setInterval()</code> llama a una función o evalúa una expresión a intervalos especificados (en milisegundos).</p>
     				<p><em>setInterval(function, milliseconds, param1, param2, ...)</em></p>
     				<button class="btn btn-primary" onclick="pruebasetInterval()">Pulsar</button>
@@ -274,7 +280,7 @@
     		</div>
     		<div class="col-md-4 mb-2">
     			<div class="bg-light shadow rounded p-2">
-    				<p><strong>Usando <code>setTimeout()</code></strong></p>
+    				<p><strong>Usando setTimeout()</strong></p>
     				<p>El método <code>setTimeout()</code> llama a una función o evalúa una expresión a intervalos especificados (en milisegundos).</p>
     				<p><em>setTimeout(function, milliseconds, param1, param2, ...)</em></p>
     				<button class="btn btn-primary" onclick="pruebasetTimeout()">Pulsar</button>
@@ -288,7 +294,7 @@
     	<!------------------->	
     		<div class="col-md-4 mb-2">
     			<div class="bg-light shadow rounded p-2">
-    				<p><strong>Usando btoa() y atob</strong></p>
+    				<p><strong>Usando btoa() y atob()</strong></p>
     				<p>El método <code>btoa()</code> codifica una cadena en base-64.</p>
     				<p>El método <code>atob()</code> descodifica una cadena de base-64 codificada.</p>
     				<p><em>window.btoa(str)</em></p>
@@ -320,14 +326,30 @@
     	<!------------------->
     	<div class="col-md-4 mb-2">
     			<div class="bg-light shadow rounded p-2">
-    				<p><strong>Usando -----</strong></p>
-    				<p>El método <code>open()</code> abre una nueva ventana del navegador.</p>
-					<p>window.open(<em>URL, name, specs, replace</em>)</p>
-					<button class="btn btn-primary" onClick="openVentana()">Pulsar </button>
+    				<p><strong>Usando moveBy() y moveTo()</strong></p>
+    				<p>El método <code>moveBy()</code> se mueve una ventana de un número especificado de píxeles con respecto a sus coordenadas actuales.</p>
+    				<p>El método moveTo () mueve el borde izquierdo y la parte superior de una ventana a las coordenadas especificadas.</p>
+					<p><em>window.moveBy(x, y)</em></p>
+					<p><em>window.moveTo(x, y)</em></p>
+					<button class="btn btn-primary" onclick="abreWin()">Abre nueva ventana</button><br><br>
+					<button class="btn btn-primary" onclick="moveWinTo()">Mueve nueva ventana</button><br><br>
+					<button class="btn btn-primary" onclick="moveWinBy()">Mueve nueva ventana 600 * 400px</button>
     				<script>					
-						function openVentana() {
-							var miVentana = window.open("", "MensajeVentana", "width=200,height=100");
-  							miVentana.document.write("<p>Esto es 'MensajeVentana'. ¡Tengo 200px de ancho y 100px de alto!</p>"); }		
+						var miVentana4;
+
+						function abreWin() {
+							  miVentana4 = window.open("", "", "width=250, height=250");
+							}
+
+						function moveWinTo() {
+							  miVentana4.moveTo(150, 150);
+							  miVentana4.focus();
+							}
+
+						function moveWinBy() {
+							  miVentana4.moveBy(600, 400);
+							  miVentana4.focus();
+							}
 					</script>
     			</div>
     		</div>
