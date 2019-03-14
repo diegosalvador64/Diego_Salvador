@@ -4,11 +4,12 @@
 <title>Metodos cadenas Javascript</title>
 <meta name="keywords" content="HTML, CSS, JavaScript">
 <meta name="description" content="Aprende Javascript con ejemplos pr&aacute;cticos">
-<script src="js/funciones.js"></script>
+<script src="js/cadenas.js"></script>
 <link href="css/estilos.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
+<div class="container p-3">
 <h1>Métodos string (cadenas)</h1>
 <hr>
 <h2>El concepto de cadenas</h2>
@@ -16,7 +17,7 @@
 <p>Las cadenas JavaScript se utilizan para almacenar y manipular texto. Los métodos son funciones que permiten manipular las cadenas de texto.</p>
 <div>
 <div>
-  <table>
+  <table class="table">
        <caption>
        <strong>Secuencias de escape JavaScript</strong>
        </caption>
@@ -103,54 +104,55 @@
       <th>&nbsp;</th>
     </tr>
     <tr>
-      <td><a href="#">length ( )</a></td>
+      <td><a href="#">length</a></td>
       <td>Devuelve la longitud de una cadena.</td>
-      <td><button type="button" onClick="">Ejecutar</button></td>
+      <td><button type="button" onClick="pruebaLength()">Ejecutar</button></td>
+     
     </tr>
     <tr>
       <td><a href="#">charAt ( )</a></td>
       <td>Devuelve el carácter en el índice especificado (posición).</td>
-      <td><button type="button" onClick="">Ejecutar</button></td>
+      <td><button type="button" onClick="pruebacharAt()">Ejecutar</button></td>
     </tr>
     <tr>
       <td><a href="#">charCodeAt ( )</a></td>
-      <td>Devuelve el índice del caracter Unicode  especificado.</td>
-      <td><button type="button" onClick="caractercode()">Ejecutar</button></td>
+      <td>Devuelve el índice del caracter Unicode especificado.</td>
+      <td><button type="button" onClick="pruebacharCodeAt()">Ejecutar</button></td>
     </tr>
     <tr>
       <td><a href="#">fromCharCode ( )</a></td>
       <td>Convierte los valores Unicode en caracteres.</td>
-      <td><button type="button" onClick="">Ejecutar</button></td>
+      <td><button type="button" onClick="pruebafromCharCode()">Ejecutar</button></td>
     </tr>
     <tr>
       <td><a href="#">toUpperCase ( )</a></td>
       <td>Convierte una cadena en mayúsculas.</td>
-      <td><button type="button" onClick="">Ejecutar</button></td>
+      <td><button type="button" onClick="pruebatoUpperCase()">Ejecutar</button></td>
     </tr>
     <tr>
       <td><a href="#">toLowerCase ( )</a></td>
       <td>Convierte una cadena a minúsculas.</td>
-      <td><button type="button" onClick="">Ejecutar</button></td>
+      <td><button type="button" onClick="pruebatoLowerCase()">Ejecutar</button></td>
     </tr>
     <tr>
       <td><a href="#">concat ( )</a></td>
       <td>Convierte  dos o más cadenas en una nueva cadena concatenada.</td>
-      <td><button type="button" onClick="">Ejecutar</button></td>
+      <td><button type="button" onClick="pruebaconcat()">Ejecutar</button></td>
     </tr>
     <tr>
       <td><a href="#">endsWith ( )</a></td>
       <td>Comprueba si una cadena termina con una cadena/caracteres especificados.</td>
-      <td><button type="button" onClick="">Ejecutar</button></td>
+      <td><button type="button" onClick="pruebaendsWith()">Ejecutar</button></td>
     </tr>
     <tr>
       <td><a href="#">includes ( )</a></td>
       <td>Comprueba si una cadena contiene la cadena/caracteres especificados.</td>
-      <td><button type="button" onClick="">Ejecutar</button></td>
+      <td><button type="button" onClick="pruebaincludes()">Ejecutar</button></td>
     </tr>
     <tr>
       <td><a href="#">indexOf ( )</a></td>
       <td>Devuelve la posición de la primera aparición encontrada de un valor especificado en una cadena.</td>
-      <td><button type="button" onClick="">Ejecutar</button></td>
+      <td><button type="button" onClick="pruebaindexOf()">Ejecutar</button></td>
     </tr>
     <tr>
       <td><a href="#">lastIndexOf ( )</a></td>
@@ -160,22 +162,22 @@
     <tr>
       <td><a href="#">localeCompare ( )</a></td>
       <td>Compara dos cadenas en la localización actual.</td>
-      <td><button type="button" onClick="">Ejecutar</button></td>
+      <td><button type="button" onClick="pruebalocaleCompare()">Ejecutar</button></td>
     </tr>
     <tr>
       <td><a href="#">match ( )</a></td>
       <td>Busca una cadena que coincida con una expresión regular y devuelve las coincidencias separadas por comas</td>
-      <td><button type="button" onClick="">Ejecutar</button></td>
+      <td><button type="button" onClick="pruebamatch()">Ejecutar</button></td>
     </tr>
     <tr>
       <td><a href="#">repeat ( )</a></td>
       <td>Devuelve una cadena nueva con un número especificado de copias de una cadena existente</td>
-      <td><button type="button" onClick="">Ejecutar</button></td>
+      <td><button type="button" onClick="pruebarepeat()">Ejecutar</button></td>
     </tr>
     <tr>
       <td><a href="#">replace( )</a></td>
       <td>Busca una cadena con una expresión regular y devuelve una nueva cadena sustituyendo los valores especificados.</td>
-      <td><button type="button" onClick="">Ejecutar</button></td>
+      <td><button type="button" onClick="pruebareplace()">Ejecutar</button></td>
     </tr>
     <tr>
       <td><a href="#">search ( )</a></td>
@@ -222,7 +224,7 @@
 <br>
 <hr>
 <p>&nbsp;</p>
-
+</div>
 </body>
 </html>
 
