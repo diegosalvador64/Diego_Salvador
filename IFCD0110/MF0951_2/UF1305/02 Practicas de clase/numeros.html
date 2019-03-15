@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="es-ES">
+<head>
+<meta charset="utf-8">
+<title>Métodos numéricos Javascript</title>
+<meta name="keywords" content="HTML, CSS, JavaScript">
+<meta name="description" content="Aprende Javascript con ejemplos pr&aacute;cticos">
+<script src="js/funciones2.js"></script>
+<link href="css/estilos.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div class="container">
+<h1>Métodos numéricos (number)</h1>
+<hr>
+<h2>El concepto de números</h2>
+<p>Un número (number) es un  tipo de dato. Los números pueden ser escritos con o sin decimales y son precisos hasta los 15 dígitos.</p>
+<p>Los métodos numéricos devuelven un valor nuevo y no cambian la variable original,  y puede utilizarse con cualquier tipo de número (literales, variables o expresiones).  </p>
+<div class="row bg-light p-2">
+  <div class="col-6 p-2 shadow-lg rounded">
+<h3>Definición  y uso</h3>
+<p id="demo1"></p>
+  </div>
+<div class="col-6 p-2 shadow-lg rounded">
+<h3>Resultado del uso </h3>
+<p id="demo2"></p>
+</div> 
+
+</div>
+<hr>
+<h2>Métodos numéricos</h2>
+<table class="table">
+  <tbody>
+    <tr>
+      <th>Método</th>
+      <th>Descripción</th>
+      <th>Síntaxis</th>
+      <th>&nbsp;</th>
+    </tr>
+    <tr>
+      <td><a href="#">isFinite ( )</a></td>
+      <td>Comprueba si un valor es un número finito.</td>
+      <td><em>number</em>.isFinite(<em>value</em>)</td>
+      <td><button type="button" onClick="esFinito()">Ejecutar</button></td>
+    </tr>
+    <tr>
+      <td><a href="#">isInteger ( )</a></td>
+      <td>      Comprueba si un valor es un entero.</td>
+      <td>Number.isInteger(<em>value</em>)</td>
+      <td><button type="button" onClick="esEntero() ">Ejecutar</button></td>
+    </tr>
+    <tr>
+      <td><a href="#">isNaN ( )</a></td>
+      <td>Comprueba si un valor no es un número (NaN).</td>
+      <td>isNaN(<em>value</em>)</td>
+      <td><button type="button" onClick="noEsNumero()">Ejecutar</button></td>
+    </tr>
+    <tr>
+      <td><a href="#">toExponential (x)</a></td>
+      <td>Convierte un número en un número exponencial. x es igual al número de dígitos.</td>
+      <td><em>number</em>.toExponential(<em>x</em>)</td>
+      <td><button type="button" onClick="aExponencial()">Ejecutar</button></td>
+    </tr>
+    <tr>
+      <td><a href="#">toFixed (x)</a></td>
+      <td>      Formatea un número con x números de dígitos después del punto decimal.</td>
+      <td><em>number</em>.toFixed(<em>x</em>)</td>
+      <td><button type="button" onClick="aFijar()">Ejecutar</button></td>
+    </tr>
+    <tr>
+      <td><a href="#">toPrecision (x)</a></td>
+      <td>Formatea un número a una longitud.</td>
+      <td><em>number</em>.toPrecision(x)</td>
+      <td><button type="button" onClick="aPrecision()">Ejecutar</button></td>
+    </tr>
+    <tr>
+      <td><a href="#">toString ( )</a></td>
+      <td>Convierte un número en una cadena y lo representa en una base aritmética.</td>
+      <td><em>number</em>.toString(<em>radix</em>)</td>
+      <td><button type="button" onClick="aCadena()">Ejecutar</button></td>
+    </tr>
+    <tr>
+      <td><a href="#">valueOf ( )</a></td>
+      <td>Devuelve el valor primitivo de un número.</td>
+      <td><em>number</em>.valueOf ( )</td>
+      <td><button type="button" onClick="valorDe() ">Ejecutar</button></td>
+    </tr>
+  </tbody>
+</table>
+
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
