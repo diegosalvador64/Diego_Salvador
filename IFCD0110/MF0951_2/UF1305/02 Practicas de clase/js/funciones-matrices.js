@@ -47,11 +47,212 @@ function ejemplonewArray() {
 	var color3 = prompt("Inserte otro color más: ");
 	
 	var colores = ("\"" + color1 + "\"," + "\"" + color2 + "\"," + "\"" + color3 + "\"");
-	var convertir = colores.split(",");
+		
+	var crearMatriz = new Array(color1,color2,color3);
 	
-	var matriz = new Array(convertir);
+	alert("Se han creado las variables:  " + "\n" +
+		  "var color1 = " + color1 + "\n" +
+		  "var color2 = " + color2 + "\n" +
+		  "var color3 = " + color3 + "\n" +
+		  "Se ha creado la matriz colores" + "\n" +
+		  "var colores = " + "[" + colores + "];" + "\n" +
+		  "La variable colores es de tipo: " + typeof(crearMatriz) + "\n" +
+		  "la matriz contiene: " + crearMatriz.length) + "valores.";
+}
+//función join()
+function ejemplojoin() {
+	var color1 = prompt("Inserte un color: ");
+	var color2 = prompt("Inserte otro color: ");
+	var color3 = prompt("Inserte otro color más: ");
 	
-	alert("La matriz o array resultante es: " + matriz);
+	var colores = ("\"" + color1 + "\"," + "\"" + color2 + "\"," + "\"" + color3 + "\"");
+		
+	var crearMatriz = new Array(color1,color2,color3);
 	
-	alert("El tipo de datos de la variable colores es: " + typeof(colores) + "\n" + "El tipo de datos de la variable matriz es: " + typeof(matriz) + "\n longitud de la matriz es: " + matriz.length);
+	alert("Se han creado las variables:  " + "\n" +
+		  "var color1 = " + color1 + "\n" +
+		  "var color2 = " + color2 + "\n" +
+		  "var color3 = " + color3 + "\n" +
+		  "Se ha creado la matriz colores" + "\n" +
+		  "var colores = " + "[" + colores + "];" + "\n" +
+		  "La variable colores es de tipo: " + typeof(crearMatriz) + "\n" +
+		  " La matriz contiene: " + crearMatriz.length + " valores. " +
+		  "He separado los valores con '*' mediante el método join() " +
+		  crearMatriz.join(" * "));
+}
+//función pop()
+function ejemplopop() {
+			
+	var matriz = new Array("rojo","verde","azul","amarillo");
+	
+	alert("Tengo la matriz: " + matriz + "\n" + "Eliminamos la última posición usando el método pop()");
+	
+	var quitar = matriz.pop();
+	
+	alert("La matriz queda así usando el método pop() " + matriz + "\n" + "Se ha eliminado el elemento: " + quitar);
+}
+//función push()
+function ejemplopush() {
+			
+	var matriz = new Array("rojo","verde","azul","amarillo");
+	
+	alert("Tengo la matriz: " + matriz + "\n" + "Añadimos un elemento usando el método push()");
+	
+	var nuevoColor = prompt("Añade otro color: ");
+	
+	matriz.push(nuevoColor);
+		
+	alert("La matriz queda así usando el método push(): " + matriz);
+}
+//función shift()
+function ejemploshift() {
+			
+	var matriz = new Array("rojo","verde","azul","amarillo");
+	
+	alert("Tengo la matriz: " + matriz + "\n" + "Eliminamos la primera posición usando el método shift()");
+	
+	var quitar = matriz.shift();
+	
+	alert("La matriz queda así usando el método shift() " + matriz + "\n" + "Se ha eliminado el elemento: " + quitar);
+}
+//función unshift()
+function ejemplounshift() {
+			
+	var matriz = new Array("rojo","verde","azul","amarillo");
+	
+	alert("Tengo la matriz: " + matriz + "\n" + "Añadimos un elemento al comienzo usando el método unshift()");
+	
+	var nuevoColor = prompt("Añade otro color: ");
+	
+	matriz.unshift(nuevoColor);
+		
+	alert("La matriz queda así usando el método unshift(): " + matriz);
+}
+//función sort()
+function ejemplosort() {
+			
+	var matriz = new Array("rojo","verde","azul","amarillo");
+	
+	alert("Tengo la matriz: " + matriz + "\n" + "Ordenamos alfabéticamente usando el método sort()");
+	
+	matriz.sort();
+		
+	alert("La matriz queda así ordenando con el método sort(): " + matriz);
+}
+//propiedad length
+function ejemplolength() {
+			
+	var matriz = new Array("rojo","verde","azul","amarillo");
+	
+	alert("Tengo la matriz: " + matriz + "\n" + "Añadimos un elemento al final usando la propiedad length");
+	
+	var nuevoColor = prompt("Añade otro color: ");
+	
+	matriz[matriz.length] = nuevoColor;
+		
+	alert("La matriz queda así usando la propiedad length: " + matriz);
+}
+//propiedad splice()
+function ejemplosplice() {
+			
+	var matriz = new Array("rojo","verde","azul","amarillo");
+	
+	alert("Tengo la matriz: " + matriz + "\n" + "Añadimos un elementos en las posiciones deseadas usando splice()");
+	
+	var nuevoColor1 = prompt("Añade un color: ");
+	var nuevoColor2 = prompt("Añade otro color: ");
+	
+	var longitud = matriz.length;
+	
+	var posicion = prompt("Elija un número del 0 al " + longitud + " para la posición donde quiere incluir los dos colores que ha tecleado");
+	
+	matriz.splice(posicion, 0, nuevoColor1, nuevoColor2);
+		
+	alert("La matriz queda así usando el método splice() con los parámetros introducidos: " + matriz);
+}
+//propiedad concat()
+function ejemploconcat() {
+			
+	var matriz = new Array("rojo","verde","azul","amarillo");
+	
+	alert("Tengo la matriz: " + matriz + "\n" + "Concatenamos otros arrays con el método concat()" + "\n" + "Para ello creamos otro array con nuevos colores");
+	
+	var nuevoColor1 = prompt("Añade un color: ");
+	var nuevoColor2 = prompt("Añade otro color: ");
+	var nuevoColor3 = prompt("Añade otro color más: ");
+	
+	var nuevaMatriz = new Array(nuevoColor1,nuevoColor2,nuevoColor3);
+	
+	var resultado = matriz.concat(nuevaMatriz); 
+	
+	alert("La nueva matriz resultante y ordenada con sort() es: " + resultado.sort());
+}
+//función reverse()
+function ejemploreverse() {
+			
+	var matriz = new Array("rojo","verde","azul","amarillo");
+	
+	alert("Tengo la matriz: " + matriz + "\n" + "Con el método reverse() se invierte el orden ");
+	
+	matriz.reverse();
+		
+	alert("La matriz queda así con el método reverse(): " + matriz);
+}
+//función reduce()
+function ejemploreduce() {
+	
+	var nuevoNum1 = prompt("Añade un número: ");
+	var nuevoNum2 = prompt("Añade otro número: ");
+	var nuevoNum3 = prompt("Añade otro número más: ");
+	
+	var numbers = [parseInt(nuevoNum1), parseInt(nuevoNum2), parseInt(nuevoNum3)];
+	
+	function sumar(total, num) {
+  		return total + num;
+	}
+	
+	var resultado = numbers.reduce(sumar);
+	
+	alert("Convertimos los números introducidos en un array: " + numbers + "\n" + "El resultado final del método reduce(): " + resultado) 
+}
+//función every()
+function ejemploevery() {
+	
+	var num1 = prompt("Añade un número: ");
+	var num2 = prompt("Añade otro número: ");
+	var num3 = prompt("Añade otro número más: ");
+	
+	var matriz = new Array(parseInt(num1), parseInt(num2), parseInt(num3));
+	
+	function checkMayorEdad(edad) {
+  			return edad >= 18;
+	}
+	
+	var resultado = matriz.every(checkMayorEdad);
+	
+	var res;
+	
+	if (resultado == true) {
+		res = "SI";
+		alert(res + " pueden pasar. Ustedes son todos mayores de edad"); 
+	} else {
+		res = "NO";
+		alert(res + " pueden pasar. Hay algún menor");
+	}
+}
+//propiedad slice()
+function ejemploslice() {
+			
+	var matriz = new Array("rojo","verde","azul","amarillo","negro");
+	
+	alert("Tengo la matriz: " + matriz + "\n" + " queremos quitar elementos utilizando el método slice()");
+	
+	var longitud = matriz.length;
+	
+	var posicion1 = prompt("Elija un número del 0 al " + longitud + " para la posición desde donde quiere quitar el color");
+	var posicion2 = prompt("Elija un número del 0 al " + longitud + " para la posición hasta donde quiere quitar el color");
+	
+	var resultado = matriz.slice(parseInt(posicion1),parseInt(posicion2));
+		
+	alert("La matriz queda así usando el método slice() con los parámetros introducidos: " + resultado);
 }

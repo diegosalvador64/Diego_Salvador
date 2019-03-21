@@ -71,58 +71,89 @@
       <td><button class="btn btn-primary btn-sm" type="button" onClick="ejemplonewArray()">Ejecutar</button></td>
     </tr>
     <tr>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td><button class="btn btn-primary btn-sm" type="button" onClick="">Ejecutar</button></td>
+      <td><a href="#">join()</a></td>
+      <td>Método que también se une a todos los elementos de la matriz en una cadena.</td>
+      <td><em>array</em>.join(<em>separator</em>)</td>
+      <td><button class="btn btn-primary btn-sm" type="button" onClick="ejemplojoin()">Ejecutar</button></td>
     </tr>
     <tr>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td><button class="btn btn-primary btn-sm" type="button" onClick="">Ejecutar</button></td>
+      <td><a href="#">pop()</a></td>
+      <td>Método que elimina el último elemento de una matriz</td>
+      <td><em>array</em>.pop()</td>
+      <td><button class="btn btn-primary btn-sm" type="button" onClick="ejemplopop()">Ejecutar</button></td>
     </tr>
     <tr>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td><button class="btn btn-primary btn-sm" type="button" onClick="">Ejecutar</button></td>
+      <td><a href="#">push()</a></td>
+      <td>Método que añade un nuevo elemento a una matriz. Lo hace al final de la matriz.</td>
+      <td><em>array</em>.push(<em>item1</em>, <em>item2</em>, ..., <em>itemX</em>)</td>
+      <td><button class="btn btn-primary btn-sm" type="button" onClick="ejemplopush()">Ejecutar</button></td>
     </tr>
     <tr>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td><button class="btn btn-primary btn-sm" type="button" onClick="">Ejecutar</button></td>
+      <td><a href="#">shift()</a></td>
+      <td>Método que elimina el primer elemento de matriz y "desplaza" todos los otros elementos a un índice inferior.</td>
+      <td><em>array</em>.shift()</td>
+      <td><button class="btn btn-primary btn-sm" type="button" onClick="ejemploshift()">Ejecutar</button></td>
     </tr>
     <tr>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td><button class="btn btn-primary btn-sm" type="button" onClick="">Ejecutar</button></td>
+      <td><a href="#">unshift()</a></td>
+      <td>Método que añade un nuevo elemento a una matriz (al principio).</td>
+      <td><em>array</em>.unshift(<em>item1</em>,<em> item2</em>, ..., <em>itemX</em>)</td>
+      <td><button class="btn btn-primary btn-sm" type="button" onClick="ejemplounshift()">Ejecutar</button></td>
     </tr>
     <tr>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td><button class="btn btn-primary btn-sm" type="button" onClick="">Ejecutar</button></td>
+      <td><a href="#">sort()</a></td>
+      <td>Método que ordena los elementos de una matriz.</td>
+      <td><em>array</em>.sort(<em>compareFunction</em>)</td>
+      <td><button class="btn btn-primary btn-sm" type="button" onClick="ejemplosort()">Ejecutar</button></td>
     </tr>
     <tr>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td><button class="btn btn-primary btn-sm" type="button" onClick="">Ejecutar</button></td>
+      <td><a href="#">length</a></td>
+      <td>Propiedad que ofrece una forma fácil de añadir un nuevo elemento a una matriz.</td>
+      <td><em>length</em></td>
+      <td><button class="btn btn-primary btn-sm" type="button" onClick="ejemplolength()">Ejecutar</button></td>
     </tr>
     <tr>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td><button class="btn btn-primary btn-sm" type="button" onClick="">Ejecutar</button></td>
+      <td><a href="#">splice()</a></td>
+      <td>Método que se puede utilizar para añadir nuevos elementos a una matriz. 
+        <p>El primer parámetro (index) define la posición <strong>donde</strong> se deben nuevos elementos <strong>añadidos</strong> (empalmados).</p>
+        <p>El segundo parámetro (<em>howmany</em>) define <strong>el número de</strong> elementos debe ser <strong>eliminado</strong> .</p></td>
+      <td><em>array</em>.splice(<em>index</em>,<em> howmany</em>,<em> item1</em>, .....,<em> itemX</em>)</td>
+      <td><button class="btn btn-primary btn-sm" type="button" onClick="ejemplosplice()">Ejecutar</button></td>
     </tr>
     <tr>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td><button class="btn btn-primary btn-sm" type="button" onClick="">Ejecutar</button></td>
+      <td><a href="#">concat()</a></td>
+      <td>Método que crea una nueva matriz mediante la fusión (concatenar) matrices existentes.</td>
+      <td><em>array1</em>.concat(<em>array2</em>,<em> array3</em>, ...,<em> arrayX</em>)</td>
+      <td><button class="btn btn-primary btn-sm" type="button" onClick="ejemploconcat()">Ejecutar</button></td>
+    </tr>
+    <tr>
+      <td><a href="#">reverse()</a></td>
+      <td>El método reverse () invierte el orden de los elementos en una matriz.</td>
+      <td><em>array</em>.reverse()</td>
+      <td><button class="btn btn-primary btn-sm" type="button" onClick="ejemploreverse()">Ejecutar</button></td>
+    </tr>
+    <tr>
+      <td><a href="#">reduce()</a></td>
+      <td><p>El método reduce() reduce la matriz a un solo valor. Realiza una función proporcionada para cada valor de la matriz (de izquierda a derecha). El valor de retorno de la función se almacena en un acumulador (resultado / total).</p></td>
+      <td><em>array</em>.reduce(<em>function(total, currentValue, currentIndex, arr), initialValue</em>)</td>
+      <td><button class="btn btn-primary btn-sm" type="button" onClick="ejemploreduce()">Ejecutar</button></td>
+    </tr>
+    <tr>
+      <td><a href="#">every()</a></td>
+      <td><p>El  método every() comprueba si todos los elementos de una matriz cumplen una condición (proporcionado como una función).</p>
+        <p>El método every() ejecuta la función de una vez para cada elemento presente en la matriz:</p>
+        <ul>
+          <li>Si encuentra un elemento de matriz donde la función devuelve un <em>falso</em> valor, every() devuelve falso (y no comprueba los valores restantes)</li>
+          <li>Si no se producen falsas, every() devuelve true</li>
+        </ul></td>
+      <td><em>array</em>.every(<em>function(currentValue, index, arr), thisValue</em>)</td>
+      <td><button class="btn btn-primary btn-sm" type="button" onClick="ejemploevery()">Ejecutar</button></td>
+    </tr>
+    <tr>
+      <td><a href="#">slice()</a></td>
+      <td><p>El método slice() devuelve los elementos seleccionados en una matriz, como un nuevo objeto de matriz. Selecciona los elementos a partir de un argumento de <em>inicio</em> (start), y termina en, <em>pero no incluye</em> , el argumento<em> final</em> (end).</p></td>
+      <td><em>array</em>.slice(<em>start</em>,<em> end</em>)</td>
+      <td><button class="btn btn-primary btn-sm" type="button" onClick="ejemploslice()">Ejecutar</button></td>
     </tr>
    </tbody>
 </table>
