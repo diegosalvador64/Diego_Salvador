@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="es-ES"><head>
+<meta charset="utf-8">
+<title>Estructuras de Control de Flujo</title>
+<meta name="keywords" content="HTML, CSS, JavaScript">
+<meta name="description" content="Aprende Javascript con ejemplos pr&aacute;cticos">
+<meta name="author" content="Diego">
+<script src="js/funciones-control-de-flujo.js"></script>
+<link href="css/estilos.css" rel="stylesheet" type="text/css">
+
+<link rel="icon" type="image/png" href="img/javajcript.png">
+<link rel="favicon" type="image/png" href="img/javajcript.png">
+
+<script>
+function startTime() {
+  var today = new Date();
+  var h = today.getHours();
+  var m = today.getMinutes();
+  var s = today.getSeconds();
+  m = checkTime(m);
+  s = checkTime(s);
+  document.getElementById('txt').innerHTML =
+  h + ":" + m + ":" + s;
+  var t = setTimeout(startTime, 500);
+}
+function checkTime(i) {
+  if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+  return i;
+}
+</script>
+</head>
+
+<body onLoad="startTime()">
+<div class="container">
+	<div id="txt"></div>
+<h1>Estructuras de control de flujo</h1>
+<hr>
+<h2>El concepto de control de flujo</h2>
+<p>Con las estructuras de control de flujo, los programas dejan de ser una sucesión lineal de instrucciones para convertirse en programas <em>inteligentes</em> que pueden tomar decisiones en función del valor de las variables. Son instrucciones del tipo &quot;si se cumple esta condición, haz esto; si no se cumple, haz esto otro&quot;. También existen instrucciones del tipo &quot;repite esto mientras se cumpla esta condición&quot;.</p>
+
+<p>Las estructuras de control definen el flujo de ejeccución del programa, y con ellas podemos resolver cualquier logaritmo. Básicamente son tres: secuencial, condicional y repetitiva, aunque cada una de ellas admite ciertas variantes y distintas sintaxis.</p>
+
+<div id="contenedor" class="container rounded p-3 mb-3" style="background-color: rgba(0,0,0,0.075);">
+<div class="row">
+  <div class="col-md-4">
+  <div class="bg-light shadow rounded p-3 h-100">
+<h4 class="text-primary">Estructura Secuencial</h4>
+<p>Se compone de instrucciones que se ejecutan secuencialmente, una detrás de la otra, sin ningún tipo de condición ni situación que impida su ejecucución de principio a fin del script.</p>
+ </div>
+  </div>
+<div class="col-md-4">
+   <div class="bg-light shadow rounded p-3 h-100">
+  <h4 class="text-primary">Estructura Condicional</h4>
+<p>Son instrucciones con una condición, si al evaluar la condición la respuesta es verdadera se ejecutarán una serie de instrucciones, y si es falsa se ejecutarán otras.</p>
+</div> 
+</div> 
+<div class="col-md-4">
+    <div class="bg-light shadow rounded p-3 h-100">
+  <h4 class="text-primary">Estructura Repetitiva</h4>
+  <p>Se utilizan cuando se quiere que un conjunto de instrucciones se ejecuten un cierto número finito de veces. Se les llama bucle o ciclo a todo proceso que se repite cierto número de veces.</p>
+  </div> 
+	</div>
+</div>
+	</div>
+<hr>
+<h2>Estructura condicional</h2>
+<p>Las sentencias condicionales se utilizan para llevar a cabo diferentes acciones basadas en diferentes condiciones.</p>
+<table class="table table-striped">
+  <tbody>
+    <tr>
+      <th>Método</th>
+      <th>Descripción</th>
+      <th>Sintaxis</th>
+      <th>&nbsp;</th>
+    </tr>
+    <tr>
+      <td><a href="#">if</a></td>
+      <td>Ejecuta una serie de instrucciones si se cumple una determinada condición.</td>
+      <td><strong>if</strong> (condicion) {<br>
+      <em>Bloque de código</em><br> 
+      }</td>
+      <td><button class="btn btn-primary btn-sm" type="button" onClick="horaIf()">Ejecutar</button></td>
+    </tr>
+    <tr>
+      <td><a href="#">else</a></td>
+      <td>Ejecuta una segunda serie de instrucciones si no se  cumple una determinada condición.</td>
+      <td><strong>if</strong> (condicion) { <br>
+        <em>Bloque de código</em><br> 
+        } <strong>else</strong> { <br>
+       <em>Bloque de código</em><br> 
+       } </td>
+      <td><button class="btn btn-primary btn-sm" type="button" onClick="horaElse()">Ejecutar</button></td>
+    </tr>
+    <tr>
+      <td><a href="#">else if</a></td>
+      <td>Especifica una nueva condición si la primera condición no se cumple.</td>
+      <td><p><strong>if </strong>(condicion) {<br>
+          <em>Bloque de código</em><br> 
+          }<strong> else if </strong>(condicion) { <br>
+          <em>Bloque de código</em><br> 
+          }  <strong>else</strong> { <br>
+      <em>Bloque de código</em> } </p></td>
+      <td><button class="btn btn-primary btn-sm" type="button" onClick="horaElseIf()">Ejecutar</button></td>
+    </tr>
+    <tr>
+      <td><a href="#">switch</a></td>
+      <td>Realiza diferentes acciones basadas en diferentes condiciones.</td>
+      <td><strong>switch</strong>(<em>expresión</em>) {<br>
+        <strong>case</strong> <em>a</em>:<em>  Bloque de código</em>        break;<br>
+        <strong>case</strong> <em>b</em>: <em> Bloque de código </em>       break;<br>
+        <strong>case</strong> <em>z</em>: <em>  Bloque de código</em>; <br>
+        <strong>default</strong>:   <em>Bloque de código</em><br>
+      }</td>
+      <td><button class="btn btn-primary btn-sm" type="button" onClick="switchCase()">Ejecutar</button></td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<hr>
+<h2>Estructura repetitiva</h2>
+<p>Los bucles son muy útiles, si desea ejecutar el mismo código una y otra vez, cada vez con un valor diferente.</p>
+<p id="demo"></p>
+<table class="table table-striped">
+  <tbody>
+    <tr>
+      <th>Método</th>
+      <th>Descripción</th>
+      <th>Sintaxis</th>
+      <th>&nbsp;</th>
+    </tr>
+    <tr>
+      <td><a href="#">for</a></td>
+      <td>Ejecuta un bloque de código  varias veces, cada vez con un valor diferente.</td>
+      <td><strong>for</strong> (<em>declaración 1</em>;<em> declaración 2</em>;<em> declaración 3</em>) {<br>
+            <em>Bloque de código a ejecutar</em><br>
+      }</td>
+      <td><button class="btn btn-primary btn-sm" type="button" onClick="bucleFor()">Ejecutar</button></td>
+    </tr>
+    <tr>
+      <td><a href="#">while</a></td>
+      <td>Ejecuta un bloque de código, siempre que la condición especificada sea verdadera.</td>
+      <td><strong>while</strong> (<em>condición</em>) {<br>
+        <em>    Bloque de código a ejecutar</em><br>
+      }</td>
+      <td><button class="btn btn-primary btn-sm" type="button" onClick="mientrasWhile()">Ejecutar</button></td>
+    </tr>
+    <tr>
+      <td height="81"><a href="#">do while</a></td>
+      <td>Ejecuta el bloque de código una vez, antes de comprobar si la condición es verdadera, y se repite el bucle mientras la condición es verdadera.</td>
+      <td><strong>do</strong> {<br>
+        <em>    code block to be executed<br>
+        </em>}<br>
+        <strong>while</strong> (<em>condition</em>);</td>
+      <td><button class="btn btn-primary btn-sm" type="button" onClick="hacerMientrasDoWhile()">Ejecutar</button></td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<hr>
+<h2>Sentencias saltar y continuar</h2>
+<p>La sentencia break &quot;salta&quot; de un bucle. La sentencia continue &quot;salta sobre&quot; una iteración en el bucle.</p>
+<table class="table table-striped">
+  <tbody>
+    <tr>
+      <th>Método</th>
+      <th>Descripción</th>
+      <th>Sintaxis</th>
+      <th>&nbsp;</th>
+    </tr>
+    <tr>
+      <td><a href="#">break</a></td>
+      <td>Rompe un bucle, si se produce una condición especificada, y continúa con la siguiente iteración del bucle.</td>
+      <td><strong>break</strong> <em>labelname</em>; </td>
+      <td><button class="btn btn-primary btn-sm" type="button" onClick="romperBucle()">Ejecutar</button></td>
+    </tr>
+    <tr>
+      <td><a href="#">continue</a></td>
+      <td>Continua un bucle, si se produce una condición especificada, y continúa con la siguiente iteración del bucle.</td>
+      <td><strong>continue</strong> <em>labelname</em>;</td>
+      <td><button class="btn btn-primary btn-sm" type="button" onClick="continuarBucle()">Ejecutar</button></td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<hr>
+<p>&nbsp;</p>
+</div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+

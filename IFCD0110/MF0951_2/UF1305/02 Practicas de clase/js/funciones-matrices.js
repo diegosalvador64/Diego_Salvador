@@ -191,11 +191,18 @@ function ejemploconcat() {
 function ejemploreverse() {
 			
 	var matriz = new Array("rojo","verde","azul","amarillo");
+	var matrizAntigua = matriz.toString();//en Javascript: si var a = 10; var b = a; si se modifica el valor de a, también se modifica el valor de b. Debe ser un asunto de asignación de memoria. Si una variable se asigna a una segunda, si se modifica una se modifica la otra. Si convierto el array en string (con el método toString(), ya mantiene el valor anterior)
+	
+	var a = 10; //en este caso sí que mantiene el valor original de "a"; al guardarlo en una "const", que esa sí que no está afectada por los cambios en la variable "a".
+	const b = a;
+	a += 20;
+	alert("La variable a es " + a + " la constante b es " + b)
 	
 	alert("Tengo la matriz: " + matriz + "\n" + "Con el método reverse() se invierte el orden ");
 	
 	matriz.reverse();
-		
+	
+	alert("La matriz original era: " + matrizAntigua);
 	alert("La matriz queda así con el método reverse(): " + matriz);
 }
 //función reduce()
@@ -255,4 +262,44 @@ function ejemploslice() {
 	var resultado = matriz.slice(parseInt(posicion1),parseInt(posicion2));
 		
 	alert("La matriz queda así usando el método slice() con los parámetros introducidos: " + resultado);
+}
+//propiedad fill()
+function ejemplofill() {
+			
+	var matriz = new Array("rojo","verde","azul","amarillo");
+	
+	alert("Tengo la matriz: " + matriz + "\n" + "Voy a cambiar cada elemento de la matriz por lo que voy a escribir");
+	
+	var nuevoColor1 = prompt("Añade un color: ");
+	
+	var longitud = matriz.length;
+	
+	var posicion1 = prompt("Elija un número del 0 al " + longitud + " para la posición desde donde quiere cambiar el color");
+	var posicion2 = prompt("Elija un número del 0 al " + longitud + " para la posición hasta donde quiere cambiar el color");
+			
+	matriz.fill(nuevoColor1, parseInt(posicion1), parseInt(posicion2));
+		
+	alert("La matriz queda así usando el método fill() con el nuevo valor introducido" + "\n" + "y los argumentos de inicio y fin: " + matriz);
+}
+//función prototype
+function ejemploprototipo() {
+	
+	Array.prototype.misMayusculas = function() {
+  		var i;
+  		for (i = 0; i < this.length; i++) 
+								{
+		   	this[i] = this[i].toUpperCase();
+  		}
+	};
+//primero pasa por myFunction; Y luego por el prototype; Lógico, pues primero debe pasar por la invocación a la función, que luego buscará. Como la función tiene dentro otra función, se irá a buscarla.
+	function myFunction() {
+		var color1 = prompt("Añade un color: ");
+		var color2 = prompt("Añade otro color: ");
+		var matriz = new Array(color1, color2);
+		matriz.misMayusculas();
+		alert("He convertido todos los colores a mayúsculas " + matriz);
+	}
+	
+	myFunction();
+		
 }
