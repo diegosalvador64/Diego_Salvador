@@ -93,14 +93,14 @@ function bucleFor() {
 		var matriz = new Array(color1,color2,color3);
 	
 		var text = "";
-		text = "<ul>";
+		text = "<ol>";
 		var i;
 	
 		for (i = 0; i < matriz.length; i++) {
 		  text += "<li><strong>" + matriz[i] + "</strong></li>";
 		}
 	
-		text += "</ul>";
+		text += "</ol>";
 	
 		document.getElementById("demo").innerHTML = "<strong>La lista de colores introducida es : </strong>" + text;
 	
@@ -129,6 +129,68 @@ function hacerMientrasDoWhile() {
 
 		document.getElementById("demo").innerHTML = text;	
 }
+//Estructura break
 function romperBucle() {
-	/*------voy por aquí ----*/
+	var mes;
+	switch (new Date().getMonth()) {
+	  case 0:
+		mes = "Enero";
+		break;
+	  case 1:
+		mes = "Febrero";
+		break;
+	  case 2:
+		mes = "Marzo";
+		break;
+	  case 3:
+		mes = "Abril";
+		break;
+	  case 4:
+		mes = "Mayo";
+		break;
+	  case 5:
+		mes = "Junio";
+		break;
+	  case  6:
+		mes = "Julio";
+		break;	
+	  case  7:
+		mes = "Agosto";
+		break;
+	  case  8:
+		mes = "Septiembre";
+		break;
+	  case  9:
+		mes = "Octubre";
+		break;
+	  case  10:
+		mes = "Noviembre";
+		break;
+	  case  11:
+		mes = "Diciembre";
+		break;
+	  default:
+		mes = "Indefinido";	
+	}
+	var resultado = mes.slice(0,3).toUpperCase();//también se pueden poner directamente los métodos detrás del nombre, pues funciona igual: "Marzo".slice(0,3).toUpperCase();
+	
+	alert("Estamos en el mes de " + resultado + " (" + mes + ")");
+}
+//Estructura continue
+function continuarBucle() {
+var cadena = "En un lugar de la Mancha de cuyo nombre no quiero acordarme...";
+alert("La cadena original dice " + cadena);
+var letras = cadena.split(" ");
+alert("He aplicado método split separando con comas por palabras y conviertiéndolo en array " + letras);	
+var resultado = "";
+
+for(i in letras) { //: esta expresión sustituye a for (i=0; i<letras.length;i++)
+  if(letras[i] == 'lugar' || letras[i] == 'Mancha' || letras[i] == 'nombre') {
+    continue;
+  }
+  else {
+    resultado += letras[i] + " ";
+  }
+}
+alert(resultado);
 }

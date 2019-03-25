@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="es-ES">
+<head>
+<meta charset="utf-8">
+<title>Conversión de unidades con JavaScript</title>
+<script src="funciones.js" type="text/javascript"></script>
+<link href="estilos.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div class="container">
+<h2><strong>Operaciones de conversión de unidades con JavaScript</strong></h2>
+<hr>
+<div class="col-12 rounded p-3 m-2 shadow" style="border: 1 solid black;">
+<p><strong>(volumen) <br>
+¿Cuántos  son X litros en decilitros, centilitos y mililitros?</strong> <br>
+(1 litro = 10 decilitros), (1 litro = 100 centilitros), (1 litro = 1000 mililitros)</p>
+<form id="form1" name="form1" method="post">
+  <label for="number1">Introduce un número de litros:</label>
+  <br>
+  <input type="number" name="number1" id="number1">
+  <input type="button" name="button1" id="button1" value="Enviar" onClick="obtenerlitros()">
+</form>
+<p id="etiqueta1"></p>
+</div>
+<div class="col-12 rounded p-3 m-2 shadow" style="border: 1 solid black">
+<p> <span><strong>(longitud) <br>
+¿Cuántos son X kilómetros en metros, centímetros y milímetros? </strong></span><br>
+(1 km = 1000 metros), (1 metro = 100 centímetros), (1 centímetro = 10 milímetros)</p>
+<form id="form2" name="form2" method="post">
+  <label for="number2">Introduce un número de kilómetros:<br>
+  </label>
+  <input type="number" name="number2" id="number2">
+  <input type="button" name="button2" id="button2" value="Enviar" onClick="obtenerlongitud()">
+</form>
+<p id="etiqueta2"></p>
+</div>
+<div class="col-12 rounded p-3 m-2 shadow" style="border: 1 solid black">
+<p><strong>(tiempo) <br>
+¿Cuántas  son X días en horas, minutos y segundos?</strong> <br>
+(1 día = 24 horas), (1 hora = 60 minutos), (1 minuto = 60 asegundos)</p>
+<form id="form3" name="form3" method="post">
+  <label for="number3">Introduce un número de días:<br>
+  </label>
+  <input type="number" name="number3" id="number3">
+  <input type="button" name="button3" id="button3" value="Enviar" onClick="obtenerTiempo()">
+</form>
+<p id="etiqueta3"></p>
+</div>
+<div class="col-12 rounded p-3 m-2 shadow" style="border: 1 solid black">
+<p><strong>(temperatura) <br>
+¿Cuántos son X grados centígrados en grados fahrenheit y grados kelvin? </strong><br>
+(℉= ( ℃ * 1. 8 ) + 32 ), ( ℃ + 273.15 )</p>
+<form id="form4" name="form4" method="post">
+  <label for="number4">Introduce un número de grados:</label>
+  <br>
+  <input type="number" name="number4" id="number4">
+  <input type="button" name="button4" id="button4" value="Enviar" onClick="obtenerTemperatura()">
+</form>
+<p id="etiqueta4"></p>
+</div>
+<div class="col-12 rounded p-3 m-2 shadow" style="border: 1 solid black">
+<p><strong>(peso) <br>
+¿Cuántos son X toneladas en kilogramos, gramos,  miligramos?<br>
+</strong>(1 tonelada = 1000 kilogramos), (1kilogramo = 1000 gramos), (1 gramo = 1000 miligramos)</p>
+<form id="form5" name="form5" method="post">
+  <label for="number5">Introduce un número de toneladas:</label>
+  <br>
+  <input type="number" name="number5" id="number5">
+  <input type="button" name="button5" id="button5" value="Enviar" onClick="obtenerPeso()">
+</form>
+<p id="etiqueta5"></p>
+</div>
+<div class="col-12 rounded p-3 m-2 shadow" style="border: 1 solid black">
+<p><strong>(pesaje) <br>
+¿Cuántos son X kilogramos en onzas, libras y piedras, quilates? <br>
+</strong>(1kg = 0.1575 piedras), (1 kg = 2.2046 libras),(1kg = 35.274 onzas), (1 kg = 5000 kilates)</p>
+<form id="form6" name="form6" method="post">
+  <label for="number6">Introduce un número de kilogramos:</label>
+  <br>
+  <input type="number" name="number6" id="number6">
+  <input type="button" name="button6" id="button6" value="Enviar" onClick="obtenerPesaje()">
+</form>
+<p id="etiqueta6"></p>
+</div>
+<div class="col-12 rounded p-3 m-2 shadow" style="border: 1 solid black">
+<p><strong>(distancia) <br>
+¿Cuántos son X kilómetros en millas, pies, yardas, pulgadas?</strong> <br>
+(1 km = 0,621371 millas), (1 km = 1093,61 yardas), (1 km =3280,84 pies), (1 km = 39370,1 pulgadas)</p>
+<form id="form7" name="form7" method="post">
+  <label for="number7">Introduce un número de kilómetros:</label>
+  <br>
+  <input type="number" name="number7" id="number7">
+  <input type="button" name="button7" id="button7" value="Enviar" onClick="obtenerDistancia()">
+</form>
+<p id="etiqueta7"></p>
+</div>
+<div class="col-12 rounded p-3 m-2 shadow" style="border: 1 solid black">
+<p><strong>(modeda) <br>
+¿Cuántos son X euros en dólares US, libras, yenes, yuanes? <br>
+</strong>(1€ = 1,13 dólares), (1€=0,88 libras), (1€ = 128.27 yenes), (1€ = 7,85 yuanes)</p>
+<form id="form8" name="form8" method="post">
+  <label for="number8">Introduce un importe en Euros:</label>
+  <br>
+  <input type="number" name="number8" id="number8">
+  <input type="button" name="button8" id="button8" value="Enviar" onClick="obtenerMoneda()">
+</form>
+<p id="etiqueta8"></p>
+</div>
+<div class="col-12 rounded p-3 m-2 shadow" style="border: 1 solid black">
+<p><strong>(velocidad) <br>
+¿Cuántos son X kilómetros por hora en metros por segundo, millas por hora, nudos?</strong> <br>
+(1km/h = 0,621371m/h), (1 km/h = 0,539957 nudos), (1km/h = 0,277778 m/s), (1km/h = 0,911344 p/s), </p>
+<form id="form9" name="form9" method="post">
+  <label for="number9">Introduce un número de kilómetros por hora:</label>
+  <br>
+  <input type="number" name="number9" id="number9">
+  <input type="button" name="button9" id="button9" value="Enviar" onClick="obtenerVelocidad()">
+</form>
+<p id="etiqueta9"></p>
+</div>
+<p><strong>(áreas)</strong> <strong><br>
+  ¿Cuántos son X km cuadrados en hectareas, acres y millas cuadradas?</strong> <br>
+(1km2 = 100 hectáreas),  (1km2 = 247,105 acres), (1km2 = 0,386102 millas cuadradas)</p>
+<form id="form10" name="form10" method="post">
+  <label for="number10">Introduce un número de kilómetros cuadrados:</label>
+  <br>
+  <input type="number" name="number10" id="number10">
+  <input type="button" name="button10" id="button10" value="Enviar" onClick="obtenerArea()">
+</form>
+<p id="etiqueta10"></p>
+</div>
+</body>
+</html>
