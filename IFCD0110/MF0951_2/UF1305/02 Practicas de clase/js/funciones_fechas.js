@@ -174,6 +174,8 @@ function calcular_edad(fecha) {
 
    	//entonces es que eran iguales. miro los dias 
    	//si resto los dias y me da menor que 0 entonces no ha cumplido años. Si da mayor o igual si ha cumplido 
+	alert("hoy.getUTCDate()" + hoy.getUTCDate());
+	alert("Día de hoy " + dia);
    	if (hoy.getUTCDate() - dia >= 0) 
       	return edad + 1 
 

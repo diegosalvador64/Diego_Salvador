@@ -1,0 +1,23 @@
+@charset "utf-8";
+/* CSS Document */
+
+ #etiqueta2, #etiqueta4, #etiqueta6, #etiqueta8, #etiqueta10 {
+	color: black; font-weight: bold;
+}
+
+#etiqueta1, #etiqueta3, #etiqueta5, #etiqueta7, #etiqueta9 {
+	color: white; font-weight: bold;
+}
+
+.margenleft {
+	margin-left: 500px;
+}
+.margenrigth {
+	margin-right: 500px;
+}
+.estilodiv {
+	background-color: lightgoldenrodyellow;
+}
+.estilodiv1 {
+	background-color: lightsalmon; color: white;
+}
