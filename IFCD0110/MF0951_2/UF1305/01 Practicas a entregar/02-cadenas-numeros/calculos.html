@@ -12,7 +12,7 @@
 <h2><strong>Operaciones de cálculo con JavaScript</strong></h2>
 <hr>
 <div class="col-12 rounded p-3 m-3 shadow">
-	<p><strong><em><u>Ejercicio 1: (Cáculo)</u></em><br>
+	<p><strong><em><u>Ejercicio 1: (Cálculo)</u></em><br>
 	  </strong><strong>Crear</strong> <strong>una función  que calcule el sueldo neto mensual introduciendo el salario bruto anual.<br>
 	</strong>(Seguridad Social = 6,4%), (IRPF = 15%), (pagas = 14), (fórmula: sueldo  mensual - (IRPF + Seguridad Social).</p>
 	<form id="form1" name="form1" method="post">
@@ -64,71 +64,25 @@
 
 <div class="col-12 rounded p-3 m-3 shadow">
 	<p><strong><em><u>Ejercicio 5: (Comparativa)</u></em><br>
-	</strong><strong>Crear  una función, que introduciendo 3 valores numéricos compare cual es el número  mayor, el menor, y muestre el  resultado  de sumar los números. Representar los datos a través de en una lista desordenada  HTML.</strong><strong> </strong></p>
+	</strong><strong>Crear  una función, que introduciendo varios valores numéricos compare cual es el número  mayor, el menor, y muestre el  resultado  de sumar los números. Representar los datos a través de en una lista desordenada  HTML.</strong><strong> </strong></p>
 	<form id="form5" name="form5" method="post">
-	  <label for="number5">Introduce 3 valores numéricos</label>
-	  <br>
-	  <input type="number" name="number5" id="number5">
-	  <input type="button" name="button5" id="button5" value="Enviar" onClick="">
+	  <label for="number5">Introduce varios valores numéricos</label>
+	  separados por comas<br>
+	  <input type="text" name="number5" id="number5">
+	  <input type="button" name="button5" id="button5" value="Enviar" onClick="ejemploComparativa()">
 	</form>
 	<p id="etiqueta5"></p>
 </div>
-
+<!---------------------------------------------------no valen-->
 <div class="col-12 rounded p-3 m-3 shadow">
-	<p><strong><em><u>Ejercicio 6: (Comparativa)</u></em><br>
-	</strong><strong>Crear  una función, que introduciendo 3 palabras en un campo de formulario, ya sea  separado por comas o espacios, muestre en una lista ordenada HTML de forma  ascendente las 3 palabras.<u></u></strong></p>
-	<form id="form6" name="form6" method="post">
-	  <label for="number6">Introduce 3 palabras:</label>
-	  <br>
-	  <input type="number" name="number6" id="number6">
-	  <input type="button" name="button6" id="button6" value="Enviar" onClick="">
-	</form>
-	<p id="etiqueta6"></p>
-</div>
-
-<div class="col-12 rounded p-3 m-3 shadow">
-	<p><strong><em><u>Ejercicio 7:</u></em> (Análisis)</strong><br>
-	<strong>Crear una  función que, introduciendo el  nombre, apellido, teléfono, email y fecha de nacimiento separados por espacios o por comas, represente los datos en una tabla HTML, calculando la edad y mostrando cada resultado en una celda distinta.</strong></p>
-	<form id="form7" name="form7" method="post">
-	  <label for="number7">Introduce los datos personales</label><br>
-	  <input type="number" name="number7" id="number7">
-	  <input type="button" name="button7" id="button7" value="Enviar" onClick="">
-	</form>
-	<p id="etiqueta7"></p>
-</div>
-
-<div class="col-12 rounded p-3 m-3 shadow">
-	<p><strong><em><u>Ejercicio 8:</u></em> (Comparativa)</strong> <br>
-	  <strong>Crear una  función que introduciendo una secuencia de números separados por comas, puntos  o espacios muestre el valor mayor y el menor, y los represente de forma  ascendente, descendente y de forma aleatoria.</strong></p>
-	<form id="form8" name="form8" method="post">
-	  <label for="number8">Introduce una secuencia de núemeros:</label>
-	  <br>
-	  <input type="number" name="number8" id="number8">
-	  <input type="button" name="button8" id="button8" value="Enviar" onClick="">
-	</form>
-	<p id="etiqueta8"></p>
-</div>
-
-<div class="col-12 rounded p-3 m-3 shadow">
-	<p><strong><em><u>Ejercicio 9: (Validación)</u></em> <br>
-	</strong><strong>Crear  una función que valide la entrada de un campo de correo electrónico estándar <a href="mailto:correo@dominio.ext">correo@dominio.ext</a>,  y que tras validarlo muestre de forma individual el usuario, el dominio, la extensión  en forma de párrafos independientes.</strong></p>
-	<form id="form9" name="form9" method="post">
-	  <label for="number9">Introduce un correo electrónico</label><br>
-	  <input type="number" name="number9" id="number9">
-	  <input type="button" name="button9" id="button9" value="Enviar" onClick="">
-	</form>
-	<p id="etiqueta9"></p>
-</div>
-
-<div class="col-12 rounded p-3 m-3 shadow">
-	<p><strong><em><u>Ejercicio 10: (Listado)</u></em></strong><strong><br>
+	<p><strong><em><u>Ejercicio 6: (Listado)</u></em></strong><strong><br>
 	</strong><strong>Crear  una función que introduciendo un número del 1 al 10, muestre la tabla de  multiplicar de ese número. Los datos deben ser representados en forma de lista  hacia abajo desde el 1 hasta el 10. Ejemplo: 2 x 5 = 10.</strong><strong> </strong></p>
-	<form id="form10" name="form10" method="post">
-	  <label for="number10">Introduce un número</label><br>
-	  <input type="number" name="number10" id="number10">
-	  <input type="button" name="button10" id="button10" value="Enviar" onClick="">
+	<form id="form6" name="form6" method="post">
+	  <label for="number6">Introduce un número</label><br>
+	  <input type="number" name="number6" id="number6">
+	  <input type="button" name="button6" id="button6" value="Enviar" onClick="tablaMultiplicar()">
 	</form>
-	<p id="etiqueta10"></p>
+	<p id="etiqueta6" class="p-2" style="display: none;"></p>
 </div>
 </div>
 </body>

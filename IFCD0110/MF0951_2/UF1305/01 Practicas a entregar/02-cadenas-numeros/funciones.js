@@ -63,17 +63,82 @@ function calcularTiempoDescarga() {
 function introducirFrase() {
 	var frase= document.getElementById("number4").value;
 	
-	if (frase == " ") {
+	if (frase == "") {
 		alert("teclee una frase");
 		return false;
 			}
 	var arrayFrase = frase.split(" ");
-	
-	document.getElementById("etiqueta4").innerHTML = "Frase: " + arrayFrase + "<br>" +
-		"\"Cita\" entre comillas" + frase + "<br>" +
-		"\"Cita\" en mayúsculas" + frase.toUpperCase() + "<br>" +
-		"\"Cita\" en minúsculas" + frase.toLowerCase() + "<br>";
+	var revesArray = arrayFrase.reverse();
+	var revesString = revesArray.toString().replace(/,/g, " ");
+		
+	document.getElementById("etiqueta4").innerHTML = "Frase: " + frase + "<br>" +
+		"\"Cita\" entre comillas: " + "\"" + frase + "\"" + "<br>" +
+		"\"Cita\" frase al revés: " + revesString + "<br>" +
+		"\"Cita\" en mayúsculas: " + frase.toUpperCase() + "<br>" +
+		"\"Cita\" en minúsculas: " + frase.toLowerCase() + "<br>";
 	
 	//Y convertir con toString de nuevo a string desde array; reverse para el revés: no sé si esto funciona igual con arrays y con cadenas. Convierto primero a arrays, le meto la función reverse() y luego lo convierto a string de nuevo
 	}
-
+//Crear una función, que introduciendo 3 valores numéricos compare cual es el número mayor, el menor, y muestre el resultado de sumar los números. Representar los datos a través de en una lista desordenada HTML. 
+function ejemploComparativa() {
+	var numero= document.getElementById("number5").value;
+	
+	if (numero == "") {
+		alert("teclee tres números separados por coma");
+		return false;
+			}
+	
+	var arrayNumero = numero.split(",");
+	var numeroMayor = 0;
+	var numeroMenor = 0;
+	var suma = 0;
+	
+		
+	numeroMayor = parseInt(arrayNumero[0]);
+	numeroMenor = parseInt(arrayNumero[0]);
+	
+	for (i in arrayNumero) {
+		suma += parseInt(arrayNumero[i]);
+		if (parseInt(arrayNumero[i]) > numeroMayor) {
+			numeroMayor = parseInt(arrayNumero[i]);
+		} 
+		
+		if (numeroMenor > parseInt(arrayNumero[i])) {
+			numeroMenor = parseInt(arrayNumero[i]);
+		}  
+	}
+			
+	document.getElementById("etiqueta5").innerHTML = "<ul>" + 
+		"<li>" + "El número mayor es: " + numeroMayor + "</li>" +
+		"<li>" + "El número menor es: " + numeroMenor + "</li>" +
+		"<li>" + "La suma de los tres números es: " + suma + "</li>" +
+		"</ul>";
+	
+	}
+//Crear una función que introduciendo un número del 1 al 10, muestre la tabla de multiplicar de ese número. Los datos deben ser representados en forma de lista hacia abajo desde el 1 hasta el 10. Ejemplo: 2 x 5 = 10. 
+function tablaMultiplicar() {
+	var numero= parseInt(document.getElementById("number6").value);
+	
+	if (isNaN(numero) == true) {
+		alert("teclee un número");
+		return false;
+			}
+	
+	var producto = 0;
+	var i = 0;
+	var resultado = "<ul>";
+	
+	for (i=1; i<= 10; i++) {
+		producto = numero * i;
+		resultado += "<li>" + numero + "x" + i + "=" + producto + "</li>";
+	}
+	resultado += "</ul>";
+	document.getElementById("etiqueta6").style.display = 'block';
+	document.getElementById("etiqueta6").style.color = 'white';
+	document.getElementById("etiqueta6").style.backgroundColor = 'grey';
+	document.getElementById("etiqueta6").style.width = "300px";
+	document.getElementById("etiqueta6").style.height = "300px";
+	document.getElementById("etiqueta6").style.marginLeft = "400px";
+	document.getElementById("etiqueta6").style.font = "italic bold 1.5em arial,serif";
+	document.getElementById("etiqueta6").innerHTML = resultado;
+}
