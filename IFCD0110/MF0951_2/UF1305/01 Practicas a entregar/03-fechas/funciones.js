@@ -34,4 +34,78 @@ function formarFecha() {
 		fechaSistema.getHours() + "/" + fechaSistema.getMinutes() + "/" + fechaSistema.getSeconds();
 	}
 
-
+/*Crear una función que al introducir una fecha en un campo de formulario muestre la fecha en este formato: "Hoy es martes, 11 de Noviembre de 2018". */
+function fechaLarga() {
+	
+	var fecha = new Date(document.getElementById("date3").value);
+	
+	var dias = ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"];
+	var meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+	
+	var mes       = fecha.getMonth();
+	var dia       = fecha.getDate();
+	var diaSemana = fecha.getDay();
+	var anio      = fecha.getFullYear();
+					
+	document.getElementById("etiqueta3").innerHTML = "<strong>" + "\"Hoy es " + dias[diaSemana] + " " + dia + " de " +   meses[mes] + " de " + anio + "\"" + "</strong>";	
+}
+/*Crear una función que tras identificarse una persona con usuario y contraseña en un formulario de acceso, muestre un mensaje de bienvenida con el nombre de usuario y la frase: "Hola usuario, has iniciado sesión el día 13/11/2018 a las 15:30:25". Mostar el resultado debajo del campo de formulario.*/
+function sesionUser() {
+	var usuario  = document.getElementById("text4").value;
+	var password = document.getElementById("password4").value;
+	
+	if (usuario === "diego") {
+		if (password !== "alejandro") {
+			alert("Contraseña no válida");
+			return false;
+		}
+	} else {
+			alert("Usuario inexistente");
+			return false;
+	}
+	
+	var fechaSistema = new Date();
+	
+	alert("¡Bienvenido " + usuario.toUpperCase() + "!" + "¡Me alegra de verte de nuevo por aquí!");
+	
+	document.getElementById("etiqueta4").innerHTML = "<strong>" + "\"Hola " + usuario.toUpperCase() + ", has iniciado sesión el día " +  fechaSistema.getDate() + "/" + (fechaSistema.getMonth() +1) + "/" + fechaSistema.getFullYear() +     " a las " +  fechaSistema.getHours() + ":" + fechaSistema.getMinutes() + ":" + fechaSistema.getSeconds() +
+	"\"" + "</strong>";	
+}
+/*Crear una función que introduciendo la fecha de nacimiento en un campo de formulario calcule los días que faltan para su cumpleaños a partir de la fecha introducida. Si el cumpleaños ya ha pasado, mostrar los días que han transcurrido desde la su último cumpleaños y los días restantes que faltan para el siguiente cumpleaños, y si el cumpleaños no ha llegado aún, mostrar sólo los días restantes. */
+function calcularDias() {
+	
+	var fecha = new Date(document.getElementById("date5").value);
+	var fechaSistema = new Date();
+	
+	var fechaParaComparar = new Date((fecha.getMonth() +1) + "-" + fecha.getDate() + "-" + fechaSistema.getFullYear());
+	
+	var dias = 0;
+		
+	if (fechaSistema > fechaParaComparar || fechaSistema < fechaParaComparar) {
+		dias = parseInt((((((fechaSistema - fechaParaComparar) / 1000) / 60) / 60) / 24));
+	}
+	alert("dias " + dias);
+	
+	var text = "";
+	
+	//Lo podemos hacer mediante switch/case 	
+	/*switch (true) {
+		case dias < 0:
+			text = "Quedan " + dias*(-1).toFixed(0) + " días para tu cumpleaños";
+    		break;
+		case dias > 0:
+			text = "Han pasado " + dias.toFixed(0) + " días desde mi cumpleaños";
+			break;
+		default:
+			text = "FELICIDADES, HOY ES TU CUMPLEAÑOS";
+	}*/
+	//Con if anidados. En ambos casos ocurre que si hoy es 28 y pongo 29, me dice también que el 29 es mi cumpleaños ¿Por qué?
+	
+	if (dias < 0) {
+		text = "Quedan " + dias*(-1).toFixed(0) + " días para tu cumpleaños";	
+		} else if (dias > 0) {
+			text = "Han pasado " + dias.toFixed(0) + " días desde mi cumpleaños";	
+		} else {text = "FELICIDADES, HOY ES TU CUMPLEAÑOS";}				
+	
+	document.getElementById("etiqueta5").innerHTML = "<strong>" + text + "</strong>";
+}
