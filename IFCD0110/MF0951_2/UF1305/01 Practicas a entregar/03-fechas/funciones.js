@@ -82,10 +82,11 @@ function calcularDias() {
 	var dias = 0;
 		
 	if (fechaSistema > fechaParaComparar || fechaSistema < fechaParaComparar) {
-		dias = parseInt((((((fechaSistema - fechaParaComparar) / 1000) / 60) / 60) / 24));
+		dias = Number((((((fechaSistema - fechaParaComparar) / 1000) / 60) / 60) / 24));
 	}
-	alert("dias " + dias);
 	
+	if (dias > 0 && dias < 1) {dias = 0;}
+		
 	var text = "";
 	
 	//Lo podemos hacer mediante switch/case 	
