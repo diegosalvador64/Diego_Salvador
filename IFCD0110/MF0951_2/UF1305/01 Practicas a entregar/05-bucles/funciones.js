@@ -36,16 +36,42 @@ function signoZodiaco() {
 	//Aries (Fecha: Del 21 de marzo al 20 de abril)
 	if ((dia >= 21 && mes == 3) || (dia <= 20 && mes == 4)) {
 		signo = "Aries";
-		imagen = "img/aries.jpg";
-	} else if ((dia >= 21 && mes == 4) || (dia <= 20 && mes == 5)) {
+		imagen = "img/aries.jpg";}
+	  else if ((dia >= 21 && mes == 4) || (dia <= 20 && mes == 5)) {
 				signo = "Tauro";
 				imagen = "img/tauro.jpg";}
-		else if ((dia > 21 && mes == 5) || (dia <= 21 && mes == 6)) {
-				signo = "Géminis";
-				imagen = "img/geminis.jpg";}
-		else if ((dia > 21 && mes == 6) || (dia <= 22 && mes == 7)) {
-				signo = "Cáncer";
-				imagen = "img/cancer.jpg";}
+		else if ((dia >= 21 && mes == 5) || (dia <= 21 && mes == 6)) {
+				 signo = "Géminis";
+				 imagen = "img/geminis.jpg";}
+		  else if ((dia >= 22 && mes == 6) || (dia <= 22 && mes == 7)) {
+				  signo = "Cáncer";
+				  imagen = "img/cancer.jpg";}
+		    else if ((dia >= 23 && mes == 7) || (dia <= 23 && mes == 8)) {
+				   signo = "Leo";
+				   imagen = "img/leo.jpg";}
+		     else if ((dia >= 24 && mes == 8) || (dia <= 23 && mes == 9)) {
+				    signo = "Virgo";
+				    imagen = "img/virgo.jpg";}
+		      else if ((dia >= 24 && mes == 9) || (dia <= 22 && mes == 10)) {
+				     signo = "Libra";
+				     imagen = "img/libra.jpg";}
+		       else if ((dia >= 23 && mes == 10) || (dia <= 22 && mes == 11)) {
+				      signo = "Escorpio";
+				      imagen = "img/escorpio.jpg";}
+		        else if ((dia >= 23 && mes == 11) || (dia <= 21 && mes == 12)) {
+				        signo = "Sagitario";
+				        imagen = "img/sagitario.jpg";}
+		         else if ((dia >= 22 && mes == 12) || (dia <= 19 && mes == 1)) {
+				         signo = "Capricornio";
+				         imagen = "img/capricornio.jpg";}
+		          else if ((dia >= 20 && mes == 1) || (dia <= 19 && mes == 2)) {
+				         signo = "Acuario";
+				         imagen = "img/acuario.jpg";}
+		           else if ((dia >= 20 && mes == 2) || (dia <= 20 && mes == 3)) {
+				          signo = "Piscis";
+				          imagen = "img/piscis.jpg";}
 	
-	document.getElementById("etiqueta2").innerHTML = "Naciste un " + dia + "/" + mes + "<br><br>" + "<strong>Eres " + signo + "</strong>" + "<br>" + "<img src=" + "'" + imagen + "'" + " style='width:100px; heigth=100px'";
+	var meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+	
+	document.getElementById("etiqueta2").innerHTML = 'Naciste un ' + dia + ' de ' + meses[fecha.getMonth()] + '<br><br>' + '<strong>Eres ' + signo + '</strong>' + '<br>' + '<img src=' + '"' + imagen + '"' + ' style="width:100px; heigth:100px">';
 }

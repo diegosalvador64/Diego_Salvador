@@ -80,33 +80,39 @@ function calcularDias() {
 	var fechaParaComparar = new Date((fecha.getMonth() +1) + "-" + fecha.getDate() + "-" + fechaSistema.getFullYear());
 	
 	var dias = 0;
-		
-	if (fechaSistema > fechaParaComparar || fechaSistema < fechaParaComparar) {
-		dias = Number((((((fechaSistema - fechaParaComparar) / 1000) / 60) / 60) / 24));
-	}
-	
-	if (dias > 0 && dias < 1) {dias = 0;}
-		
 	var text = "";
 	
-	//Lo podemos hacer mediante switch/case 	
-	/*switch (true) {
-		case dias < 0:
-			text = "Quedan " + dias*(-1).toFixed(0) + " días para tu cumpleaños";
-    		break;
-		case dias > 0:
-			text = "Han pasado " + dias.toFixed(0) + " días desde mi cumpleaños";
+	if ((fechaSistema > fechaParaComparar) || (fechaSistema < fechaParaComparar)) {
+		dias = Number((((((fechaSistema - fechaParaComparar) / 1000) / 60) / 60) / 24));
+		}
+	
+	var diasDef; 
+	
+	switch (true) {
+		case (dias > 0 && dias < 1):
+		    diasDef = 0;
+			break;
+		case (dias > 0 && dias >= 1):
+			diasDef = dias.toFixed(0)-1;
+			break;
+		case (dias < 0 && dias >= -1):
+			diasDef = -1;
+			break;
+		case (dias < 0 && dias <= -1):
+			diasDef = dias.toFixed(0)-1;
+			break;
+	} 
+			
+	switch (true) {
+		case diasDef > 0:
+			text = "Han pasado " + diasDef + " días desde mi cumpleaños";
+			break;
+		case diasDef < 0:
+			text = "Quedan " + diasDef*(-1) + " días para tu cumpleaños";
 			break;
 		default:
 			text = "FELICIDADES, HOY ES TU CUMPLEAÑOS";
-	}*/
-	//Con if anidados. En ambos casos ocurre que si hoy es 28 y pongo 29, me dice también que el 29 es mi cumpleaños ¿Por qué?
-	
-	if (dias < 0) {
-		text = "Quedan " + dias*(-1).toFixed(0) + " días para tu cumpleaños";	
-		} else if (dias > 0) {
-			text = "Han pasado " + dias.toFixed(0) + " días desde mi cumpleaños";	
-		} else {text = "FELICIDADES, HOY ES TU CUMPLEAÑOS";}				
+	}
 	
 	document.getElementById("etiqueta5").innerHTML = "<strong>" + text + "</strong>";
 }

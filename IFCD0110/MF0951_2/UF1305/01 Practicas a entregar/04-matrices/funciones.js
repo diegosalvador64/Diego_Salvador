@@ -29,11 +29,13 @@ function incluirCoches() {
 		return false;
 		}
 	
-	var arrayCochesEntrada = cochesEntrada.split(",");
+	var cochesSin = cochesEntrada.replace(/\"/gi, " ");
+	
+	var arrayCochesEntrada = cochesSin.split(",");
 	
 	var cochesTotal = arrayCoches.concat(arrayCochesEntrada); 
 	
-	document.getElementById("etiqueta2").innerHTML = "<i><u>" + "Representación de la matriz " + "</u>" + ": Grupo Volkswagen: " + cochesTotal[0] + ", " + cochesTotal[1] + ", " + cochesTotal[2] + ", " + cochesTotal[3] + ", " + cochesTotal[4] + ", " + cochesTotal[5] + "." + "</i>"; 
+	document.getElementById("etiqueta2").innerHTML = "<i><u>" + "Representación de la matriz " + "</u>" + ": Grupo Volkswagen: " + cochesTotal[0].trim() + ", " + cochesTotal[1].trim() + ", " + cochesTotal[2].trim() + ", " + cochesTotal[3].trim() + ", " + cochesTotal[4].trim() + ", " + cochesTotal[5].trim() + "." + "</i>"; 
 }
 //EJERCICIO 3
 /*A partir del array creado anteriormente, crear una función que permita introducir al comienzo de la matriz los valores "Ducati", "Lamborghini", "Porsche" sin espacios en blanco. Mostrar la matriz como se muestra a continuación.*/
@@ -47,11 +49,24 @@ function incluirCochesDelante() {
 		return false;
 		}
 	
-	var arrayCochesEntrada = cochesEntrada.split(",");
+	var cochesSin = cochesEntrada.replace(/\"/gi, " ");
+	
+	var arrayCochesEntrada = cochesSin.split(",");
 	
 	var cochesTotal = arrayCochesEntrada.concat(arrayCoches); 
 	
-	document.getElementById("etiqueta3").innerHTML = "<i><u>" + "Representación de la matriz " + "</u>" + ": Grupo Volkswagen: " + cochesTotal[0] + ", " + cochesTotal[1] + ", " + cochesTotal[2] + ", " + cochesTotal[3] + ", " + cochesTotal[4] + ", " + cochesTotal[5] + ", " + cochesTotal[6] + ", " + cochesTotal[7] + ", " + cochesTotal[8] + "." + "</i>"; 
+	var texto = " ";
+	
+	for (i in cochesTotal) {
+		if (i < cochesTotal.length-1) {
+			texto += cochesTotal[i].trim() + ", ";
+		} else {
+			texto += cochesTotal[i].trim() + ".";
+		}	
+	}
+	
+	document.getElementById("etiqueta3").innerHTML = "<i><u>" + "Representación de la matriz " + "</u>" + ": Grupo Volkswagen: " + texto + "</i>"; 
+	
 }
 //EJERCICIO 4
 /*A partir del array creado anteriormente, crear una función que introduzca entre los valores del conjunto "Seat" y "Audi" los valores "Scania" y "MAN" sin espacios en blanco. */
@@ -65,11 +80,23 @@ function incluirCochesenMedio() {
 		return false;
 		}
 	
-	var arrayCochesEntrada = cochesEntrada.split(",");
+	var cochesSin = cochesEntrada.replace(/\"/gi, " ");
+	
+	var arrayCochesEntrada = cochesSin.split(",");
 		
 	arrayCoches.splice(4, 0, arrayCochesEntrada[0], arrayCochesEntrada[1]);
 	
-	document.getElementById("etiqueta4").innerHTML = "<i><u>" + "Representación de la matriz " + "</u>" + ": Grupo Volkswagen: " + arrayCoches[0] + ", " + arrayCoches[1] + ", " + arrayCoches[2] + ", " + arrayCoches[3] + ", " + arrayCoches[4] + ", " + arrayCoches[5] + ", " + arrayCoches[6] + ", " + arrayCoches[7] + ", " + arrayCoches[8] + ", " + arrayCoches[9] + ", " + arrayCoches[10] + "." + "</i>"; 
+	var texto = " ";
+	
+	for (i in arrayCoches) {
+		if (i < arrayCoches.length-1) {
+			texto += arrayCoches[i].trim() + ", ";
+		} else {
+			texto += arrayCoches[i].trim() + ".";
+		}	
+	}
+	
+	document.getElementById("etiqueta4").innerHTML = "<i><u>" + "Representación de la matriz " + "</u>" + ": Grupo Volkswagen: " + texto + "</i>";  
 }
 
 //EJERCICIO 5
