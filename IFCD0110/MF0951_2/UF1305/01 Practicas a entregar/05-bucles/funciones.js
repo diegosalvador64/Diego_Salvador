@@ -75,3 +75,100 @@ function signoZodiaco() {
 	
 	document.getElementById("etiqueta2").innerHTML = 'Naciste un ' + dia + ' de ' + meses[fecha.getMonth()] + '<br><br>' + '<strong>Eres ' + signo + '</strong>' + '<br>' + '<img src=' + '"' + imagen + '"' + ' style="width:100px; heigth:100px">';
 }
+/*Crear una función que, al introducir la fecha de nacimiento, muestre la categoría deportiva de fútbol a la que pertenece. Si la fecha es menor o no válida deberá de mostrar un mensaje indicando el problema.*/
+function calcularCategoriaDeportiva() {
+	var fecha = new Date(document.getElementById("date3").value);
+	
+	var fechaActual = new Date();
+	var anoUsuario = fecha.getFullYear();
+	var edad = (fechaActual.getFullYear() - anoUsuario);
+	
+	var resultado = " ";
+	
+	switch (edad) {
+		case 5:
+		case 6:
+		case 7:
+		   resultado = "Prebenjamines";
+		   break;
+		case 8:
+		case 9:
+		   resultado = "Benjamines";
+		   break;
+		case 10:
+		case 11:
+		   resultado = "Alevines";
+		   break;
+		case 12:
+		case 13:
+		   resultado = "Infantiles";
+		   break;
+		case 14:
+		case 15:
+		   resultado = "Cadetes";
+		   break;
+		case 16:
+		case 17:
+		case 18:
+		   resultado = "Juveniles";
+		   break;
+		default: 
+		   break;
+	}
+		if (edad > 18) {
+			resultado = "Aficionados";
+		}
+		if (edad < 5) {
+			resultado = "Eres muy enano para jugar al fútbol";
+		}	
+	
+	document.getElementById("etiqueta3").innerHTML = "Tienes " + edad + " años" + "<br>" + "Tu categoría profesional es " + resultado;
+}
+/*Ejercicio 4: (for)(Array) 
+Crear una función que solicite varios nombre de frutas al usuario y cree un array con ellas.
+Mostar todos los valores del array en forma de lista desordenada HTML. */
+
+function crearListaFrutas() {
+		
+	var frutasEntrada= document.getElementById("text4").value;
+	
+	if (frutasEntrada == "") {
+		alert("teclee varios tipos de frutas separados por comas");
+		return false;
+		}
+	
+	var frutasSin = frutasEntrada.replace(/\"/gi, " ");//para quitar las posibles comillas que el usuario haya podido introducir
+	
+	var arrayFrutasEntrada = frutasSin.split(",");
+	
+	var texto = "<ul>";
+	
+	for (i in arrayFrutasEntrada) {
+		texto += "<li>" + arrayFrutasEntrada[i].trim() + "</li>";
+	}
+	
+	document.getElementById("etiqueta4").innerHTML = "Matriz de frutas en forma lista desordenada " + texto + "</ul>"; 
+	
+}
+/*EJERCICIO 5: Crear una función que al introducir un número del 1 al 10 muestre su tabla de multiplicar.*/
+function tablaMultiplicar() {
+	var numero= parseInt(document.getElementById("number5").value);
+	
+	if (isNaN(numero) == true) {
+		alert("teclee un número");
+		return false;
+			}
+	
+	var producto = 0;
+	var i = 0;
+	var resultado = "<table><tr><th>Tabla de multiplicar</th></tr>";
+	
+	for (i=1; i<= 10; i++) {
+		producto = numero * i;
+		resultado += "<tr><td>" + numero + "x" + i + "=" + producto + "</td></tr>";
+	}
+	resultado += "</table>";
+	document.getElementById("etiqueta5").style.width = "15%"; 
+	document.getElementById("etiqueta5").style.border = "1px solid black";
+	document.getElementById("etiqueta5").innerHTML = resultado;
+}
