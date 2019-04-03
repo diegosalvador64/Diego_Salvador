@@ -23,7 +23,7 @@
 <p><strong>Más información en... </strong><a href="https://webaim.org/blog/user-agent-string-history/" target="_blank">https://webaim.org/blog/user-agent-string-history/</a></p>
 </div>
 
-<div id="infoNav" class="divNAV">Info Navegador<script>window.onload = infoNavegador();</script></div>
+<div id="infoNav" class="divNAV"><h3>Información Navegador</h3><script>window.onload = infoNavegador();</script></div>
 </div>
 
 <hr>
@@ -116,6 +116,12 @@
       <td>El método history.forward () carga la  siguiente URL en la lista del historial.</td>
       <td><button type="button" onClick="irAdelante()">Ejecutar</button></td>
     </tr>
+    <tr>
+      <td><a href="@">history.go( ) </a></td>
+      <td>El método history.go () carga una URL específica de la lista del historial. Permite volver varias páginas hacia atrás (-x) o hacia adelante (+x)</td>
+      <td><button type="button" onClick="irGo()">Ejecutar</button></td>
+    </tr>
+    
   </tbody>
 </table>
 <br>
@@ -159,15 +165,23 @@
       </a><a href="@">window.clearTimeout(<em>timeoutVariable</em>)</a><a href="#">;      </a></td>
       <td>El método setTimeout ( ) ejecuta una función  en un intervalo de tiempo especificado.<br>
       El método clearTimeout ( ) detiene la ejecución de la función especificada en setTimeout ( ).</td>
-      <td><button type="button" onClick="myVar = setTimeout(miFuncion, 3000)">Iniciar</button><button type="button" onClick="clearTimeout(myVar)">Parar</button></td>
+      <td><button type="button" onClick="myVar = setTimeout(miTimeout, 3000)">Iniciar</button><button type="button" onClick="clearTimeout(myVar)">Parar</button></td>
     </tr>
     <tr>
       <td><a href="#">window.setInterval(function, milliseconds);<br>
       </a><a href="@">window.clearInterval(timerVariable);</a><a href="#"> </a></td>
       <td>El método setInterval ( ) repite una función dada en cada intervalo de tiempo dado..<br>
       El método clearInterval ( ) detiene la ejecución de la función especificada en setTimeout ( ).</td>
-      <td><button type="button" onClick="myTimer()">Iniciar</button>
+      <td><button type="button" onClick="myVar = setInterval(miIntervaloTiempo, 3000)">Iniciar</button>
         <button type="button" onClick="clearInterval(myVar)">Parar</button></td>
+    </tr>
+    <tr>
+      <td><a href="#">window.setInterval(function, milliseconds);<br>
+      </a><a href="@">window.clearInterval(timerVariable);</a><a href="#"> </a></td>
+      <td>El método setInterval ( ) repite una función dada en cada intervalo de tiempo dado.<br>
+      El método clearInterval ( ) detiene la ejecución de la función especificada en setTimeout ( ).<span style="font-size: 1.4em;">	<strong>Utilizando llamada a funciones con el onClick.</strong></span></td>
+      <td><button type="button" onClick="pruebaInterval()">Iniciar</button>
+        <button type="button" onClick="clearInterval(myVar2)">Parar</button></td>
     </tr>
   </tbody>
 </table>
