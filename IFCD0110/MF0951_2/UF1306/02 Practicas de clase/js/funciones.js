@@ -8,13 +8,89 @@ function infoNavegador() {
 	if (motorNombre === "Netscape") {motorNombre = "JavaScript";}
 	
 	//Nombre Navegador
-	var navegador = window.navigator.appCodeName;
+	/*var navegador = window.navigator.appCodeName;*/ //solo saca Mozilla. Por ello hay que buscarlo en agentUser
 	
-	//Versión Navegador. Saca prácticamente la misma información que userAgent
-	var versionNav = window.navigator.appVersion;
+	var navegador, agenteUsuario = navigator.userAgent;
+	//ojo que hay que buscar ls cadenas donde aparece el navegador en el orden en el que agentUser arroja la información de los mismos
+	if (agenteUsuario.indexOf("Firefox") > -1) 
+		{navegador = "Firefox";}
+	else if (agenteUsuario.indexOf("Opera") > -1 || agenteUsuario.indexOf("OPR") > -1)
+		{navegador = "Opera";}
+	else if (agenteUsuario.indexOf("Trident") > -1 || agenteUsuario.indexOf("MSIE") > -1)
+		{navegador = "I.Explorer";}
+	else if (agenteUsuario.indexOf("Edge") > -1)
+		{navegador = "Edge";}
+	else if (agenteUsuario.indexOf("Chrome") > -1)
+		{navegador = "Chrome";}
+	else if (agenteUsuario.indexOf("Safari") > -1)
+		{navegador = "Safari";}
+	else {navegador = "Desconocido";}
 	
-	//Propietario Navegador
-	var propietario = "Google, Inc";
+	//Versión Navegador. Saca prácticamente la misma información que userAgent. De aquí extraemos la versión aplicando el siguiente algoritmo
+	/*var versionNav = window.navigator.appVersion;*/
+	
+	var versionNav= " ";
+	
+	//Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0
+	if (agenteUsuario.indexOf("Firefox") > -1) {
+		var indice1 = agenteUsuario.lastIndexOf("Firefox/");
+		var version = agenteUsuario.substr(indice1,12);
+		var localizar = version.search("/");
+		var versionNav = version.slice(localizar+1,12);
+	}
+	//Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36 OPR/58.0.3135.127
+	else if (agenteUsuario.indexOf("Opera") > -1 || agenteUsuario.indexOf("OPR") > -1) {
+		var indice2 = agenteUsuario.lastIndexOf("OPR/");
+		var version = agenteUsuario.substr(indice2,18);
+		var localizar = version.search("/");
+		var versionNav = version.slice(localizar+1,8);
+	}
+	/*Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; .NET4.0C; .NET4.0E; rv:11.0) like Gecko*/
+	else if (agenteUsuario.indexOf("Trident") > -1 || agenteUsuario.indexOf("MSIE") > -1) {
+		var indice3 = agenteUsuario.lastIndexOf("Trident/");
+		var version = agenteUsuario.substr(indice3,12);
+		var localizar = version.search("/");
+		var versionNav = version.slice(localizar+1,11);
+	}
+	/*Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/18.17763*/
+	else if (agenteUsuario.indexOf("Edge") > -1) {
+		var indice4 = agenteUsuario.lastIndexOf("Edge/");
+		var version = agenteUsuario.substr(indice4,14);
+		var localizar = version.search("/");
+		var versionNav = version.slice(localizar+1,10);
+	}
+	//Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36
+	else if (agenteUsuario.indexOf("Chrome") > -1) {
+		var indice5 = agenteUsuario.lastIndexOf("Chrome/");
+		var version = agenteUsuario.substr(indice5,20);
+		var localizar = version.search("/");
+		var versionNav = version.slice(localizar+1,11);
+	}
+	//Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/534.57.2 (KHTML, like Gecko) Version/5.1.7 Safari/534.57.2
+	else if (agenteUsuario.indexOf("Safari") > -1) {
+		var indice6 = agenteUsuario.lastIndexOf("Safari/");
+		var version = agenteUsuario.substr(indice6,16);
+		var localizar = version.search("/");
+		var versionNav = version.slice(localizar+1,13);
+	}
+	else {versionNav = "Desconocido";}
+	
+	//Propietario Navegador: se rellena con el siguiente algoritmo a partir de los datos de userAgent anteriormente extraido
+	var propietario = " ";
+	
+	if (agenteUsuario.indexOf("Firefox") > -1) 
+		{propietario = "Fundación Mozilla";}
+	else if (agenteUsuario.indexOf("Opera") > -1 || agenteUsuario.indexOf("OPR") > -1)
+		{propietario = "Opera Software";}
+	else if (agenteUsuario.indexOf("Trident") > -1 || agenteUsuario.indexOf("MSIE") > -1)
+		{propietario = "Microsoft Corporation";}
+	else if (agenteUsuario.indexOf("Edge") > -1)
+		{propietario = "Microsoft Corporation";}
+	else if (agenteUsuario.indexOf("Chrome") > -1)
+		{propietario = "Google, Inc.";}
+	else if (agenteUsuario.indexOf("Safari") > -1)
+		{propietario = "Apple Computer, Inc.";}
+	else {propietario = "Desconocido";}
 	
 	//Lenguaje Navegador
 	var lenguaje = window.navigator.language;
@@ -106,8 +182,24 @@ function tamanoVentana() {
 
 	var x = document.getElementById("infoVentana");
 	x.innerHTML = 
-    "La anchura interior de la ventana del navegador (en píxeles) es: " + w + ". La altura interior de la ventana del navegador (en píxeles) es: " + h;	
+    "<h3>" + "La ventana del navegador tiene anchura: " + w + "px, y de alto " + h +"px." + "</h3>";	
 }
+//Geolocalización
+function getLocation(){
+	
+	if (navigator.geolocation) {
+    	navigator.geolocation.getCurrentPosition(showPosition);
+  	} else { 
+    	document.getElementById("geolocalizacion").innerHTML = "La Geolocalización no es soportada por este navegador.";
+  	}
+}
+
+function showPosition(position) {
+  document.getElementById("geolocalizacion").innerHTML = "<h3>" + "Geolocalización de tu navegador: " + "Latitud: " + position.coords.latitude + ", Longitud: " + position.coords.longitude + "</h3>";
+}
+
+
+
 //Ancho y alto de la pantalla total
 function pantalla() {
 	document.getElementById("divBom").innerHTML = 
@@ -196,3 +288,42 @@ function miIntervaloTiempo() {
 			alert(d.toLocaleTimeString());
 	   			}
 	}
+//COOKIES
+//Crear una cookie del documento
+function setCookie(cname,cvalue,exdays) {
+  var d = new Date();
+  d.setTime(d.getTime() + (exdays*24*60*60*1000));
+  var expires = "expires=" + d.toGMTString();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+//Obtener la cookie
+function getCookie(cname) {
+  var name = cname + "=";
+  var decodedCookie = decodeURIComponent(document.cookie);
+  var ca = decodedCookie.split(';');
+  for(var i = 0; i < ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+//Chequear la cookie
+function checkCookie() {
+  var user=getCookie("username");
+  if (user != "") {
+    alert("Bienvenido " + user);
+  } else {
+     user = prompt("Por favor, teclee su nombre: ","");
+     if (user != "" && user != null) {
+       setCookie("username", user, 30);
+     }
+  }
+}
+//
+var h = document.cookie;
+alert("La Cookie es: " + h);
