@@ -1,0 +1,42 @@
+@charset "utf-8";
+/* CSS Document */
+
+#contenedor-cookies {
+	background-color: black;
+	opacity: 0.5;
+	color: white;
+	position: fixed;
+    bottom: 0;
+    width: 90%;
+	margin-left: 100px;
+	padding: 10px;
+	justify-content: center;
+	display: block;
+	z-index: 1;
+	font-size: 1.2em;
+	font-family: Lucida Grande, Lucida Sans Unicode, Lucida Sans, DejaVu Sans, Verdana," sans-serif";
+}
+
+#botonaceptar {
+	margin-left: 500px;
+}
+.contenedor {
+		position: relative;
+		
+	}
+#times {
+		position: absolute;
+		color: white;
+		top: 0px;
+		right: 10px;
+		font-weight: bold;
+		font-size: 2em;
+		z-index: 1;
+		}
+#aqui {
+	color: darkgreen;
+}
+#aqui:hover  {
+	color: yellow;
+}
+
