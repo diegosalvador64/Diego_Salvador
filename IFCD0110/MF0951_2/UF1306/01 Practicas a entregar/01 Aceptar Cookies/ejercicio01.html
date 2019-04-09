@@ -19,7 +19,7 @@ h1, h2, h3, h4, h5, h6 {
 </style>
 </head>
 <body>
-
+<div id="ocultar">
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
   <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
@@ -104,22 +104,46 @@ h1, h2, h3, h4, h5, h6 {
   
 <!-- End page content -->
 </div>
-<div id="contenedor-cookies">
-
-	<div class="contenedor"> 
-		<div id="times"><span onclick="checkCookie()">&times;</span></div>
-		<div id="div_cookies">
-			<p>Utilizamos cookies propias y de terceros para mejorar nuestros servicios y mostrarle publicidad relacionada con sus preferencias mediante el análisis de sus hábitos de navegación. Si continua navegando, consideramos que acepta su uso. Puede cambiar la configuración u obtener más información <a href="politica_cookies.html" target="_blank" id="aqui">aquí.</a></p> 
-			<button type="button" onClick="checkCookie()" id="botonaceptar">Aceptar</button>
-		</div>
-	</div>
-		
-</div>
-
 <!-- Footer -->
 <footer class="w3-center w3-light-grey w3-padding-32">
   <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
 </footer>
+</div>
+<div id="contenedor-cookies">
 
+	<div id="contenedor"> 
+		<div id="times"><span onMouseUp="checkCookie()"><a href="#">&times;</a></span></div>
+		<div id="div_cookies">
+			<p>Utilizamos cookies propias y de terceros para mejorar nuestros servicios y mostrarle publicidad relacionada con sus preferencias mediante el análisis de sus hábitos de navegación. Si continua navegando, consideramos que acepta su uso. Puede cambiar la configuración u obtener más información <a href="politica_cookies.html" target="_blank" id="aqui">aquí.</a></p> 
+			<button type="button" onMouseUp="checkCookie()" id="botonaceptar">Aceptar</button>
+		</div>
+	</div>
+		
+</div>
+<script>
+	//Obtener la caja Modal
+	var caja = document.getElementById("contenedor-cookies");
+	//Obtener el botón de la caja Modal
+	var boton = document.getElementById("botonaceptar");
+	//Obtener el aspa que cierra la caja Modal
+	var span = document.getElementById("times");
+	
+	//Obtener la caja superior "Ocultar"
+	var ocultar = document.getElementById("ocultar");
+
+	//cuando el usuario hace click en el botón, cierra el cuadro Modal
+
+	boton.onclick = function() {
+		caja.style.display = "none";
+		ocultar.style.opacity = 1;
+		ocultar.style.pointerEvents= "auto";
+	}
+
+	span.onclick = function() {
+		caja.style.display = "none";
+		ocultar.style.opacity = 1;
+		ocultar.style.pointerEvents= "auto";
+	}
+</script>
 </body>
 </html>
