@@ -1,3 +1,60 @@
 @charset "utf-8";
 /* CSS Document */
+.miImagen {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.miImagen:hover {opacity: 0.7;}
+
+/* El Modal (pantalla) */
+.modal {
+  display: none; /*oculto por defecto*/
+  position: fixed;  /*Permanece en el sitio*/ 
+  z-index: 1;  /*Colocado en primera posición*/  
+  padding-top: 100px;  /*Localización en la caja*/ 
+  left: 0;
+  top: 0;
+  width: 100%; /* Anchura completa */
+  height: 100%; /* Altura completa */
+  overflow: auto;  /* Scroll activado si fuese necesario */ 
+  background-color: rgba(0,0,0,0.9); /* Opacidad*/ 
+}
+
+/* Contenido del Modal (imagen) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Captura de la imagen Modal */
+.captura {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+/* El Botón de Cerrar */
+.cerrar {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.cerrar:hover,
+.cerrar:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
 
