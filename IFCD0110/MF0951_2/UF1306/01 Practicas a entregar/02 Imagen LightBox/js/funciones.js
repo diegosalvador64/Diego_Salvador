@@ -3,7 +3,11 @@
 function tratarModal(a) { //ojo, que le he metido un parámetro "a" si utilizo los id
 		var b = a-1;
 		var modal = document.getElementById('miModal' + a);
-					
+		
+		/*var imgSRC = document.getElementsByTagName("img")[a].src;*///para tratarla a partir de la etiqueta img. Así me evitaría tantos id, aunque es necesario identificar la imagen con su id
+		/*var imgSRC = document.getElementsByTagName("img")[a].alt;*/
+		//también se puede hacer con function nombre(this)
+	
 		// Obtener la imagen e insertarla en el modal - Usar el texto que aparece en "alt" como captura
 		var img = document.getElementById('miImagen' + a);
 		var modalImg = document.getElementById("img" + a); 
