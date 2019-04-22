@@ -1,31 +1,47 @@
 // JavaScript Document
-// Obtener el modal
-function tratarModal(a) { //ojo, que le he metido un parámetro "a" si utilizo los id
-		var b = a-1;
-		var modal = document.getElementById('miModal' + a);
-		
-		/*var imgSRC = document.getElementsByTagName("img")[a].src;*///para tratarla a partir de la etiqueta img. Así me evitaría tantos id, aunque es necesario identificar la imagen con su id
-		/*var imgSRC = document.getElementsByTagName("img")[a].alt;*/
-		//también se puede hacer con function nombre(this)
+//FUNCIÓN ABRIR CAJA MODAL CON LA IMAGEN
+function abrirFoto(foto) {
+
+//EXtraer el src de la imagen que se pulsa.	
+	var imagen = '<img class="imagen" src="' + foto.src + '" alt="' + foto.alt + 
+	' style="width:100%" onClick="cerrarFoto()">';
+
+//Mostrar texto alternativo en la etiqueta con clase leyenda
+	document.getElementsByClassName("leyenda")[0].innerHTML = foto.alt;
 	
-		// Obtener la imagen e insertarla en el modal - Usar el texto que aparece en "alt" como captura
-		var img = document.getElementById('miImagen' + a);
-		var modalImg = document.getElementById("img" + a); 
-		var captionText = document.getElementById("captura" + a);
-	    										
-		img.onclick = function() {
-			modal.style.display = "block";
-			modalImg.src = this.src;
-			captionText.innerHTML = this.alt;
-						
-			}
+//Mostrar la imagen dentro de la etiqueta demo
+	document.getElementById("demo").innerHTML = imagen;
 
-		// Guardar el elemento <span> que cierra el modal
-			
-			var span = document.getElementsByClassName("cerrar")[b];
+// Obtener el elemento caja modal y mostrar la Caja Modal
+    var caja = document.getElementById("modal1");
+	caja.style.display = "block";
+}
 
-		// Cuando el usuario clica en el aspa del <span>, se cierra el modal
-			span.onclick = function() { 
-			modal.style.display = "none";
-					}
+
+// FUNCIÓN CERRAR CAJA MODAL
+
+function cerrarFoto() {
+// Obtener la Caja Modal
+var caja = document.getElementById('modal1');
+	
+// Obtener el elemento <span> con la X que cierra la Caja Modal
+var span = document.getElementsByClassName("cerrar")[0];
+	
+// Obtener el elemento <span> con el texto que cierra la Caja Modal
+var span = document.getElementsByClassName("cerrar-texto")[0];
+
+// Cuando el usuario hace click en el texto CERRAR, cierra el cuadro Modal
+span.onclick = miFuncion();
+	function miFuncion() {
+  caja.style.display = "none";
+}
+// Cuando el usuario hace click en el <span> (x), cierra la caja modal
+span.onclick = function() {
+  caja.style.display = "none";
+}
+// Cuando el usuario hace click en el fondo oscuro, cierra la caja modal
+caja.onclick = function() {
+  caja.style.display = "none";
+}
+
 }

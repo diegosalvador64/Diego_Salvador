@@ -16,84 +16,114 @@ function abrir(){
 	document.getElementById("mensaje").style.display="none";
 	document.getElementById("miFormulario").reset();
 }
+//Función validar donde discrimina si debe valida el formulario o si debe valida el PIN, en función de si éste viene o no relleno.
+function validar() {
+	var pinx = document.forms["miFormulario"]["pin1"].value;
+	
+	if (pinx == "") {
+		var formulario = validarFormulario();
+	} 
+	else {
+		var pin = validarPin();
+	}
+}
 //Para comprobar si el usuario y contraseña es correcta//
 function validarFormulario() {
-			
-	var pin = document.getElementById("pin1").value;
-		
-	var usuario1 = {user:"juan", password:"1234", pin: 147}; 
-	var usuario2 = {user:"pedro", password:"4321", pin: 258}; 
-	var usuario3 = {user:"jose", password:"1324", pin: 369};
+	
+	document.getElementById("mensaje").style.display = "none";
 	
 	var usuario = document.forms["miFormulario"]["usuario"].value;
 	var pw = document.forms["miFormulario"]["password"].value;
 	
+	//Comprobar que los campos usuario y contraseña estén rellenos
   	if (usuario == "") {
     	alert("El usuario debe estar relleno");
     	return false;}
 	else if (pw == "") {
 		alert("La contraseña debe estar rellena");
     	return false;}
-	else return true;
 	
-	 /*switch(true) {
-		  case (usuario.length == 0 || pw.length == 0):
-		  alert("Teclee usuario y contraseña");
-	      break;
-         case (pin == " "):
-			 	alert("usuario de referencia " + usuario1.user);
-			 	alert("pw de referencia " + usuario1.password);
-			 	alert("usuario tecleado " + usuario);
-			 	alert("pw tecleado " + pw);
-			  	if (usuario1.user == usuario && usuario1.password == pw) { 
-				alert("Bienvenido " + usuario);
-				alert("paso por pin blanco usuario1");
-					return true;}
-				else if (usuario2.user == usuario && usuario2.password == pw) { 
-				 alert("Bienvenido " + usuario);
-				 alert("paso por pin blanco usuario2");
-					return true;}
-				else if (usuario3.user == usuario && usuario3.password == pw) { 
-				 alert("Bienvenido " + usuario);
-				 alert("paso por pin blanco usuario3");
-					return true;}
-				else {
-					document.getElementById("mensaje").style.display="block";
-					document.getElementById("mensaje").innerHTML = "Usuario o contraseña incorrecta";
-					return false;
-					}
-        		break;
-        case (pin !== " "):
-             if (usuario1.pin == pin && usuario1.user == usuario) { 
-				alert("paso por pin relleno usuario1")
-			   document.getElementById("password").innerHTML = usuario1.password;
-			 	return true;}
-				else if (usuario2.pin == pin && usuario2.user == usuario) {
-				alert("paso por pin relleno usuario1")
-			   document.getElementById("password").innerHTML = usuario2.password;
-				return true;}
-				else if (usuario3.pin == pin && usuario3.user == usuario) { 
-				alert("paso por pin relleno usuario1");
-				document.getElementById("password").innerHTML = usuario3.password;
-				return true;}
-			  else {
-				document.getElementById("mensaje").style.display="block";
-			  	document.getElementById("mensaje").innerHTML = "Usuario o PIN incorrecto";
-			  	return false}
-	  
-        break;
+	//Comprobar que no hay espacios en blanco en una cadena con la RegExp(/\s/)
+	//El método test busca una cadena para el carácter dado, en este caso, espacios:
+	
+	var espacios = new RegExp(/\s/);
+	
+	if(espacios.test(usuario)){
+			alert('No se permiten espacios en el usuario');
+			return false;
+		}
+   
+	if(espacios.test(pw)){
+			alert('No se permiten espacios en la contraseña');
+			return false;
+		}
+   	
+	//Comprobar que usuario y contrseña son válidas, accediendo a las objetos usuario1, usuario2, usuario3:
+	var usuario1 = {user:"juan", password:"1234", pin: 147}; 
+	var usuario2 = {user:"pedro", password:"4321", pin: 258}; 
+	var usuario3 = {user:"jose", password:"1324", pin: 369};
 		
-        default:
-            alert("default");
-        break;
-    }*/
-	
+	if  (usuario == usuario1.user && pw == usuario1.password) {alert("¡Bienvenido a la web!");}
+	else if	(usuario == usuario2.user && pw == usuario2.password) {alert("¡Bienvenido a la web!");} 
+	else if	(usuario == usuario3.user && pw == usuario3.password) {alert("¡Bienvenido a la web!");} 
+	else	{
+		document.getElementById("mensaje").style.display = "block";
+		document.getElementById("mensaje").innerHTML = 'Usuario o contraseña incorrecta';
+		return false;
+		}
+		  		
 	}
-
+//Comprobar campo numérico mientras escribo un texto. Se entra en esta función al teclear (evento onkeyUp)
+ function Solo_Numerico(variable){
+	 Numer=parseInt(variable);
+        if (isNaN(Numer)){
+            return "";
+        }
+        return Numer;
+    }
+    function ValNumero(Control){
+		Control.value=Solo_Numerico(Control.value);
+    }
 //Para recordar la contraseña: Introduzca el PIN//
 function recordarContrasena() {
 	document.getElementById("pin1").style.display = "block";
 	
+	}
+
+function validarPin() {
+	
+	
+	var pinx = document.forms["miFormulario"]["pin1"].value;
+		
+	//Comprobar que el pin es válido para que muestre usuario y contraseña:
+	var usuario1 = {user:"juan", password:"1234", pin: 147}; 
+	var usuario2 = {user:"pedro", password:"4321", pin: 258}; 
+	var usuario3 = {user:"jose", password:"1324", pin: 369};
+	
+		
+	if  (pinx == usuario1.pin) {
+		document.forms["miFormulario"]["usuario"].value = usuario1.user;
+		document.forms["miFormulario"]["password"].value = usuario1.password;
+		document.forms["miFormulario"]["mensaje"].style.display = "none";
+		document.forms["miFormulario"]["pin1"].value = "";
+		}
+	else if	(pinx == usuario2.pin) {
+		document.forms["miFormulario"]["usuario"].value = usuario2.user;
+		document.forms["miFormulario"]["password"].value = usuario2.password;
+		document.forms["miFormulario"]["mensaje"].style.display = "none";
+		document.forms["miFormulario"]["pin1"].value = "";
+		} 
+	else if	(pinx == usuario3.pin) {
+		document.forms["miFormulario"]["usuario"].value = usuario3.user;
+		document.forms["miFormulario"]["password"].value = usuario3.password;
+		document.forms["miFormulario"]["mensaje"].style.display = "none";
+		document.forms["miFormulario"]["pin1"].value = "";
+		} 
+	else	{
+		document.getElementById("mensaje").style.display = "block";
+		document.forms["miFormulario"]["mensaje"].value = 'PIN INCORRECTO';
+		}
+		  		
 	}
 
 function checkCookie() {
