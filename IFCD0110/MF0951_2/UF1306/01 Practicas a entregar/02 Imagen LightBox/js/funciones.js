@@ -44,4 +44,8 @@ caja.onclick = function() {
   caja.style.display = "none";
 }
 
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 8ceb4659ec98a7dde51f5d27a30842db8af86077
