@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="es-ES"><head>
+<meta charset="utf-8">
+<title>Eventos del DOM</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="keywords" content="HTML, CSS, JavaScript">
+<meta name="description" content="Aprende Javascript con ejemplos pr&aacute;cticos">
+<script src="js/funciones.js"></script>
+<link href="css/estilos.css" rel="stylesheet" type="text/css">
+<link rel="icon" href="img/javajcript.png" type="image/png" />
+<style>
+	/* CUADROS FLEXIBLES */
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: DodgerBlue;
+}
+
+.flex-container > div {
+  background-color: #f1f1f1;
+  width: 200px; /*100px*/
+  margin: 10px;
+  text-align: center;
+  /*line-height: 75px;*/
+  /*font-size: 30px;*/
+}
+/* TARJETA */
+.tarjeta {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 100%;/*40%*/
+  border-radius: 5px;
+  height: 100%;
+}
+
+.tarjeta:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.imgBombilla {
+  border-radius: 5px 5px 0 0;
+  margin: 10px;
+  max-width: 100px;
+}
+
+.contenido {
+  padding: 2px 5px;
+}
+.tabla {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.tabla th, .tabla td {
+  text-align: left;
+  padding: 8px;
+}
+
+.tabla tr:nth-child(even) {background-color: #f2f2f2;}
+</style>
+</head>
+
+<body>
+<div class="container">
+<h1>JavaScript HTML Eventos DOM</h1>
+<hr>
+<h2>Eventos</h2>
+<p>Se llama evento a un suceso que tiene lugar en el sistema cuando un usuario ejecuta alguna acción. <strong>Los eventos se asocian a elementos HTML</strong> y las acciones que se ejecutan se programan en JavaScript . JavaScript puede ejecutarse cuando se produce un evento<strong><strong>,</strong></strong> como cuando un usuario hace clic en un elemento HTML. Para ejecutar el código cuando un usuario hace clic en un elemento, se añade código JavaScript a un atributo de evento HTML. </p>
+<p>Sintaxis: onclick=&quot;<em>JavaScript</em>&quot;;</p>
+<div>
+  <h2>Enciende las bombillas</h2>
+  <p><button onClick="apagar()" style="font-size=15px;">Apagar todas las bombillas</button></p>
+</div>
+ <script>
+	 function apagar() {
+		 var bombillas = document.getElementsByClassName("imgBombilla");
+		/* var i;*/
+		 /*for (i = 0; i < bombillas.length; i++) {*/
+		 for (i in bombillas) { //sustituye a las condiciones de bucle de arriba
+		 	bombillas[i].src = "img/pic_bulboff.gif";}
+	 }
+	
+</script>
+
+<div class="flex-container">
+  <div>
+	<div class="tarjeta">
+		<img id="img1" src="img/pic_bulboff.gif" alt="Bombilla OFF" class="imgBombilla" style="width:100%"
+		onclick="onclick2()">
+		<div class="contenido">
+		  <h4><b>onclick</b></h4> 
+			<!--<p>El evento ocurre cuando el usuario hace clic en un elemento.</p>--> 
+		</div>
+	</div>
+	<script>
+	  function onclick2() {
+		  	   document.getElementById('img1').src="img/pic_bulbon.gif";
+	  }
+	  
+	  </script>
+ </div>
+  <div>
+  	<div class="tarjeta">
+		<img id="img2" src="img/pic_bulboff.gif" alt="Bombilla OFF" class="imgBombilla" style="width:100%" ondblclick="ondblclick2()">>
+		<div class="contenido">
+		  <h4><b>ondblclick</b></h4> 
+			<!--<p>El evento ocurre cuando el usuario hace doble clic en un elemento.</p> -->
+		</div>
+	</div>
+  </div>
+  
+  <script>
+	  function ondblclick2() {
+		  	   document.getElementById('img2').src="img/pic_bulbon.gif";
+	  }
+  </script>
+  
+  <div>
+    <div class="tarjeta">
+		<img id="img3" src="img/pic_bulboff.gif" alt="Bombilla OFF" class="imgBombilla" style="width:100%" oncontextmenu="document.getElementById('img3').src='img/pic_bulbon.gif'">
+		<div class="contenido">
+		  <h4><b>oncontextmenu</b></h4> 
+			<!--<p>El evento ocurre cuando el usuario hace clic con el botón derecho en un elemento para abrir un menú contextual</p> -->
+		</div>
+	</div>
+  </div>  
+  <div>
+  	<div class="tarjeta">
+		<img id="img4" src="img/pic_bulboff.gif" alt="Bombilla OFF" class="imgBombilla" style="width:100%"
+		onmousedown="document.getElementById('img4').src='img/pic_bulbon.gif'">
+		<div class="contenido">
+		  <h4><b>onmousedown</b></h4> 
+			<!--<p>El evento ocurre cuando el usuario presiona un botón del mouse sobre un elemento.</p> -->
+		</div>
+	</div>
+  </div>
+  <div>
+    <div class="tarjeta">
+		<img id="img5" src="img/pic_bulboff.gif" alt="Bombilla OFF" class="imgBombilla" style="width:100%"
+		onmouseenter="document.getElementById('img5').src='img/pic_bulbon.gif'">
+		<div class="contenido">
+		  <h4><b>onmouseenter</b></h4> 
+		  <!--<p>El evento ocurre cuando el puntero se mueve a un elemento.</p> -->
+		</div>
+	</div>
+  </div>
+  <div>
+    <div class="tarjeta">
+		<img id="img6" src="img/pic_bulboff.gif" alt="Bombilla OFF" class="imgBombilla" style="width:100%"
+		onmouseleave="document.getElementById('img6').src='img/pic_bulbon.gif'">
+		<div class="contenido">
+		  <h4><b>onmouseleave</b></h4> 
+		  <!--<p>El evento ocurre cuando el puntero se mueve fuera de un elemento.</p> -->
+		</div>
+	</div>
+  </div>  
+  <div>
+    <div class="tarjeta">
+		<img id="img7" src="img/pic_bulboff.gif" alt="Bombilla OFF" class="imgBombilla" style="width:100%"
+		onmousemove="document.getElementById('img7').src='img/pic_bulbon.gif'">
+		<div class="contenido">
+		  <h4><b>onmousemove</b></h4> 
+		  <!--<p>El evento ocurre cuando el puntero se mueve mientras está sobre un elemento.</p> -->
+		</div>
+	</div>
+  </div>
+  <div>
+    <div class="tarjeta">
+		<img id="img8" src="img/pic_bulboff.gif" alt="Bombilla OFF" class="imgBombilla" style="width:100%"
+		onmouseout="document.getElementById('img8').src='img/pic_bulbon.gif'">
+		<div class="contenido">
+		  <h4><b>onmouseout</b></h4> 
+		  <!--<p>El evento ocurre cuando un usuario mueve el puntero del mouse fuera de un elemento o de uno de sus hijos.</p> -->
+		</div>
+	</div>
+  </div>
+  <div>
+    <div class="tarjeta">
+		<img id="img9" src="img/pic_bulboff.gif" alt="Bombilla OFF" class="imgBombilla" style="width:100%"
+		onmouseover="document.getElementById('img9').src='img/pic_bulbon.gif'">
+		<div class="contenido">
+		  <h4><b>onmouseover</b></h4> 
+		  <!--<p>El evento ocurre cuando el puntero se mueve a un elemento o a uno de sus hijos.</p>--> 
+		</div>
+	</div>
+  </div>  
+  <div>
+    <div class="tarjeta">
+		<img id="img10" src="img/pic_bulboff.gif" alt="Bombilla OFF" class="imgBombilla" style="width:100%"
+		onmouseup="document.getElementById('img10').src='img/pic_bulbon.gif'">
+		<div class="contenido">
+		  <h4><b>onmouseup</b></h4> 
+		  <!--<p>El evento ocurre cuando un usuario suelta un botón del mouse sobre un elemento.</p> -->
+		</div>
+	</div>
+  </div>
+<!--  <div>11</div>
+  <div>12</div>  -->
+</div>
+<hr>
+<h2>Eventos de ratón</h2>
+<p>Estos tipos de eventos pertenece al objeto MouseEvent:</p>
+<table class="tabla">
+  <tbody>
+    <tr>
+      <th>Evento</th>
+      <th>Descripción</th>
+    </tr>
+    <tr>
+      <td><a href="#">onclick</a></td>
+      <td> El evento ocurre cuando el usuario hace clic en un elemento.</td>
+    </tr>
+    <tr>
+      <td><a href="#">oncontextmenu</a></td>
+      <td> El evento ocurre cuando el usuario hace clic con el botón derecho en un elemento para abrir un menú contextual.</td>
+    </tr>
+    <tr>
+      <td><a href="#">ondblclick</a></td>
+      <td>El evento ocurre cuando el usuario hace doble clic en un elemento.</td>
+    </tr>
+    <tr>
+      <td><a href="#">onmousedown</a></td>
+      <td> El evento ocurre cuando el usuario presiona un botón del mouse sobre un elemento.</td>
+    </tr>
+    <tr>
+      <td><a href="#">onmouseenter</a></td>
+      <td> El evento ocurre cuando el puntero se mueve a un elemento.</td>
+    </tr>
+    <tr>
+      <td><a href="#">onmouseleave</a></td>
+      <td> El evento ocurre cuando el puntero se mueve fuera de un elemento.</td>
+    </tr>
+    <tr>
+      <td><a href="#">onmousemove</a></td>
+      <td>El evento ocurre cuando el puntero se mueve mientras está sobre un elemento.</td>
+    </tr>
+    <tr>
+      <td><a href="#">onmouseout</a></td>
+      <td>El evento ocurre cuando un usuario mueve el puntero del mouse fuera de un elemento o de uno de sus hijos.</td>
+    </tr>
+    <tr>
+      <td><a href="#">onmouseover</a></td>
+      <td>El evento ocurre cuando el puntero se mueve a un elemento o a uno de sus hijos.</td>
+    </tr>
+    <tr>
+      <td><a href="#">onmouseup</a></td>
+      <td> El evento ocurre cuando un usuario suelta un botón del mouse sobre un elemento.</td>
+    </tr>
+  </tbody>
+</table>
+<p></p>
+<hr>
+<h2>Eventos del Portapapeles</h2>
+<p>Estos tipos de eventos pertenece al objeto ClipboardEvent:</p>
+<table class="tabla">
+  <tbody>
+    <tr>
+      <th>Event</th>
+      <th>Description</th>
+      <th>Funcionamiento</th>
+    </tr>
+    <tr>
+      <td><a href="#">oncopy</a></td>
+      <td>El evento ocurre cuando el usuario copia el contenido de un elemento. </td>
+      <td><input class="input" name="input1" type="text" value="Copia este texto" 
+       oncopy="document.getElementById('demo1').innerHTML = '¡Has copiado el texto!'">
+        <label for="input1" id="demo1"></label></td>
+      
+    </tr>
+    <tr>
+      <td><a href="#">oncut</a></td>
+      <td>El evento ocurre cuando el usuario corta el contenido de un elemento. </td>
+      <td><input name="input2" type="text" class="input" value="Corta este texto"
+       oncut="document.getElementById('demo2').innerHTML = '¡Has cortado el texto!'">
+        <label for="input2" id="demo2"></label></td>
+      
+    </tr>
+    <tr>
+      <td><a href="#">onpaste</a></td>
+      <td>El evento ocurre cuando el usuario pega el contenido de un elemento. </td>
+      <td><input class="input" name="input3" type="text" value="Pega el texto aquí"
+       onpaste="document.getElementById('demo3').innerHTML = '¡Has pegado el texto!'">
+        <label for="input3" id="demo3"></label></td>
+      
+    </tr>
+  </tbody>
+</table>
+<hr>
+<h2>Eventos de teclado</h2>
+<p>Estos tipos de eventos pertenece al objeto KeyboardEvent:</p>
+
+<table class="tabla">
+  <tbody>
+    <tr>
+      <th>Evento</th>
+      <th>Descripción</th>
+      <th>&nbsp;</th>
+    </tr>
+    <tr>
+      <td><a href="#">onkeydown</a></td>
+      <td> El evento ocurre cuando el usuario está presionando una tecla.</td>
+      <td><input class="input" name="input4" id="input4" type="text" value="presiona una tecla" 
+      onkeydown="document.getElementById('demo4').innerHTML = 'Estás presionando una tecla'">
+      <label for="input4" id="demo4"></label></td>
+     
+    </tr>
+    
+    <tr>
+      <td><a href="#">onkeypress</a></td>
+      <td> El evento ocurre cuando el usuario presiona una tecla.</td>
+      <td><input class="input" name="input5" id="input5" type="text" value="presiona una tecla"
+      onkeypress="document.getElementById('demo5').innerHTML = 'Estás presionando una tecla'">
+      <label for="input5" id="demo5"></label></td>
+     
+    </tr>
+    <tr>
+      <td><a href="#">onkeyup</a></td>
+      <td>El evento ocurre cuando el usuario libera una tecla.</td>
+      <td><input class="input" name="input6" id="input6" type="text" value="pulsa una tecla y suelta"
+       onkeyup="document.getElementById('demo6').innerHTML = '¡Has pulsado una tecla y has soltado!'">
+      <label for="input6" id="demo6"></label></td>
+     
+    </tr>
+  </tbody>
+</table>
+<hr>
+</div>
+</body>
+</html>

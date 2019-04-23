@@ -1,7 +1,9 @@
 // JavaScript Document
-
-
-//cierra con el aspa y en cerrar.
+//Declaración variables globales
+	var usuario1 = {user:"juan", password:"1234", pin: 147}; 
+	var usuario2 = {user:"pedro", password:"4321", pin: 258}; 
+	var usuario3 = {user:"jose", password:"1324", pin: 369};
+//cierra con el aspa y cerrar.
 function cerrar(){
 	document.getElementById("miModal").style.display="none";
 	document.getElementById("pin1").style.display = "none";
@@ -21,10 +23,10 @@ function validar() {
 	var pinx = document.forms["miFormulario"]["pin1"].value;
 	
 	if (pinx == "") {
-		var formulario = validarFormulario();
+		validarFormulario();
 	} 
 	else {
-		var pin = validarPin();
+		validarPin();
 	}
 }
 //Para comprobar si el usuario y contraseña es correcta//
@@ -59,10 +61,7 @@ function validarFormulario() {
 		}
    	
 	//Comprobar que usuario y contrseña son válidas, accediendo a las objetos usuario1, usuario2, usuario3:
-	var usuario1 = {user:"juan", password:"1234", pin: 147}; 
-	var usuario2 = {user:"pedro", password:"4321", pin: 258}; 
-	var usuario3 = {user:"jose", password:"1324", pin: 369};
-		
+			
 	if  (usuario == usuario1.user && pw == usuario1.password) {alert("¡Bienvenido a la web!");}
 	else if	(usuario == usuario2.user && pw == usuario2.password) {alert("¡Bienvenido a la web!");} 
 	else if	(usuario == usuario3.user && pw == usuario3.password) {alert("¡Bienvenido a la web!");} 
@@ -96,11 +95,7 @@ function validarPin() {
 	var pinx = document.forms["miFormulario"]["pin1"].value;
 		
 	//Comprobar que el pin es válido para que muestre usuario y contraseña:
-	var usuario1 = {user:"juan", password:"1234", pin: 147}; 
-	var usuario2 = {user:"pedro", password:"4321", pin: 258}; 
-	var usuario3 = {user:"jose", password:"1324", pin: 369};
-	
-		
+			
 	if  (pinx == usuario1.pin) {
 		document.forms["miFormulario"]["usuario"].value = usuario1.user;
 		document.forms["miFormulario"]["password"].value = usuario1.password;
@@ -147,4 +142,13 @@ if (buscar != -1) { //si existe la cookie buscando por la clave, informamos que 
         alert("Este sitio utiliza cookies");
  		}
 	//document.getElementById("contenedor-cookies").style.display="none";
+}
+//Mostrar password
+function mostrarPassword () {
+  var campo = document.getElementById('password');
+  if (campo.type === "password") {
+    campo.type = "text";
+  } else {
+    campo.type = "password";
+  }
 }

@@ -217,18 +217,24 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
 	<div id="miModal" class="modal" >
 		<!--<span class="cerrar">&times;</span>-->
 		<div class="modal-content">	
-			<form action="mailto:login@servidor.com" method="post" name="Formulario de contacto" enctype="multipart/form-data" accept-charset="UTF-8" autocomplete="on" target="_blank" id="miFormulario" onSubmit="">
+			<form action="mailto:login@servidor.com" method="post" name="Formulario de contacto" enctype="multipart/form-data" accept-charset="UTF-8" autocomplete="on" target="_blank" id="miFormulario">
 			<fieldset>
 			<img class="img" src="../03 Login Popup/img/img_avatar.png" alt="#">
 			<div class="Char"><a href="#" onClick="cerrar()">&times;</a></div>	
 	  
 			<label for="usuario">Usuario</label><br>
 	  		<input type="text" name="usuario" id="usuario" value="" placeholder="Entrar usuario" pattern="^([a-z]+[0-9]{0,2}){4,12}$" required title="Letras y números. Tamaño mínimo: 4. Tamaño máximo: 12">
+	  		<label for="usuario" id="mensajesUser"></label>
 	  		<br>
 	  		<label for="password">Contraseña</label><br>
 			<input type="password" name="password" id="password" value="" placeholder="Entrar la contraseña" title="Rellene el campo" maxlength="4" required onkeyUp="return ValNumero(this);">
+	 		<label for="password" id="mensajesPass"></label><br>
+	 		
  	 		<label for="mensaje"></label>
 			<input type="text" name="mensaje" id="mensaje" value="Usuario o contraseña incorrecta" readonly>
+ 	 		
+ 	 		<input type="checkbox" onClick="mostrarPassword()"> Mostrar Contraseña
+ 	 		
   	 		<input type="submit" value="Login" onClick="validar()"><br>
 			<input type="checkbox" name="recordarme" id="recordarme" value="" required onClick="checkCookies()"> Recordarme <br>
 			<div class="footer">
