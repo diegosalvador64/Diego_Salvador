@@ -21,113 +21,17 @@
   </div>
   
   <!-- Navbar (placed at the bottom of the header image) -->
-  <div class="w3-bar w3-light-grey w3-round w3-display-bottommiddle w3-hide-small" style="bottom:-16px">
+  <div class="w3-bar w3-light-grey w3-round w3-display-bottommiddle w3-hide-small" style="bottom:-16px; width: 750px;">
     <a href="#" class="w3-bar-item w3-button">Home</a>
     <a href="ejercicio04.html" class="w3-bar-item w3-button">Slide</a>
-    <a href="acordeon.html" class="w3-bar-item w3-button">Acordeón</a>
-    <a href="tabs.html" class="w3-bar-item w3-button">Tabs</a>
+    <a href="#fotoAcordeon" class="w3-bar-item w3-button">Acordeón</a>
+    <a href="#fotoTabs" class="w3-bar-item w3-button">Tabs</a>
+    <a href="#fotoGallery" class="w3-bar-item w3-button">Galería Slide</a>
+    <a href="#fotoGrid" class="w3-bar-item w3-button">Responsive Foto Grid</a>
     <a href="#contact" class="w3-bar-item w3-button">Contact</a>
   </div>
 </header>
-<style>
-/* Estilos SlideShow */
-* {box-sizing:border-box}
 
-/* Slideshow container */
-.slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
-}
-
-/* Hide the images by default */
-.mySlides {
-  display: none;
-}
-
-/* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-}
-
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
-
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
-
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
-/* The dots/bullets/indicators */
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.active, .dot:hover {
-  background-color: #717171;
-}
-
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-
-@keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}	
-	
-	
-</style>
 <!-- Navbar on small screens -->
 <div class="w3-center w3-light-grey w3-padding-16 w3-hide-large w3-hide-medium">
 <div class="w3-bar w3-light-grey">
@@ -144,34 +48,34 @@
    <div class="slideshow-container">
 
 <!-- Full-width images with number and caption text -->
-	  <div class="mySlides fade accordion">
+	  <div class="mySlides fade">
 		<div class="numbertext">1 / 5</div>
 		<img src="img/ocean.jpg" alt="Ocean" class="w3-image" width="1000" height="500">
-		<div class="text">Foto 1</div>
+		<div class="text">Océano</div>
 	  </div>
 
-	  <div class="mySlides fade accordion">
+	  <div class="mySlides fade">
 		<div class="numbertext">2 / 5</div>
 		<img src="img/ocean2.jpg" alt="Ocean II" class="w3-image" width="1000" height="500">
-		<div class="text">Foto 2</div>
+		<div class="text">Océano II</div>
 	  </div>
 
-	  <div class="mySlides fade accordion">
+	  <div class="mySlides fade">
 		<div class="numbertext">3 / 5</div>
 		<img src="img/falls2.jpg" alt="Falls" class="w3-image" width="1000" height="500">
-		<div class="text">Foto 3</div>
+		<div class="text">Cascadas</div>
 	  </div>
 
-	  <div class="mySlides fade accordion">
+	  <div class="mySlides fade">
 		<div class="numbertext">4 / 5</div>
 		<img src="img/mountainskies.jpg" alt="Skies" class="w3-image" width="1000" height="500">
-		<div class="text">Foto 4</div>
+		<div class="text">Cielos</div>
 	  </div>
 
-	  <div class="mySlides fade accordion">
+	  <div class="mySlides fade">
 		<div class="numbertext">5 / 5</div>
 		<img src="img/mountains2.jpg" alt="Mountains"  class="w3-image" width="1000" height="500">
-		<div class="text">Foto 5</div>
+		<div class="text">Montañas</div>
 	  </div>
   <!--<img src="img/ocean.jpg" alt="Ocean" class="w3-image" width="1000" height="500">
   <img src="img/ocean2.jpg" alt="Ocean II" class="w3-image w3-margin-top" width="1000" height="500">
@@ -252,7 +156,244 @@ function showSlides2() {
 </script>
   <!-- Fin tratamiento Images (Portfolio en forma de slideshow) -->
   
+  <!--<img src="img/ocean.jpg" alt="Ocean" class="w3-image" width="1000" height="500">
+  <img src="img/ocean2.jpg" alt="Ocean II" class="w3-image w3-margin-top" width="1000" height="500">
+  <img src="img/falls2.jpg" alt="Falls" class="w3-image w3-margin-top" width="1000" height="500">
+  <img src="img/mountainskies.jpg" alt="Skies" class="w3-image w3-margin-top" width="1000" height="500">
+  <img src="img/mountains2.jpg" alt="Mountains" class="w3-image w3-margin-top" width="1000" height="500">-->
+  
+  
+ <!--Tratamiento responsive Image Grid--> 
+  
+ <!-- Photo Grid -->
+ <div id="fotoGrid">
+ <div class="headergrid">
+  <h1>Responsive Image Grid</h1>
+  <p>Cambia el tamaño de la ventana del navegador para ver el efecto responsivo</p>
+</div>
 
+<div class="rowgrid"> 
+  <div class="columngrid">
+    <img src="img/ocean.jpg" style="width:100%">
+    <img src="img/ocean2.jpg" style="width:90%">
+    <img src="img/falls2.jpg" style="width:50%">
+    <img src="img/mountainskies.jpg" style="width:75%">
+    <img src="img/mountains2.jpg" style="width:45%">
+  </div>
+  <div class="columngrid">
+    <img src="img/mountains2.jpg" style="width:90%">
+    <img src="img/mountainskies.jpg" style="width:75%">
+    <img src="img/falls2.jpg" style="width:60%">
+    <img src="img/ocean2.jpg" style="width:45%">
+    <img src="img/ocean.jpg" style="width:100%">
+  </div>
+  <div class="columngrid">
+    <img src="img/falls2.jpg" style="width:85%">
+    <img src="img/ocean2.jpg" style="width:100%">
+    <img src="img/mountainskies.jpg" style="width:34%">
+    <img src="img/ocean.jpg" style="width:90%">
+    <img src="img/mountains2.jpg" style="width:85%">
+   </div>
+   <div class="columngrid">
+    <img src="img/mountainskies.jpg" style="width:65%">
+    <img src="img/mountains2.jpg" style="width:85%">
+    <img src="img/falls2.jpg" style="width:50%">
+    <img src="img/ocean2.jpg" style="width:100%">
+    <img src="img/ocean.jpg" style="width:75%">
+   </div>
+ </div> 
+</div>
+   
+<!--Fin Tratamiento responsive Image Grid--> 
+ 
+<!-- Inicio tratamiento acordeón-->
+
+<!-- Photo Acordeón -->
+ <div id="fotoAcordeon">
+ <div class="headergrid">
+  <h1>Foto Acordeón</h1>
+ </div>
+
+<div class="w3-content w3-padding-large w3-margin-top">
+  <!-- Tratamiento Images (Portfolio en forma de acordeón) -->
+  		<button class="accordion" onClick="mostrarAcordeon()">Océano</button>
+		<div class="panelAcordeon">
+		  <img src="img/ocean.jpg" alt="Ocean" class="w3-image" width="1000" height="500">
+		</div>
+
+		<button class="accordion" onClick="mostrarAcordeon()">Océano II</button>
+		<div class="panelAcordeon">
+		  <img src="img/ocean2.jpg" alt="Ocean II" class="w3-image" width="1000" height="500">
+		</div>
+
+		<button class="accordion" onClick="mostrarAcordeon()">Cascadas</button>
+		<div class="panelAcordeon">
+		  <img src="img/falls2.jpg" alt="Falls" class="w3-image" width="1000" height="500">
+		</div>
+		
+		<button class="accordion" onClick="mostrarAcordeon()">Cielos</button>
+		<div class="panelAcordeon">
+		  <img src="img/mountainskies.jpg" alt="Skies" class="w3-image" width="1000" height="500">
+		</div>
+		
+		<button class="accordion" onClick="mostrarAcordeon()">Montañas</button>
+		<div class="panelAcordeon">
+		  <img src="img/mountains2.jpg" alt="Mountains" class="w3-image" width="1000" height="500">
+		</div>
+
+ </div> 
+
+<!-- Fin tratamiento acordeón-->
+
+<!-- Inicio Tratamiento Images forma de tabs (fichas) -->
+<!-- Photo Tabs (Fichas) -->
+ <div id="fotoTabs">
+ <div class="headergrid">
+  <h1>Fotos Tabs (fichas)</h1>
+ </div>
+
+<div class="w3-content w3-padding-large w3-margin-top">
+
+	  <div class="tab">
+	  <button class="tablinks" onclick="openFoto(event, 'foto1')">Océano</button>
+	  <button class="tablinks" onclick="openFoto(event, 'foto2')">Océano II</button>
+	  <button class="tablinks" onclick="openFoto(event, 'foto3')">Cascadas</button>
+	  <button class="tablinks" onclick="openFoto(event, 'foto4')">Cielos</button>
+	  <button class="tablinks" onclick="openFoto(event, 'foto5')">Montañas</button>
+	</div>
+
+	<div id="foto1" class="tabcontent">
+	  <h3>Océano</h3>
+	  <img src="img/ocean.jpg" alt="Ocean" class="w3-image" width="1000" height="500">
+	</div>
+
+	<div id="foto2" class="tabcontent">
+	  <h3>Océano II</h3>
+	  <img src="img/ocean2.jpg" alt="Ocean II" class="w3-image" width="1000" height="500">
+	</div>
+
+	<div id="foto3" class="tabcontent">
+	  <h3>Cascadas</h3>
+	  <img src="img/falls2.jpg" alt="Falls" class="w3-image" width="1000" height="500">
+	</div>
+  
+  	<div id="foto4" class="tabcontent">
+	  <h3>Cielos</h3>
+	  <img src="img/mountainskies.jpg" alt="Skies" class="w3-image" width="1000" height="500">
+	</div>
+	
+	<div id="foto5" class="tabcontent">
+	  <h3>Montañas</h3>
+	  <img src="img/mountains2.jpg" alt="Mountains" class="w3-image" width="1000" height="500">
+	</div>
+	
+</div>
+
+<!-- Fin Tratamiento Images forma de tabs (fichas) -->
+ 
+ <!-- Inicio Tratamiento Images Slide Gallery -->
+ 
+ <div id="fotoGallery">
+ <div class="headergrid">
+  <h1>Fotos Slide Gallery</h1>
+ </div>
+ 
+ <div class="containerG">
+  <div class="mySlidesG">
+    <div class="numbertextG">1 / 5</div>
+    <img src="img/ocean.jpg" alt="Ocean" class="w3-image w3-margin-top" width="100%">
+  </div>
+
+  <div class="mySlidesG">
+    <div class="numbertextG">2 / 5</div>
+    <img src="img/ocean2.jpg" alt="Ocean II" class="w3-image w3-margin-top" width="100%">
+  </div>
+
+  <div class="mySlidesG">
+    <div class="numbertextG">3 / 5</div>
+    <img src="img/falls2.jpg" alt="Falls" class="w3-image w3-margin-top" width="100%">
+  </div>
+    
+  <div class="mySlidesG">
+    <div class="numbertextG">4 / 5</div>
+    <img src="img/mountainskies.jpg" alt="Skies" class="w3-image w3-margin-top" width="100%">
+  </div>
+
+  <div class="mySlidesG">
+    <div class="numbertextG">5 / 5</div>
+    <img src="img/mountains2.jpg" alt="Mountains" class="w3-image w3-margin-top" width="100%">
+  </div>
+    
+  <a class="prev" onclick="plusSlidesG(-1)">❮</a>
+  <a class="next" onclick="plusSlidesG(1)">❯</a>
+
+  <div class="caption-containerG">
+    <p id="captionG"></p>
+  </div>
+
+
+  <div class="rowG">
+    <div class="columnG">
+      <img class="demoG cursorG" src="img/ocean.jpg" style="width:100%" onclick="currentSlideG(1)" alt="Océano">
+    </div>
+    <div class="columnG">
+      <img class="demoG cursorG" src="img/ocean2.jpg" style="width:100%" onclick="currentSlideG(2)" alt="Océano II">
+    </div>
+    <div class="columnG">
+      <img class="demoG cursorG" src="img/falls2.jpg" style="width:100%" onclick="currentSlideG(3)" alt="Cascadas">
+    </div>
+    <div class="columnG">
+      <img class="demoG cursorG" src="img/mountainskies.jpg" style="width:100%" onclick="currentSlideG(4)" alt="Cielos">
+    </div>
+    <div class="columnG">
+      <img class="demoG cursorG" src="img/mountains2.jpg" style="width:100%" onclick="currentSlideG(5)" alt="Montañas">
+    </div>    
+   </div>
+</div>
+
+ <script>
+//Este script le incluy en el código HTML para que se dispare la animación de fotos sin tener que hacer click en ningún sitio	 
+//Inicio Slide Gallery
+
+var slideIndexG = 1;
+showSlidesG(slideIndexG);
+
+function plusSlidesG(n) {
+  showSlidesG(slideIndexG += n);
+}
+
+function currentSlideG(n) {
+  showSlidesG(slideIndexG = n);
+}
+
+function showSlidesG(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlidesG");
+  var dots = document.getElementsByClassName("demoG");
+  var captionText = document.getElementById("captionG");
+  if (n > slides.length) {slideIndexG = 1}
+  if (n < 1) {slideIndexG = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndexG-1].style.display = "block";
+  dots[slideIndexG-1].className += " active";
+  captionText.innerHTML = dots[slideIndexG-1].alt;
+}	
+
+//Fin Slide Gallery
+	 
+	 
+</script> 
+ 
+ 
+ <!-- Fin Tratamiento Images Slide Gallery -->
+ 
+ 
+ 
   <!-- Contact -->
   <div class="w3-light-grey w3-padding-large w3-padding-32 w3-margin-top" id="contact">
     <h3 class="w3-center">Contact</h3>
@@ -279,6 +420,8 @@ function showSlides2() {
   </div>
 
 <!-- End page content -->
+</div>
+</div>
 </div>
 </body>
 </html>
