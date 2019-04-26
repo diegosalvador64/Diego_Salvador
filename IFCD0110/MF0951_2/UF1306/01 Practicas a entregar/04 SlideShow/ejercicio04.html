@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="css/estilos.css">
+<script src="js/funciones.js"></script>
+</head>
+<body class="w3-content" style="max-width:1200px">
+
+
+<!-- Header -->
+<header class="w3-display-container w3-content w3-center" style="max-width:1500px">
+  <img class="w3-image" src="img/photographer.jpg" alt="Me" width="1500" height="600">
+  <div class="w3-display-middle w3-padding-large w3-border w3-wide w3-text-light-grey w3-center">
+    <h1 class="w3-hide-medium w3-hide-small w3-xxxlarge">JANE DOE</h1>
+    <h5 class="w3-hide-large" style="white-space:nowrap">JANE DOE</h5>
+    <h3 class="w3-hide-medium w3-hide-small">PHOTOGRAPHER</h3>
+  </div>
+  
+  <!-- Navbar (placed at the bottom of the header image) -->
+  <div class="w3-bar w3-light-grey w3-round w3-display-bottommiddle w3-hide-small" style="bottom:-16px; width: 750px;">
+    <a href="#" class="w3-bar-item w3-button">Home</a>
+    <a href="ejercicio04.html" class="w3-bar-item w3-button">Slide</a>
+    <a href="#fotoAcordeon" class="w3-bar-item w3-button">Acordeón</a>
+    <a href="#fotoTabs" class="w3-bar-item w3-button">Tabs</a>
+    <a href="#fotoGallery" class="w3-bar-item w3-button">Galería Slide</a>
+    <a href="#fotoGrid" class="w3-bar-item w3-button">Responsive Foto Grid</a>
+    <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+  </div>
+</header>
+
+<!-- Navbar on small screens -->
+<div class="w3-center w3-light-grey w3-padding-16 w3-hide-large w3-hide-medium">
+<div class="w3-bar w3-light-grey">
+  <a href="#" class="w3-bar-item w3-button">Home</a>
+  <a href="#portfolio" class="w3-bar-item w3-button">Portfolio</a>
+  <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+  </div>
+</div>
+<!-- Page content -->
+<div class="w3-content w3-padding-large w3-margin-top" id="portfolio">
+
+  <!-- Tratamiento Images (Portfolio en forma de slideshow) -->
+ <!-- Contenedor del slide -->
+   <div class="slideshow-container">
+
+<!-- Full-width images with number and caption text -->
+	  <div class="mySlides fade">
+		<div class="numbertext">1 / 5</div>
+		<img src="img/ocean.jpg" alt="Ocean" class="w3-image" width="1000" height="500">
+		<div class="text">Océano</div>
+	  </div>
+
+	  <div class="mySlides fade">
+		<div class="numbertext">2 / 5</div>
+		<img src="img/ocean2.jpg" alt="Ocean II" class="w3-image" width="1000" height="500">
+		<div class="text">Océano II</div>
+	  </div>
+
+	  <div class="mySlides fade">
+		<div class="numbertext">3 / 5</div>
+		<img src="img/falls2.jpg" alt="Falls" class="w3-image" width="1000" height="500">
+		<div class="text">Cascadas</div>
+	  </div>
+
+	  <div class="mySlides fade">
+		<div class="numbertext">4 / 5</div>
+		<img src="img/mountainskies.jpg" alt="Skies" class="w3-image" width="1000" height="500">
+		<div class="text">Cielos</div>
+	  </div>
+
+	  <div class="mySlides fade">
+		<div class="numbertext">5 / 5</div>
+		<img src="img/mountains2.jpg" alt="Mountains"  class="w3-image" width="1000" height="500">
+		<div class="text">Montañas</div>
+	  </div>
+  <!--<img src="img/ocean.jpg" alt="Ocean" class="w3-image" width="1000" height="500">
+  <img src="img/ocean2.jpg" alt="Ocean II" class="w3-image w3-margin-top" width="1000" height="500">
+  <img src="img/falls2.jpg" alt="Falls" class="w3-image w3-margin-top" width="1000" height="500">
+  <img src="img/mountainskies.jpg" alt="Skies" class="w3-image w3-margin-top" width="1000" height="500">
+  <img src="img/mountains2.jpg" alt="Mountains" class="w3-image w3-margin-top" width="1000" height="500">-->
+  
+	  <!-- Next and previous buttons -->
+	  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+	  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div> 
+ 
+ <!-- The dots/circles debajo del slide -->
+	<div style="text-align:center">
+	  <span class="dot" onclick="currentSlide(1)"></span> 
+	  <span class="dot" onclick="currentSlide(2)"></span> 
+	  <span class="dot" onclick="currentSlide(3)"></span>
+	  <span class="dot" onclick="currentSlide(4)"></span>
+	  <span class="dot" onclick="currentSlide(5)"></span> 
+	</div>
+	
+<script>
+//Para que funcione el manual y automático a la vez, es necesario incluirlo en script dentro del html, porque si se llama al fichero funciones no funciona
+//Inicio Tratamiento para slideshow manual
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+
+  var i;
+  var slides = document.getElementsByClassName("mySlides"); //Crea array con la clase mySlides (las fotos excepto la de la chica)
+  var dots = document.getElementsByClassName("dot"); //Crea array con la clase dot (los circulitos de avance)
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+	  slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+//Fin Tratamiento para slideshow manual
+
+//Inicio Tratamiento slideshow automático
+
+var slideIndex2 = 0;
+showSlides2();
+
+function showSlides2() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex2++;
+  if (slideIndex2 > slides.length) {slideIndex2 = 1;}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex2-1].style.display = "block";  
+  dots[slideIndex2-1].className += " active";
+  setTimeout(showSlides2, 6000); // Change image every 2 seconds
+}
+//Fin Tratamiento slideshow automático		
+</script>
+  <!-- Fin tratamiento Images (Portfolio en forma de slideshow) -->
+  
+  <!--<img src="img/ocean.jpg" alt="Ocean" class="w3-image" width="1000" height="500">
+  <img src="img/ocean2.jpg" alt="Ocean II" class="w3-image w3-margin-top" width="1000" height="500">
+  <img src="img/falls2.jpg" alt="Falls" class="w3-image w3-margin-top" width="1000" height="500">
+  <img src="img/mountainskies.jpg" alt="Skies" class="w3-image w3-margin-top" width="1000" height="500">
+  <img src="img/mountains2.jpg" alt="Mountains" class="w3-image w3-margin-top" width="1000" height="500">-->
+  
+  
+ <!--Tratamiento responsive Image Grid--> 
+  
+ <!-- Photo Grid -->
+ <div id="fotoGrid">
+ <div class="headergrid">
+  <h1>Responsive Image Grid</h1>
+  <p>Cambia el tamaño de la ventana del navegador para ver el efecto responsivo</p>
+</div>
+
+<div class="rowgrid"> 
+  <div class="columngrid">
+    <img src="img/ocean.jpg" style="width:100%">
+    <img src="img/ocean2.jpg" style="width:90%">
+    <img src="img/falls2.jpg" style="width:50%">
+    <img src="img/mountainskies.jpg" style="width:75%">
+    <img src="img/mountains2.jpg" style="width:45%">
+  </div>
+  <div class="columngrid">
+    <img src="img/mountains2.jpg" style="width:90%">
+    <img src="img/mountainskies.jpg" style="width:75%">
+    <img src="img/falls2.jpg" style="width:60%">
+    <img src="img/ocean2.jpg" style="width:45%">
+    <img src="img/ocean.jpg" style="width:100%">
+  </div>
+  <div class="columngrid">
+    <img src="img/falls2.jpg" style="width:85%">
+    <img src="img/ocean2.jpg" style="width:100%">
+    <img src="img/mountainskies.jpg" style="width:34%">
+    <img src="img/ocean.jpg" style="width:90%">
+    <img src="img/mountains2.jpg" style="width:85%">
+   </div>
+   <div class="columngrid">
+    <img src="img/mountainskies.jpg" style="width:65%">
+    <img src="img/mountains2.jpg" style="width:85%">
+    <img src="img/falls2.jpg" style="width:50%">
+    <img src="img/ocean2.jpg" style="width:100%">
+    <img src="img/ocean.jpg" style="width:75%">
+   </div>
+ </div> 
+</div>
+   
+<!--Fin Tratamiento responsive Image Grid--> 
+ 
+<!-- Inicio tratamiento acordeón-->
+
+<!-- Photo Acordeón -->
+ <div id="fotoAcordeon">
+ <div class="headergrid">
+  <h1>Foto Acordeón</h1>
+ </div>
+
+<div class="w3-content w3-padding-large w3-margin-top">
+  <!-- Tratamiento Images (Portfolio en forma de acordeón) -->
+  		<button class="accordion" onClick="mostrarAcordeon()">Océano</button>
+		<div class="panelAcordeon">
+		  <img src="img/ocean.jpg" alt="Ocean" class="w3-image" width="1000" height="500">
+		</div>
+
+		<button class="accordion" onClick="mostrarAcordeon()">Océano II</button>
+		<div class="panelAcordeon">
+		  <img src="img/ocean2.jpg" alt="Ocean II" class="w3-image" width="1000" height="500">
+		</div>
+
+		<button class="accordion" onClick="mostrarAcordeon()">Cascadas</button>
+		<div class="panelAcordeon">
+		  <img src="img/falls2.jpg" alt="Falls" class="w3-image" width="1000" height="500">
+		</div>
+		
+		<button class="accordion" onClick="mostrarAcordeon()">Cielos</button>
+		<div class="panelAcordeon">
+		  <img src="img/mountainskies.jpg" alt="Skies" class="w3-image" width="1000" height="500">
+		</div>
+		
+		<button class="accordion" onClick="mostrarAcordeon()">Montañas</button>
+		<div class="panelAcordeon">
+		  <img src="img/mountains2.jpg" alt="Mountains" class="w3-image" width="1000" height="500">
+		</div>
+
+ </div> 
+
+<!-- Fin tratamiento acordeón-->
+
+<!-- Inicio Tratamiento Images forma de tabs (fichas) -->
+<!-- Photo Tabs (Fichas) -->
+ <div id="fotoTabs">
+ <div class="headergrid">
+  <h1>Fotos Tabs (fichas)</h1>
+ </div>
+
+<div class="w3-content w3-padding-large w3-margin-top">
+
+	  <div class="tab">
+	  <button class="tablinks" onclick="openFoto(event, 'foto1')">Océano</button>
+	  <button class="tablinks" onclick="openFoto(event, 'foto2')">Océano II</button>
+	  <button class="tablinks" onclick="openFoto(event, 'foto3')">Cascadas</button>
+	  <button class="tablinks" onclick="openFoto(event, 'foto4')">Cielos</button>
+	  <button class="tablinks" onclick="openFoto(event, 'foto5')">Montañas</button>
+	</div>
+
+	<div id="foto1" class="tabcontent">
+	  <h3>Océano</h3>
+	  <img src="img/ocean.jpg" alt="Ocean" class="w3-image" width="1000" height="500">
+	</div>
+
+	<div id="foto2" class="tabcontent">
+	  <h3>Océano II</h3>
+	  <img src="img/ocean2.jpg" alt="Ocean II" class="w3-image" width="1000" height="500">
+	</div>
+
+	<div id="foto3" class="tabcontent">
+	  <h3>Cascadas</h3>
+	  <img src="img/falls2.jpg" alt="Falls" class="w3-image" width="1000" height="500">
+	</div>
+  
+  	<div id="foto4" class="tabcontent">
+	  <h3>Cielos</h3>
+	  <img src="img/mountainskies.jpg" alt="Skies" class="w3-image" width="1000" height="500">
+	</div>
+	
+	<div id="foto5" class="tabcontent">
+	  <h3>Montañas</h3>
+	  <img src="img/mountains2.jpg" alt="Mountains" class="w3-image" width="1000" height="500">
+	</div>
+	
+</div>
+
+<!-- Fin Tratamiento Images forma de tabs (fichas) -->
+ 
+ <!-- Inicio Tratamiento Images Slide Gallery -->
+ 
+ <div id="fotoGallery">
+ <div class="headergrid">
+  <h1>Fotos Slide Gallery</h1>
+ </div>
+ 
+ <div class="containerG">
+  <div class="mySlidesG">
+    <div class="numbertextG">1 / 5</div>
+    <img src="img/ocean.jpg" alt="Ocean" class="w3-image w3-margin-top" width="100%">
+  </div>
+
+  <div class="mySlidesG">
+    <div class="numbertextG">2 / 5</div>
+    <img src="img/ocean2.jpg" alt="Ocean II" class="w3-image w3-margin-top" width="100%">
+  </div>
+
+  <div class="mySlidesG">
+    <div class="numbertextG">3 / 5</div>
+    <img src="img/falls2.jpg" alt="Falls" class="w3-image w3-margin-top" width="100%">
+  </div>
+    
+  <div class="mySlidesG">
+    <div class="numbertextG">4 / 5</div>
+    <img src="img/mountainskies.jpg" alt="Skies" class="w3-image w3-margin-top" width="100%">
+  </div>
+
+  <div class="mySlidesG">
+    <div class="numbertextG">5 / 5</div>
+    <img src="img/mountains2.jpg" alt="Mountains" class="w3-image w3-margin-top" width="100%">
+  </div>
+    
+  <a class="prev" onclick="plusSlidesG(-1)">❮</a>
+  <a class="next" onclick="plusSlidesG(1)">❯</a>
+
+  <div class="caption-containerG">
+    <p id="captionG"></p>
+  </div>
+
+
+  <div class="rowG">
+    <div class="columnG">
+      <img class="demoG cursorG" src="img/ocean.jpg" style="width:100%" onclick="currentSlideG(1)" alt="Océano">
+    </div>
+    <div class="columnG">
+      <img class="demoG cursorG" src="img/ocean2.jpg" style="width:100%" onclick="currentSlideG(2)" alt="Océano II">
+    </div>
+    <div class="columnG">
+      <img class="demoG cursorG" src="img/falls2.jpg" style="width:100%" onclick="currentSlideG(3)" alt="Cascadas">
+    </div>
+    <div class="columnG">
+      <img class="demoG cursorG" src="img/mountainskies.jpg" style="width:100%" onclick="currentSlideG(4)" alt="Cielos">
+    </div>
+    <div class="columnG">
+      <img class="demoG cursorG" src="img/mountains2.jpg" style="width:100%" onclick="currentSlideG(5)" alt="Montañas">
+    </div>    
+   </div>
+</div>
+
+ <script>
+//Este script le incluy en el código HTML para que se dispare la animación de fotos sin tener que hacer click en ningún sitio	 
+//Inicio Slide Gallery
+
+var slideIndexG = 1;
+showSlidesG(slideIndexG);
+
+function plusSlidesG(n) {
+  showSlidesG(slideIndexG += n);
+}
+
+function currentSlideG(n) {
+  showSlidesG(slideIndexG = n);
+}
+
+function showSlidesG(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlidesG");
+  var dots = document.getElementsByClassName("demoG");
+  var captionText = document.getElementById("captionG");
+  if (n > slides.length) {slideIndexG = 1}
+  if (n < 1) {slideIndexG = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndexG-1].style.display = "block";
+  dots[slideIndexG-1].className += " active";
+  captionText.innerHTML = dots[slideIndexG-1].alt;
+}	
+
+//Fin Slide Gallery
+	 
+	 
+</script> 
+ 
+ 
+ <!-- Fin Tratamiento Images Slide Gallery -->
+ 
+ 
+ 
+  <!-- Contact -->
+  <div class="w3-light-grey w3-padding-large w3-padding-32 w3-margin-top" id="contact">
+    <h3 class="w3-center">Contact</h3>
+    <hr>
+    <p>Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at. Phasellus sed ultricies mi non congue ullam corper. Praesent tincidunt sed tellus.</p>
+
+    <form action="/action_page.php" target="_blank">
+      <div class="w3-section">
+        <label>Name</label>
+        <input class="w3-input w3-border" type="text" required name="Name">
+      </div>
+      <div class="w3-section">
+        <label>Email</label>
+        <input class="w3-input w3-border" type="text" required name="Email">
+      </div>
+      <div class="w3-section">
+        <label>Message</label>
+        <input class="w3-input w3-border" required name="Message">
+      </div>
+      <button type="submit" class="w3-button w3-block w3-dark-grey">Send</button>
+    </form><br>
+    <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+
+  </div>
+
+<!-- End page content -->
+</div>
+</div>
+</div>
+</body>
+</html>
