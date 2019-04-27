@@ -182,7 +182,7 @@
 		}	 
 	 }
 // prueba trim:  elimina los espacios en blanco de ambos lados de una cadena.
- function + {
+ function pruebatrim() {
 		var palabra1 = prompt('Introduce una frase con espacios por delante y por detrás:');	
 	 	var resultado = palabra1.trim();
 	 	window.alert('La frase sin espacios queda : ' + resultado);
