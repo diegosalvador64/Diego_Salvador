@@ -1,5 +1,22 @@
 /* Estilos SlideShow */
 * {box-sizing:border-box}
+
+/* Estilos botón de inicio */
+.btnInicio {
+	border:none;
+	padding:8px 16px;
+	vertical-align:middle;
+	text-decoration:none;
+	color:white;
+	background-color:dimgrey;
+	text-align:center;
+	cursor:pointer;
+	}
+.btnInicio:hover {
+	opacity:0.7;
+}
+/*  Fin Estilos botón de inicio */
+
 /* Inicio tratamiento SlideShow */
 
 /* Slideshow container */
@@ -297,3 +314,61 @@
 }
 
 /* Fin Tratamiento Slide Gallery */
+
+/* Inicio Tratamiento Portfolio Gallery Filtering*/
+
+/* Center website */
+.rowP {
+  margin: 10px -16px;
+}
+
+/* Add padding BETWEEN each column */
+.rowP,
+.rowP > .columnP {
+  padding: 8px;
+}
+
+/* Create three equal columns that floats next to each other */
+.columnP {
+  float: left;
+  width: 33.33%;
+  display: none; /* Hide all elements by default */
+}
+
+/* Clear floats after rows */ 
+.rowP:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.contentP {
+  background-color: white;
+  padding: 10px;
+}
+
+/* The "show" class is added to the filtered elements */
+.showP {
+  display: block;
+}
+
+/* Style the buttons */
+.btnP {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.btnP:hover {
+  background-color: #ddd;
+}
+
+.btnP.activeP {
+  background-color: #666;
+  color: white;
+}
+
+/* Fin Tratamiento Portfolio Gallery Filtering*/

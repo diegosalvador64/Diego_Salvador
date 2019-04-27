@@ -21,13 +21,14 @@
   </div>
   
   <!-- Navbar (placed at the bottom of the header image) -->
-  <div class="w3-bar w3-light-grey w3-round w3-display-bottommiddle w3-hide-small" style="bottom:-16px; width: 750px;">
+  <div class="w3-bar w3-light-grey w3-round w3-display-bottommiddle w3-hide-small" style="bottom:-16px; width: 925px;" id="inicio">
     <a href="#" class="w3-bar-item w3-button">Home</a>
     <a href="ejercicio04.html" class="w3-bar-item w3-button">Slide</a>
     <a href="#fotoAcordeon" class="w3-bar-item w3-button">Acordeón</a>
     <a href="#fotoTabs" class="w3-bar-item w3-button">Tabs</a>
     <a href="#fotoGallery" class="w3-bar-item w3-button">Galería Slide</a>
     <a href="#fotoGrid" class="w3-bar-item w3-button">Responsive Foto Grid</a>
+    <a href="#mainP" class="w3-bar-item w3-button">Porftfolio Gallery Filtro</a>
     <a href="#contact" class="w3-bar-item w3-button">Contact</a>
   </div>
 </header>
@@ -162,6 +163,7 @@ function showSlides2() {
   <img src="img/mountainskies.jpg" alt="Skies" class="w3-image w3-margin-top" width="1000" height="500">
   <img src="img/mountains2.jpg" alt="Mountains" class="w3-image w3-margin-top" width="1000" height="500">-->
   
+  <a href="#inicio" class="btnInicio">Inicio</a>
   
  <!--Tratamiento responsive Image Grid--> 
   
@@ -205,6 +207,8 @@ function showSlides2() {
 </div>
    
 <!--Fin Tratamiento responsive Image Grid--> 
+
+<a href="#inicio" class="btnInicio">Inicio</a>
  
 <!-- Inicio tratamiento acordeón-->
 
@@ -244,6 +248,8 @@ function showSlides2() {
  </div> 
 
 <!-- Fin tratamiento acordeón-->
+
+<a href="#inicio" class="btnInicio">Inicio</a>
 
 <!-- Inicio Tratamiento Images forma de tabs (fichas) -->
 <!-- Photo Tabs (Fichas) -->
@@ -290,6 +296,8 @@ function showSlides2() {
 </div>
 
 <!-- Fin Tratamiento Images forma de tabs (fichas) -->
+
+<a href="#inicio" class="btnInicio">Inicio</a>
  
  <!-- Inicio Tratamiento Images Slide Gallery -->
  
@@ -389,10 +397,98 @@ function showSlidesG(n) {
 	 
 </script> 
  
- 
  <!-- Fin Tratamiento Images Slide Gallery -->
  
+ <a href="#inicio" class="btnInicio">Inicio</a>
  
+<!-- Tratamiento Portfolio Gallery Filtering -->
+ <!-- MAIN (Center website) -->
+<div class="headergrid" id="mainP">
+<h2>Portfolio Gallery Filtering</h2>
+
+<div id="myBtnContainer">
+  <button class="btnP activeP" onclick="filterSelection('all')"> Mostrar todo</button>
+  <button class="btnP" onclick="filterSelection('nature')"> Naturaleza</button>
+  <button class="btnP" onclick="filterSelection('cars')"> Coches</button>
+  <button class="btnP" onclick="filterSelection('people')"> Gente</button>
+</div>
+
+<!-- Portfolio Gallery Grid -->
+<div class="rowP">
+  <div class="columnP natureP">
+    <div class="contentP">
+      <img src="img/mountains.jpg" alt="Mountains" style="width:100%">
+      <h4>Montañas</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+  <div class="columnP natureP">
+    <div class="contentP">
+    <img src="img/lights.jpg" alt="Lights" style="width:100%">
+      <h4>Luces</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+  <div class="columnP natureP">
+    <div class="contentP">
+    <img src="img/nature.jpg" alt="Nature" style="width:100%">
+      <h4>Bosque</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+  
+  <div class="columnP carsP">
+    <div class="contentP">
+      <img src="img/cars1.jpg" alt="Car" style="width:100%">
+      <h4>Retro</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+  <div class="columnP carsP">
+    <div class="contentP">
+    <img src="img/cars2.jpg" alt="Car" style="width:100%">
+      <h4>Rápido</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+  <div class="columnP carsP">
+    <div class="contentP">
+    <img src="img/cars3.jpg" alt="Car" style="width:100%">
+      <h4>Clásico</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+
+  <div class="columnP peopleP">
+    <div class="contentP">
+      <img src="img/people1.jpg" alt="Car" style="width:100%">
+      <h4>Chica</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+  <div class="columnP peopleP">
+    <div class="contentP">
+    <img src="img/people2.jpg" alt="Car" style="width:100%">
+      <h4>Hombre</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+  <div class="columnP peopleP">
+    <div class="contentP">
+    <img src="img/people3.jpg" alt="Car" style="width:100%">
+      <h4>Mujer</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+<!-- END GRID -->
+</div>
+
+<!-- END MAIN -->
+</div>
+
+ <!-- Fin Tratamiento Portfolio Gallery Filtering -->
+ 
+ <a href="#inicio" class="btnInicio">Inicio</a>
  
   <!-- Contact -->
   <div class="w3-light-grey w3-padding-large w3-padding-32 w3-margin-top" id="contact">
@@ -418,6 +514,8 @@ function showSlidesG(n) {
     <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">w3.css</a></p>
 
   </div>
+  
+  <a href="#inicio" class="btnInicio">Inicio</a>
 
 <!-- End page content -->
 </div>
