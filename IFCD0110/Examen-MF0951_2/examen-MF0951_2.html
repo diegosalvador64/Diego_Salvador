@@ -1,0 +1,145 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Integrar componentes de software en páginas web</title>
+
+<!-- vinculaciones con otros documentos -->
+<link href="css/estilos.css" type="text/css">
+<script src="js/funciones.js" type="text/javascript"></script>
+
+<!-- enlace al icono de favoritos -->
+<link href="img/html5.png" rel="icon" type="image/png">
+<link href="img/html5.ico" rel="icon" type="image/ico">
+
+<!--meta etiquetas que informan del sitio -->
+<meta name="description" content="Curso de diseño web">
+<meta name="keywords" content="HTML5,CSS3,JavaScript">
+<meta name="author" content="Francisco">
+
+<!-- meta etiqueta para que el navegador adapte los contenidos a los dispositivos -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+<p><strong>Ejercicio 1:  </strong><br>
+  Crear una función que, al pulsar en un botón de formulario muestre el nombre y el propietario del navegador web que está utilizando el usuario. El mensaje debe de mostrarse en un cuadro de alerta del navegador.</p>
+<form id="form1" name="form1" method="post">
+  <input type="button" name="button1" id="button1" value="Enviar" onClick="mostrarNavegador()">
+</form>
+<p id="etiqueta1"></p>
+<p><strong>Ejercicio 2:</strong><br>
+Crea una función que, introduciendo  una fecha en un campo de formulario, muestre el día de la semana y el mes con texto. El día del mes y el año deben de estar en formato numérico. La fecha  debe de tener este formato &ldquo;<strong>Miércoles,  21</strong> <strong>Noviembre, 2018</strong>&rdquo;, utiliza una  etiqueta de párrafo debajo del campo de formulario, para mostrar la fecha.</p>
+<form id="form2" name="form2" method="post">
+  <label for="date2">Introduce un fecha:</label>
+  <br>
+<input type="date" name="date2" id="date2">
+  <input type="button" name="button2" id="button2" value="Enviar" onClick="calcularFecha()">
+</form>
+<p id="etiqueta2"></p>
+<p><strong>Ejercicio 3:  </strong><em><strong><br>
+</strong></em>Crea una  función que, introduciendo 3 frutas separadas por comas en un campo de  formulario, muestre los datos introducidos en una lista desordenada de HTML.  Mostrar la lista debajo del campo de formulario. </p>
+<form id="form3" name="form3" method="post">
+  <label for="textfield1">Introduce 3 frutas<br>
+  </label>
+  <input type="text" name="textfield1" id="textfield1">
+  <input type="button" name="button3" id="button3" value="Enviar" on onClick="meterFrutas()">
+</form>
+<p id="etiqueta3"></p>
+<p><strong>Ejercicio 4: </strong><em><strong> <br>
+</strong></em>Crea una función que, introduciendo en un campo de formulario una fecha, capture la hora, minutos y segundos del sistema, y muestre la fecha introducida junto a la hora del sistema en este formato: “Has iniciado sesión el día 13/11/2018 a las 15:30:25”.</p>
+<form id="form4" name="form4" method="post">
+  <label for="date3">Introduce una fecha:<br>
+  </label>
+  <input type="date" name="date3" id="date3">
+  <input type="button" name="button4" id="button4" value="Enviar" onClick="sesionFecha()">
+</form>
+<p id="etiqueta4"></p>
+<p><strong>Ejercicio 5: </strong><em><strong><br>
+</strong></em>Crea una función que, introduciendo un precio en un campo de formulario, calcule el precio final, aplicándole un descuento del 20%, y sumándole los impuestos 21% IVA. Mostrar el precio con el símbolo del Euro y con dos decimales. Utiliza una etiqueta de párrafo debajo del campo de formulario, para mostrar el precio desglosado como en el ejemplo.</p>
+<form id="form5" name="form5" method="post">
+  <label for="number1">Introduce un precio:<br>
+  </label>
+  <input type="number" name="number1" id="number1">
+  <input type="button" name="button5" id="button5" value="Enviar" onClick="calcularPrecioProducto()">
+</form>
+<p id="etiqueta5"></p>
+<p><strong>Ejercicio 6: </strong><em><strong><br>
+</strong></em>Crear una función que, introduciendo la fecha de nacimiento de una persona en un campo de formulario, le diga el signo del zodiaco y le muestre una imagen del signo encima del texto. La imagen y el texto deben de estar alineadas al centro.</p>
+<form id="form6" name="form6" method="post">
+  <label for="date4">Introduce tu fecha de nacimiento:<br>
+  </label>
+  <input type="date" name="date4" id="date4">
+  <input type="button" name="button6" id="button6" value="Enviar" onClick="signoZodiaco()">
+</form>
+<p id="etiqueta6"></p>
+<p><strong>Ejercicio 7:</strong><br>
+Crear una  función que, introduciendo un número del 1 al 10 en un campo de formulario,  muestre la tabla de multiplicar de ese número. Muestra el resultado de la tabla  de multiplicar en forma de listado hacia abajo como se muestra en el ejemplo.  Mostrar mensaje de aviso en rojo si no se introduce un número comprendido entre  1 y 10.</p>
+<form id="form7" name="form7" method="post">
+  <label for="number2">Introduce un número del 1 al 10:<br>
+  </label>
+  <input type="number" name="number2" id="number2">
+  <input type="button" name="button7" id="button7" value="Enviar" onClick="tablaMultiplicar()">
+</form>
+<p id="etiqueta7"></p>
+<p><strong>Ejercicio 8:</strong><br>
+Crear una función que, al introducir una fecha de nacimiento a partir de año 2000, compruebe a que categoría deportiva de fútbol pertenece. Utiliza una etiqueta de párrafo debajo del campo de formulario, para mostrar la categoría.</p>
+<form id="form8" name="form8" method="post">
+  <label for="date5">Introduce tu fecha de nacimiento:<br>
+  </label>
+  <input type="date" name="date5" id="date5">
+  <input type="button" name="button8" id="button8" value="Enviar" onClick="calcularCategoriaDeportiva()">
+</form>
+<p id="etiqueta8"></p>
+<p><strong>Ejercicio 9:  <br>
+</strong>Crea una  función que, al pulsar en un botón de formulario, le pida al usuario sus datos  personales a través del prompt y los muestre en una tabla html creada con Javascript.  Los datos a recoger son: Nombre, apellido, teléfono, email, fecha de nacimiento  y la edad se deberá calcular. Mostrar como en el ejemplo.</p>
+<form id="form9" name="form9" method="post">
+  <input type="button" name="button9" id="button9" value="Enviar" onClick="datosUsuario()">
+</form>
+<p id="etiqueta9"></p>
+<p><strong>Ejercicio 10: <br>
+</strong>Crea una función que, al pulsar en un botón de formulario muestre un mensaje emergente de alerta  para informar al usuario que debe de aceptar la política de cookies del sitio  web.</p>
+<form id="form10" name="form10" method="post">
+  <input type="button" name="button" id="button" value="Enviar">
+</form>
+
+<div id="contenedor-cookies">
+
+	<div id="contenedor"> 
+		<div id="times"><span onMouseUp="checkCookie()"><a href="#">&times;</a></span></div>
+		<div id="div_cookies">
+			<p>“Según el apartado 2 del artículo 22 de la LSSI le informamos que utilizamos cookies propias y de terceros para mejorar nuestros servicios y mostrarle publicidad relacionada con sus preferencias mediante el análisis de sus hábitos de navegación. Tras aceptar o cerrar el mensaje, entendemos que acepta nuestra Política de Cookies”.
+		 	<button type="button" onMouseUp="checkCookie()" id="botonaceptar">Aceptar</button>
+		</div>
+	</div>
+	
+	<script>
+	//Obtener la caja Modal
+	var caja = document.getElementById("contenedor-cookies");
+	//Obtener el botón de la caja Modal
+	var boton = document.getElementById("botonaceptar");
+	//Obtener el aspa que cierra la caja Modal
+	var span = document.getElementById("times");
+	
+	//Obtener la caja superior "Ocultar"
+	var ocultar = document.getElementById("ocultar");
+
+	//cuando el usuario hace click en el botón, cierra el cuadro Modal
+
+	boton.onclick = function() {
+		caja.style.display = "none";
+		ocultar.style.opacity = 1;
+		ocultar.style.pointerEvents= "auto";
+	}
+
+	span.onclick = function() {
+		caja.style.display = "none";
+		ocultar.style.opacity = 1;
+		ocultar.style.pointerEvents= "auto";
+	}
+</script>
+		
+</div>
+</body>
+</html>

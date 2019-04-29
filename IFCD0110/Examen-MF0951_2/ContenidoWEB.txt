@@ -1,0 +1,91 @@
+examen-MF0951_2.html
+--------------------------------------------------------
+Integrar componentes software en páginas web
+
+Ejercicios a realizar en la práctica con funciones JavaScript
+
+Ejercicio 1: 
+Crear una función que, al pulsar en un botón de formulario muestre el nombre y el propietario del navegador web que está utilizando el usuario. El mensaje debe de mostrarse en un cuadro de alerta del navegador.
+
+Ejercicio 2: 
+Crear una función que, introduciendo una fecha en un campo de formulario, muestre el día de la semana y el mes con texto. El día del mes y el año deben de estar en formato numérico. La fecha debe de tener este formato “miércoles, 21 noviembre, 2018”.
+
+Ejercicio 3: 
+Crear una función que, introduciendo 3 frutas separadas por comas en un campo de formulario, muestre los datos introducidos en una lista desordenada de HTML. Mostrar la lista debajo del campo de formulario.
+
+• Peras
+• anzanas
+• Uvas.
+
+Ejercicio 4: 
+Crea una función que, introduciendo en un campo de formulario una fecha, capture la hora, minutos y segundos del sistema, y muestre la fecha introducida junto a la hora del sistema en este formato: “Has iniciado sesión el día 13/11/2018 a las 15:30:25”.
+Ejercicio 5: 
+
+Crea una función que, introduciendo un precio en un campo de formulario, calcule el precio final, aplicándole un descuento del 20%, y sumándole los impuestos 21% IVA. Mostrar el precio con el símbolo del Euro y con dos decimales. Utiliza una etiqueta de párrafo debajo del campo de formulario, para mostrar el precio desglosado como en el ejemplo.
+
+Subtotal	25.95 €
+Descuento 20%  	5.19 €
+IVA 21 % = 	4.35 €
+Total	25.11 €
+
+Ejercicio 6: 
+Crear una función que, introduciendo la fecha de nacimiento de una persona en un campo de formulario, le diga el signo del zodiaco y le muestre una imagen del signo encima del texto. La imagen y el texto deben de estar alineadas al centro.
+
+Signos zodiacales
+
+Acuario (Enero 20 – Febrero 18) 
+Piscis (Febrero 19 – Marzo 20)
+Aries (Marzo 21 –Abril 19)
+Tauro (Abril 20 – Mayo 20)
+Géminis (Mayo 21 – Junio 20)
+Cáncer (Junio 21 – Julio 22)
+Leo (Julio 23–Agosto 22)
+Virgo (Agosto 23 – Septiembre 22) 
+Libra (Septiembre 23 – Octubre 22)
+Escorpio (Octubre 23 – Noviembre 21)
+Sagitario (Noviembre 22 – Diciembre 21) 
+Capricornio (Diciembre 22 – Enero 19)
+
+
+Ejercicio 7:
+Crear una función que, introduciendo un número del 1 al 10 en un campo de formulario, muestre la tabla de multiplicar de ese número. Muestra el resultado de la tabla de multiplicar en forma de listado hacia abajo como se muestra en el ejemplo. Mostrar mensaje en rojo si no se introduce un número comprendido entre 1 y 10.
+
+Tabla del 8 
+ 
+8 x 1 = 8
+8 x 2 = 16
+8 x 3 = 24
+8 x 4 = 32
+8 x 5 = 40
+8 x 6 = 48
+8 x 7 = 56
+8 x 8 = 64
+8 x 9 = 72
+8 x 10 = 80
+
+Ejercicio 8:
+Crear una función que, al introducir una fecha de nacimiento a partir de año 2000, compruebe a que categoría deportiva de fútbol pertenece. Utiliza una etiqueta de párrafo debajo del campo de formulario, para mostrar la categoría. Mostrar mensaje en rojo si no se introduce una fecha correcta. 
+Selecciones españolas de fútbol:
+ 
+Prebenjamín = 7,8 años. 
+Benjamín = 9,10 años. 
+Alevín = 11,12 años.
+Infantil= 13,14 años.
+Cadete = 15,16 años. 
+Juvenil = 17,18,19 años.
+Sénior = Absoluta.
+
+Ejercicio 9: 
+Crea una función que, al pulsar en un botón de formulario muestre los datos almacenados en una variable y los represente en una tabla html creada con JavaScript.
+
+var car = {nombre:"Juan", apellido:" Fernández ", telefono: “654789452”, email: “jfernandez@gmail.com”, fecha:”02/07/1968”, edad:”50 años”};
+
+Nombre	Apellidos	Teléfono	Email	Fecha	Edad
+Juan	Fernández	654789452	jfernandez@gmail.com	02/07/1968	50 años
+
+Ejercicio 10:
+Crea una función que, al pulsar en un botón de formulario muestre un mensaje emergente de alerta para informar al usuario que debe de aceptar la política de cookies del sitio web.  El mensaje debe de estar situado en la parte inferior de la web, ocupando todo el ancho de la página, de forma fija. Tendrá un botón de aceptar que al pulsar cerrará el mensaje, y una x para cerrar el mensaje.
+
+Texto a utilizar:  
+“Según el apartado 2 del artículo 22 de la LSSI le informamos que utilizamos cookies propias y de terceros para mejorar nuestros servicios y mostrarle publicidad relacionada con sus preferencias mediante el análisis de sus hábitos de navegación. Tras aceptar o cerrar el mensaje, entendemos que acepta nuestra Política de Cookies”.
+
